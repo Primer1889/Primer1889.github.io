@@ -14,3 +14,8 @@
 # 项目发布
 - hexo clean
 - hexo deploy
+
+
+# 主题选择
+
+- https://blinkfox.github.io
