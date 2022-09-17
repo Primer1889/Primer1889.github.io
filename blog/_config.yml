@@ -3,19 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: 深大村长 & 来学习
+subtitle: '一篇文章、一张图都可以作为美好记录'
+description: '在追寻梦想的道路上，我们远离家乡，疏远亲人，只为自己那颗倔强的心只有撞到南墙后，才会回头看到父母已驼背的身影他们渐渐老去，他们要的只是陪伴，而我们总是想赚到钱功成名就后再衣锦还乡，那时或许你只是想证明自己'
 keywords:
 author: John Doe
-language: en
+language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+url: https://github.com/Primer1889/Primer1889.github.io
+apermalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
@@ -102,4 +101,7 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: 'git'
+  repo: https://github.com/Primer1889/Primer1889.github.io.git
+  branch: master
+  message: public blogs
