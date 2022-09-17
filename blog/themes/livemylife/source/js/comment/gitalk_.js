@@ -3180,7 +3180,7 @@
                 };
 
                 var formatErrorMsg = exports.formatErrorMsg = function formatErrorMsg(err) {
-                    var msg = 'Error: ';
+                    var msg = '';
                     if (err.response && err.response.data && err.response.data.message) {
                         msg += err.response.data.message + '. ';
                         err.response.data.errors && (msg += err.response.data.errors.map(function(e) {

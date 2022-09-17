@@ -1,13 +1,15 @@
 <!-- Visitors -->
-<h5><a href="<%= config.root %>"><%= __('visitors') %></a></h5>
+<h5><a href="<%= config.root %>">
+    <%= __('visitors') %>
+  </a></h5>
 <% if (config.busuanzi){ %>
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
-<% } %>
+  <div class="widget">
+    <span>
+      浏览次数： <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> 次
+    </span>
+    <!-- <br /> -->
+    <!-- <span> -->
+    <!-- <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total -->
+    <!-- </span> -->
+  </div>
+  <% } %>
