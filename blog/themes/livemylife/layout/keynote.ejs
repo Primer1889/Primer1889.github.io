@@ -35,8 +35,10 @@ layout: layout
           <h1><%= page.title %></h1>
           <h2 class="subheading"><%= page.subtitle %></h2>
           <span class="meta">
-            Posted by <%- page.author || config.author %> on
-            <%= page.date.format(config.date_format) %>
+            作者：<%- page.author || config.author %> 
+            <br>
+            <br>
+            时间：<%= page.date.format(config.date_format) %>
           </span>
 
         </div>
