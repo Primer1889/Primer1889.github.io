@@ -20,25 +20,15 @@
           <li>
             <a href="<%= config.root %>"><%= __('Home') %></a>
           </li>
-
-          <% site.pages.forEach(function(page){ %>
-          <% if(page.title){ %>
           <li>
-            <a href="<%= config.root %><%= page.path.replace('index.html', '') %>">
-              <% if(page.title === 'Archives'){ %>
-              <%= __('Archives') %>
-              <% }else if (page.title === 'About'){ %>
-              <%= __('About') %>
-              <% }else if (page.title === 'Categories'){ %>
-              <%= __('Categories') %>
-              <% }else if (page.title === 'Tags'){ %>
-              <%= __('Tags') %>
-              <% } %>
-              %>
-            </a>
+            <a href="<%=/categories/ %>"><%= __('Categories') %></a>
           </li>
-          <% } %>
-          <% }); %>
+          <li>
+            <a href="<%=/tags/%>"><%= __('Tags') %></a>
+          </li>
+          <li>
+            <a href="<%=/about/%>"><%= __('About') %></a>
+          </li>
 
           <% if(config.search){ %>
           <li>

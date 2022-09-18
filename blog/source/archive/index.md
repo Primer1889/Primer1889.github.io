@@ -1,7 +1,7 @@
 ---
 layout: "archive"
-title: "Archives"
+title: "文章存档"
 header-img: "img/header_img/archive_bg.jpg"
 date: 2017-03-20 20:49:56
-description: "Don't rush and never settle...... If it's meant to be, it will be......"
+description: 城市的柏油路太硬，踩不出足迹！
 ---
