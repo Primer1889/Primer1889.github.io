@@ -4,8 +4,8 @@ const ap = new APlayer({
     autoplay: false,
     audio: [
       {
-        name: "China-Y",
-        artist: '徐梦圆',
+        name: "一生只想跟你走",
+        artist: '张学友',
         url: 'https://www.xzmp3.com/down/77f0b34e1432.mp3',
         cover: 'https://img1.imgtp.com/2022/09/18/ykxBDTnB.png',
       },
