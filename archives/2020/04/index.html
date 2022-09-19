@@ -450,6 +450,19 @@
           <li>
             09-19
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/TheSongList/" style="color: #0085a1">
+              <span>
+                KTV 点歌没歌单的焦虑
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
             <a href="/cn/README/" style="color: #0085a1">
               <span>
                 README
@@ -485,11 +498,9 @@
           <li>
             04-17
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
+            <a href="/en/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
               <span>
-                你可以哭泣，但不要放弃
-                
-                -- cn
+                AOSP：AMS 启动深入分析
                 
               </span>
             </a>
@@ -498,9 +509,11 @@
           <li>
             04-17
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
+            <a href="/cn/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
               <span>
-                AOSP：AMS 启动深入分析
+                你可以哭泣，但不要放弃
+                
+                -- cn
                 
               </span>
             </a>
@@ -549,8 +562,8 @@
     <div class="tags">
       
         
-          <a href="/tags/#AOSP" title="AOSP" rel="1">
-            AOSP
+          <a href="/tags/#心灵鸡汤" title="心灵鸡汤" rel="1">
+            心灵鸡汤
           </a>
           
             
@@ -561,8 +574,14 @@
           
             
         
-          <a href="/tags/#心灵鸡汤" title="心灵鸡汤" rel="1">
-            心灵鸡汤
+          <a href="/tags/#AOSP" title="AOSP" rel="1">
+            AOSP
+          </a>
+          
+            
+        
+          <a href="/tags/#KTV" title="KTV" rel="1">
+            KTV
           </a>
           
             
@@ -587,6 +606,10 @@
 <div class="widget">
   <ul>
     
+    <a href="../../../undefined/TheSongList/">
+      <li>KTV 点歌没歌单的焦虑</li>
+    </a>
+    
     <a href="../../../cn/README/">
       <li>README</li>
     </a>
@@ -595,12 +618,12 @@
       <li>Hexo 测试</li>
     </a>
     
-    <a href="../../../en/Hexo-Theme-LiveMyLife/">
-      <li>AOSP：AMS 启动深入分析</li>
-    </a>
-    
     <a href="../../../cn/Hexo-Theme-LiveMyLife/">
       <li>你可以哭泣，但不要放弃</li>
+    </a>
+    
+    <a href="../../../en/Hexo-Theme-LiveMyLife/">
+      <li>AOSP：AMS 启动深入分析</li>
     </a>
     
   </ul>
@@ -623,7 +646,7 @@
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="">April 2020</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../2022/09/">September 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="">April 2020</a><span class="archive-list-count">2</span></li></ul>
 </div>
 
 
@@ -635,16 +658,16 @@
 <div class="widget">
   <ul>
     
-    <a href="/categories/#Android 源码">
-      <li>Android 源码</li>
+    <a href="/categories/#生活">
+      <li>生活</li>
     </a>
     
     <a href="/categories/#心灵鸡汤">
       <li>心灵鸡汤</li>
     </a>
     
-    <a href="/categories/#生活">
-      <li>生活</li>
+    <a href="/categories/#Android 源码">
+      <li>Android 源码</li>
     </a>
     
   </ul>
@@ -1117,7 +1140,22 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 
 	<link rel="stylesheet" href="/dist/APlayer.min.css">
 	<div id="aplayer"></div>
