@@ -139,24 +139,25 @@
                       <span>
                         作者： <%- page.author || config.author %>
                       </span>
+                      <br>
                       <span>
                         时间：<%= page.date.format(config.date_format) %>
                       </span>
+                      <br>
                       <% if(config.wordcount) { %>
                         <!-- WordCount start -->
-                        <div class="blank_box"></div>
                         <span>
                           时长： <span>
                             <%= min2read(page.content) %>
                           </span> 分钟
                         </span>
-                        <div class="blank_box"></div>
+                        <br>
                         <span>
                           字数： <span>
                             <%= wordcount(page.content) %>
                           </span> 字
                         </span>
-                        <div class="blank_box"></div>
+                        <br>
                         <!-- WordCount end -->
                         <% } %>
                           <% if(config.busuanzi) { %>
