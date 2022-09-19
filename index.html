@@ -176,6 +176,11 @@
   <i class="mdui-icon material-icons light-mode"></i>
   <i class="mdui-icon material-icons dark-mode"></i>
 </div>
+<style>
+  div .toggle{
+    margin-bottom: 90px;
+  }
+</style>
 <script>
   //getCookieValue
   function getCookieValue(a) {
@@ -448,21 +453,13 @@
 
   <a href="/en/Hexo-Theme-LiveMyLife/">
     <h2 class="post-title">
-      AOSP：AMS 启动深入分析
+      AOSP：Binder 如何使用 ioctl
     </h2>
     <h3 class="post-subtitle">
       会当凌绝顶，一览众山小
     </h3>
     <div class="post-content-preview">
-      startActivity
-startActivityForResult
-startActivityAsUser
-startActivityInternal
-startActivityLocked
-startActivityUnLocked
-realyStartActivity
-realStartActivityLocked
-...
+      文章编写测试Binder 客户端Binder 驱动服务ioctl 数据传递...
     </div>
   </a>
   
@@ -496,23 +493,14 @@ realStartActivityLocked
       歌唱心中的情感 :)
     </h3>
     <div class="post-content-preview">
-      我不是歌神
-世面
-
+      我不是歌神世面
 林初初
 
-真希望你没见过什么世面
-一生只爱我这张平凡的脸
-我不像他能够给你一切
-他不像我能够给你一切
+真希望你没见过什么世面一生只爱我这张平凡的脸我不像他能够给你一切他不像我能够给你一切
 雨点
-
 林祥子
 
-踏着风中小雨点，粉碎几多的片段，
-一再想，痴想，妄想，我再度怀念。
-寂静街中飘雨烟，恍见她风中再现，
-这暗影，纤影，背影，似擦亮雷电。
+踏着风中小雨点，粉碎几多的片段，一再想，痴想，妄想，我再度怀念。寂静街中飘雨烟，恍见她风中再现，这暗影，纤影，背影，似擦亮雷电。
 ...
     </div>
   </a>
@@ -548,23 +536,20 @@ realStartActivityLocked
     </h3>
     <div class="post-content-preview">
       Primer1889.github.io
-
 时间：2022 年 09 月 17 日
 作者：深南村长
 描述：我的 blog
 
 项目部署
-
 Github Pages + Hexo
 https://hexo.io/zh-cn/
 
 项目相关
-
 hexo server
 hexo clean
 hexo deploy
 hexo new layout title
-hexo clear &amp; hexo ......
+hexo clear &amp; hexo g &......
     </div>
   </a>
   
@@ -596,8 +581,7 @@ hexo clear &amp; hexo ......
       布局优化，注重体验
     </h3>
     <div class="post-content-preview">
-      测试 Page
-...
+      测试 Page...
     </div>
   </a>
   
@@ -631,8 +615,7 @@ hexo clear &amp; hexo ......
       你可以跌倒，但是不要爬不起 ...
     </h3>
     <div class="post-content-preview">
-      这里就可以写文章
-let do it ! 加油
+      这里就可以写文章let do it ! 加油
 ...
     </div>
   </a>
@@ -756,7 +739,7 @@ let do it ! 加油
     </a>
     
     <a href="en/Hexo-Theme-LiveMyLife/">
-      <li>AOSP：AMS 启动深入分析</li>
+      <li>AOSP：Binder 如何使用 ioctl</li>
     </a>
     
   </ul>
@@ -1295,4 +1278,10 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 	<script src="./node_modules/pjax/pjax.js"></script>
 	<script type="text/javascript" src="/dist/APlayer.min.js"></script>
 	<script type="text/javascript" src="/dist/music.js"></script>
+
+	<style>
+		#aplayer-body{
+			margin-bottom: 90px;
+		}
+	</style>
 </html>
