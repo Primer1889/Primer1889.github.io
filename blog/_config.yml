@@ -359,8 +359,8 @@ gitter:
 ##
 deploy:
   type: git
-  repo: https://github.com/<yourAccount>/<repo> # or https://gitee.com/<yourAccount>/<repo>
-  branch: <your-branch>
+  repo: https://github.com/Primer1889/Primer1889.github.io.git
+  branch: main
 
 
 # 音乐播放
