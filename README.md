@@ -11,11 +11,17 @@
 - https://hexo.io/zh-cn/
 
 
-# 项目相关
-- hexo server
+# 关于 Hexo
+
+## GitHub pages 发布
 - hexo clean
 - hexo deploy
-- hexo new 
+
+## 创建文章
+- hexo new title
+
+## 本地条数
+- hexo server
 - http://localhost:4000
 
 

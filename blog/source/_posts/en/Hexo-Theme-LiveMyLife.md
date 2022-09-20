@@ -1,5 +1,5 @@
 ---
-title: AOSP：AMS 启动深入分析
+title: AOSP：Binder 如何使用 ioctl
 catalog: true
 date: 2020-04-17 02:34:17
 subtitle: 会当凌绝顶，一览众山小
@@ -11,18 +11,10 @@ categories:
 - Android 源码
 ---
 
-# startActivity
+# 文章编写测试
 
-# startActivityForResult
+## Binder 客户端
 
-# startActivityAsUser
+## Binder 驱动服务
 
-# startActivityInternal
-
-# startActivityLocked
-
-# startActivityUnLocked
-
-## realyStartActivity
-
-## realStartActivityLocked
+## ioctl 数据传递

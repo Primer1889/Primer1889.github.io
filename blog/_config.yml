@@ -50,9 +50,9 @@ archives-img: img/header_img/archive_bg2.jpg
 favicon: 
 
 
-# Signature Setup
+# 签名信息
 signature: true # show signature
-signature-img: img/signature/vincent-white.png
+signature-img: img/signature/nick-name.png
 
 
 # Wave settings
