@@ -329,22 +329,22 @@
     <style type="text/css">
       .body--light {
         /* intro-header */
-        --intro-header-background-image-url-home: url('/img/header_img/main_sea_bg.png');
-        --intro-header-background-image-url-post: url('img/header_img/tag_bg.png');
-        --intro-header-background-image-url-page: url('/img/header_img/tag_bg.png');
+        --intro-header-background-image-url-home: url('/img/header_img/index_new_bg.png');
+        --intro-header-background-image-url-post: url('img/header_img/tag_new_bg.png');
+        --intro-header-background-image-url-page: url('/img/header_img/tag_new_bg.png');
       }
 
       .body--dark {
-        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/main_sea_bg.png');
-        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/tag_bg.png');
-        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tag_bg.png');
+        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/index_new_bg.png');
+        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/tag_new_bg.png');
+        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tag_new_bg.png');
       }
 
       header.intro-header {
         
           /*page*/
           background-image: var(--intro-header-background-image-url-page);
-          /* background-image: url('/img/header_img/tag_bg.png'); */
+          /* background-image: url('/img/header_img/tag_new_bg.png'); */
           
       }
 
@@ -373,7 +373,7 @@
                         </h1>
                         <!--<hr class="small">-->
                         <span class="subheading">
-                          每篇文章都有重点，也就是说标签，突出它的个性
+                          每篇文章总是围绕重点展开，工作也有重点，生活也是。
                         </span>
                       </div>
                       
@@ -427,11 +427,11 @@
         
         <a href="#心灵鸡汤" title="心灵鸡汤" rel="1">心灵鸡汤</a>
         
+        <a href="#测试" title="测试" rel="1">测试</a>
+        
         <a href="#AOSP" title="AOSP" rel="1">AOSP</a>
         
         <a href="#KTV" title="KTV" rel="1">KTV</a>
-        
-        <a href="#测试" title="测试" rel="1">测试</a>
         
       </div>
 
@@ -453,6 +453,30 @@
             
             <h3 class="post-subtitle">
               你可以跌倒，但是不要爬不起 ...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="测试">
+          <span class="tag-text">测试</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/cn/test-hexo-pae/">
+            <h2 class="post-title">
+              Hexo 测试
+              
+              -- cn
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              布局优化，注重体验
             </h3>
             
           </a>
@@ -499,30 +523,6 @@
             
             <h3 class="post-subtitle">
               歌唱心中的情感 :)
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="测试">
-          <span class="tag-text">测试</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/test-hexo-pae/">
-            <h2 class="post-title">
-              Hexo 测试
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              布局优化，注重体验
             </h3>
             
           </a>
@@ -665,8 +665,8 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 		<!-- Search -->
 		
-		<div class="popup search-popup local-search-popup">
-  <span class="popup-btn-close">
+		<div style="margin-top: 300px;" class="popup search-popup local-search-popup">
+  <span style="margin-left: 100px;" class="popup-btn-close">
     退出搜索
   </span>
   <div class="container">

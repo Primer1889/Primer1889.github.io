@@ -329,22 +329,22 @@
     <style type="text/css">
       .body--light {
         /* intro-header */
-        --intro-header-background-image-url-home: url('/img/header_img/main_sea_bg.png');
-        --intro-header-background-image-url-post: url('img/header_img/categories_bg.png');
-        --intro-header-background-image-url-page: url('/img/header_img/categories_bg.png');
+        --intro-header-background-image-url-home: url('/img/header_img/index_new_bg.png');
+        --intro-header-background-image-url-post: url('img/header_img/total_bg.png');
+        --intro-header-background-image-url-page: url('/img/header_img/total_bg.png');
       }
 
       .body--dark {
-        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/main_sea_bg.png');
-        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/categories_bg.png');
-        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/categories_bg.png');
+        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/index_new_bg.png');
+        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/total_bg.png');
+        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/total_bg.png');
       }
 
       header.intro-header {
         
           /*page*/
           background-image: var(--intro-header-background-image-url-page);
-          /* background-image: url('/img/header_img/categories_bg.png'); */
+          /* background-image: url('/img/header_img/total_bg.png'); */
           
       }
 
@@ -429,9 +429,9 @@
         
         <a href="#生活" title="生活" rel="1">生活</a>
         
-        <a href="#Android 源码" title="Android 源码" rel="1">Android 源码</a>
-        
         <a href="#心灵鸡汤" title="心灵鸡汤" rel="1">心灵鸡汤</a>
+        
+        <a href="#Android 源码" title="Android 源码" rel="1">Android 源码</a>
         
       </div>
 
@@ -467,33 +467,6 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Android 源码">
-          <span class="tag-text">Android 源码</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/en/Hexo-Theme-LiveMyLife/">
-            <h2 class="post-title">
-              AOSP：Binder 如何使用 ioctl
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              会当凌绝顶，一览众山小
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="心灵鸡汤">
           <span class="tag-text">心灵鸡汤</span>
         </span>
@@ -513,6 +486,33 @@
             
             <h3 class="post-subtitle">
               布局优化，注重体验
+            </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Android 源码">
+          <span class="tag-text">Android 源码</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/en/Hexo-Theme-LiveMyLife/">
+            <h2 class="post-title">
+              AOSP：Binder 如何使用 ioctl
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              会当凌绝顶，一览众山小
             </h3>
             
           </a>
@@ -656,8 +656,8 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 		<!-- Search -->
 		
-		<div class="popup search-popup local-search-popup">
-  <span class="popup-btn-close">
+		<div style="margin-top: 300px;" class="popup search-popup local-search-popup">
+  <span style="margin-left: 100px;" class="popup-btn-close">
     退出搜索
   </span>
   <div class="container">
