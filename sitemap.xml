@@ -95,14 +95,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/KTV/</loc>
+    <loc>http://yoursite-url/tags/AOSP/</loc>
     <lastmod>2022-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/AOSP/</loc>
+    <loc>http://yoursite-url/tags/KTV/</loc>
     <lastmod>2022-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
