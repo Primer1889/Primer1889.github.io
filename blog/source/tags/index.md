@@ -1,6 +1,6 @@
 ---
 layout: "tags"
 title: "标签"
-description: "每篇文章都有重点，也就是说标签，突出它的个性"
+description: "每篇文章总是围绕重点展开，工作也有重点，生活也是。"
 header-img: "img/header_img/tag_new_bg.png"
 ---

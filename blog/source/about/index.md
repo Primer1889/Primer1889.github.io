@@ -1,8 +1,8 @@
 ---
 layout: "about"
-title: "关于博主"
+title: "About me!"
 date: 2016-04-21 04:48:33
-description: "那些年的愿望，还有很多没有实现吧。"
+description: "那些年吹的牛逼，还有很多没有实现吧。"
 header-img: "img/scenery/about_me_bg.png"
 ---
 
