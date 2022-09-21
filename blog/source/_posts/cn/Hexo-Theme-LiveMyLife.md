@@ -4,7 +4,7 @@ catalog: true
 date: 2020-04-17 02:34:17
 subtitle: 你可以跌倒，但是不要爬不起 ...
 lang: cn
-header-img: /img/header_img/lml_bg.jpg
+header-img: /img/header_img/lml_bg.png
 tags:
 - 心灵鸡汤
 categories:

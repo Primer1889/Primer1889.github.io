@@ -3,7 +3,7 @@ layout: "about"
 title: "关于博主"
 date: 2016-04-21 04:48:33
 description: "那些年的愿望，还有很多没有实现吧。"
-header-img: "img/scenery/about_bg.jpg"
+header-img: "img/scenery/about_bg.png"
 ---
 
 

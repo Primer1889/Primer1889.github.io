@@ -3,7 +3,7 @@ title: README
 catalog: true
 date: 2022-09-19 00:50:12
 subtitle: 项目调试记录简述
-header-img: /img/other/readme_bg.jpeg
+header-img: /img/other/readme_bg.png
 tags:
 categories:
 ---

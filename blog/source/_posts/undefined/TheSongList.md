@@ -3,7 +3,7 @@ title: KTV 点歌没歌单的焦虑
 catalog: true
 date: 2022-09-19 20:23:36
 subtitle: 歌唱心中的情感 :)
-header-img: /img/header_img/tag_bg.jpg
+header-img: /img/header_img/tag_bg.png
 tags: KTV
 categories:
 ---
