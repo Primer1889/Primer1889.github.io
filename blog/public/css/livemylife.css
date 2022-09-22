@@ -27,8 +27,8 @@ i.mdui-icon.material-icons.bright-mode {
 /* tip */
 .tip {
   color: rgba(51, 51, 51, 0.9);
-  text-align: left;
-  font-style: italic;
+  text-align: center;
+  font-style: normal;
 }
 
 /* archives */

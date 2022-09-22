@@ -525,7 +525,7 @@ pre code {
   font-family: "Lora", "Times New Roman", serif;
   color: gray;
   font-size: 16px;
-  font-style: italic;
+  font-style: normal;
   margin-top: 0;
 }
 .post-preview > .post-meta > a {
@@ -547,12 +547,12 @@ pre code {
     font-size: 16px;
   }
   .post-preview .post-meta {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 .post-content-preview {
-  font-size: 13px;
-  font-style: italic;
+  font-size: 16px;
+  font-style: normal;
   color: #a3a3a3;
 }
 .post-content-preview:hover {
@@ -560,7 +560,7 @@ pre code {
 }
 @media only screen and (min-width: 840px) {
   .post-content-preview {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .section-heading {
@@ -821,7 +821,8 @@ img::-moz-selection {
   }
 }
 .one-tag-list .tag-text {
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 25px;
   font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC",
     "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei",
     "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN",

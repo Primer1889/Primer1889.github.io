@@ -1,11 +1,46 @@
 <!-- Visitors -->
 <h5>
-  <%= __('visitors') %>
+  <%= __('统计数据') %>
 </h5>
 <% if (config.busuanzi){ %>
   <div class="widget">
     <span>
-      浏览次数： <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b>
+      访问次数：
+      <b>
+        <i>
+          <span id="busuanzi_value_site_pv">
+            <i class="fa fa-spinner fa-spin">
+            </i>
+          </span>
+        </i>
+      </b>
+
+      <br>
+
+      文章总数：
+      <b>
+        <i>
+          <span>
+            <i>
+              <%= page.total %>
+            </i>
+          </span>
+        </i>
+      </b>
+
+      <br>
+      
+      文章页数：
+      <b>
+        <i>
+          <span>
+            <i>
+              <%= site.pages.size() %>
+            </i>
+          </span>
+        </i>
+      </b>
+
     </span>
   </div>
   <% } %>

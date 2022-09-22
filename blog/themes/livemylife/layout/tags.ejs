@@ -17,7 +17,7 @@ layout: layout
       <!-- 标签列表 -->
       <% site.tags.map(function(tag){  %>
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="<%= tag.name %>">
+        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="<%= tag.name %>">
           <span class="tag-text"><%= tag.name %></span>
         </span>
         <% tag.posts.map(function(post){  %>
