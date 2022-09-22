@@ -660,13 +660,13 @@ pre code {
   }
 
   .post-preview .post-meta {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
 .post-content-preview {
-  font-size: 13px;
-  font-style: italic;
+  font-size: 16px;
+  font-style: normal;
   color: #a3a3a3;
 }
 
@@ -676,7 +676,7 @@ pre code {
 
 @media only screen and (min-width: 768px) {
   .post-content-preview {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -988,7 +988,9 @@ body {
 }
 
 .one-tag-list .tag-text {
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 25px;
+
   /* Hux learn from
      *     TypeIsBeautiful,
      *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
