@@ -5,7 +5,7 @@
     </a></h5>
   <ul class="widget" style="list-style-type: none; padding-left: 0px;">
     <% config.friends.forEach(function(friend){ %>
-      <li><a href="<%= friend.href %>" target="_blank">
+      <li><a style="text-decoration: none;" href="<%= friend.href %>" target="_blank">
           <%= friend.title %>
         </a></li>
       <% }); %>

@@ -36,7 +36,7 @@ layout: layout
       <h5><%= __('friends') %></h5>
       <ul class="list-inline">
         <% config.friends.forEach(function(friend){ %>
-        <li><a href="<%= friend.href %>"><%= friend.title %></a></li>
+        <li><a style="text-decoration: none;" href="<%= friend.href %>"><%= friend.title %></a></li>
         <% }); %>
       </ul>
       <% }%>

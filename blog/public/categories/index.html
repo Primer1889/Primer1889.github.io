@@ -220,7 +220,7 @@
 
 		<!-- Navigation (contains search)-->
 		<!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+<nav style="background-color: rgba(255, 255, 255, 0); border: 0px;" class="navbar navbar-default navbar-custom navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header page-scroll">
@@ -235,7 +235,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
     <div id="huxblog_navbar">
-      <div class="navbar-collapse">
+      <div  style="background-color: rgba(255, 255, 255, 0);" class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
             <a href="/">首页</a>
@@ -427,73 +427,17 @@
       <!-- 标签云 -->
       <div id='tag_cloud' class="tags">
         
-        <a href="#Android 源码" title="Android 源码" rel="1">Android 源码</a>
-        
-        <a href="#我不是歌神" title="我不是歌神" rel="1">我不是歌神</a>
-        
         <a href="#生活" title="生活" rel="1">生活</a>
         
         <a href="#心灵鸡汤" title="心灵鸡汤" rel="1">心灵鸡汤</a>
         
+        <a href="#Android 源码" title="Android 源码" rel="1">Android 源码</a>
+        
+        <a href="#我不是歌神" title="我不是歌神" rel="1">我不是歌神</a>
+        
       </div>
 
       <!-- 标签列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Android 源码">
-          <span class="tag-text">Android 源码</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/en/Hexo-Theme-LiveMyLife/">
-            <h2 class="post-title">
-              AOSP：Binder 如何使用 ioctl
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              会当凌绝顶，一览众山小
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="我不是歌神">
-          <span class="tag-text">我不是歌神</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/undefined/TheSongList/">
-            <h2 class="post-title">
-              KTV 点歌没歌单的焦虑
-              
-              -- undefined
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              歌唱心中的情感 :)
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
       
       <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="生活">
@@ -544,6 +488,62 @@
             
             <h3 class="post-subtitle">
               布局优化，注重体验
+            </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Android 源码">
+          <span class="tag-text">Android 源码</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/en/Hexo-Theme-LiveMyLife/">
+            <h2 class="post-title">
+              AOSP：Binder 如何使用 ioctl
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              会当凌绝顶，一览众山小
+            </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="我不是歌神">
+          <span class="tag-text">我不是歌神</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/undefined/TheSongList/">
+            <h2 class="post-title">
+              KTV 点歌没歌单的焦虑
+              
+              -- undefined
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              歌唱心中的情感 :)
             </h3>
             
           </a>
