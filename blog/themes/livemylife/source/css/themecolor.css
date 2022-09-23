@@ -955,8 +955,8 @@ textarea.gt-header-textarea::placeholder {
 } */
 .toggle {
   position: fixed;
-  bottom: 9rem;
-  left: 2.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
   /* background-color: var(--background-color); */
   color: var(--toggle-color);
   /* border: 1px dotted var(--toggle-border-color); */

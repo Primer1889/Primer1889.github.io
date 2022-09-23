@@ -331,19 +331,19 @@ deploy:
   branch: master
 
 # 音乐播放
-aplayer:
-  meting: true
-  asset_inject: false
-  inject:
-    bottom:
-      - <div class="aplayer no-destroy" data-id="7422861869" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-lrcType="-1"> </div>
+# aplayer:
+#   meting: true
+#   asset_inject: false
+#   inject:
+#     bottom:
+#       - <div class="aplayer no-destroy" data-id="7422861869" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-lrcType="-1"> </div>
 
-pjax:
-  enable: ture
-  exclude:
+# pjax:
+#   enable: ture
+#   exclude:
 
-self_comments:
-  - 那时候，真的委屈你了！
-  - 我会在上界继续等你的，玉儿。
-  - 飞升上界去吧，去见你的兄弟。
-  - 你们好好修炼，相信总有一日我们会再相见，保重🌹
+# self_comments:
+#   - 那时候，真的委屈你了！
+#   - 我会在上界继续等你的，玉儿。
+#   - 飞升上界去吧，去见你的兄弟。
+#   - 你们好好修炼，相信总有一日我们会再相见，保重🌹
