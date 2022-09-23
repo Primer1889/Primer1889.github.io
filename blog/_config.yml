@@ -98,12 +98,13 @@ friends:
 ## Doc:https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 ##
 gitalk:
-  owner: # 'GitHub repo owner'
-  admin: # 'GitHub repo'
-  repo: # ['GitHub repo owner and collaborators, only these guys can initialize github issues']
-  clientID: # 'GitHub Application Client ID'
-  clientSecret: # 'GitHub Application Client Secret'
-  perPage: 10 # Pagination size, with maximum 100.
+  enable: true
+  owner: 'Primer1889'
+  admin: ['Primer1889']
+  repo: 'Primer1889.github.io'
+  clientID: 'e06a5201a629f94218ec'
+  clientSecret: 'e103b1fc452e44b776fd2bf4ab46bff009f06fea'
+  perPage: 20 # Pagination size, with maximum 100.
   pagerDirection: last # Comment sorting direction, available values are last and first.
   createIssueManually: false # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users. You can create it manually by setting this option to true
   language: zh-CN # Localization language key, en, zh-CN and zh-TW are currently available.
@@ -265,7 +266,6 @@ tip:
 ## Docs:https://github.com/overtrue/share.js
 ##
 socialshare: true
-
 # Viewer config
 ## Docs:https://github.com/fengyuanchen/viewer
 ## Demo:https://fengyuanchen.github.io/viewer/
