@@ -37,14 +37,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/cn/page-aosp/</loc>
+    <loc>http://yoursite-url/cn/page-cry/</loc>
     
     <lastmod>2020-04-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/cn/page-cry/</loc>
+    <loc>http://yoursite-url/cn/page-aosp/</loc>
     
     <lastmod>2020-04-16</lastmod>
     
@@ -74,7 +74,7 @@
 
   
   <url>
-    <loc>http://yoursite-url/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://yoursite-url/tags/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/</loc>
     <lastmod>2022-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -88,7 +88,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/</loc>
+    <loc>http://yoursite-url/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -97,14 +97,14 @@
 
   
   <url>
-    <loc>http://yoursite-url/categories/Android-%E6%BA%90%E7%A0%81/</loc>
+    <loc>http://yoursite-url/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2022-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <loc>http://yoursite-url/categories/Android-%E6%BA%90%E7%A0%81/</loc>
     <lastmod>2022-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
