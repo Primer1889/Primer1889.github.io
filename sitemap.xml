@@ -2,56 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite-url/categories/index.html</loc>
+    <loc>http://yoursite-url/cn/page-Native%E4%BF%A1%E5%8F%B7%E8%A1%A8/</loc>
     
-    <lastmod>2022-09-22</lastmod>
+    <lastmod>2022-09-24</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/index.html</loc>
     
-    <lastmod>2022-09-22</lastmod>
+    <lastmod>2022-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/categories/index.html</loc>
+    
+    <lastmod>2022-09-24</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite-url/404.html</loc>
     
-    <lastmod>2022-09-22</lastmod>
+    <lastmod>2022-09-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/undefined/TheSongList/</loc>
-    
-    <lastmod>2022-09-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/cn/README/</loc>
+    <loc>http://yoursite-url/cn/page-readme/</loc>
     
     <lastmod>2022-09-18</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/cn/test-hexo-pae/</loc>
-    
-    <lastmod>2022-09-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/cn/Hexo-Theme-LiveMyLife/</loc>
+    <loc>http://yoursite-url/cn/page-aosp/</loc>
     
     <lastmod>2020-04-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/en/Hexo-Theme-LiveMyLife/</loc>
+    <loc>http://yoursite-url/cn/page-cry/</loc>
     
     <lastmod>2020-04-16</lastmod>
     
@@ -81,14 +74,7 @@
 
   
   <url>
-    <loc>http://yoursite-url/tags/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/</loc>
-    <lastmod>2022-09-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>http://yoursite-url/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -102,27 +88,13 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/KTV/</loc>
+    <loc>http://yoursite-url/tags/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/</loc>
     <lastmod>2022-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
 
-  
-  <url>
-    <loc>http://yoursite-url/categories/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2022-09-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/categories/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/</loc>
-    <lastmod>2022-09-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
   
   <url>
     <loc>http://yoursite-url/categories/Android-%E6%BA%90%E7%A0%81/</loc>
@@ -132,7 +104,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/%E6%88%91%E4%B8%8D%E6%98%AF%E6%AD%8C%E7%A5%9E/</loc>
+    <loc>http://yoursite-url/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2022-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
