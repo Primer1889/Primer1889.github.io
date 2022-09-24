@@ -1,6 +1,6 @@
 <!-- Visitors -->
 <h5>
-  <%= __('统计数据') %>
+  <%= __('数据统计') %>
 </h5>
 <% if (config.busuanzi){ %>
   <div class="widget">
@@ -17,12 +17,12 @@
 
       <br>
 
-      文章总数：
+      文章数量：
       <b>
         <i>
           <span>
             <i>
-              <%= page.total %>
+              <%= site.posts.size() %>
             </i>
           </span>
         </i>
@@ -35,7 +35,7 @@
         <i>
           <span>
             <i>
-              <%= site.pages.size() %>
+              <%= page.total %>
             </i>
           </span>
         </i>
