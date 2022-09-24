@@ -46,7 +46,7 @@
   /* hr */
   --hr-background-color: #eee;
   /* tag_cloud */
-  --tag_cloud-background-color: #D6D6D6;
+  --tag_cloud-background-color: #000000;
   --tag_cloud-color: #fff;
   --tag_cloud-color-hovor: white;
   /* img */
@@ -115,10 +115,14 @@
   /* hr */
   --hr-background-color: rgb(74, 74, 74);
   /* tag_cloud */
-  --tag_cloud-background-color: rgb(150, 104, 239);
-  --tag_cloud-background-color2: rgb(212, 103, 140);
-  --tag_cloud-color: rgba(255, 255, 255, 0.8);
-  --tag_cloud-color-hovor: white;
+  /* 黑夜模式渐变色 - begin */
+  --tag_cloud-background-color: rgba(142, 144, 145, 0.937);
+  /* 黑夜模式渐变色 - end */
+  --tag_cloud-background-color2: rgba(238, 12, 87, 0.852);
+  /* 黑夜模式文字颜色 */
+  --tag_cloud-color: rgb(255, 255, 255);
+  /* 黑夜模式选中文字颜色 */
+  --tag_cloud-color-hovor: rgba(255, 255, 255, 0.503);
   /* img */
   --img-shadow-color: 1px 1px 10px 5px rgba(255, 255, 255, .5);
   --img-about-shadow-color: 1px 1px 10px 5px rgba(255, 255, 255, .5);
