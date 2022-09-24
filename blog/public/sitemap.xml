@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite-url/cn/page-Native%E4%BF%A1%E5%8F%B7%E8%A1%A8/</loc>
+    
+    <lastmod>2022-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/index.html</loc>
+    
+    <lastmod>2022-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/categories/index.html</loc>
+    
+    <lastmod>2022-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/404.html</loc>
+    
+    <lastmod>2022-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/cn/page-readme/</loc>
+    
+    <lastmod>2022-09-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/cn/page-cry/</loc>
+    
+    <lastmod>2020-04-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/cn/page-aosp/</loc>
+    
+    <lastmod>2020-04-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/archive/index.html</loc>
+    
+    <lastmod>2017-03-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/about/index.html</loc>
+    
+    <lastmod>2016-04-20</lastmod>
+    
+  </url>
+  
+
+  <url>
+    <loc>http://yoursite-url/</loc>
+    <lastmod>2022-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>http://yoursite-url/tags/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/</loc>
+    <lastmod>2022-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/AOSP/</loc>
+    <lastmod>2022-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>http://yoursite-url/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2022-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/categories/Android-%E6%BA%90%E7%A0%81/</loc>
+    <lastmod>2022-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>
