@@ -329,13 +329,13 @@
     <style type="text/css">
       .body--light {
         /* intro-header */
-        --intro-header-background-image-url-home: url('/img/header_img/index_new_bg.png');
+        --intro-header-background-image-url-home: url('/img/index/index_bg.webp');
         --intro-header-background-image-url-post: url('img/header_img/tag_new_bg.png');
         --intro-header-background-image-url-page: url('/img/header_img/tag_new_bg.png');
       }
 
       .body--dark {
-        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/index_new_bg.png');
+        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/index/index_bg.webp');
         --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/tag_new_bg.png');
         --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tag_new_bg.png');
       }
@@ -425,63 +425,13 @@
       <!-- 标签云 -->
       <div id='tag_cloud' class="tags">
         
-        <a href="#心灵鸡汤" title="心灵鸡汤" rel="1">心灵鸡汤</a>
-        
-        <a href="#AOSP" title="AOSP" rel="1">AOSP</a>
-        
         <a href="#笔记" title="笔记" rel="1">笔记</a>
+        
+        <a href="#字节码" title="字节码" rel="1">字节码</a>
         
       </div>
 
       <!-- 标签列表 -->
-      
-      <div class="one-tag-list">
-        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="心灵鸡汤">
-          <span class="tag-text">心灵鸡汤</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/page-cry/">
-            <h2 class="post-title">
-              你可以哭泣，但不要放弃
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              你可以跌倒，但是不要爬不起 ...
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="AOSP">
-          <span class="tag-text">AOSP</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/page-aosp/">
-            <h2 class="post-title">
-              AOSP：Binder 如何使用 ioctl
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              会当凌绝顶，一览众山小
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
       
       <div class="one-tag-list">
         <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="笔记">
@@ -489,16 +439,34 @@
         </span>
         
         <div class="post-preview">
-          <a href="/cn/page-Native信号表/">
+          <a href="/undefined/page-Native信号表/">
             <h2 class="post-title">
               Native 信号表（部分）
-              
-              -- cn
-              
             </h2>
             
             <h3 class="post-subtitle">
               描述对应信号代表的含义，协助问题排查
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="字节码">
+          <span class="tag-text">字节码</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/undefined/page-咋们一起修改-class-文件/">
+            <h2 class="post-title">
+              咋们一起修改 class 文件
+            </h2>
+            
+            <h3 class="post-subtitle">
+              修改第三方 jar 包满足当前需求，这是一种方式！
             </h3>
             
           </a>
@@ -974,22 +942,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 
 	<link rel="stylesheet" href="/dist/APlayer.min.css">
 	<script src="./node_modules/pjax/pjax.js"></script>

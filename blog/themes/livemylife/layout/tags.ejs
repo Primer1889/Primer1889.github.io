@@ -25,9 +25,6 @@ layout: layout
           <a href="<%- config.root %><%- post.path %>">
             <h2 class="post-title">
               <%- post.title || "Untitled" %>
-              <% if(post.lang !== 'en'){ %>
-              -- <%- post.lang %>
-              <% } %>
             </h2>
             <% if (post.subtitle && post.subtitle.length) { %>
             <h3 class="post-subtitle">
