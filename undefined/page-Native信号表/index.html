@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/page-cry/">
+  <link rel="canonical" href="http://yoursite-url/undefined/page-Native信号表/">
   <title>
     
-      你可以哭泣，但不要放弃 - 深南村长
+      Native 信号表（部分） - 深南村长
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -311,22 +311,22 @@
     <style type="text/css">
       .body--light {
         /* intro-header */
-        --intro-header-background-image-url-home: url('/img/header_img/index_new_bg.png');
-        --intro-header-background-image-url-post: url('/img/header_img/lml_bg.png');
-        --intro-header-background-image-url-page: url('//img/header_img/lml_bg.png');
+        --intro-header-background-image-url-home: url('/img/index/index_bg.webp');
+        --intro-header-background-image-url-post: url('/img/header_img/tag_bg.png');
+        --intro-header-background-image-url-page: url('//img/header_img/tag_bg.png');
       }
 
       .body--dark {
-        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/index_new_bg.png');
-        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.png');
-        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.png');
+        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/index/index_bg.webp');
+        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tag_bg.png');
+        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/tag_bg.png');
       }
 
       header.intro-header {
         
           /*post*/
           background-image: var(--intro-header-background-image-url-post);
-          /* background-image: url('/img/header_img/lml_bg.png'); */
+          /* background-image: url('/img/header_img/tag_bg.png'); */
           
       }
 
@@ -352,23 +352,23 @@
                     <div class="post-heading">
                       <div class="tags">
                         
-                          <a class="tag" href="/tags/#心灵鸡汤" title="心灵鸡汤">
-                            心灵鸡汤
+                          <a class="tag" href="/tags/#笔记" title="笔记">
+                            笔记
                           </a>
                           
                       </div>
                       <h1>
-                        你可以哭泣，但不要放弃
+                        Native 信号表（部分）
                       </h1>
                       <h2 class="subheading">
-                        你可以跌倒，但是不要爬不起 ...
+                        描述对应信号代表的含义，协助问题排查
                       </h2>
                       <span>
                         作者： 深南村长
                       </span>
                       <br>
                       <span>
-                        时间：2020-04-17
+                        时间：2022-09-24
                       </span>
                       <br>
                       
@@ -381,7 +381,7 @@
                         <br>
                         <span>
                           字数： <span>
-                            13
+                            70
                           </span> 字
                         </span>
                         <br>
@@ -444,7 +444,68 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="这里就可以写文章"><a href="#这里就可以写文章" class="headerlink" title="这里就可以写文章"></a>这里就可以写文章</h2><p>let do it ! <a href="">加油</a></p>
+        <h1>常见信号</h1>
+<table>
+<thead>
+<tr>
+<th>signal</th>
+<th>code</th>
+<th>describe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SIGILL</td>
+<td>4</td>
+<td>非法指令</td>
+</tr>
+<tr>
+<td>SIGTRAP</td>
+<td>5</td>
+<td>断点调试异常</td>
+</tr>
+<tr>
+<td>SIGABRT</td>
+<td>6</td>
+<td>异常退出</td>
+</tr>
+<tr>
+<td>SIGBUS</td>
+<td>7</td>
+<td>总线错误</td>
+</tr>
+<tr>
+<td>SIGFPE</td>
+<td>8</td>
+<td>浮点错误</td>
+</tr>
+<tr>
+<td>SIGEGV</td>
+<td>11</td>
+<td>无效引用</td>
+</tr>
+<tr>
+<td>SIGPIPE</td>
+<td>13</td>
+<td>管道错误</td>
+</tr>
+<tr>
+<td>SIGTERM</td>
+<td>15</td>
+<td>终止运行</td>
+</tr>
+<tr>
+<td>SIGSTKFLT</td>
+<td>16</td>
+<td>栈异常</td>
+</tr>
+<tr>
+<td>SIGSYS</td>
+<td>31</td>
+<td>系统调用异常</td>
+</tr>
+</tbody>
+</table>
 
 
           <hr>
@@ -452,16 +513,11 @@
           <ul class="pager">
             
               <li class="previous">
-                <a href="/cn/page-readme/" data-toggle="tooltip" data-placement="top">&larr;
+                <a href="/undefined/page-咋们一起修改-class-文件/" data-toggle="tooltip" data-placement="top">&larr;
                   上一篇</a>
               </li>
               
                 
-                  <li class="next">
-                    <a href="/cn/page-aosp/" data-toggle="tooltip" data-placement="top">下一篇
-                      &rarr;</a>
-                  </li>
-                  
           </ul>
 
           
@@ -528,7 +584,7 @@
       repo: 'Primer1889.github.io',
       owner: 'Primer1889',
       admin: 'Primer1889',
-      id: 'Fri Apr 17 2020 02:34:17 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Sat Sep 24 2022 15:35:36 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 20,
       pagerDirection: 'last',
@@ -581,7 +637,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%BF%99%E9%87%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%86%99%E6%96%87%E7%AB%A0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">这里就可以写文章</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">常见信号</span></a></li></ol>
         
         </div>
       </aside>
@@ -606,8 +662,8 @@
               </h5>
               <div class="tags">
                 
-                  <a class="tag" href="/tags/#心灵鸡汤" title="心灵鸡汤">
-                    心灵鸡汤
+                  <a class="tag" href="/tags/#笔记" title="笔记">
+                    笔记
                   </a>
                   
               </div>
@@ -1151,22 +1207,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 
 	<link rel="stylesheet" href="/dist/APlayer.min.css">
 	<script src="./node_modules/pjax/pjax.js"></script>
