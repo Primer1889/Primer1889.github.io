@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/tags/">
+  <link rel="canonical" href="http://yoursite-url/undefined/你我字节码/">
   <title>
     
-      标签 - 深南村长
+      再探 jclasslib 修改字节码 - 深南村长
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -260,25 +260,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="tags/index.html">
-      
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -330,21 +312,21 @@
       .body--light {
         /* intro-header */
         --intro-header-background-image-url-home: url('/img/index/index_bg.webp');
-        --intro-header-background-image-url-post: url('img/header_img/tag_new_bg.png');
-        --intro-header-background-image-url-page: url('/img/header_img/tag_new_bg.png');
+        --intro-header-background-image-url-post: url('/img/220923_classmodify/ymclass_bg.png');
+        --intro-header-background-image-url-page: url('//img/220923_classmodify/ymclass_bg.png');
       }
 
       .body--dark {
         --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/index/index_bg.webp');
-        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/tag_new_bg.png');
-        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tag_new_bg.png');
+        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/220923_classmodify/ymclass_bg.png');
+        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/220923_classmodify/ymclass_bg.png');
       }
 
       header.intro-header {
         
-          /*page*/
-          background-image: var(--intro-header-background-image-url-page);
-          /* background-image: url('/img/header_img/tag_new_bg.png'); */
+          /*post*/
+          background-image: var(--intro-header-background-image-url-post);
+          /* background-image: url('/img/220923_classmodify/ymclass_bg.png'); */
           
       }
 
@@ -367,16 +349,54 @@
               <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                   
-                      <div class="site-heading">
-                        <h1>
-                          标签
-                        </h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">
-                          每篇文章总是围绕重点展开，工作也有重点，生活也是。
-                        </span>
+                    <div class="post-heading">
+                      <div class="tags">
+                        
+                          <a class="tag" href="/tags/#字节码" title="字节码">
+                            字节码
+                          </a>
+                          
                       </div>
+                      <h1>
+                        再探 jclasslib 修改字节码
+                      </h1>
+                      <h2 class="subheading">
+                        夏天的海边，再美不过落日余晖
+                      </h2>
+                      <span>
+                        作者： 深南村长
+                      </span>
+                      <br>
+                      <span>
+                        时间：2022-09-25
+                      </span>
+                      <br>
                       
+                        <!-- WordCount start -->
+                        <span>
+                          时长： <span>
+                            7
+                          </span> 分钟
+                        </span>
+                        <br>
+                        <span>
+                          字数： <span>
+                            2k
+                          </span> 字
+                        </span>
+                        <br>
+                        <!-- WordCount end -->
+                        
+                          
+                            <!-- 不蒜子统计 start -->
+                            <span id="busuanzi_container_page_pv">
+                              次数： <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                            
+
+                    </div>
+                    
                 </div>
               </div>
             </div>
@@ -416,84 +436,329 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <!-- 标签列表 -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-      <!-- 标签云 -->
-      <div id='tag_cloud' class="tags">
-        
-        <a href="#字节码" title="字节码" rel="2">字节码</a>
-        
-        <a href="#笔记" title="笔记" rel="1">笔记</a>
-        
-      </div>
+        <h1 id="从-jclasslib-认识-Hello-world"><a href="#从-jclasslib-认识-Hello-world" class="headerlink" title="从 jclasslib 认识 Hello world"></a>从 jclasslib 认识 Hello world</h1><p>那年，再熟悉不过的 Hello world。</p>
+<p>可能很多人的第一个 java 程序都从‘你好世界’开始，从此踏上了一条<strong><em>不归路</em></strong>，多年以后（大概毕业半年），我以另一种方式重新认识它，这种方式叫<strong>字节码</strong>。</p>
+<blockquote>
+<p>Test.java</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> primer;</span><br><span class="line"></span><br><span class="line"><span class="comment">//比如 Test 类的组成：</span></span><br><span class="line"><span class="comment">//主版本号 + 常量池 + 访问标识 + 当前类签名 + 父类签名 + 接口集合 + 方法集合 + 字段集合 + 属性集合（仅列举部分）</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="comment">//方法一：&lt;init&gt;()V   【默认构造器】</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//方法二：main([Ljava/lang/String;)V   【main 方法、V 表示 void、L 表示数组、String 变成类的全路径】（仅列举部分；String 作为对象结尾必须是逗号）</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//比如 main 方法（仅列举部分）</span></span><br><span class="line">    <span class="comment">// 组成： </span></span><br><span class="line">    <span class="comment">//    - 方法名 + 方法签名 + 访问标识（main + ([Ljava/lang/String;)V + public static）</span></span><br><span class="line">    <span class="comment">//    - 异常表</span></span><br><span class="line">    <span class="comment">//    - 字节码【我们讨论的重点】</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>javac Test.java</code> 编译得到 Test.class 字节码文件</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6fd777b8a85ec867a59fdb307082595b.png" alt="image.png"></p>
+<p>也可以直接使用 <code>java &lt;类全路径&gt;</code> 直接运行查看效果，类全路径：包名 + 类名</p>
+<p><strong>举个例子：</strong></p>
+<p>Test 启动类的包名是 <code>package primer</code>，我本地目录是<code>primer/primer/Test.class</code></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ec87c8988833fd4f5d34a8f9edb76d8c.png" alt="image.png"></p>
+<p>1、在 class 所在目录下运行 ❌</p>
+<p>如果你在 Test.class 同级目录下执行命令运行，可惜报错了，大概意思是你的 Test 类全路径不对，当存在主类存在包名时，不能在当前 class 文件所在路径执行命令，需要在包名所在目录执行，否则报错，java 命令认为在当前目录下找<strong><em>包名路径</em></strong>，如果文件夹存在，则继续根据包名往下查找，直到找到主类，否则抛出异常。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/421255941965168858b22ae04aebe4d6.png" alt="image.png"></p>
+<p>前面提到，直接执行字节码是这样 <strong><code>java &lt;类全路径&gt;</code></strong>，全路径是要包含包名在内，比如 <code>com.tencent.mmkv.MMKV</code>，如果 MMKV 类有执行入口，想要通过 java 命令执行它必须确保路径正确。<strong>JVM 在加载类过程中是如何确定唯一个类的？</strong>比如，有两个类名相同但包名（全路径）不同的 Test 类，JVM 通过<code>包名限定符 + 是否同一个虚拟机</code>唯一确定一个类（一般情况下，我们运行的程序只有一个虚拟机）</p>
+<p>2、在 class 启动类最外层包名的上一层目录运行 ☑️</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ec6fbd643ecb13cd555200dc4ab5fbd2.png" alt="image.png"></p>
+<h2 id="邂逅的-jclasslib"><a href="#邂逅的-jclasslib" class="headerlink" title="邂逅的 jclasslib"></a>邂逅的 jclasslib</h2><p>这里开始涉及到具体的 JVM 指令，先奉上官方文档 <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/specs/jvms/se16/html/jvms-6.html#jvms-6.5.getstatic">ORACLE - JVM 指令集 </a>，全部指令记住一般不会这么干，通常是用时查阅，熟能生巧；对于 jclasslib 工具可以右击跳转到官方文档特定指令位置<code>show JVM spec</code>。以上面的<code>Hello World</code>为例子进行操作。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/160147efe7c8029f9f254df0e0d853e1.png" alt="image.png"></p>
+<p><strong>1、修改字符串常量</strong></p>
+<p>先看 main 方法的 java 代码，输出的第一个字符串常量是 <code>Hello World</code></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/cceaaf6bd80b26ff3667900fc47cb4cc.png" alt="image.png"></p>
+<p>再看 main 方法的 class 字节码，也可以使用 javap 命令查看字节码</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/34699591dd1e5ae793d6b15d803951c0.png" alt="image.png"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">getstatic：     获取静态字段 out（System 类中的 out 声明是 `<span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> PrintStream out = <span class="keyword">null</span>;`）</span><br><span class="line">ldc：           从常量池中获取值并压入操作数栈（此处常量是 `Hello World`）</span><br><span class="line">invokevirtual： 类级别的方法调用（可以是通过类名调用方法 `System.out.println()`）</span><br><span class="line"><span class="keyword">new</span>：           创建 Hello 类的实例</span><br><span class="line">dup：           复制栈顶操作数</span><br><span class="line">invokespecial： 调用实例方法</span><br><span class="line">astore_1：      把创建的 Hello 对象存储到 hello 本地变量</span><br><span class="line">aload_1：       加载 hello 本地变量的对象</span><br><span class="line">invokevirtual： 调用实例方法</span><br><span class="line"><span class="keyword">return</span>：        方法退出</span><br></pre></td></tr></table></figure>
+<p>在工具上对字节码直接进行修改<code>ldc</code>读取的常量值，保存并重新编译运行（我在想一个疑惑：我修改的字符串之前在常量池中没有，是否在我修改并保存后会把这个字符串纳入常量池）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/76d48e2e9a414d6ec3651e6550891099.png" alt="image.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/61b1f79282b2c1a44d998b702f129ae1.png" alt="image.png"></p>
+<h1 id="跳跳虎：现在一起想想想"><a href="#跳跳虎：现在一起想想想" class="headerlink" title="跳跳虎：现在一起想想想"></a>跳跳虎：现在一起想想想</h1><p>在我们的记忆中，字面量相同的字符串常量在常量池中是仅存一份。如下代码<code>&quot;张三&quot;</code>字符串在常量池中有且只有一份，但是程序中多处引用，直接修改常量池中的值那么这两个输出的都会改变了，我希望只改变<code>name</code>的输出，保持原先<code>aliasName</code>的值。</p>
+<p>直接修改常量池，确实两个都受影响，不符合期望</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a49ef4afa4cd0c272c09965ce5d0d947.png" alt="image.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/1ca7b5055306fd77c67fd1674eac168d.png" alt="image.png"></p>
+<p>直接修改常量池不符合我们的期望，那如何操作满足需求呢？如果你有更好的版本欢迎评论。</p>
+<p>我只好妥协<code>创建一个新的字符串引用</code>，通过 jd-gui 把 class文件转换成 java 文件，修改完毕之后再 javac 编译成 class 文件然后运行；如果你有其他方法，欢迎评论。</p>
+<p>1、使用 JD-GUI 工具打开 class 文件，并导出为 java 文件<br>2、修改完毕，重新使用 javac 编译</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9f9269cbfec4b34850bee93a0a6b192d.png" alt="image.png"></p>
+<h2 id="修改-for-循环次数"><a href="#修改-for-循环次数" class="headerlink" title="修改 for 循环次数"></a>修改 for 循环次数</h2><p><strong>1、第一种类型的 for 循环</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a76f00397b0fce18876026f6829738f5.png" alt="image.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/7b81844c00d775820b56c6f0b9ac1961.png" alt="image.png"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">iconst_&lt;`n`&gt;：  把值压入操作数堆栈</span><br><span class="line">istore_&lt;`n`&gt;：  弹出并获取操作数堆栈栈顶顶的值，并将其值存储到本地变量</span><br><span class="line">iload_&lt;`n`&gt;：   从本地变量获取值</span><br><span class="line">if_icmp：       如果比较成功则执行后续指令</span><br><span class="line">dup：           复制栈顶操作数</span><br><span class="line">iinc `index` by `value`: 按照 value 自增</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>对于此种方式的 for 循环，我们可以修改自增量<code>value</code>来减少循环执行次数</p>
+<p><strong>2、第二种类型的 for 循环</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d5b54400c909e17de7eeac8fdbcbec4b.png" alt="image.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/67ea8692acc97de294a5fd5624d0496a.png" alt="image.png"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bipush：    将值压入到操作数堆栈</span><br></pre></td></tr></table></figure>
+<p>对于此种方式的 for 循环，我们可以修改<code>final int MAX_COUNT（bipush 的值）</code>来跳过或减少循环执行次数</p>
+<p><strong>3、第三种类型的 for 循环</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/bea551ae82ec1340deb4802f0d2d26a4.png" alt="image.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8c7203dfd3cd59c3eaefcb2c0f867dd3.png" alt="image.png"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">anewarray： 创建数组引用</span><br><span class="line">aastore：   把值存储到数组列表中</span><br></pre></td></tr></table></figure>
+<p>对于此种方式的 for 循环，我们可以修改<code>iinc</code>自增量<code>value</code>来减少循环执行次数</p>
+<h1 id="修改-smail-某个变量"><a href="#修改-smail-某个变量" class="headerlink" title="修改 smail 某个变量"></a>修改 smail 某个变量</h1><p>上述算是实现了如何简单修改 class 文件中的某个常量，十分简单。但是呢？有时候反编译 apk 我们是直接使用 <code>apktool</code> 工具，反编译得到的是 <code>smail</code> 代码，难不成还想把 <code>smail</code> 转换成 class 再修改，可麻烦了。</p>
+<h2 id="环境、工具准备"><a href="#环境、工具准备" class="headerlink" title="环境、工具准备"></a>环境、工具准备</h2><blockquote>
+<p>工欲善其，事必先利其器</p>
+</blockquote>
+<p>1、<a target="_blank" rel="noopener" href="https://ibotpeaches.github.io/Apktool/">apktool 下载</a><br>2、<a target="_blank" rel="noopener" href="https://github.com/skylot/jadx">JADX 反编译利器下载</a><br>3、<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">VSCode 下载</a><br>4、<a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ooooonly.smali2java">VSCode smali2Java 插件</a></p>
+<p>在 vscode 为 smali2Java 配置 jadx.bat 路径：<code>Decompile failed: The jadx executable path has not been configured</code></p>
+<p><strong>1、配置 vscode</strong></p>
+<p>1、找到 vscode 插件配置文件：<code>C:\Users\YTS\.vscode\extensions</code>，比如我本地的 smali2java 配置是在：<code>C:\Users\YTS\.vscode\extensions\ooooonly.smali2java-1.0.1\pachage.json</code></p>
+<p>2、找到 jadxPath：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/f55e99d21c69e4130e01c16b9f2bb3a3.png" alt="image.png"></p>
+<p><strong>2、获得 smail</strong></p>
+<p>当遇到 dex 反编译错误时候，可以使用参数 <code>--only-main-classes</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">java -jar apktool_2<span class="number">.6</span><span class="number">.1</span>.jar d &lt;apk 文件&gt; --only-main-classes</span><br><span class="line">````</span><br><span class="line"></span><br><span class="line">![image.png](https:<span class="comment">//img-blog.csdnimg.cn/img_convert/0148a4cc70f2c26b68184431306d67b4.png)</span></span><br><span class="line"></span><br><span class="line">![image.png](https:<span class="comment">//img-blog.csdnimg.cn/img_convert/b1241ca7c38bc50d143ffa67d80c5933.png)</span></span><br><span class="line"></span><br><span class="line">**<span class="number">3</span>、简约分析**</span><br><span class="line">我们修改一下 sayHello() 延时执行时间，目前是 <span class="number">1000</span> 毫秒，<span class="number">1000</span> 的十六进制是 x03e8，sayHello() 所在类是 GameDemoActivity；在 smail 代码中搜索类名、方法名、x03e8 等可定位代码；如果我想修改成延时 <span class="number">5000</span> 毫秒后执行，那把 <span class="number">5000</span>（x01388） 的十六进制替换掉 x03e8 即可。</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line"><span class="keyword">private</span> Handler mHandle = <span class="keyword">new</span> Handler();</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;invoke sayHello time = &quot;</span> + System.currentTimeMillis());</span><br><span class="line">    mHandle.postDelayed(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;execute sayHello time = &quot;</span> + System.currentTimeMillis());</span><br><span class="line">            System.out.println(<span class="string">&quot;你好，村长&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"><span class="number">2022</span>-<span class="number">05</span>-<span class="number">23</span> <span class="number">18</span>:<span class="number">14</span>:<span class="number">20.134</span> <span class="number">32431</span>-<span class="number">32431</span>/com.primer.comment I/System.out: invoke sayHello time = <span class="number">1653300860134</span></span><br><span class="line"><span class="number">2022</span>-<span class="number">05</span>-<span class="number">23</span> <span class="number">18</span>:<span class="number">14</span>:<span class="number">21.135</span> <span class="number">32431</span>-<span class="number">32431</span>/com.primer.comment I/System.out: execute sayHello time = <span class="number">1653300861135</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>smail 源码</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c3849a7c84f328e728c7c3ad6b929736.png" alt="image.png"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2022</span>-<span class="number">05</span>-<span class="number">23</span> <span class="number">18</span>:<span class="number">21</span>:<span class="number">48.473</span> <span class="number">1333</span>-<span class="number">1333</span>/com.primer.comment I/System.out: invoke sayHello time = <span class="number">1653301308473</span></span><br><span class="line"><span class="number">2022</span>-<span class="number">05</span>-<span class="number">23</span> <span class="number">18</span>:<span class="number">21</span>:<span class="number">53.478</span> <span class="number">1333</span>-<span class="number">1333</span>/com.primer.comment I/System.out: execute sayHello time = <span class="number">1653301313478</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>最后打包、签名</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java -jar apktool_2<span class="number">.6</span><span class="number">.1</span>.jar b &lt;打包目录&gt; </span><br><span class="line"></span><br><span class="line">apksigner sign --ks ****.jks --ks-key-alias &lt;别名&gt; --out &lt;新生成 apk&gt; &lt;待签名 apk&gt;</span><br></pre></td></tr></table></figure>
 
-      <!-- 标签列表 -->
-      
-      <div class="one-tag-list">
-        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="字节码">
-          <span class="tag-text">字节码</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/undefined/page-咋们一起修改-class-文件/">
-            <h2 class="post-title">
-              咋们一起修改 class 文件
-            </h2>
-            
-            <h3 class="post-subtitle">
-              修改第三方 jar 包满足当前需求，这是一种方式！
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/undefined/你我字节码/">
-            <h2 class="post-title">
-              再探 jclasslib 修改字节码
-            </h2>
-            
-            <h3 class="post-subtitle">
-              夏天的海边，再美不过落日余晖
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="笔记">
-          <span class="tag-text">笔记</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/undefined/page-Native信号表/">
-            <h2 class="post-title">
-              Native 信号表（部分）
-            </h2>
-            
-            <h3 class="post-subtitle">
-              描述对应信号代表的含义，协助问题排查
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
 
-    </div>
-  </div>
+          <hr>
+          <!-- Pager -->
+          <ul class="pager">
+            
+                
+                  <li class="next">
+                    <a href="/undefined/page-咋们一起修改-class-文件/" data-toggle="tooltip" data-placement="top">下一篇
+                      &rarr;</a>
+                  </li>
+                  
+          </ul>
+
+          
+            <!-- tip start -->
+            <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果你觉得有用，快来分享给你的小伙伴吧💗
+    
+  </p>
+</div>
+<!-- tip end -->
+
+              <!-- tip end -->
+              
+
+                
+                  <!-- Sharing Srtart -->
+                  <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
 </div>
 
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+                    <!-- Sharing End -->
+                    
+                      <hr>
+
+                      <!-- comments start -->
+                      <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'e06a5201a629f94218ec',
+      clientSecret: 'e103b1fc452e44b776fd2bf4ab46bff009f06fea',
+      repo: 'Primer1889.github.io',
+      owner: 'Primer1889',
+      admin: 'Primer1889',
+      id: 'Sun Sep 25 2022 23:11:20 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 20,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+                        <!-- comments end -->
+                        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%BB%8E-jclasslib-%E8%AE%A4%E8%AF%86-Hello-world"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">从 jclasslib 认识 Hello world</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%82%82%E9%80%85%E7%9A%84-jclasslib"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">邂逅的 jclasslib</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E8%B7%B3%E8%B7%B3%E8%99%8E%EF%BC%9A%E7%8E%B0%E5%9C%A8%E4%B8%80%E8%B5%B7%E6%83%B3%E6%83%B3%E6%83%B3"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">跳跳虎：现在一起想想想</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9-for-%E5%BE%AA%E7%8E%AF%E6%AC%A1%E6%95%B0"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">修改 for 循环次数</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9-smail-%E6%9F%90%E4%B8%AA%E5%8F%98%E9%87%8F"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">修改 smail 某个变量</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%8E%AF%E5%A2%83%E3%80%81%E5%B7%A5%E5%85%B7%E5%87%86%E5%A4%87"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">环境、工具准备</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+          <!-- Featured Tags -->
+          
+            <section>
+              <!-- no hr -->
+              <h5>
+                <a href="/tags/">
+                  个性标签
+                </a>
+              </h5>
+              <div class="tags">
+                
+                  <a class="tag" href="/tags/#字节码" title="字节码">
+                    字节码
+                  </a>
+                  
+              </div>
+            </section>
+            
+
+              <!-- Friends Blog -->
+              
+                <hr>
+                <h5>
+                  友情链接
+                </h5>
+                <ul class="list-inline">
+
+                  
+                    <li>
+                      <a style="text-decoration: none;" href="https://www.dalv666.top" target="_blank">
+                        打驴动漫
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a style="text-decoration: none;" href="https://www.gfysys1.com" target="_blank">
+                        干饭影视
+                      </a>
+                    </li>
+                    
+                </ul>
+                
+        </div>
+    </div>
+  </div>
+</article>
+
+
+
+  <!-- anchorjs start -->
+  <!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+    <!-- anchorjs end -->
+    
 
 		<!-- Footer (contains ThemeColor、viewer) -->
 		<!-- Footer -->

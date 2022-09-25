@@ -446,6 +446,49 @@
   <!-- top end -->
   
 
+  <a href="/undefined/你我字节码/">
+    <h2 class="post-title">
+      再探 jclasslib 修改字节码
+    </h2>
+    <h3 class="post-subtitle">
+      夏天的海边，再美不过落日余晖
+    </h3>
+    <div class="post-content-preview">
+      从 jclasslib 认识 Hello world那年，再熟悉不过的 Hello world。
+可能很多人的第一个 java 程序都从‘你好世界’开始，从此踏上了一条不归路，多年以后（大概毕业半年），我以另一种方式重新认识它，这种方式叫字节码。
+
+Test.java
+
+12345678910111213141516171819package primer;//比如 Test 类的组成：//......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    作者： 深南村长 
+    <br>
+    时间：2022-09-25
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#字节码" title="字节码">字节码</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
   <a href="/undefined/page-咋们一起修改-class-文件/">
     <h2 class="post-title">
       咋们一起修改 class 文件
@@ -455,16 +498,11 @@
     </h3>
     <div class="post-content-preview">
       你有遇到适用的场景吗
-
-你有没有遇到需要修改 class 文件重新打包的场景呢？
-巧得很，最近刚好遇到需要修改一个已存在的 jar 包以满足当前的需求，
-不过本次修改的是字符常量，尚未涉及到比较复杂的逻辑，
-记录下此刻，如何修改？如何快速修改完成需求？
-希望可以抛砖引玉，剩下的较为复杂的逻辑修改就交给你们了 :)
+你有没有遇到需要修改 class 文件重新打包的场景呢？巧得很，最近刚好遇到需要修改一个已存在的 jar 包以满足当前的需求，不过本次修改的是字符常量，尚未涉及到比较复杂的逻辑，记录下此刻，如何修改？如何快速修改完成需求？希望可以抛砖引玉，剩下的较为复杂的逻辑修改就交给你们了 :)
 举个例子：
-问题描述：
-1、某弹窗文本显示不正确（文字冗余，格式不符合要求）
-......
+问题描述：    1、某弹窗文本显示不正确（文字冗余，格式不符合要求）
+
+关......
     </div>
   </a>
   
@@ -623,7 +661,7 @@ SIGSYS
         <i>
           <span>
             <i>
-              2
+              3
             </i>
           </span>
         </i>
@@ -656,14 +694,14 @@ SIGSYS
     <div class="tags">
       
         
-          <a href="/tags/#笔记" title="笔记" rel="1">
-            笔记
+          <a href="/tags/#字节码" title="字节码" rel="2">
+            字节码
           </a>
           
             
         
-          <a href="/tags/#字节码" title="字节码" rel="1">
-            字节码
+          <a href="/tags/#笔记" title="笔记" rel="1">
+            笔记
           </a>
           
             
@@ -700,6 +738,12 @@ SIGSYS
   <div class="widget">
     <ul style="padding-left: 20px; list-style-type: circle;">
       
+        <a href="undefined/%E4%BD%A0%E6%88%91%E5%AD%97%E8%8A%82%E7%A0%81/">
+          <li>
+            再探 jclasslib 修改字节码
+          </li>
+        </a>
+        
         <a href="undefined/page-%E5%92%8B%E4%BB%AC%E4%B8%80%E8%B5%B7%E4%BF%AE%E6%94%B9-class-%E6%96%87%E4%BB%B6/">
           <li>
             咋们一起修改 class 文件
@@ -744,7 +788,7 @@ SIGSYS
   <style>
   </style>
   <div style="margin-left: -20px; padding-left:-20px;">
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/09/">September 2022</a><span class="archive-list-count">2</span></li></ul>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/09/">September 2022</a><span class="archive-list-count">3</span></li></ul>
   </div>
   
         <hr>
@@ -1222,7 +1266,22 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 
 	<link rel="stylesheet" href="/dist/APlayer.min.css">
 	<script src="./node_modules/pjax/pjax.js"></script>
