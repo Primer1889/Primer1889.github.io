@@ -98,7 +98,7 @@ friends:
 ## Doc:https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 ##
 gitalk:
-  enable: true
+  enable: false
   owner: 'Primer1889'
   admin: ['Primer1889']
   repo: 'Primer1889.github.io'

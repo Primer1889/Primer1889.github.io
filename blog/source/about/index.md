@@ -3,7 +3,7 @@ layout: "about"
 title: "About me!"
 date: 2016-04-21 04:48:33
 description: "那些年吹的牛逼，还有很多没有实现吧。"
-header-img: "img/scenery/about_me_bg.png"
+header-img: "img/220928/aboutme_bg.png"
 ---
 
 
