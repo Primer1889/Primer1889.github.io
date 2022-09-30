@@ -2,7 +2,7 @@
 title: Android 系统 Home（一）
 catalog: true
 date: 2022-09-29 22:57:44
-subtitle:
+subtitle: 启动桌面就是查找并启动 Activity
 header-img: /img/220928/android_sysserver_bg.png
 tags: AOSP
 sticky: 8
