@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="学习痕迹，留下痕迹可作为回忆的点滴"/>
+  <meta name="keyword" content="学习痕迹，深南村长"/>
+  <link rel="shortcut icon" href="/"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="http://yoursite-url/undefined/Android系统启动zgote进程/">
+  <title>
+    
+      Android 系统 zygote - 深南村长
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav style="background-color: rgba(255, 255, 255, 0); border: 0px;" class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div  style="background-color: rgba(255, 255, 255, 0);" class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+          <li>
+            <a href="/categories/">分类</a>
+          </li>
+          <li>
+            <a href="/tags/">标签</a>
+          </li>
+          <li>
+            <a href="/about/">关于</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+    <style type="text/css">
+      .body--light {
+        /* intro-header */
+        --intro-header-background-image-url-home: url('/img/index/index_bg.webp');
+        --intro-header-background-image-url-post: url('/img/220928/android_zygot_bg.png');
+        --intro-header-background-image-url-page: url('//img/220928/android_zygot_bg.png');
+      }
+
+      .body--dark {
+        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/index/index_bg.webp');
+        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/220928/android_zygot_bg.png');
+        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/220928/android_zygot_bg.png');
+      }
+
+      header.intro-header {
+        
+          /*post*/
+          background-image: var(--intro-header-background-image-url-post);
+          /* background-image: url('/img/220928/android_zygot_bg.png'); */
+          
+      }
+
+      #signature {
+          /*signature*/
+          background-image: url('/img/signature/nick-name.png');
+        }
+
+        
+    </style>
+    
+
+
+
+      
+        <header class="intro-header">
+          <!-- Signature -->
+          <div id="signature">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+                    <div class="post-heading">
+                      <div class="tags">
+                        
+                          <a class="tag" href="/tags/#AOSP" title="AOSP">
+                            AOSP
+                          </a>
+                          
+                      </div>
+                      <h1>
+                        Android 系统 zygote
+                      </h1>
+                      <h2 class="subheading">
+                        俗称 Java 世界的鼻祖
+                      </h2>
+                      <span>
+                        作者： 深南村长
+                      </span>
+                      <br>
+                      <span>
+                        时间：2022-09-29
+                      </span>
+                      <br>
+                      
+                        <!-- WordCount start -->
+                        <span>
+                          时长： <span>
+                            18
+                          </span> 分钟
+                        </span>
+                        <br>
+                        <span>
+                          字数： <span>
+                            4k
+                          </span> 字
+                        </span>
+                        <br>
+                        <!-- WordCount end -->
+                        
+                          
+                            <!-- 不蒜子统计 start -->
+                            <span id="busuanzi_container_page_pv">
+                              次数： <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                            
+
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+            <!-- waveoverlay start -->
+            <div class="preview-overlay">
+              <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+                  </path>
+                </defs>
+                <g class="preview-parallax">
+                  <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+                  <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+                  <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+                  <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+                </g>
+              </svg>
+            </div>
+            <!-- waveoverlay end -->
+            
+
+        </header>
+        
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <blockquote>
+<p>Read The Fucking Source Code. <code>—— Linus</code> <br>
+<br>
+站在’巨人’的肩膀上开始自己的旅途。<code>—— 佚名</code> <br>
+<br>
+愉快的周末，从打开💻开始，到骑行归来结束。<code>—— 佚名</code></p>
+</blockquote>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0f3f427cb339492aabc306bd0c8b3cb0~tplv-k3u1fbpfcp-watermark.image?" alt="WechatIMG53.jpeg"></p>
+<blockquote>
+<p>文章系列</p>
+</blockquote>
+<p><code>注：</code> 本系列文章源码基于 <code>Android 11-r21 master 分支</code></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7121229897074212877"> Android 系统启动 &lt;init&gt; 进程 [1]</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7123511970871345159"> Android 系统启动 &lt;zygote&gt; 进程 [2]</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7125453300660437029">Android 系统启动 &lt;Systemserver&gt; 服务 [3]</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7126437054002495495">Android 源码 &lt;package&gt; 了解 [4]</a></li>
+<li>🤔 敬请期待</li>
+</ul>
+<blockquote>
+<p>相关文件</p>
+</blockquote>
+<ul>
+<li>/system/core/init/init.cpp</li>
+<li>/system/etc/init/hw/init.rc  (源码工程没找到，是从手机上获取)</li>
+<li>/system/etc/init/hw/init.zygote32.rc （手机上获取）</li>
+<li>/system/etc/init/hw/init.zygote64_32.rc （手机上获取）</li>
+<li>/system/core/init/action.cpp</li>
+<li>/system/core/init/service.cpp</li>
+<li>/system/core/init/service_list.cpp</li>
+<li>frameworks/base/core/java/com/android/internal/os/ZygoteInit.java</li>
+<li>frameworks/base/core/java/com/android/internal/os/ZygoteServer.java</li>
+<li>frameworks/base/core/java/com/android/internal/os/Zygote.java</li>
+<li>frameworks/base/core/java/com/android/internal/os/WrapperInit.java</li>
+</ul>
+<h1>解析 hw/init.rc</h1>
+<blockquote>
+<p>init.rc 解析</p>
+</blockquote>
+<p>带着上文留下的疑惑继续看源码，之前提到执行到第二阶段时候进入了 loop 循环，似乎不知去向何处？第二阶段创建 init 进程中有一个重要的函数那就是 <code>LoadBootScripts(actionManager,serviceList)</code> 加载启动脚本，相当重要，与 <code>init.rc</code> 文件存在千丝万缕的关系，那么就要看看这里究竟在执行什么。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//init.cpp</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">LoadBootScripts</span><span class="params">(ActionManager&amp; action_manager, ServiceList&amp; service_list)</span> </span>&#123;</span><br><span class="line">    Parser parser = <span class="built_in">CreateParser</span>(action_manager, service_list);</span><br><span class="line">    std::string bootscript = <span class="built_in">GetProperty</span>(<span class="string">&quot;ro.boot.init_rc&quot;</span>, <span class="string">&quot;&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (bootscript.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        <span class="comment">//解析 init.rc，启动的关键文件</span></span><br><span class="line">        parser.<span class="built_in">ParseConfig</span>(<span class="string">&quot;/system/etc/init/hw/init.rc&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (!parser.<span class="built_in">ParseConfig</span>(<span class="string">&quot;/system/etc/init&quot;</span>)) &#123;</span><br><span class="line">            late_import_paths.<span class="built_in">emplace_back</span>(<span class="string">&quot;/system/etc/init&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        parser.<span class="built_in">ParseConfig</span>(<span class="string">&quot;/system_ext/etc/init&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (!parser.<span class="built_in">ParseConfig</span>(<span class="string">&quot;/vendor/etc/init&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">//vendor 厂商相关的初始化配置</span></span><br><span class="line">            late_import_paths.<span class="built_in">emplace_back</span>(<span class="string">&quot;/vendor/etc/init&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!parser.<span class="built_in">ParseConfig</span>(<span class="string">&quot;/odm/etc/init&quot;</span>)) &#123;</span><br><span class="line">            late_import_paths.<span class="built_in">emplace_back</span>(<span class="string">&quot;/odm/etc/init&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!parser.<span class="built_in">ParseConfig</span>(<span class="string">&quot;/product/etc/init&quot;</span>)) &#123;</span><br><span class="line">            late_import_paths.<span class="built_in">emplace_back</span>(<span class="string">&quot;/product/etc/init&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        parser.<span class="built_in">ParseConfig</span>(bootscript);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//init.cpp</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SecondStageMain</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//数据解析获得，开始构建 action 队列</span></span><br><span class="line">    ActionManager&amp; am = ActionManager::<span class="built_in">GetInstance</span>();</span><br><span class="line">    am.<span class="built_in">QueueBuiltinAction</span>(SetupCgroupsAction, <span class="string">&quot;SetupCgroups&quot;</span>);</span><br><span class="line">    .... etc</span><br><span class="line"></span><br><span class="line">    <span class="comment">//触发启动</span></span><br><span class="line">    am.<span class="built_in">QueueEventTrigger</span>(<span class="string">&quot;init&quot;</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//若处于充电模式将延迟初始化</span></span><br><span class="line">    std::string bootmode = <span class="built_in">GetProperty</span>(<span class="string">&quot;ro.bootmode&quot;</span>, <span class="string">&quot;&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (bootmode == <span class="string">&quot;charger&quot;</span>) &#123;</span><br><span class="line">        am.<span class="built_in">QueueEventTrigger</span>(<span class="string">&quot;charger&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        am.<span class="built_in">QueueEventTrigger</span>(<span class="string">&quot;late-init&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//init 进程进入无限轮训</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">        <span class="comment">//开始通过 command 命令执行 inir.rc 脚本各项服务以及初始化</span></span><br><span class="line">        <span class="keyword">if</span> (!(prop_waiter_state.<span class="built_in">MightBeWaiting</span>() || Service::<span class="built_in">is_exec_service_running</span>())) &#123;</span><br><span class="line">            am.<span class="built_in">ExecuteOneCommand</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!(prop_waiter_state.<span class="built_in">MightBeWaiting</span>() || Service::<span class="built_in">is_exec_service_running</span>())) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// If there&#x27;s more work to do, wake up again immediately.</span></span><br><span class="line">        <span class="keyword">if</span> (am.<span class="built_in">HasMoreCommands</span>())</span><br><span class="line">            epoll_timeout = <span class="number">0</span>ms;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在 Android 11 上，init.rc 文件在<code>/system/etc/init/hw/init.rc</code></p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/92ab7d4ccd7a4118a1f705928d97c212~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>这是在小米手机找的，看看内容，rc 文件被视为 Android 初始化语言，也有一定的语法，可以参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/gufanyuan/p/9350130.html">https://www.cnblogs.com/gufanyuan/p/9350130.html</a></p>
+<p><strong>总结下 Android 初始化语言</strong></p>
+<ul>
+<li>action on 后携带一组命令</li>
+<li>trigger 触发器，确定何时执行命令</li>
+<li>service 当 init 退出时启动或重启</li>
+<li>options 进一步控制命令执行的方式和时间</li>
+<li>命令：on 每一行代表一条命令</li>
+<li>import 导入额外的 rc 文件需要解析</li>
+</ul>
+<p>下面简略看看 rc 文件：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0991aad99b524f9ebc147ce1fe075047~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  /system/etc/init/hw/init.rc</span></span><br><span class="line"></span><br><span class="line"># 小米系统，肯定也是有厂商自己的解析文件需要执行属于自己的进程</span><br><span class="line"><span class="meta"># import 指明导入其他配置文件需要解析</span></span><br><span class="line"># MIUI ADD:</span><br><span class="line"><span class="keyword">import</span> /init.miui.rc</span><br><span class="line"></span><br><span class="line"># 还记得 SecondStageMain actionManage 吗</span><br><span class="line"><span class="meta"># am.QueueEventTrigger(<span class="meta-string">&quot;early-init&quot;</span>);</span></span><br><span class="line">on early-init</span><br><span class="line">    # 一个守护进程，负责处理 uevent 消息</span><br><span class="line">    start ueventd</span><br><span class="line">    <span class="meta"># apex 服务于系统模块安装</span></span><br><span class="line">    exec_start apexd-bootstrap</span><br><span class="line"></span><br><span class="line"># 触发所有 action</span><br><span class="line"><span class="meta"># am.QueueEventTrigger(<span class="meta-string">&quot;init&quot;</span>);</span></span><br><span class="line">on init</span><br><span class="line">    # 创建 stdio 标准输入输出链接</span><br><span class="line">    symlink /proc/self/fd/<span class="number">0</span> /dev/stdin</span><br><span class="line">    # 给 sdcard 更改权限</span><br><span class="line">    chmod <span class="number">0770</span> /config/sdcardfs</span><br><span class="line">    </span><br><span class="line">    # 启动服务</span><br><span class="line">    # 系统服务，越来越接近应用层了</span><br><span class="line">    start servicemanager</span><br><span class="line">    <span class="meta"># hw——hardware，硬件服务</span></span><br><span class="line">    start hwservicemanager</span><br><span class="line">    #供应商服务</span><br><span class="line">    start vndservicemanager</span><br><span class="line">    <span class="meta"># init action 就执行到这，中间省略很多命令，这里只是抽取几个，点到为止</span></span><br><span class="line">    </span><br><span class="line"># 挂载文件系统以及核心服务</span><br><span class="line"><span class="meta"># am.QueueEventTrigger(<span class="meta-string">&quot;late-init&quot;</span>);</span></span><br><span class="line">on late-init</span><br><span class="line">    # 触发 fs：Vold 控制和管理外部存储的进程</span><br><span class="line">    trigger early-fs</span><br><span class="line"></span><br><span class="line">    # 重点来了⚠️⚠️⚠️</span><br><span class="line">    <span class="meta"># import /system/etc/init/hw/init.$&#123;ro.zygote&#125;.rc</span></span><br><span class="line">    <span class="meta"># zygote 进来了，常说的 Android 应用层的鼻祖</span></span><br><span class="line">    trigger zygote-start</span><br><span class="line">    </span><br><span class="line">    trigger early-boot</span><br><span class="line">    trigger boot</span><br><span class="line"></span><br><span class="line">on boot</span><br><span class="line">    # 启动 HAL 硬件抽象类服务</span><br><span class="line">    class_start hal</span><br><span class="line">    # 启动核心类服务</span><br><span class="line">    class_start core</span><br></pre></td></tr></table></figure>
+<h1>解析 zygote.rc</h1>
+<p>看上面截图，现在该执行<code>init.zygote32.rc、init.zygote64_32.rc</code>，继续往下看。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  /system/etc/init/hw/init.zygote32.rc</span></span><br><span class="line"><span class="comment">// zygote32 : 只有一个 32，那就是纯纯的为 32 位准备的</span></span><br><span class="line"></span><br><span class="line">service zygote /system/bin/app_process -Xzygote /system/bin --zygote --start-system-server</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">main</span></span></span><br><span class="line"><span class="class">    <span class="title">priority</span> -20</span></span><br><span class="line"><span class="class">    <span class="title">user</span> <span class="title">root</span></span></span><br><span class="line"><span class="class">    <span class="title">group</span> <span class="title">root</span> <span class="title">readproc</span> <span class="title">reserved_disk</span></span></span><br><span class="line"><span class="class">    <span class="title">socket</span> <span class="title">zygote</span> <span class="title">stream</span> 660 <span class="title">root</span> <span class="title">system</span></span></span><br><span class="line"><span class="class">    <span class="title">socket</span> <span class="title">usap_pool_primary</span> <span class="title">stream</span> 660 <span class="title">root</span> <span class="title">system</span></span></span><br><span class="line"><span class="class">    <span class="title">onrestart</span> <span class="title">exec_background</span> - <span class="title">system</span> <span class="title">system</span> -- /<span class="title">system</span>/<span class="title">bin</span>/<span class="title">vdc</span> <span class="title">volume</span> <span class="title">abort_fuse</span></span></span><br><span class="line"><span class="class">    <span class="title">onrestart</span> <span class="title">write</span> /<span class="title">sys</span>/<span class="title">power</span>/<span class="title">state</span> <span class="title">on</span></span></span><br><span class="line"><span class="class">    <span class="title">onrestart</span> <span class="title">restart</span> <span class="title">audioserver</span></span></span><br><span class="line"><span class="class">    <span class="title">onrestart</span> <span class="title">restart</span> <span class="title">cameraserver</span></span></span><br><span class="line"><span class="class">    <span class="title">onrestart</span> <span class="title">restart</span> <span class="title">media</span></span></span><br><span class="line"><span class="class">    <span class="title">onrestart</span> <span class="title">restart</span> <span class="title">netd</span></span></span><br><span class="line"><span class="class">    <span class="title">onrestart</span> <span class="title">restart</span> <span class="title">wificond</span></span></span><br><span class="line"><span class="class">    <span class="title">writepid</span> /<span class="title">dev</span>/<span class="title">cpuset</span>/<span class="title">foreground</span>/<span class="title">tasks</span></span></span><br><span class="line"><span class="class"></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  /system/etc/init/hw/init.zygote64_32.rc</span></span><br><span class="line"><span class="comment">// zygote64_32 : 前部分 64 指主要模式，后部分 32 指辅助模式；同样的也会有 zygote32_64.rc、zygote32.rc、zygote64.rc  etc.</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># service 是 Android 初始化话语言的一部分，指 init 启动或退出时重新启动服务</span></span><br><span class="line"># 显然，这里的服务名称就是‘家喻户晓’的 zygote 进程</span><br><span class="line">service zygote /system/bin/app_process64 -Xzygote /system/bin --zygote --start-system-server --socket-name=zygote</span><br><span class="line">    class main</span><br><span class="line">    priority <span class="number">-20</span>     ### 进程优先级 <span class="number">-20</span> ，值越小优先级越高，取值范围 [<span class="number">-20</span>,<span class="number">19</span>]</span><br><span class="line">    user root        ### 由 root 用户执行 </span><br><span class="line">    group root readproc reserved_disk</span><br><span class="line">    socket zygote stream <span class="number">660</span> root system</span><br><span class="line">    socket usap_pool_primary stream <span class="number">660</span> root system</span><br><span class="line">    onrestart exec_background - system system -- /system/bin/vdc volume abort_fuse</span><br><span class="line">    onrestart write /sys/power/state on</span><br><span class="line">    onrestart restart audioserver</span><br><span class="line">    onrestart restart cameraserver</span><br><span class="line">    onrestart restart media</span><br><span class="line">    onrestart restart netd</span><br><span class="line">    onrestart restart wificond</span><br><span class="line">    task_profiles ProcessCapacityHigh MaxPerformance</span><br><span class="line"></span><br><span class="line"># zygote_secondary ？？？？？</span><br><span class="line"># 你在看前面提到的‘主模式’和‘辅模式’，恰好 zygote 是 app_process64，zygote_secondary 是 app_process32，</span><br><span class="line"># 刚刚好对应上文件名 init.zygote64_32.rc 【主模式是<span class="number">64</span>，辅模式是<span class="number">32</span>】</span><br><span class="line">service zygote_secondary /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload</span><br><span class="line">    class main</span><br><span class="line">    priority <span class="number">-20</span></span><br><span class="line">    user root</span><br><span class="line">    group root readproc reserved_disk</span><br><span class="line">    socket zygote_secondary stream <span class="number">660</span> root system</span><br><span class="line">    socket usap_pool_secondary stream <span class="number">660</span> root system</span><br><span class="line">    onrestart restart zygote</span><br><span class="line">    task_profiles ProcessCapacityHigh MaxPerformance</span><br></pre></td></tr></table></figure>
+<h1>创建 zygote Process</h1>
+<p>在第二阶段 SecondStageMain 初始化时候解析了 inir.rc，回到 main.cpp 看到 函数映射表 GetBuiltinFunctionMap 作为参数传进入 SubcontextMain 第四部分开始执行，接着看看执行流程。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//main.cpp</span></span><br><span class="line"><span class="keyword">return</span> <span class="built_in">SubcontextMain</span>(argc, argv, &amp;function_map);</span><br><span class="line"></span><br><span class="line"><span class="comment">//subcontext.cpp</span></span><br><span class="line"><span class="keyword">auto</span> subcontext_process = <span class="built_in">SubcontextProcess</span>(function_map, context, init_fd);</span><br><span class="line"></span><br><span class="line"><span class="comment">//subcontext.cpp</span></span><br><span class="line"><span class="built_in">SubcontextProcess</span>(<span class="keyword">const</span> BuiltinFunctionMap* function_map, std::string context, <span class="keyword">int</span> init_fd)</span><br><span class="line">: <span class="built_in">function_map_</span>(function_map), <span class="built_in">context_</span>(std::<span class="built_in">move</span>(context)), <span class="built_in">init_fd_</span>(init_fd)&#123;&#125;;</span><br><span class="line"><span class="comment">//通过构造函数，直接将函数映射表赋值给成员 function_map_</span></span><br><span class="line"><span class="keyword">const</span> BuiltinFunctionMap* function_map_;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在 SubcontextMain 中开始主循环</span></span><br><span class="line">subcontext_process.<span class="built_in">MainLoop</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">//主循环中准备执行命令</span></span><br><span class="line"><span class="built_in">RunCommand</span>(subcontext_command.<span class="built_in">execute_command</span>(), &amp;reply);</span><br><span class="line"></span><br><span class="line"><span class="comment">//映射表 function_map_ 被使用</span></span><br><span class="line"><span class="comment">//根据参数（命令）查找对应的内置函数</span></span><br><span class="line"><span class="keyword">auto</span> map_result = function_map_-&gt;<span class="built_in">Find</span>(args);</span><br><span class="line"><span class="comment">//找到了命令准备执行</span></span><br><span class="line">result = <span class="built_in">RunBuiltinFunction</span>(map_result-&gt;function, args, context_);</span><br><span class="line"></span><br><span class="line"><span class="comment">//构造参数，直接调用</span></span><br><span class="line"><span class="comment">//回想一下，映射表中是否有着一个 item</span></span><br><span class="line"><span class="comment">//&#123;&quot;class_start&quot;, &#123;1, 1, &#123;false, do_class_start&#125;&#125;&#125;</span></span><br><span class="line"><span class="comment">//do_class_start：内置函数被声明在 builtins.cpp 中，下面看看其实现</span></span><br><span class="line"><span class="keyword">auto</span> builtin_arguments = <span class="built_in">BuiltinArguments</span>(context);</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">function</span>(builtin_arguments);</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//builtins.cpp</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> Result&lt;<span class="keyword">void</span>&gt; <span class="title">do_class_start</span><span class="params">(<span class="keyword">const</span> BuiltinArguments&amp; args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (android::base::<span class="built_in">GetBoolProperty</span>(<span class="string">&quot;persist.init.dont_start_class.&quot;</span> + args[<span class="number">1</span>], <span class="literal">false</span>))</span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">    <span class="comment">//服务启动</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        1、ServiceList::GetInstance() 到底是什么东西啊？service 列表又是什么？</span></span><br><span class="line"><span class="comment">    还记得第二阶段初始化 SecondStageMain 中这段代码吗</span></span><br><span class="line"><span class="comment">    ServiceList&amp; sm = ServiceList::GetInstance();</span></span><br><span class="line"><span class="comment">    LoadBootScripts(am, sm); //这正是在解析 init.rc 文件，其中就包含 hw/init.rc</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">        2、可以认为 service 就是通过解析 init.rc 中的 service 获得的，此文件正好也导入 import hw/init.rc，其中包含 zygote 相关，</span></span><br><span class="line"><span class="comment">    进而继续解析 init.zygote.rc，zygote.rc 文件内容也会被解析到</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">ServiceList.GetInstance 就是 std::vector&lt;std::unique_ptr&lt;Service&gt;&gt; services_;</span></span><br><span class="line"><span class="comment">service-&gt;classenames() 就是 std::set&lt;std::string&gt; classnames_;</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">        3、创建 Service 的构造函数：</span></span><br><span class="line"><span class="comment">    Service::Service(const std::string&amp; name, unsigned flags, uid_t uid, gid_t gid,</span></span><br><span class="line"><span class="comment">       const std::vector&lt;gid_t&gt;&amp; supp_gids, int namespace_flags,</span></span><br><span class="line"><span class="comment">       const std::string&amp; seclabel, Subcontext* subcontext_for_restart_commands,</span></span><br><span class="line"><span class="comment">       const std::vector&lt;std::string&gt;&amp; args, bool from_apex)</span></span><br><span class="line"><span class="comment">       :  name_(name),</span></span><br><span class="line"><span class="comment">       classnames_(&#123;&quot;default&quot;&#125;),</span></span><br><span class="line"><span class="comment">        ... etc</span></span><br><span class="line"><span class="comment">     )&#123;&#125;</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; service : ServiceList::<span class="built_in">GetInstance</span>()) &#123;</span><br><span class="line">        <span class="comment">//参数的来源</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            1、反复查阅资料得知 args 就是 rc 文件中每个 service 的参数</span></span><br><span class="line"><span class="comment">        args[1] 自然是第二个参数</span></span><br><span class="line"><span class="comment">        看 hw/zygote.rc service 执行 zygote 命令前部分</span></span><br><span class="line"><span class="comment">        ...</span></span><br><span class="line"><span class="comment">        service zygote</span></span><br><span class="line"><span class="comment">          class main</span></span><br><span class="line"><span class="comment">          ...</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">            2、因此 args[1] 其实就是 main</span></span><br><span class="line"><span class="comment">        同样，我们看 hw/init.usb.rc 也有一个 service</span></span><br><span class="line"><span class="comment">        ...</span></span><br><span class="line"><span class="comment">        service adbd</span></span><br><span class="line"><span class="comment">           class core</span></span><br><span class="line"><span class="comment">           ...   </span></span><br><span class="line"><span class="comment">        adb 的使用与 adbd 可有很大的关系，adbd 是一个远程服务进程</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">            3、所以这里的意思是：</span></span><br><span class="line"><span class="comment">        根据参数名称去服务列表中查找是否存在，如果服务存在那么开始执行</span></span><br><span class="line"><span class="comment">        服务一般是以进程的形式存在，且很有可能是守护进程</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="keyword">if</span> (service-&gt;<span class="built_in">classnames</span>().<span class="built_in">count</span>(args[<span class="number">1</span>])) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">auto</span> result = service-&gt;<span class="built_in">StartIfNotDisabled</span>(); !result.<span class="built_in">ok</span>()) &#123;</span><br><span class="line">                <span class="built_in">LOG</span>(ERROR) &lt;&lt; <span class="string">&quot;Could not start service &#x27;&quot;</span> &lt;&lt; service-&gt;<span class="built_in">name</span>()</span><br><span class="line">                           &lt;&lt; <span class="string">&quot;&#x27; as part of class &#x27;&quot;</span> &lt;&lt; args[<span class="number">1</span>] &lt;&lt; <span class="string">&quot;&#x27;: &quot;</span> &lt;&lt; result.<span class="built_in">error</span>();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//service.cpp</span></span><br><span class="line"><span class="function">Result&lt;<span class="keyword">void</span>&gt; <span class="title">Service::StartIfNotDisabled</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!(flags_ &amp; SVC_DISABLED)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Start</span>();</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        flags_ |= SVC_DISABLED_START;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//service.cpp</span></span><br><span class="line"><span class="function">Result&lt;<span class="keyword">void</span>&gt; <span class="title">Service::Start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">pid_t</span> pid = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span> (namespaces_.flags) &#123;</span><br><span class="line">        pid = <span class="built_in">clone</span>(<span class="literal">nullptr</span>, <span class="literal">nullptr</span>, namespaces_.flags | SIGCHLD, <span class="literal">nullptr</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//就这？进程就被 fork 出来了？？？</span></span><br><span class="line">        pid = fork();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// pid 0 是 idle 进程，肯定不能</span></span><br><span class="line">    <span class="keyword">if</span> (pid == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">umask</span>(<span class="number">077</span>);</span><br><span class="line">        <span class="built_in">RunService</span>(override_mount_namespace, descriptors, std::<span class="built_in">move</span>(pipefd));</span><br><span class="line">        _exit(<span class="number">127</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//创建进程组</span></span><br><span class="line">    errno = -<span class="built_in">createProcessGroup</span>(proc_attr_.uid, pid_, use_memcg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>到此，通过查找服务列表创建了一堆进程，现在我们主要关注 <code>zygote</code>进程的创建，这时候间从 cpp 进入 Java</p>
+<h1>初始化 zygote</h1>
+<h2 id="预加载">预加载</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ZygoteInit.java</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ZygoteInit</span> &#123;</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 初始化主要做：</span></span><br><span class="line"><span class="comment">     * 1、完成预初始化</span></span><br><span class="line"><span class="comment">     * 2、创建 zygote 服务</span></span><br><span class="line"><span class="comment">     * 3、创建系统服务</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] argv)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//【1】完成预初始化</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            1、调用 ZygoteHooks.onBeginPreload(); ZygoteHooks 从 Dalvik 包引入，在 framework 下没有找到的源码应该是在别处了，预想是对 Dalvik 的初始化；预加载结束时也会调用 ZygoteHooks.onEndPreload();</span></span><br><span class="line"><span class="comment">            2、VMRuntime 为 Dalvik 预加载路径下的类 /system/etc/preloaded-classes、profilebootclasspath</span></span><br><span class="line"><span class="comment">            3、创建并缓存非启动类路径下的类加载器 /system/framework/android.hidl.base-V1.0-java.jar、/system/framework/android.hidl.manager-V1.0-java.jar (HIDL 接口定义语言 —— https://source.android.google.cn/devices/architecture/hidl?hl=zh-cn)</span></span><br><span class="line"><span class="comment">            4、加载资源，加载前先更新配置（比如当前设备分辨率、屏幕尺寸、语言），</span></span><br><span class="line"><span class="comment">        根据分辨率加载 drawable、颜色资源</span></span><br><span class="line"><span class="comment">            5、通过 native 加载为应用进程准备的 HAL 硬件抽象列表</span></span><br><span class="line"><span class="comment">            6、如果开启了 ro.zygote.disable_gl_preload，也通过 native 执行图形 GL 预加载</span></span><br><span class="line"><span class="comment">            7、通过 System.loadLibrary 加载共享库 android.lib、compiler_rt.lib、jnigraphics.lib</span></span><br><span class="line"><span class="comment">            8、准备 Hyphenator 环境，缓存字体</span></span><br><span class="line"><span class="comment">            9、加载 webviewchromium_loader.lib，准备 webview </span></span><br><span class="line"><span class="comment">            10、通过 AndroidKeyStoreProvider 安装 keystore 内容提供者  </span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="built_in">preload</span>(bootTimingsTraceLog);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//初始化 GC，并执行一次清理</span></span><br><span class="line">        ZygoteHooks.<span class="built_in">gcAndFinalize</span>()；</span><br><span class="line">        <span class="comment">//到这里 zygote 已经是【初始化完毕】</span></span><br><span class="line">        Zygote.<span class="built_in">initNativeState</span>(isPrimaryZygote)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//【2】创建 zygote 服务</span></span><br><span class="line">        ZygoteServer zygoteServer = null;</span><br><span class="line">        zygoteServer = <span class="keyword">new</span> <span class="built_in">ZygoteServer</span>(isPrimaryZygote);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//【3】创建系统服务</span></span><br><span class="line">        <span class="keyword">if</span> (startSystemServer) &#123;</span><br><span class="line">            <span class="comment">//fork，可见每一个系统服务都是独立的进程；ABI —— Application binary interface【参考链接】</span></span><br><span class="line">            <span class="comment">//在 Android 项目中对应的就是 ndk filter，如 arm64、x86  .etc</span></span><br><span class="line">            <span class="comment">//为支持不同平台，ndk filter 是能够配置多个的，所以是一个列表形式存在</span></span><br><span class="line">            Runnable r = forkSystemServer(abiList, zygoteSocketName, zygoteServer);</span><br><span class="line">            <span class="keyword">if</span> (r != null) &#123;</span><br><span class="line">                <span class="comment">//创建之后马上运行</span></span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">         &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="comment">// zygote 服务进入自己的世界轮训</span></span><br><span class="line">        caller = zygoteServer.<span class="built_in">runSelectLoop</span>(abiList);</span><br><span class="line">        <span class="keyword">if</span>(caller != null)&#123;</span><br><span class="line">            caller.<span class="built_in">run</span>();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="创建-zygote-Server">创建 zygote Server</h2>
+<p>服务主要还是通过 socket 实现，等待来自 Linux、unix 守护进程 (socket) 的消息，同时也负责子进程的创建。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ZygoteServer.java</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ZygoteServer</span> &#123;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//列举几个重要的成员</span></span><br><span class="line"><span class="comment">//用于监听 socket 连接</span></span><br><span class="line"><span class="keyword">private</span> LocalServerSocket mZygoteSocket;</span><br><span class="line"><span class="comment">//为 USAP 非专用应用进程池 服务</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> LocalServerSocket mUsapPoolSocket;</span><br><span class="line"></span><br><span class="line"><span class="built_in">ZygoteServer</span>(boolean isPrimaryZygote) &#123;</span><br><span class="line">        <span class="comment">//通过 native 调用获取</span></span><br><span class="line">        mUsapPoolEventFD = Zygote.<span class="built_in">getUsapPoolEventFD</span>();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//主 zygote</span></span><br><span class="line">        <span class="keyword">if</span> (isPrimaryZygote) &#123;</span><br><span class="line">            <span class="comment">//完成的 socket 名称需要和 ANDROID_SOCKET_ + socketname 拼接，</span></span><br><span class="line">            <span class="comment">//然后拿完整的名称去系统环境变量中查找获取文件描述符 fd —— file describe，实际是一个整型数值【参考链接】</span></span><br><span class="line">            mZygoteSocket = Zygote.<span class="built_in">createManagedSocketFromInitSocket</span>(Zygote.PRIMARY_SOCKET_NAME);</span><br><span class="line">            mUsapPoolSocket =</span><br><span class="line">                    Zygote.<span class="built_in">createManagedSocketFromInitSocket</span>(</span><br><span class="line">                            Zygote.USAP_POOL_PRIMARY_SOCKET_NAME);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123; <span class="comment">//辅 zygote</span></span><br><span class="line">            mZygoteSocket = Zygote.<span class="built_in">createManagedSocketFromInitSocket</span>(Zygote.SECONDARY_SOCKET_NAME);</span><br><span class="line">            mUsapPoolSocket =</span><br><span class="line">                    Zygote.<span class="built_in">createManagedSocketFromInitSocket</span>(</span><br><span class="line">                            Zygote.USAP_POOL_SECONDARY_SOCKET_NAME);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取 非专用应用进程池 配置，还是通过系统配置 SystemPropertice 获取</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            mUsapPoolSizeMax —— usap_pool_size_max</span></span><br><span class="line"><span class="comment">            mUsapPoolSizeMin —— usap_pool_size_min</span></span><br><span class="line"><span class="comment">            mUsapPoolRefillThreshold —— usap_refill_threshold</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="built_in">fetchUsapPoolPolicyProps</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//最重要的还是进入 poll 轮训【关于高并发 IO 多路复用，参考链接】</span></span><br><span class="line"><span class="function">Runnable <span class="title">runSelectLoop</span><span class="params">(String abiList)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">        <span class="comment">//每一次轮训且超过一分钟都更新 USAP 配置</span></span><br><span class="line">        fetchUsapPoolPolicyPropsWithMinInterval</span><br><span class="line"></span><br><span class="line">        <span class="comment">//系统调用 poll 处理文件描述符 fd</span></span><br><span class="line">        <span class="comment">//Os.poll 返回值0：表示处理超时或非阻塞状态没有可处理的文件描述符</span></span><br><span class="line">        pollReturnValue = Os.<span class="built_in">poll</span>(pollFDs, pollTimeoutMs);</span><br><span class="line">        </span><br><span class="line">        ... etc</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//还有一个需要关注的就是返回值，类型是 Runnable</span></span><br><span class="line">        <span class="comment">//这是在特殊情况下发生重置 USAP，command 的内容是：</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            fetchUsapPoolPolicyPropsIfUnfetched();</span></span><br><span class="line"><span class="comment">            ZygoteHooks.preFork();</span></span><br><span class="line"><span class="comment">            ZygoteHooks.postForkCommon();</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="keyword">final</span> Runnable command = <span class="built_in">fillUsapPool</span>(sessionSocketRawFDs, isPriorityRefill);</span><br><span class="line">        <span class="keyword">if</span> (command != null) &#123;</span><br><span class="line">            <span class="keyword">return</span> command;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="创建-System-Server">创建 System Server</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ZygoteInit.java</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    abiList —— ndl filter</span></span><br><span class="line"><span class="comment">    socketname —— zygote 进程名称</span></span><br><span class="line"><span class="comment">    zygoteServer —— 自然是 zygote 的主要服务</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Runnable <span class="title">forkSystemServer</span><span class="params">(String abiList, String socketName,</span></span></span><br><span class="line"><span class="function"><span class="params">                                             ZygoteServer zygoteServer)</span> </span>&#123;</span><br><span class="line">                                             </span><br><span class="line">    </span><br><span class="line">    <span class="comment">//启动参数</span></span><br><span class="line">    String[] args = &#123;</span><br><span class="line">                <span class="string">&quot;--setuid=1000&quot;</span>, <span class="comment">//linux 中不同 uid 可以代表拥有不同的权限</span></span><br><span class="line">                <span class="string">&quot;--setgid=1000&quot;</span>,</span><br><span class="line">                <span class="string">&quot;--setgroups=1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1018,1021,1023,&quot;</span></span><br><span class="line">                        + <span class="string">&quot;1024,1032,1065,3001,3002,3003,3005,3006,3007,3009,3010,3011,3012&quot;</span>,</span><br><span class="line">                <span class="string">&quot;--capabilities=&quot;</span> + capabilities + <span class="string">&quot;,&quot;</span> + capabilities,</span><br><span class="line">                <span class="string">&quot;--nice-name=system_server&quot;</span>,</span><br><span class="line">                <span class="string">&quot;--runtime-args&quot;</span>,</span><br><span class="line">                <span class="string">&quot;--target-sdk-version=&quot;</span> + VMRuntime.SDK_VERSION_CUR_DEVELOPMENT,</span><br><span class="line">                <span class="string">&quot;com.android.server.SystemServer&quot;</span>,</span><br><span class="line">     &#125;;</span><br><span class="line">     </span><br><span class="line"></span><br><span class="line">    <span class="comment">//省略参数构造过程</span></span><br><span class="line">    ZygoteArguments parsedArgs;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//创建服务进程，还是调用 native 方法</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        int pid = nativeForkSystemServer(</span></span><br><span class="line"><span class="comment">        uid, gid, gids, runtimeFlags, rlimits,</span></span><br><span class="line"><span class="comment">        permittedCapabilities, effectiveCapabilities);</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    pid = Zygote.forkSystemServer(</span><br><span class="line">        parsedArgs.mUid, parsedArgs.mGid,</span><br><span class="line">        parsedArgs.mGids,</span><br><span class="line">        parsedArgs.mRuntimeFlags,</span><br><span class="line">        null,</span><br><span class="line">        parsedArgs.mPermittedCapabilities,</span><br><span class="line">        parsedArgs.mEffectiveCapabilities);</span><br><span class="line">     </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        pid=0 则是子进程被创建</span></span><br><span class="line"><span class="comment">        pid=-1 则表示出错</span></span><br><span class="line"><span class="comment">        pid (非0值)创建父进程</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">if</span> (pid == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">//？？？还会有第二个 zygote 进程，这是什么操作？？？</span></span><br><span class="line">        <span class="comment">//看看官方描述：We determine this by comparing the device ABI list with this zygotes list. </span></span><br><span class="line">        <span class="comment">//            If this zygote supports all ABIs this device supports, there won&#x27;t be another zygote.</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">hasSecondZygote</span>(abiList)) &#123;</span><br><span class="line">            <span class="built_in">waitForSecondaryZygote</span>(socketName);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        zygoteServer.<span class="built_in">closeServerSocket</span>();</span><br><span class="line">        <span class="comment">//继续把参数分发给系统服务进程，这里做的事情比较多了</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            1、获取系统服务类路径 systemServerClassPath，首先还是从系统环境中读取Os.getenv(&quot;SYSTEMSERVERCLASSPATH&quot;)；当进程执行时 ART 将会处理此路径</span></span><br><span class="line"><span class="comment">            2、负责 zygote 的 native 初始化和 application 的执行</span></span><br><span class="line"><span class="comment">            3、这里无论先走那个分支，后面都会走到同一个方法调用：return RuntimeInit.applicationInit(targetSdkVersion, disabledCompatChanges, argv,</span></span><br><span class="line"><span class="comment">        classLoader);</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">            if (parsedArgs.mInvokeWith != null) &#123;</span></span><br><span class="line"><span class="comment">                WrapperInit.execApplication(parsedArgs.mInvokeWith,</span></span><br><span class="line"><span class="comment">                        parsedArgs.mNiceName, parsedArgs.mTargetSdkVersion,</span></span><br><span class="line"><span class="comment">                        VMRuntime.getCurrentInstructionSet(), null, args);</span></span><br><span class="line"><span class="comment">            &#125; else &#123;</span></span><br><span class="line"><span class="comment">                ClassLoader cl = getOrCreateSystemServerClassLoader();</span></span><br><span class="line"><span class="comment">                return ZygoteInit.zygoteInit(parsedArgs.mTargetSdkVersion,</span></span><br><span class="line"><span class="comment">                parsedArgs.mDisabledCompatChanges,</span></span><br><span class="line"><span class="comment">                parsedArgs.mRemainingArgs, cl);</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">handleSystemServerProcess</span>(parsedArgs);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//RuntimeInit.java</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">static</span> Runnable <span class="title">applicationInit</span><span class="params">(<span class="keyword">int</span> targetSdkVersion, <span class="keyword">long</span>[] disabledCompatChanges,</span></span></span><br><span class="line"><span class="function"><span class="params">        String[] argv, ClassLoader classLoader)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置运行目标版本</span></span><br><span class="line">    VMRuntime.<span class="built_in">getRuntime</span>().<span class="built_in">setTargetSdkVersion</span>(targetSdkVersion);</span><br><span class="line">    <span class="comment">//通过启动类名找到此类，由类加载器加载并调用其 main 方法</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">findStaticMain</span>(args.startClass, args.startArgs, classLoader);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//RuntimeInit.java</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">static</span> Runnable <span class="title">findStaticMain</span><span class="params">(String className, String[] argv,</span></span></span><br><span class="line"><span class="function"><span class="params">            ClassLoader classLoader)</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">    <span class="comment">//常规方法，只是执行 classloader</span></span><br><span class="line">    Class&lt;?&gt; cl = Class.forName(className, <span class="literal">true</span>, classLoader);</span><br><span class="line">    Method m = cl.<span class="built_in">getMethod</span>(<span class="string">&quot;main&quot;</span>, <span class="keyword">new</span> Class[] &#123; String[].class &#125;);</span><br><span class="line">    </span><br><span class="line">        <span class="comment">//因为当前是在 zygote 进程创建 SystemServer，在此流程中本次执行我们认为参数 className=&quot;com.android.internal.os.SystemServer&quot;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">MethodAndArgsCaller</span>(m, argv);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>到这里 SystemServer 已经创建完成，接下来是通过 <code>MethodAndArgsCaller</code> 方法执行其中的 <code>main</code> 方法，源码路径是<code>/frameworks/base/services/java/com/android/server/SystemServer.java</code>。</p>
+<p><strong>那么本节笔记到此，我们下周再见😊。</strong></p>
+<h1>附加</h1>
+<h2 id="参考链接">参考链接</h2>
+<ul>
+<li>Androi.bp：bp 文件，替换 .mk 的配置文，由 <a target="_blank" rel="noopener" href="https://github.com/palantir/blueprint">https://github.com/palantir/blueprint</a> 框架解析</li>
+<li><a target="_blank" rel="noopener" href="http://Android.mk">Android.mk</a>：mk 文件，Android 程序编译</li>
+<li>lmkd：low memory killer deamon 低内存终止守护进程</li>
+<li>Apex：Android pony express 解决较低级别系统模块的安装流程 <a target="_blank" rel="noopener" href="https://source.android.google.cn/devices/tech/ota/apex?hl=zh-cn">https://source.android.google.cn/devices/tech/ota/apex?hl=zh-cn</a></li>
+<li>syspro 文件：系统共享信息的属性配置文件，通常作为系统 API 实现 <a target="_blank" rel="noopener" href="https://source.android.google.cn/devices/architecture/sysprops-apis?hl=zh-cn#:~:text=%E4%B8%80%E4%B8%AA,Sysprop%20%E8%AF%B4%E6%98%8E%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E4%B8%80%E6%9D%A1%E5%B1%9E%E6%80%A7%E6%B6%88%E6%81%AF%EF%BC%8C%E7%94%A8%E6%9D%A5%E6%8F%8F%E8%BF%B0%E4%B8%80%E7%BB%84%E5%B1%9E%E6%80%A7%E3%80%82">https://source.android.google.cn/devices/architecture/sysprops-apis?hl=zh-cn#:~:text=一个,Sysprop 说明文件包含一条属性消息，用来描述一组属性。</a></li>
+<li>ABI：与 CPU 指令集相关 <a target="_blank" rel="noopener" href="https://developer.android.google.cn/ndk/guides/abis?hl=zh-cn">https://developer.android.google.cn/ndk/guides/abis?hl=zh-cn</a></li>
+<li>fd ：文件描述符 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/cscshi/p/15705033.html">https://www.cnblogs.com/cscshi/p/15705033.html</a></li>
+<li>Linux IO 多路复用：select、poll、epoll <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1005481">https://cloud.tencent.com/developer/article/1005481</a></li>
+<li>MTE：memory tagging extension  <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2003341#:~:text=Arm%20MTE%EF%BC%88%E5%86%85%E5%AD%98%E6%A0%87%E8%AE%B0%EF%BC%89%E4%BD%9C%E4%B8%BAArmv8.5%E6%8C%87%E4%BB%A4%E9%9B%86%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86%E5%BC%95%E5%85%A5%E3%80%82%20MTE%E7%8E%B0%E5%9C%A8%E5%86%85%E7%BD%AE%E4%BA%8EArm%20%E6%9C%80%E8%BF%91%E5%AE%A3%E5%B8%83%E7%9A%84%E7%AC%A6%E5%90%88Armv9%20%E7%9A%84%20CPU%20%E4%B8%AD%EF%BC%8C%E4%BE%8B%E5%A6%82,Cortex-X2%E3%80%81Cortex-A710%20%E5%92%8CCortex-A510%E3%80%82%20%E6%9C%AA%E6%9D%A5%E5%9F%BA%E4%BA%8EArmv9%20%E7%9A%84%20CPU%20%E4%B9%9F%E5%B0%86%E9%9B%86%E6%88%90%20MTE%E3%80%82"> 内存标签扩展 </a></li>
+<li>已加标记指针：<a target="_blank" rel="noopener" href="https://source.android.google.cn/devices/tech/debug/tagged-pointers?hl=zh-cn">https://source.android.google.cn/devices/tech/debug/tagged-pointers?hl=zh-cn</a></li>
+</ul>
+
+
+          <hr>
+          <!-- Pager -->
+          <ul class="pager">
+            
+              <li class="previous">
+                <a href="/undefined/Android系统启动systemserver进程/" data-toggle="tooltip" data-placement="top">&larr;
+                  上一篇</a>
+              </li>
+              
+                
+                  <li class="next">
+                    <a href="/undefined/Android系统启动init进程/" data-toggle="tooltip" data-placement="top">下一篇
+                      &rarr;</a>
+                  </li>
+                  
+          </ul>
+
+          
+            <!-- tip start -->
+            <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果你觉得有用，快来分享给你的小伙伴吧💗
+    
+  </p>
+</div>
+<!-- tip end -->
+
+              <!-- tip end -->
+              
+
+                
+                  <!-- Sharing Srtart -->
+                  <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+                    <!-- Sharing End -->
+                    
+                      <!-- <hr> -->
+
+                      <!-- comments start -->
+                      <!--  -->
+                        <!-- comments end -->
+                        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">解析 hw&#x2F;init.rc</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">解析 zygote.rc</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">创建 zygote Process</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">初始化 zygote</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%A2%84%E5%8A%A0%E8%BD%BD"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">预加载</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA-zygote-Server"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">创建 zygote Server</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA-System-Server"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">创建 System Server</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">附加</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">参考链接</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+          <!-- Featured Tags -->
+          
+            <section>
+              <!-- no hr -->
+              <h5>
+                <a href="/tags/">
+                  个性标签
+                </a>
+              </h5>
+              <div class="tags">
+                
+                  <a class="tag" href="/tags/#AOSP" title="AOSP">
+                    AOSP
+                  </a>
+                  
+              </div>
+            </section>
+            
+
+              <!-- Friends Blog -->
+              
+                <hr>
+                <h5>
+                  友情链接
+                </h5>
+                <ul class="list-inline">
+
+                  
+                    <li>
+                      <a style="text-decoration: none;" href="https://www.dalv666.top" target="_blank">
+                        打驴动漫
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a style="text-decoration: none;" href="https://www.gfysys1.com" target="_blank">
+                        干饭影视
+                      </a>
+                    </li>
+                    
+                </ul>
+                
+        </div>
+    </div>
+  </div>
+</article>
+
+
+
+  <!-- anchorjs start -->
+  <!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+    <!-- anchorjs end -->
+    
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+              
+
+                  
+
+                      
+
+                          
+
+                              
+
+                                  
+
+                                      
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          深南村长
+            2022
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+                            <!-- jQuery -->
+                            <script type="text/javascript" src="/js/jquery.min.js"></script>
+                            <!-- Bootstrap Core JavaScript -->
+                            <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+                            <!-- Custom Theme JavaScript -->
+                            <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+                            <!-- catalog -->
+                            <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+                            <!-- totop(rocket) -->
+                            <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+                            
+                              <!-- Busuanzi JavaScript -->
+                              <script async="async"
+                                src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                              
+
+                                
+                                  <!-- Scroll start -->
+                                  <script async="async" type="text/javascript"
+                                    src="/js/scroll.js"></script>
+                                  <!-- Scroll end -->
+                                  
+
+                                    
+                                      <!-- LangSelect start -->
+                                      <script type="text/javascript" src="/js/langselect.js"></script>
+                                      <!-- LangSelect end -->
+                                      
+
+                                        
+                                          <!-- Mouseclick -->
+                                          <script type="text/javascript" src="/js/mouseclick.js"
+                                            content=''
+                                            color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+                                          
+
+                                            
+                                              <!-- ribbon -->
+                                              <script type="text/javascript"
+                                                src="/js/ribbonDynamic.js"></script>
+                                              
+
+                                                
+
+                                                    
+
+                                                      
+
+                                                          
+                                                            <!-- viewer start -->
+                                                            <!-- viewer start (Picture preview) -->
+                                                            
+                                                                <script async="async" type="text/javascript"
+                                                                  src="/js/viewer/viewer.min.js"></script>
+                                                                <script async="async" type="text/javascript"
+                                                                  src="/js/viewer/pic-viewer.js"></script>
+                                                                
+
+                                                                  <!-- viewer end -->
+                                                                  
+
+                                                                    <script>
+                                                                      // async load function
+                                                                      function async(u, c) {
+                                                                        var d = document,
+                                                                          t = 'script',
+                                                                          o = d.createElement(t),
+                                                                          s = d.getElementsByTagName(t)[0];
+                                                                        o.src = u;
+                                                                        if (c) {
+                                                                          o.addEventListener('load', function (e) {
+                                                                            c(null, e);
+                                                                          }, false);
+                                                                        }
+                                                                        s.parentNode.insertBefore(o, s);
+                                                                      }
+
+                                                                      // fastClick.js
+                                                                      async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+                                                                        var $nav = document.querySelector("nav");
+                                                                        if ($nav)
+                                                                          FastClick.attach($nav);
+                                                                      }
+                                                                      )
+                                                                    </script>
+
+                                                                    <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+                                                                    <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+                                                                    <!-- jquery.tagcloud.js -->
+                                                                    <!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+		<!-- Search -->
+		
+		<div style="margin-top: 300px;" class="popup search-popup local-search-popup">
+  <span style="margin-left: 120px;" class="popup-btn-close">
+    退出搜索
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div style="padding-left: 100px;" class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	</body>
+
+	<link rel="stylesheet" href="/dist/APlayer.min.css">
+	<script src="./node_modules/pjax/pjax.js"></script>
+	<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+	<script type="text/javascript" src="/dist/music.js"></script>
+	<script src="https://myhkw.cn/api/player/166394977156" id="myhk" key="166394977156" m="1"></script>
+</html>
