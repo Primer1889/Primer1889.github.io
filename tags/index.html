@@ -373,7 +373,7 @@
                         </h1>
                         <!--<hr class="small">-->
                         <span class="subheading">
-                          每篇文章总是围绕重点展开，工作也有重点，生活也是。
+                          每篇文章总是围绕重点展开，工作也一样，生活也是。
                         </span>
                       </div>
                       
@@ -427,9 +427,13 @@
         
         <a href="#字节码" title="字节码" rel="2">字节码</a>
         
+        <a href="#AOSP" title="AOSP" rel="5">AOSP</a>
+        
         <a href="#笔记" title="笔记" rel="1">笔记</a>
         
         <a href="#SDK" title="SDK" rel="1">SDK</a>
+        
+        <a href="#刷机" title="刷机" rel="1">刷机</a>
         
       </div>
 
@@ -471,6 +475,75 @@
       </div>
       
       <div class="one-tag-list">
+        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="AOSP">
+          <span class="tag-text">AOSP</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/undefined/Android系统启动init进程/">
+            <h2 class="post-title">
+              Android 系统 Init
+            </h2>
+            
+            <h3 class="post-subtitle">
+              初始化意味着开始
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/undefined/Android系统启动systemserver进程/">
+            <h2 class="post-title">
+              Android 系统 Systemserver
+            </h2>
+            
+            <h3 class="post-subtitle">
+              启动服务、核心服务、其他服务
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/undefined/Android系统启动zgote进程/">
+            <h2 class="post-title">
+              Android 系统 zygote
+            </h2>
+            
+            <h3 class="post-subtitle">
+              俗称 Java 世界的鼻祖
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/undefined/Android系统桌面启动二/">
+            <h2 class="post-title">
+              Android 系统 Home（二）
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/undefined/Android系统桌面启动一/">
+            <h2 class="post-title">
+              Android 系统 Home（一）
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
         <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="笔记">
           <span class="tag-text">笔记</span>
         </span>
@@ -504,6 +577,27 @@
             
             <h3 class="post-subtitle">
               有时通过查看、修改第三方库能更好解决问题
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="刷机">
+          <span class="tag-text">刷机</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/undefined/设备信息获取检测/">
+            <h2 class="post-title">
+              Xposted 检测获取设备信息
+            </h2>
+            
+            <h3 class="post-subtitle">
+              拒绝应用不合理获取个人信息的行为
             </h3>
             
           </a>
@@ -979,22 +1073,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 
 	<link rel="stylesheet" href="/dist/APlayer.min.css">
 	<script src="./node_modules/pjax/pjax.js"></script>
