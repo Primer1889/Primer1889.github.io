@@ -9,27 +9,8 @@ sticky: 7
 categories:
 ---
 
-> Read The Fucking Source Code. `—— Linus` \
-> \
-> 站在'巨人'的肩膀上开始自己的旅途。`—— 佚名` \
-> \
-> 愉快的周末，从打开💻开始，到骑行归来结束。`—— 佚名`
 
-
-![WechatIMG53.jpeg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0f3f427cb339492aabc306bd0c8b3cb0~tplv-k3u1fbpfcp-watermark.image?)
-
-
-> 文章系列
-
-`注：` 本系列文章源码基于 `Android 11-r21 master 分支`
-
-- [ Android 系统启动 <init\> 进程 [1]](https://juejin.cn/post/7121229897074212877)
-- [ Android 系统启动 <zygote\> 进程 [2]](https://juejin.cn/post/7123511970871345159)
-- [Android 系统启动 <Systemserver\> 服务 [3]](https://juejin.cn/post/7125453300660437029)
-- [Android 源码 \<package> 了解 [4]](https://juejin.cn/post/7126437054002495495)
-- 🤔 敬请期待
-
-> 相关文件
+相关文件：
 - /system/core/init/init.cpp
 - /system/etc/init/hw/init.rc  (源码工程没找到，是从手机上获取)
 - /system/etc/init/hw/init.zygote32.rc （手机上获取）
@@ -43,11 +24,9 @@ categories:
 - frameworks/base/core/java/com/android/internal/os/WrapperInit.java
 
 
-# 解析 hw/init.rc 
+# 解析初始化配置文件 
 
-> init.rc 解析
-
-带着上文留下的疑惑继续看源码，之前提到执行到第二阶段时候进入了 loop 循环，似乎不知去向何处？第二阶段创建 init 进程中有一个重要的函数那就是 `LoadBootScripts(actionManager,serviceList)` 加载启动脚本，相当重要，与 `init.rc` 文件存在千丝万缕的关系，那么就要看看这里究竟在执行什么。
+初始化配置文件包括但不限于 init.rc、hw/init.rc。带着的疑惑继续看源码，之前提到执行到初始化第二阶段时 init 进程进入无限的轮询（loop），似乎不知去向何处？疑惑是在等待接收消息后再做处理，第二阶段中创建 init 进程中有一个重要的函数`LoadBootScripts(actionManager,serviceList)`——————加载启动脚本，相当重要，与`init.rc`文件存在千丝万缕的关系。
 
 ```cpp
 //init.cpp
@@ -114,13 +93,13 @@ void SecondStageMain(){
 }
 ```
 
-在 Android 11 上，init.rc 文件在`/system/etc/init/hw/init.rc`
+在 Android 11 上，init.rc 文件位于`/system/etc/init/hw/init.rc`
 
 ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/92ab7d4ccd7a4118a1f705928d97c212~tplv-k3u1fbpfcp-watermark.image?)
 
-这是在小米手机找的，看看内容，rc 文件被视为 Android 初始化语言，也有一定的语法，可以参考：https://www.cnblogs.com/gufanyuan/p/9350130.html
+这是我在小米手机找的，rc 文件被视为 Android 初始化语言，那肯定也有自己的语法或格式，可以参考：https://www.cnblogs.com/gufanyuan/p/9350130.html
 
-**总结下 Android 初始化语言**
+**Mark：**
 - action on 后携带一组命令
 - trigger 触发器，确定何时执行命令
 - service 当 init 退出时启动或重启
@@ -128,14 +107,13 @@ void SecondStageMain(){
 - 命令：on 每一行代表一条命令
 - import 导入额外的 rc 文件需要解析
 
-下面简略看看 rc 文件：
+看看 rc 文件：
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0991aad99b524f9ebc147ce1fe075047~tplv-k3u1fbpfcp-watermark.image?)
 
 ```cpp
 //  /system/etc/init/hw/init.rc
-
-# 小米系统，肯定也是有厂商自己的解析文件需要执行属于自己的进程
+# 小米系统，也有厂商自己的解析文件，需要执行属于自己的进程
 # import 指明导入其他配置文件需要解析
 # MIUI ADD:
 import /init.miui.rc
@@ -249,7 +227,7 @@ service zygote_secondary /system/bin/app_process32 -Xzygote /system/bin --zygote
 
 # 创建 zygote Process
 
-在第二阶段 SecondStageMain 初始化时候解析了 inir.rc，回到 main.cpp 看到 函数映射表 GetBuiltinFunctionMap 作为参数传进入 SubcontextMain 第四部分开始执行，接着看看执行流程。
+在初始化第二阶段 SecondStageMain 解析了 inir.rc，回到 main.cpp 知道 GetBuiltinFunctionMap 函数映射表作为参数传入 SubcontextMain，第四部分开始执行，接着看看执行流程。
 
 ```cpp
 //main.cpp
@@ -383,7 +361,8 @@ Result<void> Service::Start() {
 到此，通过查找服务列表创建了一堆进程，现在我们主要关注 `zygote`进程的创建，这时候间从 cpp 进入 Java
 
 # 初始化 zygote
-## 预加载
+## 预加载配置
+
 ```cpp
 //ZygoteInit.java
 public class ZygoteInit {
@@ -440,7 +419,7 @@ public class ZygoteInit {
 }
 ```
 
-## 创建 zygote Server
+## 创建 zygoteServer
 
 服务主要还是通过 socket 实现，等待来自 Linux、unix 守护进程 (socket) 的消息，同时也负责子进程的创建。
 
@@ -483,8 +462,6 @@ ZygoteServer(boolean isPrimaryZygote) {
     }
 }
 
-
-
 //最重要的还是进入 poll 轮训【关于高并发 IO 多路复用，参考链接】
 Runnable runSelectLoop(String abiList) {
 
@@ -512,7 +489,7 @@ Runnable runSelectLoop(String abiList) {
 }
 ```
 
-## 创建 System Server
+## 创建 SystemServer
 
 ```cpp
 //ZygoteInit.java
@@ -524,8 +501,6 @@ Runnable runSelectLoop(String abiList) {
 */
 private static Runnable forkSystemServer(String abiList, String socketName,
                                              ZygoteServer zygoteServer) {
-                                             
-    
     //启动参数
     String[] args = {
                 "--setuid=1000", //linux 中不同 uid 可以代表拥有不同的权限

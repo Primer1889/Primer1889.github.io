@@ -553,21 +553,13 @@ Android 系统启动 &lt;zygote&gt; ......
       俗称 Java 世界的鼻祖
     </h3>
     <div class="post-content-preview">
-      
-Read The Fucking Source Code. —— Linus 
+      相关文件：
 
-站在’巨人’的肩膀上开始自己的旅途。—— 佚名 
-
-愉快的周末，从打开💻开始，到骑行归来结束。—— 佚名
-
-
-
-文章系列
-
-注： 本系列文章源码基于 Android 11-r21 master 分支
-
- Android 系统启动 &lt;init&gt; 进程 [1]
- Android 系统启动 &lt;z......
+/system/core/init/init.cpp
+/system/etc/init/hw/init.rc  (源码工程没找到，是从手机上获取)
+/system/etc/init/hw/init.zygote32.rc （手机上获取）
+/system/etc/init/hw/init.zygote64_32.rc （手机上获取）
+/system/core/init/actio......
     </div>
   </a>
   
@@ -654,24 +646,29 @@ Read The Fucking Source Code. —— Linus 
       Android 系统 Init
     </h2>
     <h3 class="post-subtitle">
-      初始化意味着开始
+      本系列文章基于 Android 11-r21 master
     </h3>
     <div class="post-content-preview">
-      
-Read The Fucking Source Code. —— Linus 
+      设备启动简述
+1、BIOS 加载
 
-站在’巨人’的肩膀上开始自己的旅途。—— 佚名 
+加电自检（基本输出/输入系统 stdio）
 
-愉快的周末，从打开💻开始，到骑行归来结束。—— 佚名
+硬件自检POST
 
 
+外部存储设备启动顺序排序，下一个获得控制权的设备
+读取激活分区第一个扇区的 主引导记录（512 字节）
 
-文章系列
+负责分区读写合法性判断
+负责引导信息定位
+数据存储
 
-注： 本系列文章源码基于 Android 11-r21 master 分支
+调用操作系统的机器码
+分区表
 
- Android 系统启动 &lt;init&gt; 进程 [1]
- Android 系统启动 &lt;z......
+主分区是激活的，激活分区的第一个扇区是卷引导记录（告诉计算机操作系统在分区的位置-系统盘分区）
+当......
     </div>
   </a>
   
@@ -1037,14 +1034,14 @@ SIGSYS
     <div class="tags">
       
         
-          <a href="/tags/#笔记" title="笔记" rel="1">
-            笔记
+          <a href="/tags/#字节码" title="字节码" rel="2">
+            字节码
           </a>
           
             
         
-          <a href="/tags/#字节码" title="字节码" rel="2">
-            字节码
+          <a href="/tags/#笔记" title="笔记" rel="1">
+            笔记
           </a>
           
             
@@ -1055,14 +1052,14 @@ SIGSYS
           
             
         
-          <a href="/tags/#刷机" title="刷机" rel="1">
-            刷机
+          <a href="/tags/#SDK" title="SDK" rel="1">
+            SDK
           </a>
           
             
         
-          <a href="/tags/#SDK" title="SDK" rel="1">
-            SDK
+          <a href="/tags/#刷机" title="刷机" rel="1">
+            刷机
           </a>
           
             
