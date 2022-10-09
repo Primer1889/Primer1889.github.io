@@ -11,6 +11,7 @@ categories:
 
 
 相关文件：
+
 - /system/core/init/init.cpp
 - /system/etc/init/hw/init.rc  (源码工程没找到，是从手机上获取)
 - /system/etc/init/hw/init.zygote32.rc （手机上获取）
@@ -26,7 +27,7 @@ categories:
 
 # 解析初始化配置文件 
 
-初始化配置文件包括但不限于 init.rc、hw/init.rc。带着的疑惑继续看源码，之前提到执行到初始化第二阶段时 init 进程进入无限的轮询（loop），似乎不知去向何处？疑惑是在等待接收消息后再做处理，第二阶段中创建 init 进程中有一个重要的函数`LoadBootScripts(actionManager,serviceList)`——————加载启动脚本，相当重要，与`init.rc`文件存在千丝万缕的关系。
+初始化配置文件包括但不限于 init.rc、hw/init.rc。带着的疑惑继续看源码，之前提到执行到初始化第二阶段时 init 进程进入无限的轮询（loop），似乎不知去向何处？疑惑是在等待接收消息后再做处理，第二阶段中创建 init 进程中有一个重要的函数`LoadBootScripts(actionManager,serviceList)`，加载启动脚本的关键，相当重要，与`init.rc`文件存在千丝万缕的关系。
 
 ```cpp
 //init.cpp
@@ -99,7 +100,7 @@ void SecondStageMain(){
 
 这是我在小米手机找的，rc 文件被视为 Android 初始化语言，那肯定也有自己的语法或格式，可以参考：https://www.cnblogs.com/gufanyuan/p/9350130.html
 
-**Mark：**
+**mark：**
 - action on 后携带一组命令
 - trigger 触发器，确定何时执行命令
 - service 当 init 退出时启动或重启
@@ -597,7 +598,6 @@ protected static Runnable findStaticMain(String className, String[] argv,
 
 到这里 SystemServer 已经创建完成，接下来是通过 `MethodAndArgsCaller` 方法执行其中的 `main` 方法，源码路径是`/frameworks/base/services/java/com/android/server/SystemServer.java`。
 
-**那么本节笔记到此，我们下周再见😊。**
 
 # 附加
 

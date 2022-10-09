@@ -9,32 +9,7 @@ sticky: 9
 categories:
 ---
 
-
-
-![WechatIMG144.jpeg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4914afa929904b2ea3a66c9758a97c19~tplv-k3u1fbpfcp-watermark.image?)
-
-
-如果能够用一张图对逝去的一周留个痕迹。
-
-> Read The Fucking Source Code. `—— Linus` \
-> \
-> 站在'巨人'的肩膀上开始自己的旅途。`—— 佚名` \
-> \
-> 愉快的周末，从打开💻开始，到骑行归来结束。`—— 佚名`
-
-
-`注：` 本系列文章源码基于 `Android 11-r21 master 分支`
-
-- [Android 系统启动 \<init>进程 [1]](https://juejin.cn/post/7121229897074212877 "https://juejin.cn/post/7121229897074212877")
-- [Android 系统启动 \<zygote> 进程 [2]](https://juejin.cn/post/7123511970871345159 "https://juejin.cn/post/7123511970871345159")
-- [Android 系统启动 \<Systemserver> 服务 [3]](https://juejin.cn/post/7125453300660437029 "https://juejin.cn/post/7125453300660437029")
-- [Android 源码 \<package> 了解 [4]](https://juejin.cn/post/7126437054002495495 "https://juejin.cn/post/7126437054002495495")
-- [Android 源码 \<Activity> 桌面启动一[5]](https://juejin.cn/post/7131666908314599431) 
-- [Android 源码 \<Activity> 桌面启动二 [6] ](https://juejin.cn/post/7134256981296021512)
-- 敬请期待 🤔
-
-
-> 继篇 ——— Android 源码 \<Activity> 桌面启动一 [5]
+桌面启动类似 Activity 启动，接着上一章节继续查阅启动流程，启动限制、启动条件检查是重点，Activity 生命周期也会逐步回调给外部，这里只是粗略描述启动过程，除此之外还包括窗口的创建、绘制等等。
 
 # startActivityUnchecked
 
@@ -938,13 +913,4 @@ protected void onNewIntent(Intent intent) {
 }
 ```
 
-
-
 就到这里结束吧，看起来没那么像样。虽然是 `桌面启动`，后来越感觉像是 `Activity 启动`。~~都乱套了~~ ，可是，桌面不也是一个 activity 吗🤔️
-
-
-![89a4d9d2cddbe19944fce634088f750.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/496ab72c693e4198a932a0f05fe62a06~tplv-k3u1fbpfcp-watermark.image?)
-
-> 就到这吧，桌面启动顺带 Activity 启动（虽然 Activity 启动事实上还是有区别的）
-
-

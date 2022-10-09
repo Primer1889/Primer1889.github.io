@@ -10,46 +10,20 @@ categories:
 ---
 
 
-![WechatIMG137.jpeg](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6ca182987663476a8dfde6db1a21615b~tplv-k3u1fbpfcp-watermark.image?)
-
-> Read The Fucking Source Code. `—— Linus` \
-> \
-> 站在'巨人'的肩膀上开始自己的旅途。`—— 佚名` \
-> \
-> 愉快的周末，从打开💻开始，到骑行归来结束。`—— 佚名`
-
-
-`注：` 本系列文章源码基于 `Android 11-r21 master 分支`
-
-- [Android 系统启动 \<init>进程 [1]](https://juejin.cn/post/7121229897074212877 "https://juejin.cn/post/7121229897074212877")
-- [Android 系统启动 \<zygote> 进程 [2]](https://juejin.cn/post/7123511970871345159 "https://juejin.cn/post/7123511970871345159")
-- [Android 系统启动 \<Systemserver> 服务 [3]](https://juejin.cn/post/7125453300660437029 "https://juejin.cn/post/7125453300660437029")
-- [Android 源码 \<package> 了解 [4]](https://juejin.cn/post/7126437054002495495 "https://juejin.cn/post/7126437054002495495")
-- [Android 源码 \<Activity> 桌面启动一 [5] ](https://juejin.cn/post/7131666908314599431) 
-- Android 源码 \<Activity> 桌面启动二 [6]
-- 敬请期待 🤔
-
-
-
+# Ready go
 在系列文章中，上一章我们对 `package` 目录下的内容有了一定的了解，我们知道设备上的桌面其实就是一个`系统应用`，AOSP 原生有提供，但是厂商定制的 ROM 往往会自己重写或重新实现，扩展功能；那么继续 Android 系统启动思考往下走，我们是不是应该看看手机桌面是如何显示的———桌面程序是如何启动的？
-
-
-
-
-# [Launcher enter point]
 
 虽然我们知道桌面程序是`Launcher`，但是我们作为刚阅读源码的小白，**如何在源码中快速找到桌面程序启动的入口？** 这是一个可以思考的问题， 当然，站在‘巨人的肩膀’直接使用百度也是可以的，但这里我想到另外一种方式————`无障碍服务 Accessebility`；在平时开发中，无障碍服务除了满足项目需求应用于项目中外，还有一种就是利用该服务作为我们的辅助工具，提高开发效率，我个人最常用的就是`查看系统当前最顶部显示的 activity`。作为辅助手段，早已有成熟的软件工具，这里推荐两个工具。
 
-~~看看自己，废话一大堆，我写文章就这样，hai! 如果没有高山流水，也可以通过⌨️与屏幕对话，就当我是胡言乱语吧~~
 
 - 开发者助手
 - Android 开发工具箱
+- MT 文件管理器
 
 # systemReady
 
-我们知道，SystemServer 在被调用时先执行 `main` 函数，紧接着执行当前类的静态方法 `run`，然后分三个阶段启动 `启动服务、核心服务、其他服务`，最后进入 `Looper().loop` 循环忘不停歇的 ~~打工~~ 等待消息到来并处理。
+我们知道，SystemServer 在被调用时先执行 `main` 函数，紧接着执行当前类的静态方法 `run`，然后分三个阶段启动 `启动服务、核心服务、其他服务`，最后进入 `Looper().loop` 循环忘不停歇的 ~~打工~~ 等待消息到来并处理。启动服务是一部分，难道不做点别的吗？刚好在启动 **其他服务** 这里看到这一段注释：
 
-启动服务是一部分，难道不做点别的吗？刚好在启动 **其他服务** 这里看到这一段注释：
 ```
 // We now tell the activity manager it is okay to run third party
 // code.  It will call back into us once it has gotten to the state
@@ -141,7 +115,7 @@ mActivityManagerService.systemReady(() -> {
 
 # startHomeOnAllDisplays
 
-**我们想知道 startHomeOnAllDisplays 的具体实现在哪里？有谁执行的？不妨找找看。**
+我们想知道 startHomeOnAllDisplays 的具体实现在哪里？有谁执行的？不妨找找看。
 
 - ActivityManagerService#mAtmInternal.startHomeOnAllDisplays(currentUserId, "systemReady"); `AMS 中调用`
 - ActivityTaskManagerInternal#startHomeOnAllDisplays   `这是一个抽象类的抽象方法`
@@ -736,12 +710,7 @@ private boolean isActionRemovedForCallingPackage(@NonNull Intent intent, int cal
 
 ## shouldAbortBackgroundActivityStart
 
-          你好，我好，大家好 😊 
-
-
-![WechatIMG130.jpeg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/62b2ad34162d4d909a63e1e16a98b52d~tplv-k3u1fbpfcp-watermark.image?)
-
-```
+```java
 boolean shouldAbortBackgroundActivityStart(int callingUid, int callingPid,
         final String callingPackage, int realCallingUid, int realCallingPid,
         WindowProcessController callerApp, PendingIntentRecord originatingPendingIntent,
@@ -881,11 +850,6 @@ boolean shouldAbortBackgroundActivityStart(int callingUid, int callingPid,
 
 ## areBackgroundActivityStartsAllowed
 
-
-![WechatIMG136.jpeg](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bba4707700054738a508a8a6f1963074~tplv-k3u1fbpfcp-watermark.image?)
-
-略略略略略略！！！！
-
 ```java
 //BackgroundLaunchProcessController.java
 boolean areBackgroundActivityStartsAllowed(int pid, int uid, String packageName,
@@ -930,15 +894,11 @@ private int startActivityUnchecked(final ActivityRecord r, ActivityRecord source
         int startFlags, boolean doResume, ActivityOptions options, Task inTask,
         TaskFragment inTaskFragment, boolean restrictedBgActivity,
         NeededUriGrants intentGrants) {
-
-        //下周见😊
 }
 ```
 
-现在是周日、晚上六点半，是时候出去骑车了，续篇下周见 😊
 
-
-# [Reference]
+# Reference
 
 - 输入法控件 IME：https://developer.android.google.cn/guide/topics/text/creating-input-method?hl=zh-cn
 - [ 关于孤儿进程、僵尸进程的概念 ](https://baike.baidu.com/item/孤儿进程/16751450#:~:text=在操作系统领域中，孤儿进程指的是在其父进程执行完成或被终止后仍继续运行的一类进程%E3%80%82,这些孤儿进程将被init进程%20%28进程号为1%29所收养，并由init进程对它们完成状态收集工作%E3%80%82)
