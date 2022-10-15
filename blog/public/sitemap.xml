@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite-url/tags/index.html</loc>
+    
+    <lastmod>2022-10-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/undefined/%E6%88%91%E7%9A%84%E5%8D%95%E8%AF%8D%E6%9C%AC/</loc>
+    
+    <lastmod>2022-10-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/categories/index.html</loc>
+    
+    <lastmod>2022-10-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/undefined/%E6%88%91%E7%9A%84%E5%B7%A5%E5%85%B7/</loc>
+    
+    <lastmod>2022-10-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/undefined/%E6%AF%95%E4%B8%9A%E4%B8%80%E5%B9%B4/</loc>
     
     <lastmod>2022-10-15</lastmod>
@@ -10,20 +38,6 @@
   
   <url>
     <loc>http://yoursite-url/undefined/%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3/</loc>
-    
-    <lastmod>2022-10-10</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/tags/index.html</loc>
-    
-    <lastmod>2022-10-10</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/categories/index.html</loc>
     
     <lastmod>2022-10-10</lastmod>
     
@@ -145,6 +159,13 @@
   
   <url>
     <loc>http://yoursite-url/tags/AOSP/</loc>
+    <lastmod>2022-10-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-10-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
