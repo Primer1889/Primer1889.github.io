@@ -446,6 +446,100 @@
   <!-- top end -->
   
 
+  <a href="/undefined/毕业一年/">
+    <h2 class="post-title">
+      我的 BookMarks
+    </h2>
+    <h3 class="post-subtitle">
+      收藏从未停止，学习从未开始
+    </h3>
+    <div class="post-content-preview">
+      热修复介绍背景： dex 方法个数限制，最大不能超过 65536
+方案： 将编译好的 class 文件拆分为两个 dex 文件，运行时使用系统类加载器动态加载其他的 dex 文件；dex 文件拆分官方早有方案 multidex。
+原理： 使用 DexClassLoader 加载字节码元素，（通过反射）把字节码元素追加到 dexElements 数组；对于热修复，同名字节码文件只有第一个元素会......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    作者： 深南村长 
+    <br>
+    时间：2022-10-15
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#笔记" title="笔记">笔记</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/吾爱破解/">
+    <h2 class="post-title">
+      Android 源码之签名 Apksign
+    </h2>
+    <h3 class="post-subtitle">
+      应用签名 V1、V2、V3、V4
+    </h3>
+    <div class="post-content-preview">
+      预备知识
+apksig：签名源码工程
+apksigner：命令行签名工具
+签名 SchemeSigner，验证 SchemeVerifier
+签名类型：V1～V4
+签名算法：
+
+错误处理
+压缩文件格式异常（安装包本来就是一个压缩包）
+安装包格式异常
+没有找到安装包签名块异常
+签名能够支持的最小 Android 版本异常
+
+安装包结构附加我的单词本
+sinks：输入器
+sink：下沉、输入
+u......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    作者： 深南村长 
+    <br>
+    时间：2022-10-10
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#AOSP" title="AOSP">AOSP</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
   <a href="/undefined/Android系统桌面启动二/">
     <h2 class="post-title">
       Android 系统 Home（二）
@@ -455,8 +549,7 @@
     </h3>
     <div class="post-content-preview">
       桌面启动类似 Activity 启动，接着上一章节继续查阅启动流程，启动限制、启动条件检查是重点，Activity 生命周期也会逐步回调给外部，这里只是粗略描述启动过程，除此之外还包括窗口的创建、绘制等等。
-startActivityUnchecked
-1234567891011121314151617181920212223242526272829303132333435363738394......
+startActivityUnchecked12345678910111213141516171819202122232425262728293031323334353637383940......
     </div>
   </a>
   
@@ -494,9 +587,8 @@ startActivityUnchecked
       启动桌面就是查找并启动 Activity
     </h3>
     <div class="post-content-preview">
-      Ready go
-在系列文章中，上一章我们对 package 目录下的内容有了一定的了解，我们知道设备上的桌面其实就是一个系统应用，AOSP 原生有提供，但是厂商定制的 ROM 往往会自己重写或重新实现，扩展功能；那么继续 Android 系统启动思考往下走，我们是不是应该看看手机桌面是如何显示的———桌面程序是如何启动的？
-虽然我们知道桌面程序是Launcher，但是我们作为刚阅读源码的小......
+      Ready go在系列文章中，上一章我们对 package 目录下的内容有了一定的了解，我们知道设备上的桌面其实就是一个系统应用，AOSP 原生有提供，但是厂商定制的 ROM 往往会自己重写或重新实现，扩展功能；那么继续 Android 系统启动思考往下走，我们是不是应该看看手机桌面是如何显示的———桌面程序是如何启动的？
+虽然我们知道桌面程序是Launcher，但是我们作为刚阅读源码的小白......
     </div>
   </a>
   
@@ -620,26 +712,21 @@ startActivityUnchecked
       本系列文章基于 Android 11-r21 master
     </h3>
     <div class="post-content-preview">
-      设备启动简述
-1、BIOS 加载
+      设备启动简述1、BIOS 加载
 
 加电自检（基本输出/输入系统 stdio）
-
 硬件自检POST
 
 
 外部存储设备启动顺序排序，下一个获得控制权的设备
 读取激活分区第一个扇区的 主引导记录（512 字节）
-
 负责分区读写合法性判断
 负责引导信息定位
 数据存储
-
 调用操作系统的机器码
 分区表
-
 主分区是激活的，激活分区的第一个扇区是卷引导记录（告诉计算机操作系统在分区的位置-系统盘分区）
-当......
+当只有一个系......
     </div>
   </a>
   
@@ -677,12 +764,11 @@ startActivityUnchecked
       拒绝应用不合理获取个人信息的行为
     </h3>
     <div class="post-content-preview">
-      前言
-设备的个人信息（例如：联系人信息、短信内容等）属于用户隐私，违规获取个人信息被视为侵犯用户权益；在设备上获取个人信息一般需先获取到相应的权限才能进行获取，例如想获取相册图片，那么需要申请读写权限，用户同意权限申请之后可读取相册图片。应用存在违规获取个人信息的行为，不为罕见，何为违规行为？
+      前言设备的个人信息（例如：联系人信息、短信内容等）属于用户隐私，违规获取个人信息被视为侵犯用户权益；在设备上获取个人信息一般需先获取到相应的权限才能进行获取，例如想获取相册图片，那么需要申请读写权限，用户同意权限申请之后可读取相册图片。应用存在违规获取个人信息的行为，不为罕见，何为违规行为？
 个人理解：
 
 在用户不知情下获取个人信息。比如，在用户同意隐私政策前获取个人信息
-未向用户明确个人......
+未向用户明确个人信......
     </div>
   </a>
   
@@ -720,11 +806,8 @@ startActivityUnchecked
       有时通过查看、修改第三方库能更好解决问题
     </h3>
     <div class="post-content-preview">
-      遇到过这种场景吗
-什么时候要利用 smali 语言层面接入第三方 sdk ？一般都是使用 java 接口，一目了然，搞个 smali 不是没事找事？场景不同，在没有办法的时候这就是一种方法。
-programer A：   发你一个 apk 文件，帮我看下
-programer A：   因为我们没有原工程，只有一个 APK，我想把咋们的 sdk 接入到里面，怎么搞？
-programer B： ......
+      遇到过这种场景吗什么时候要利用 smali 语言层面接入第三方 sdk ？一般都是使用 java 接口，一目了然，搞个 smali 不是没事找事？场景不同，在没有办法的时候这就是一种方法。
+programer A：   发你一个 apk 文件，帮我看下programer A：   因为我们没有原工程，只有一个 APK，我想把咋们的 sdk 接入到里面，怎么搞？programer B：   应......
     </div>
   </a>
   
@@ -762,13 +845,12 @@ programer B： ......
       夏天的海边，再美不过落日余晖
     </h3>
     <div class="post-content-preview">
-      从 jclasslib 认识 Hello world
-那年，再熟悉不过的 Hello world。
+      从 jclasslib 认识 Hello world那年，再熟悉不过的 Hello world。
 可能很多人的第一个 java 程序都从‘你好世界’开始，从此踏上了一条不归路，多年以后（大概毕业半年），我以另一种方式重新认识它，这种方式叫字节码。
 
 Test.java
 
-12345678910111213141516171819package primer;//比如 Test 类的组成：/......
+12345678910111213141516171819package primer;//比如 Test 类的组成：//......
     </div>
   </a>
   
@@ -780,146 +862,6 @@ Test.java
   <div class="tags">
     
     <a href="/tags/#字节码" title="字节码">字节码</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/page-咋们一起修改-class-文件/">
-    <h2 class="post-title">
-      咋们一起修改 class 文件
-    </h2>
-    <h3 class="post-subtitle">
-      修改第三方 jar 包满足当前需求，这是一种方式！
-    </h3>
-    <div class="post-content-preview">
-      你有遇到适用的场景吗
-
-你有没有遇到需要修改 class 文件重新打包的场景呢？巧得很，最近刚好遇到需要修改一个已存在的 jar 包以满足当前的需求，不过本次修改的是字符常量，尚未涉及到比较复杂的逻辑，记录下此刻，如何修改？如何快速修改完成需求？希望可以抛砖引玉，剩下的较为复杂的逻辑修改就交给你们了 :)
-举个例子：
-问题描述：
-1、某弹窗文本显示不正确（文字冗余，格式不符合要求）
-
-关于描......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    作者： 深南村长 
-    <br>
-    时间：2022-09-25
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#字节码" title="字节码">字节码</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/page-Native信号表/">
-    <h2 class="post-title">
-      Native 信号表（部分）
-    </h2>
-    <h3 class="post-subtitle">
-      描述对应信号代表的含义，协助问题排查
-    </h3>
-    <div class="post-content-preview">
-      常见信号
-
-
-
-signal
-code
-describe
-
-
-
-
-SIGILL
-4
-非法指令
-
-
-SIGTRAP
-5
-断点调试异常
-
-
-SIGABRT
-6
-异常退出
-
-
-SIGBUS
-7
-总线错误
-
-
-SIGFPE
-8
-浮点错误
-
-
-SIGEGV
-11
-无效引用
-
-
-SIGPIPE
-13
-管道错误
-
-
-SIGTERM
-15
-终止运行
-
-
-SIGSTKFLT
-16
-栈异常
-
-
-SIGSYS
-3......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    作者： 深南村长 
-    <br>
-    时间：2022-09-24
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#笔记" title="笔记">笔记</a>
     
   </div>
   
@@ -931,6 +873,10 @@ SIGSYS
   <!-- Pager -->
   <ul class="pager">
     
+    
+    <li class="next">
+      <a href="/archives/2/">下一页 &rarr;</a>
+    </li>
     
   </ul>
 
@@ -972,7 +918,7 @@ SIGSYS
         <i>
           <span>
             <i>
-              10
+              12
             </i>
           </span>
         </i>
@@ -985,7 +931,7 @@ SIGSYS
         <i>
           <span>
             <i>
-              1
+              2
             </i>
           </span>
         </i>
@@ -1011,13 +957,13 @@ SIGSYS
           
             
         
-          <a href="/tags/#笔记" title="笔记" rel="1">
+          <a href="/tags/#笔记" title="笔记" rel="2">
             笔记
           </a>
           
             
         
-          <a href="/tags/#AOSP" title="AOSP" rel="5">
+          <a href="/tags/#AOSP" title="AOSP" rel="6">
             AOSP
           </a>
           
@@ -1067,6 +1013,18 @@ SIGSYS
   <div class="widget">
     <ul style="padding-left: 20px; list-style-type: circle;">
       
+        <a href="undefined/%E6%AF%95%E4%B8%9A%E4%B8%80%E5%B9%B4/">
+          <li>
+            我的 BookMarks
+          </li>
+        </a>
+        
+        <a href="undefined/%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3/">
+          <li>
+            Android 源码之签名 Apksign
+          </li>
+        </a>
+        
         <a href="undefined/%E8%AE%BE%E5%A4%87%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96%E6%A3%80%E6%B5%8B/">
           <li>
             Xposted 检测获取设备信息
@@ -1082,18 +1040,6 @@ SIGSYS
         <a href="undefined/Android%E7%B3%BB%E7%BB%9F%E6%A1%8C%E9%9D%A2%E5%90%AF%E5%8A%A8%E4%B8%80/">
           <li>
             Android 系统 Home（一）
-          </li>
-        </a>
-        
-        <a href="undefined/Android%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8systemserver%E8%BF%9B%E7%A8%8B/">
-          <li>
-            Android 系统 Systemserver
-          </li>
-        </a>
-        
-        <a href="undefined/Android%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8zgote%E8%BF%9B%E7%A8%8B/">
-          <li>
-            Android 系统 zygote
           </li>
         </a>
         
@@ -1129,7 +1075,7 @@ SIGSYS
   <style>
   </style>
   <div style="margin-left: -20px; padding-left:-20px;">
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/09/">September 2022</a><span class="archive-list-count">10</span></li></ul>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/10/">October 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/09/">September 2022</a><span class="archive-list-count">10</span></li></ul>
   </div>
   
         <hr>

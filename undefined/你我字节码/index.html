@@ -444,9 +444,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>从 jclasslib 认识 Hello world</h1>
-<p>那年，再熟悉不过的 Hello world。</p>
-<p>可能很多人的第一个 java 程序都从‘你好世界’开始，从此踏上了一条<em><strong>不归路</strong></em>，多年以后（大概毕业半年），我以另一种方式重新认识它，这种方式叫<strong>字节码</strong>。</p>
+        <h1 id="从-jclasslib-认识-Hello-world"><a href="#从-jclasslib-认识-Hello-world" class="headerlink" title="从 jclasslib 认识 Hello world"></a>从 jclasslib 认识 Hello world</h1><p>那年，再熟悉不过的 Hello world。</p>
+<p>可能很多人的第一个 java 程序都从‘你好世界’开始，从此踏上了一条<strong><em>不归路</em></strong>，多年以后（大概毕业半年），我以另一种方式重新认识它，这种方式叫<strong>字节码</strong>。</p>
 <blockquote>
 <p>Test.java</p>
 </blockquote>
@@ -460,13 +459,12 @@
 <p>Test 启动类的包名是 <code>package primer</code>，我本地目录是<code>primer/primer/Test.class</code></p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/ec87c8988833fd4f5d34a8f9edb76d8c.png" alt="image.png"></p>
 <p>1、在 class 所在目录下运行 ❌</p>
-<p>如果你在 Test.class 同级目录下执行命令运行，可惜报错了，大概意思是你的 Test 类全路径不对，当存在主类存在包名时，不能在当前 class 文件所在路径执行命令，需要在包名所在目录执行，否则报错，java 命令认为在当前目录下找<em><strong>包名路径</strong></em>，如果文件夹存在，则继续根据包名往下查找，直到找到主类，否则抛出异常。</p>
+<p>如果你在 Test.class 同级目录下执行命令运行，可惜报错了，大概意思是你的 Test 类全路径不对，当存在主类存在包名时，不能在当前 class 文件所在路径执行命令，需要在包名所在目录执行，否则报错，java 命令认为在当前目录下找<strong><em>包名路径</em></strong>，如果文件夹存在，则继续根据包名往下查找，直到找到主类，否则抛出异常。</p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/421255941965168858b22ae04aebe4d6.png" alt="image.png"></p>
-<p>前面提到，直接执行字节码是这样 <strong><code>java &lt;类全路径&gt;</code></strong>，全路径是要包含包名在内，比如 <code>com.tencent.mmkv.MMKV</code>，如果 MMKV 类有执行入口，想要通过 java 命令执行它必须确保路径正确。**JVM 在加载类过程中是如何确定唯一个类的？**比如，有两个类名相同但包名（全路径）不同的 Test 类，JVM 通过<code>包名限定符 + 是否同一个虚拟机</code>唯一确定一个类（一般情况下，我们运行的程序只有一个虚拟机）</p>
+<p>前面提到，直接执行字节码是这样 <strong><code>java &lt;类全路径&gt;</code></strong>，全路径是要包含包名在内，比如 <code>com.tencent.mmkv.MMKV</code>，如果 MMKV 类有执行入口，想要通过 java 命令执行它必须确保路径正确。<strong>JVM 在加载类过程中是如何确定唯一个类的？</strong>比如，有两个类名相同但包名（全路径）不同的 Test 类，JVM 通过<code>包名限定符 + 是否同一个虚拟机</code>唯一确定一个类（一般情况下，我们运行的程序只有一个虚拟机）</p>
 <p>2、在 class 启动类最外层包名的上一层目录运行 ☑️</p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/ec6fbd643ecb13cd555200dc4ab5fbd2.png" alt="image.png"></p>
-<h2 id="邂逅的-jclasslib">邂逅的 jclasslib</h2>
-<p>这里开始涉及到具体的 JVM 指令，先奉上官方文档 <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/specs/jvms/se16/html/jvms-6.html#jvms-6.5.getstatic">ORACLE - JVM 指令集 </a>，全部指令记住一般不会这么干，通常是用时查阅，熟能生巧；对于 jclasslib 工具可以右击跳转到官方文档特定指令位置<code>show JVM spec</code>。以上面的<code>Hello World</code>为例子进行操作。</p>
+<h2 id="邂逅的-jclasslib"><a href="#邂逅的-jclasslib" class="headerlink" title="邂逅的 jclasslib"></a>邂逅的 jclasslib</h2><p>这里开始涉及到具体的 JVM 指令，先奉上官方文档 <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/specs/jvms/se16/html/jvms-6.html#jvms-6.5.getstatic">ORACLE - JVM 指令集 </a>，全部指令记住一般不会这么干，通常是用时查阅，熟能生巧；对于 jclasslib 工具可以右击跳转到官方文档特定指令位置<code>show JVM spec</code>。以上面的<code>Hello World</code>为例子进行操作。</p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/160147efe7c8029f9f254df0e0d853e1.png" alt="image.png"></p>
 <p><strong>1、修改字符串常量</strong></p>
 <p>先看 main 方法的 java 代码，输出的第一个字符串常量是 <code>Hello World</code></p>
@@ -477,18 +475,15 @@
 <p>在工具上对字节码直接进行修改<code>ldc</code>读取的常量值，保存并重新编译运行（我在想一个疑惑：我修改的字符串之前在常量池中没有，是否在我修改并保存后会把这个字符串纳入常量池）</p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/76d48e2e9a414d6ec3651e6550891099.png" alt="image.png"></p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/61b1f79282b2c1a44d998b702f129ae1.png" alt="image.png"></p>
-<h1>跳跳虎：现在一起想想想</h1>
-<p>在我们的记忆中，字面量相同的字符串常量在常量池中是仅存一份。如下代码<code>&quot;张三&quot;</code>字符串在常量池中有且只有一份，但是程序中多处引用，直接修改常量池中的值那么这两个输出的都会改变了，我希望只改变<code>name</code>的输出，保持原先<code>aliasName</code>的值。</p>
+<h1 id="跳跳虎：现在一起想想想"><a href="#跳跳虎：现在一起想想想" class="headerlink" title="跳跳虎：现在一起想想想"></a>跳跳虎：现在一起想想想</h1><p>在我们的记忆中，字面量相同的字符串常量在常量池中是仅存一份。如下代码<code>&quot;张三&quot;</code>字符串在常量池中有且只有一份，但是程序中多处引用，直接修改常量池中的值那么这两个输出的都会改变了，我希望只改变<code>name</code>的输出，保持原先<code>aliasName</code>的值。</p>
 <p>直接修改常量池，确实两个都受影响，不符合期望</p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/a49ef4afa4cd0c272c09965ce5d0d947.png" alt="image.png"></p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/1ca7b5055306fd77c67fd1674eac168d.png" alt="image.png"></p>
 <p>直接修改常量池不符合我们的期望，那如何操作满足需求呢？如果你有更好的版本欢迎评论。</p>
 <p>我只好妥协<code>创建一个新的字符串引用</code>，通过 jd-gui 把 class文件转换成 java 文件，修改完毕之后再 javac 编译成 class 文件然后运行；如果你有其他方法，欢迎评论。</p>
-<p>1、使用 JD-GUI 工具打开 class 文件，并导出为 java 文件<br>
-2、修改完毕，重新使用 javac 编译</p>
+<p>1、使用 JD-GUI 工具打开 class 文件，并导出为 java 文件<br>2、修改完毕，重新使用 javac 编译</p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/9f9269cbfec4b34850bee93a0a6b192d.png" alt="image.png"></p>
-<h2 id="修改-for-循环次数">修改 for 循环次数</h2>
-<p><strong>1、第一种类型的 for 循环</strong></p>
+<h2 id="修改-for-循环次数"><a href="#修改-for-循环次数" class="headerlink" title="修改 for 循环次数"></a>修改 for 循环次数</h2><p><strong>1、第一种类型的 for 循环</strong></p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/a76f00397b0fce18876026f6829738f5.png" alt="image.png"></p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/7b81844c00d775820b56c6f0b9ac1961.png" alt="image.png"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">iconst_&lt;`n`&gt;：  把值压入操作数堆栈</span><br><span class="line">istore_&lt;`n`&gt;：  弹出并获取操作数堆栈栈顶顶的值，并将其值存储到本地变量</span><br><span class="line">iload_&lt;`n`&gt;：   从本地变量获取值</span><br><span class="line">if_icmp：       如果比较成功则执行后续指令</span><br><span class="line">dup：           复制栈顶操作数</span><br><span class="line">iinc `index` by `value`: 按照 value 自增</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -503,16 +498,11 @@
 <p><img src="https://img-blog.csdnimg.cn/img_convert/8c7203dfd3cd59c3eaefcb2c0f867dd3.png" alt="image.png"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">anewarray： 创建数组引用</span><br><span class="line">aastore：   把值存储到数组列表中</span><br></pre></td></tr></table></figure>
 <p>对于此种方式的 for 循环，我们可以修改<code>iinc</code>自增量<code>value</code>来减少循环执行次数</p>
-<h1>修改 smail 某个变量</h1>
-<p>上述算是实现了如何简单修改 class 文件中的某个常量，十分简单。但是呢？有时候反编译 apk 我们是直接使用 <code>apktool</code> 工具，反编译得到的是 <code>smail</code> 代码，难不成还想把 <code>smail</code> 转换成 class 再修改，可麻烦了。</p>
-<h2 id="环境、工具准备">环境、工具准备</h2>
-<blockquote>
+<h1 id="修改-smail-某个变量"><a href="#修改-smail-某个变量" class="headerlink" title="修改 smail 某个变量"></a>修改 smail 某个变量</h1><p>上述算是实现了如何简单修改 class 文件中的某个常量，十分简单。但是呢？有时候反编译 apk 我们是直接使用 <code>apktool</code> 工具，反编译得到的是 <code>smail</code> 代码，难不成还想把 <code>smail</code> 转换成 class 再修改，可麻烦了。</p>
+<h2 id="环境、工具准备"><a href="#环境、工具准备" class="headerlink" title="环境、工具准备"></a>环境、工具准备</h2><blockquote>
 <p>工欲善其，事必先利其器</p>
 </blockquote>
-<p>1、<a target="_blank" rel="noopener" href="https://ibotpeaches.github.io/Apktool/">apktool 下载</a><br>
-2、<a target="_blank" rel="noopener" href="https://github.com/skylot/jadx">JADX 反编译利器下载</a><br>
-3、<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">VSCode 下载</a><br>
-4、<a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ooooonly.smali2java">VSCode smali2Java 插件</a></p>
+<p>1、<a target="_blank" rel="noopener" href="https://ibotpeaches.github.io/Apktool/">apktool 下载</a><br>2、<a target="_blank" rel="noopener" href="https://github.com/skylot/jadx">JADX 反编译利器下载</a><br>3、<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">VSCode 下载</a><br>4、<a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ooooonly.smali2java">VSCode smali2Java 插件</a></p>
 <p>在 vscode 为 smali2Java 配置 jadx.bat 路径：<code>Decompile failed: The jadx executable path has not been configured</code></p>
 <p><strong>1、配置 vscode</strong></p>
 <p>1、找到 vscode 插件配置文件：<code>C:\Users\YTS\.vscode\extensions</code>，比如我本地的 smali2java 配置是在：<code>C:\Users\YTS\.vscode\extensions\ooooonly.smali2java-1.0.1\pachage.json</code></p>
@@ -608,7 +598,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">从 jclasslib 认识 Hello world</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%82%82%E9%80%85%E7%9A%84-jclasslib"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">邂逅的 jclasslib</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">跳跳虎：现在一起想想想</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9-for-%E5%BE%AA%E7%8E%AF%E6%AC%A1%E6%95%B0"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">修改 for 循环次数</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">修改 smail 某个变量</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%8E%AF%E5%A2%83%E3%80%81%E5%B7%A5%E5%85%B7%E5%87%86%E5%A4%87"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">环境、工具准备</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%BB%8E-jclasslib-%E8%AE%A4%E8%AF%86-Hello-world"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">从 jclasslib 认识 Hello world</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%82%82%E9%80%85%E7%9A%84-jclasslib"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">邂逅的 jclasslib</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E8%B7%B3%E8%B7%B3%E8%99%8E%EF%BC%9A%E7%8E%B0%E5%9C%A8%E4%B8%80%E8%B5%B7%E6%83%B3%E6%83%B3%E6%83%B3"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">跳跳虎：现在一起想想想</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9-for-%E5%BE%AA%E7%8E%AF%E6%AC%A1%E6%95%B0"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">修改 for 循环次数</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9-smail-%E6%9F%90%E4%B8%AA%E5%8F%98%E9%87%8F"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">修改 smail 某个变量</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%8E%AF%E5%A2%83%E3%80%81%E5%B7%A5%E5%85%B7%E5%87%86%E5%A4%87"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">环境、工具准备</span></a></li></ol></li></ol>
         
         </div>
       </aside>
