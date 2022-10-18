@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite-url/undefined/Android%E7%9B%AE%E5%BD%95/</loc>
+    <lastmod>2022-10-18</lastmod>
+  </url>
+  <url>
+    <loc>http://yoursite-url/undefined/%E5%AD%97%E8%8A%82%E7%A0%81Dalvik/</loc>
+    <lastmod>2022-10-17</lastmod>
+  </url>
+  <url>
     <loc>http://yoursite-url/undefined/class%E5%92%8Cdalvik%E5%AD%97%E8%8A%82%E7%A0%81/</loc>
     <lastmod>2022-10-16</lastmod>
   </url>
