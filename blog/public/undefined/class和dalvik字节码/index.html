@@ -142,7 +142,7 @@
   <link rel="canonical" href="http://yoursite-url/undefined/class和dalvik字节码/">
   <title>
     
-      字节码 Class &amp; Dalvik - 深南村长
+      字节码 Class - 深南村长
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -358,7 +358,7 @@
                           
                       </div>
                       <h1>
-                        字节码 Class &amp; Dalvik
+                        字节码 Class
                       </h1>
                       <h2 class="subheading">
                         
@@ -375,13 +375,13 @@
                         <!-- WordCount start -->
                         <span>
                           时长： <span>
-                            5
+                            8
                           </span> 分钟
                         </span>
                         <br>
                         <span>
                           字数： <span>
-                            1.6k
+                            2k
                           </span> 字
                         </span>
                         <br>
@@ -532,21 +532,101 @@ dcmpl —— double</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//静态方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">addB</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> i+j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//对应字节码</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">addB</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">int</span>)</span></span>;</span><br><span class="line">    descriptor: (II)I</span><br><span class="line">    flags: ACC_PUBLIC, ACC_STATIC</span><br><span class="line">    Code:</span><br><span class="line">      stack=<span class="number">2</span>, locals=<span class="number">2</span>, args_size=<span class="number">2</span></span><br><span class="line">         <span class="number">0</span>: iload_0</span><br><span class="line">         <span class="number">1</span>: iload_1</span><br><span class="line">         <span class="number">2</span>: iadd</span><br><span class="line">         <span class="number">3</span>: ireturn</span><br><span class="line">      LineNumberTable:</span><br><span class="line">        line <span class="number">13</span>: <span class="number">0</span></span><br></pre></td></tr></table></figure>
 <p>上述知识列举一小部分，更多详细内容可以参考官方文档，比如还有方法调用、创建类对象、创建数组、switch int、switch string、try 异常、throw 异常、finally 等。</p>
 <h2 id="class-文件格式">class 文件格式</h2>
-<h1>字节码 Dalvik</h1>
-<p>关于 dalvik 字节码：</p>
+<p><strong>1、基本组成结构</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">ClassFile &#123;</span><br><span class="line">    u4             magic;         <span class="comment">//class 文件格式编码 0xCAFEBABE</span></span><br><span class="line">    u2             minor_version; <span class="comment">//次版本 m</span></span><br><span class="line">    u2             major_version; <span class="comment">//主版本 M</span></span><br><span class="line">                                  <span class="comment">//class 文件格式版本：M.m</span></span><br><span class="line"></span><br><span class="line">    u2             constant_pool_count;                   <span class="comment">//常量池大小</span></span><br><span class="line">    cp_info        constant_pool[constant_pool_count-<span class="number">1</span>];  <span class="comment">//常量池数组</span></span><br><span class="line">    u2             access_flags;                          <span class="comment">//访问权限标识 </span></span><br><span class="line">                  </span><br><span class="line">                  <span class="comment">//public\final\super\interface\abstract</span></span><br><span class="line">                  <span class="comment">//synthetic\annomation\enum\module</span></span><br><span class="line"></span><br><span class="line">    u2             this_class;                    <span class="comment">//当前类，CONSTANT_Class_info</span></span><br><span class="line">    u2             super_class;                   <span class="comment">//父类，CONSTANT_Class_info</span></span><br><span class="line">    u2             interfaces_count;              <span class="comment">//接口数量</span></span><br><span class="line">    u2             interfaces[interfaces_count];  <span class="comment">//接口数组，CONSTANT_Class_info</span></span><br><span class="line"></span><br><span class="line">    u2             fields_count;                  <span class="comment">//字段数量，包括静态变量和实例变量</span></span><br><span class="line">    field_info     fields[fields_count];          <span class="comment">//字段数组，元素结构 field_info</span></span><br><span class="line">    u2             methods_count;                 <span class="comment">//方法数量</span></span><br><span class="line">    method_info    methods[methods_count];        <span class="comment">//方法数组，元素结构 method_info</span></span><br><span class="line">    u2             attributes_count;              <span class="comment">//属性个数</span></span><br><span class="line">    attribute_info attributes[attributes_count];  <span class="comment">//属性数组，元素结构 attribute_info</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>2、描述符</strong></p>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="https://source.android.com/devices/tech/dalvik/dalvik-bytecode">JVM 官网</a></p>
+<p>完全限定形式：字节码中类和接口名称表现形式，如 java.lang.String 表示为 Ljava/lang/String;</p>
 </blockquote>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/AndroidAdvanceWithGeektime/Chapter27/blob/master/doucments/Dalvik%20and%20ART.pdf">Android GitHub</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/AndroidAdvanceWithGeektime/Chapter27/blob/master/doucments/Understanding%20the%20Davlik%20Virtual%20Machine.pdf">Android </a></li>
+<li>字段类型字符串描述</li>
 </ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">B <span class="keyword">byte</span>    字节</span><br><span class="line">C <span class="keyword">char</span>    字符</span><br><span class="line">D <span class="keyword">double</span>    双精度</span><br><span class="line">F <span class="keyword">float</span>   单精度</span><br><span class="line">I <span class="keyword">int</span>   整数</span><br><span class="line">J <span class="keyword">long</span>    长整数</span><br><span class="line">L 类名;   对象（必须紧跟分号）</span><br><span class="line">S <span class="keyword">short</span>   短整型</span><br><span class="line">Z <span class="keyword">boolean</span>   布尔</span><br><span class="line">[ reference   一维数组（多个 [ 表示多维数组）</span><br></pre></td></tr></table></figure>
+<ul>
+<li>方法类型字符串描述（包括参数类型、返回值类型）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法</span></span><br><span class="line"><span class="function">String <span class="title">append</span><span class="params">(<span class="keyword">int</span> age,String name)</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//方法类型签名</span></span><br><span class="line">(ILjava/lang/String;)Ljava/lang/String;</span><br></pre></td></tr></table></figure>
+<p><strong>3、常量池</strong></p>
+<blockquote>
+<p>cp_info {<br>
+ u1 tag;<br>
+ u1 info[];<br>
+}</p>
+</blockquote>
+<p>标签：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">CONSTANT_Utf8	<span class="number">1</span>	</span><br><span class="line">CONSTANT_Integer	<span class="number">3</span>	</span><br><span class="line">CONSTANT_Float	<span class="number">4</span>	</span><br><span class="line">CONSTANT_Long	<span class="number">5</span>	</span><br><span class="line">CONSTANT_Double	<span class="number">6</span>	</span><br><span class="line">CONSTANT_Class	<span class="number">7</span>	</span><br><span class="line">CONSTANT_String	<span class="number">8</span></span><br><span class="line">CONSTANT_Fieldref	<span class="number">9</span>	</span><br><span class="line">CONSTANT_Methodref	<span class="number">10</span>	</span><br><span class="line"></span><br><span class="line">CONSTANT_InterfaceMethodref	<span class="number">11</span></span><br><span class="line">CONSTANT_NameAndType	<span class="number">12</span>	</span><br><span class="line">CONSTANT_MethodHandle	<span class="number">15</span>	</span><br><span class="line">CONSTANT_MethodType	<span class="number">16</span>	</span><br><span class="line">CONSTANT_Dynamic	<span class="number">17</span>	</span><br><span class="line">CONSTANT_InvokeDynamic	<span class="number">18</span>	</span><br><span class="line">CONSTANT_Module	<span class="number">19</span>	</span><br><span class="line">CONSTANT_Package	<span class="number">20</span></span><br></pre></td></tr></table></figure>
+<p><strong>4、结构体</strong></p>
+<blockquote>
+<p>CONSTANT_Class_info {<br>
+u1 tag;<br>
+u2 name_index<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>CONSTANT_Fieldref_info {<br>
+u1 tag;<br>
+u2 class_index;<br>
+u2 name_and_type_index;<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>CONSTANT_Methodref_info {<br>
+u1 tag;<br>
+u2 class_index;<br>
+u2 name_and_type_index;<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>CONSTANT_InterfaceMethodref_info {<br>
+u1 tag;<br>
+u2 class_index;<br>
+u2 name_and_type_index;<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>CONSTANT_String_info {<br>
+u1 tag;<br>
+u2 string_index;<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>CONSTANT_Integer_info {<br>
+u1 tag;<br>
+u4 bytes;<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>CONSTANT_Long_info {<br>
+u1 tag;<br>
+u4 high_bytes;<br>
+u4 low_bytes;<br>
+}</p>
+</blockquote>
+<p>等等等</p>
+<p><strong>5、字段</strong><br>
+一个 class 文件中没有两个字段具有相同的名称和描述，方法也是如此。</p>
+<blockquote>
+<p>field_info {<br>
+u2             access_flags; //表示访问权限或字段属性，public、static<br>
+u2             name_index;<br>
+u2             descriptor_index;<br>
+u2             attributes_count;<br>
+attribute_info attributes[attributes_count];<br>
+}</p>
+</blockquote>
+<p>略略略</p>
+<h1><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-6.html">JVM 指令集</a></h1>
 
 
           <hr>
           <!-- Pager -->
           <ul class="pager">
             
+              <li class="previous">
+                <a href="/undefined/字节码Dalvik/" data-toggle="tooltip" data-placement="top">&larr;
+                  上一篇</a>
+              </li>
+              
                 
                   <li class="next">
                     <a href="/undefined/了解插桩/" data-toggle="tooltip" data-placement="top">下一篇
@@ -614,7 +694,7 @@ dcmpl —— double</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">字节码 Class</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Java 虚拟机结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BC%96%E8%AF%91"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Java 虚拟机编译</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#class-%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">class 文件格式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">字节码 Dalvik</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">字节码 Class</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Java 虚拟机结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BC%96%E8%AF%91"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Java 虚拟机编译</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#class-%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">class 文件格式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">JVM 指令集</span></a></li></ol>
         
         </div>
       </aside>

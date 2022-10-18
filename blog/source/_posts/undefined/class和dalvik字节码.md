@@ -1,5 +1,5 @@
 ---
-title: 字节码 Class & Dalvik
+title: 字节码 Class
 catalog: true
 date: 2022-10-16 13:40:49
 subtitle:
@@ -151,13 +151,146 @@ public static int addB(int, int);
 
 ## class 文件格式
 
+**1、基本组成结构**
+
+```java
+ClassFile {
+    u4             magic;         //class 文件格式编码 0xCAFEBABE
+    u2             minor_version; //次版本 m
+    u2             major_version; //主版本 M
+                                  //class 文件格式版本：M.m
+
+    u2             constant_pool_count;                   //常量池大小
+    cp_info        constant_pool[constant_pool_count-1];  //常量池数组
+    u2             access_flags;                          //访问权限标识 
+                  
+                  //public\final\super\interface\abstract
+                  //synthetic\annomation\enum\module
+
+    u2             this_class;                    //当前类，CONSTANT_Class_info
+    u2             super_class;                   //父类，CONSTANT_Class_info
+    u2             interfaces_count;              //接口数量
+    u2             interfaces[interfaces_count];  //接口数组，CONSTANT_Class_info
+
+    u2             fields_count;                  //字段数量，包括静态变量和实例变量
+    field_info     fields[fields_count];          //字段数组，元素结构 field_info
+    u2             methods_count;                 //方法数量
+    method_info    methods[methods_count];        //方法数组，元素结构 method_info
+    u2             attributes_count;              //属性个数
+    attribute_info attributes[attributes_count];  //属性数组，元素结构 attribute_info
+}
+```
 
 
+**2、描述符**
 
-# 字节码 Dalvik
+> 完全限定形式：字节码中类和接口名称表现形式，如 java.lang.String 表示为 Ljava/lang/String;
 
-关于 dalvik 字节码：
+- 字段类型字符串描述
+```java
+B byte    字节
+C char    字符
+D double    双精度
+F float   单精度
+I int   整数
+J long    长整数
+L 类名;   对象（必须紧跟分号）
+S short   短整型
+Z boolean   布尔
+[ reference   一维数组（多个 [ 表示多维数组）
+```
 
-> [JVM 官网](https://source.android.com/devices/tech/dalvik/dalvik-bytecode)
-- [Android GitHub](https://github.com/AndroidAdvanceWithGeektime/Chapter27/blob/master/doucments/Dalvik%20and%20ART.pdf)
-- [Android ](https://github.com/AndroidAdvanceWithGeektime/Chapter27/blob/master/doucments/Understanding%20the%20Davlik%20Virtual%20Machine.pdf)
+- 方法类型字符串描述（包括参数类型、返回值类型）
+```java
+//方法
+String append(int age,String name){}
+
+//方法类型签名
+(ILjava/lang/String;)Ljava/lang/String;
+```
+
+**3、常量池**
+> cp_info {
+&emsp;u1 tag; 
+&emsp;u1 info[];
+}
+
+标签：
+```java
+CONSTANT_Utf8	1	
+CONSTANT_Integer	3	
+CONSTANT_Float	4	
+CONSTANT_Long	5	
+CONSTANT_Double	6	
+CONSTANT_Class	7	
+CONSTANT_String	8
+CONSTANT_Fieldref	9	
+CONSTANT_Methodref	10	
+
+CONSTANT_InterfaceMethodref	11
+CONSTANT_NameAndType	12	
+CONSTANT_MethodHandle	15	
+CONSTANT_MethodType	16	
+CONSTANT_Dynamic	17	
+CONSTANT_InvokeDynamic	18	
+CONSTANT_Module	19	
+CONSTANT_Package	20
+```
+
+**4、结构体**
+> CONSTANT_Class_info {
+    u1 tag;
+    u2 name_index
+}
+
+> CONSTANT_Fieldref_info {
+    u1 tag;
+    u2 class_index;
+    u2 name_and_type_index;
+}
+
+> CONSTANT_Methodref_info {
+    u1 tag;
+    u2 class_index;
+    u2 name_and_type_index;
+}
+
+> CONSTANT_InterfaceMethodref_info {
+    u1 tag;
+    u2 class_index;
+    u2 name_and_type_index;
+}
+
+> CONSTANT_String_info {
+    u1 tag;
+    u2 string_index;
+}
+
+> CONSTANT_Integer_info {
+    u1 tag;
+    u4 bytes;
+}
+
+> CONSTANT_Long_info {
+    u1 tag;
+    u4 high_bytes;
+    u4 low_bytes;
+}
+
+等等等
+
+**5、字段**
+一个 class 文件中没有两个字段具有相同的名称和描述，方法也是如此。
+> field_info {
+    u2             access_flags; //表示访问权限或字段属性，public、static
+    u2             name_index;
+    u2             descriptor_index;
+    u2             attributes_count;
+    attribute_info attributes[attributes_count];
+}
+
+
+略略略
+
+
+# [JVM 指令集](https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-6.html)
