@@ -803,6 +803,12 @@
           
             
         
+          <a href="/tags/#SDK" title="SDK" rel="1">
+            SDK
+          </a>
+          
+            
+        
           <a href="/tags/#工具" title="工具" rel="2">
             工具
           </a>
@@ -817,12 +823,6 @@
         
           <a href="/tags/#刷机" title="刷机" rel="1">
             刷机
-          </a>
-          
-            
-        
-          <a href="/tags/#SDK" title="SDK" rel="1">
-            SDK
           </a>
           
             
@@ -1398,7 +1398,22 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 
 	<link rel="stylesheet" href="/dist/APlayer.min.css">
 	<script src="./node_modules/pjax/pjax.js"></script>

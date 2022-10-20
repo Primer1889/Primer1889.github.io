@@ -431,13 +431,13 @@
         
         <a href="#AOSP" title="AOSP" rel="8">AOSP</a>
         
+        <a href="#SDK" title="SDK" rel="1">SDK</a>
+        
         <a href="#工具" title="工具" rel="2">工具</a>
         
         <a href="#Native" title="Native" rel="1">Native</a>
         
         <a href="#刷机" title="刷机" rel="1">刷机</a>
-        
-        <a href="#SDK" title="SDK" rel="1">SDK</a>
         
       </div>
 
@@ -567,27 +567,13 @@
         <hr>
         
         <div class="post-preview">
-          <a href="/undefined/Android目录/">
+          <a href="/undefined/Android系统启动zgote进程/">
             <h2 class="post-title">
-              了解 AOSP 工程目录（一）
+              Android 系统 zygote
             </h2>
             
             <h3 class="post-subtitle">
-              基于 android-11-r21
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/undefined/Android系统启动init进程/">
-            <h2 class="post-title">
-              Android 系统 Init
-            </h2>
-            
-            <h3 class="post-subtitle">
-              本系列文章基于 Android 11-r21 master
+              俗称 Java 世界的鼻祖
             </h3>
             
           </a>
@@ -609,13 +595,13 @@
         <hr>
         
         <div class="post-preview">
-          <a href="/undefined/Android系统启动zgote进程/">
+          <a href="/undefined/Android系统启动init进程/">
             <h2 class="post-title">
-              Android 系统 zygote
+              Android 系统 Init
             </h2>
             
             <h3 class="post-subtitle">
-              俗称 Java 世界的鼻祖
+              本系列文章基于 Android 11-r21 master
             </h3>
             
           </a>
@@ -651,6 +637,20 @@
         <hr>
         
         <div class="post-preview">
+          <a href="/undefined/Android目录/">
+            <h2 class="post-title">
+              了解 AOSP 工程目录（一）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              基于 android-11-r21
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
           <a href="/undefined/吾爱破解/">
             <h2 class="post-title">
               Android 源码之签名 Apksign
@@ -667,23 +667,30 @@
       </div>
       
       <div class="one-tag-list">
-        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="工具">
-          <span class="tag-text">工具</span>
+        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="SDK">
+          <span class="tag-text">SDK</span>
         </span>
         
         <div class="post-preview">
-          <a href="/undefined/我的单词本/">
+          <a href="/undefined/从smail接入第三方/">
             <h2 class="post-title">
-              我的单词本
+              从 smail 接入第三方 SDK
             </h2>
             
             <h3 class="post-subtitle">
-              讲真，我认识一个人，她每天都会学习、巩固单词
+              有时通过查看、修改第三方库能更好解决问题
             </h3>
             
           </a>
         </div>
         <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="工具">
+          <span class="tag-text">工具</span>
+        </span>
         
         <div class="post-preview">
           <a href="/undefined/我的工具/">
@@ -693,6 +700,20 @@
             
             <h3 class="post-subtitle">
               工欲善其事，必先利其器
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/undefined/我的单词本/">
+            <h2 class="post-title">
+              我的单词本
+            </h2>
+            
+            <h3 class="post-subtitle">
+              讲真，我认识一个人，她每天都会学习、巩固单词
             </h3>
             
           </a>
@@ -735,27 +756,6 @@
             
             <h3 class="post-subtitle">
               拒绝应用不合理获取个人信息的行为
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="SDK">
-          <span class="tag-text">SDK</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/undefined/从smail接入第三方/">
-            <h2 class="post-title">
-              从 smail 接入第三方 SDK
-            </h2>
-            
-            <h3 class="post-subtitle">
-              有时通过查看、修改第三方库能更好解决问题
             </h3>
             
           </a>
@@ -1231,7 +1231,22 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 
 	<link rel="stylesheet" href="/dist/APlayer.min.css">
 	<script src="./node_modules/pjax/pjax.js"></script>
