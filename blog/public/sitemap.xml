@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite-url/undefined/android-pm-pms1/</loc>
+    
+    <lastmod>2022-10-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/undefined/android-pm/</loc>
     
     <lastmod>2022-10-23</lastmod>
@@ -214,14 +221,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/SDK/</loc>
+    <loc>http://yoursite-url/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>http://yoursite-url/tags/Native/</loc>
     <lastmod>2022-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -235,7 +242,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/Native/</loc>
+    <loc>http://yoursite-url/tags/SDK/</loc>
     <lastmod>2022-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -1,7 +1,7 @@
 ---
 layout: android
 catalog: true
-title: Android 系统 Init
+title: Android Init 进程（三）
 subtitle: 本系列文章基于 Android 11-r21 master
 date: 2022-09-29 22:55:05
 tags: AOSP

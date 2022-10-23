@@ -1,5 +1,5 @@
 ---
-title: Android 系统 Home（一）
+title: Android Home 桌面（六）
 catalog: true
 date: 2022-09-29 22:57:44
 subtitle: 启动桌面就是查找并启动 Activity
