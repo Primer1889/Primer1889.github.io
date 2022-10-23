@@ -494,8 +494,8 @@ public class InstallInstalling extends AlertActivity {
             //3、开始安装 send message MSG_STREAM_VALIDATE_AND_COMMIT，StagingManager.commitSession
             //4、重启验证 PreRebootVerificationHandler.startPreRebootVerification，send message MSG_PRE_REBOOT_VERIFICATION_START，验证 apex、apk
             //5、重启验证结束，启动检查点服务 onPreRebootVerificationComplete
-            //6、蒙圈了，不知道执行到哪里去了
-            //7、通过广告回调安装成功 dispatchSessionFinished、mPm.sendSessionCommitBroadcast、mContext.sendBroadcastAsUser
+            //6、蒙圈了，真正安装 apk 不知道执行到哪里去了，估计是进入了 PMS，那我们就到此结束吧
+            //7、通过广播回调安装结果 dispatchSessionFinished、mPm.sendSessionCommitBroadcast、mContext.sendBroadcastAsUser，一开始注册的 InstallEventReceiver 就是一个广播
         session.commit(pendingIntent.getIntentSender());
     }
 ```
