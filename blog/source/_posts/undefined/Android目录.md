@@ -1,5 +1,5 @@
 ---
-title: 认识 AOSP 工程目录（一）
+title: 了解 AOSP 工程目录（一）
 catalog: true
 date: 2022-10-18 21:20:48
 subtitle: 基于 android-11-r21
@@ -11,6 +11,7 @@ categories:
 # AOSP
 
 不知道该从哪下手，那就先了解了解。
+framework 是我们重点关注的，因为其他的看不懂。
 
 - art【Android runtime】
     - adbconnection【adb 连接】
@@ -88,30 +89,134 @@ categories:
     - cdd【兼容性限制文档】
         - 设备类型【手机、手表】
         - 应用程序【web 接口、native 接口、runtime 相关等】
-        - 硬件【显示、相机、USB、音频等】
+        - 硬件【显示、相机、USB、音频等】t
         - 多媒体【音视频编码等】
         - 安全【权限、文件系统、隐私等】
 - cts【兼容性测试】[参考](https://source.android.google.cn/docs/compatibility/cts?hl=zh-cn)
-    - apps
-    - hostsidetests
-    - libs
-- dalvik
-- developers
-- development
-- device
+    - 略
+
+- dalvik【字节码】
+    - dexgen【dex 生成】
+    - dx【dx 工具】
+        - dx
+        - dex
+        - multidex
+- developers【应用 demo?】
+    - demos【?】
+    - samples【应用例子】
+- development【?】
+- device【很底层吧】
+    - amlogic【开发版】
+        - yukawa
+    - common
+    - generic
+    - google
+    - linaro
+    - mediatek
+    - ti
 - external
 - frameworks
+    - av
+    - base
+    - compile
+    - ex
+    - hardware
+    - layoutlib
+    - libs
+    - minikin
+    - ml
+    - multidex
+    - native
+    - opt
+    - rs
+    - wilhelm
 - hardware
+    - broadcom【Wi-Fi驱动？】
 - kernel
 - libcore
 - libnativehelper
 - manifest
 - packages
+    - app【系统软件】
+        - bluetooth
+        - browser
+        - calendar
+        ... 
+    - inputmethod【输入法】
+    - provider【系统软件数据提供者】
+    - service
+    - wallpapers【壁纸】
 - pdk
 - platform_testing
 - prebuilts
+    - 略
 - sdk
+    - 略
 - system
+    - apex【文件容器格式，更新】[参考](https://source.android.google.cn/docs/core/ota/apex?hl=zh-cn)
+    - bpf【内核扩展，EBPF】[参考](https://source.android.google.cn/docs/core/architecture/kernel/bpf?hl=zh-cn)
+    - bt【蓝牙，已迁移】
+    - ca-certificates【打包证书】
+    - chre【?】
+    - connectivity【Wi-Fi】
+    - core
+        - bootstat【启动】
+        - debuggerd【运行时信息记录】
+        - diagonse_usb
+        - fastboot【刷机】
+        - init【初始化，解析】
+        - libappfuse【存储相关】[参考](https://source.android.google.cn/docs/core/storage/fuse-passthrough?hl=zh-cn)
+        - libpackagelistparser【安装包解析】
+        - libprocessgroup【进程组】
+        - llkd【内核死锁监测】[参考](https://source.android.google.cn/docs/core/architecture/kernel/llkd?hl=zh-cn)
+        - rootdir【系统用户目录】
+            - init.rc
+            - init.usb.rc
+            - init.zygote32.rc
+            - init.zygote64_32.rc
+            - init.zygote64.rc
+        - run-as【权限】
+        - sdcard【SD存储】
+        - storaged【外部存储】
+        - trusty【安全环境】[参考](https://source.android.google.cn/docs/security/trusty?hl=zh-cn)
+        - watchdogd【监控】
+    - extras
+    - gatekeeper【设备解锁】[参考](https://source.android.google.cn/docs/security/features/authentication/gatekeeper?hl=zh-cn)
+    - hardware【硬件接口 hal】
+        - keystore
+        - net
+        - wifi
+        - suspend【?】
+    - libhwbinder【binder?】
+    - sysprop【系统属性】[参考](https://source.android.google.cn/docs/core/architecture/sysprops-apis?hl=zh-cn)
+    - media【媒体】
+        - audio
+        - camera
+        - radio
+    - memory
+    - nfc
+    - timezone【时区】
+    - update_engine【系统更新】
+    - void【存储管理服务】
 - test
-- toolchain
+    - 略
+- toolchain【工具链】
+    - 略
 - tools
+    - acloud【云存储?】
+    - adt【eclipse 插件】
+    - apifinder【抓包?】
+    - apksig【签名】
+    - apkzlib
+    - asuite
+    - dexter
+    - loganalysis【日志】
+    - metalava【元数据生成】
+    - swt【看门狗】 
+        - ddms【性能分析】
+        - chimpchat 【自动化测试】
+        - hierarchyviewers【布局分析】
+        - monkeyrunner【自动化测试】
+        - traceview【布局分析】
+        - uiautomatorviewer【布局分析】
+    - treble【版本更新?】[参考](https://source.android.google.cn/docs/core/architecture/treble?hl=zh-cn)

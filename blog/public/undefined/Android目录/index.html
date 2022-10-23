@@ -142,7 +142,7 @@
   <link rel="canonical" href="http://yoursite-url/undefined/Android目录/">
   <title>
     
-      认识 AOSP 工程目录（一） - 深南村长
+      了解 AOSP 工程目录（一） - 深南村长
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -358,7 +358,7 @@
                           
                       </div>
                       <h1>
-                        认识 AOSP 工程目录（一）
+                        了解 AOSP 工程目录（一）
                       </h1>
                       <h2 class="subheading">
                         基于 android-11-r21
@@ -375,13 +375,13 @@
                         <!-- WordCount start -->
                         <span>
                           时长： <span>
-                            1
+                            3
                           </span> 分钟
                         </span>
                         <br>
                         <span>
                           字数： <span>
-                            420
+                            772
                           </span> 字
                         </span>
                         <br>
@@ -445,7 +445,8 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h1>AOSP</h1>
-<p>不知道该从哪下手，那就先了解了解。</p>
+<p>不知道该从哪下手，那就先了解了解。<br>
+framework 是我们重点关注的，因为其他的看不懂。</p>
 <ul>
 <li>
 <p>art【Android runtime】</p>
@@ -556,7 +557,7 @@
 <ul>
 <li>设备类型【手机、手表】</li>
 <li>应用程序【web 接口、native 接口、runtime 相关等】</li>
-<li>硬件【显示、相机、USB、音频等】</li>
+<li>硬件【显示、相机、USB、音频等】t</li>
 <li>多媒体【音视频编码等】</li>
 <li>安全【权限、文件系统、隐私等】</li>
 </ul>
@@ -566,31 +567,75 @@
 <li>
 <p>cts【兼容性测试】<a target="_blank" rel="noopener" href="https://source.android.google.cn/docs/compatibility/cts?hl=zh-cn">参考</a></p>
 <ul>
-<li>apps</li>
-<li>hostsidetests</li>
-<li>libs</li>
+<li>略</li>
 </ul>
 </li>
 <li>
-<p>dalvik</p>
+<p>dalvik【字节码】</p>
+<ul>
+<li>dexgen【dex 生成】</li>
+<li>dx【dx 工具】
+<ul>
+<li>dx</li>
+<li>dex</li>
+<li>multidex</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<p>developers</p>
+<p>developers【应用 demo?】</p>
+<ul>
+<li>demos【?】</li>
+<li>samples【应用例子】</li>
+</ul>
 </li>
 <li>
-<p>development</p>
+<p>development【?】</p>
 </li>
 <li>
-<p>device</p>
+<p>device【很底层吧】</p>
+<ul>
+<li>amlogic【开发版】
+<ul>
+<li>yukawa</li>
+</ul>
+</li>
+<li>common</li>
+<li>generic</li>
+<li>google</li>
+<li>linaro</li>
+<li>mediatek</li>
+<li>ti</li>
+</ul>
 </li>
 <li>
 <p>external</p>
 </li>
 <li>
 <p>frameworks</p>
+<ul>
+<li>av</li>
+<li>base</li>
+<li>compile</li>
+<li>ex</li>
+<li>hardware</li>
+<li>layoutlib</li>
+<li>libs</li>
+<li>minikin</li>
+<li>ml</li>
+<li>multidex</li>
+<li>native</li>
+<li>opt</li>
+<li>rs</li>
+<li>wilhelm</li>
+</ul>
 </li>
 <li>
 <p>hardware</p>
+<ul>
+<li>broadcom【Wi-Fi驱动？】</li>
+</ul>
 </li>
 <li>
 <p>kernel</p>
@@ -606,6 +651,20 @@
 </li>
 <li>
 <p>packages</p>
+<ul>
+<li>app【系统软件】
+<ul>
+<li>bluetooth</li>
+<li>browser</li>
+<li>calendar<br>
+…</li>
+</ul>
+</li>
+<li>inputmethod【输入法】</li>
+<li>provider【系统软件数据提供者】</li>
+<li>service</li>
+<li>wallpapers【壁纸】</li>
+</ul>
 </li>
 <li>
 <p>pdk</p>
@@ -615,21 +674,114 @@
 </li>
 <li>
 <p>prebuilts</p>
+<ul>
+<li>略</li>
+</ul>
 </li>
 <li>
 <p>sdk</p>
+<ul>
+<li>略</li>
+</ul>
 </li>
 <li>
 <p>system</p>
+<ul>
+<li>apex【文件容器格式，更新】<a target="_blank" rel="noopener" href="https://source.android.google.cn/docs/core/ota/apex?hl=zh-cn">参考</a></li>
+<li>bpf【内核扩展，EBPF】<a target="_blank" rel="noopener" href="https://source.android.google.cn/docs/core/architecture/kernel/bpf?hl=zh-cn">参考</a></li>
+<li>bt【蓝牙，已迁移】</li>
+<li>ca-certificates【打包证书】</li>
+<li>chre【?】</li>
+<li>connectivity【Wi-Fi】</li>
+<li>core
+<ul>
+<li>bootstat【启动】</li>
+<li>debuggerd【运行时信息记录】</li>
+<li>diagonse_usb</li>
+<li>fastboot【刷机】</li>
+<li>init【初始化，解析】</li>
+<li>libappfuse【存储相关】<a target="_blank" rel="noopener" href="https://source.android.google.cn/docs/core/storage/fuse-passthrough?hl=zh-cn">参考</a></li>
+<li>libpackagelistparser【安装包解析】</li>
+<li>libprocessgroup【进程组】</li>
+<li>llkd【内核死锁监测】<a target="_blank" rel="noopener" href="https://source.android.google.cn/docs/core/architecture/kernel/llkd?hl=zh-cn">参考</a></li>
+<li>rootdir【系统用户目录】
+<ul>
+<li>init.rc</li>
+<li>init.usb.rc</li>
+<li>init.zygote32.rc</li>
+<li>init.zygote64_32.rc</li>
+<li>init.zygote64.rc</li>
+</ul>
+</li>
+<li>run-as【权限】</li>
+<li>sdcard【SD存储】</li>
+<li>storaged【外部存储】</li>
+<li>trusty【安全环境】<a target="_blank" rel="noopener" href="https://source.android.google.cn/docs/security/trusty?hl=zh-cn">参考</a></li>
+<li>watchdogd【监控】</li>
+</ul>
+</li>
+<li>extras</li>
+<li>gatekeeper【设备解锁】<a target="_blank" rel="noopener" href="https://source.android.google.cn/docs/security/features/authentication/gatekeeper?hl=zh-cn">参考</a></li>
+<li>hardware【硬件接口 hal】
+<ul>
+<li>keystore</li>
+<li>net</li>
+<li>wifi</li>
+<li>suspend【?】</li>
+</ul>
+</li>
+<li>libhwbinder【binder?】</li>
+<li>sysprop【系统属性】<a target="_blank" rel="noopener" href="https://source.android.google.cn/docs/core/architecture/sysprops-apis?hl=zh-cn">参考</a></li>
+<li>media【媒体】
+<ul>
+<li>audio</li>
+<li>camera</li>
+<li>radio</li>
+</ul>
+</li>
+<li>memory</li>
+<li>nfc</li>
+<li>timezone【时区】</li>
+<li>update_engine【系统更新】</li>
+<li>void【存储管理服务】</li>
+</ul>
 </li>
 <li>
 <p>test</p>
+<ul>
+<li>略</li>
+</ul>
 </li>
 <li>
-<p>toolchain</p>
+<p>toolchain【工具链】</p>
+<ul>
+<li>略</li>
+</ul>
 </li>
 <li>
 <p>tools</p>
+<ul>
+<li>acloud【云存储?】</li>
+<li>adt【eclipse 插件】</li>
+<li>apifinder【抓包?】</li>
+<li>apksig【签名】</li>
+<li>apkzlib</li>
+<li>asuite</li>
+<li>dexter</li>
+<li>loganalysis【日志】</li>
+<li>metalava【元数据生成】</li>
+<li>swt【看门狗】
+<ul>
+<li>ddms【性能分析】</li>
+<li>chimpchat 【自动化测试】</li>
+<li>hierarchyviewers【布局分析】</li>
+<li>monkeyrunner【自动化测试】</li>
+<li>traceview【布局分析】</li>
+<li>uiautomatorviewer【布局分析】</li>
+</ul>
+</li>
+<li>treble【版本更新?】<a target="_blank" rel="noopener" href="https://source.android.google.cn/docs/core/architecture/treble?hl=zh-cn">参考</a></li>
+</ul>
 </li>
 </ul>
 
@@ -638,6 +790,11 @@
           <!-- Pager -->
           <ul class="pager">
             
+              <li class="previous">
+                <a href="/undefined/Android-Framework目录/" data-toggle="tooltip" data-placement="top">&larr;
+                  上一篇</a>
+              </li>
+              
                 
                   <li class="next">
                     <a href="/undefined/字节码Dalvik/" data-toggle="tooltip" data-placement="top">下一篇

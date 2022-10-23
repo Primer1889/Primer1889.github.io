@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/archives/2022/">
+  <link rel="canonical" href="http://yoursite-url/undefined/Android-Framework目录/">
   <title>
     
-      深南村长
+      了解 framework base（二） - 深南村长
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -260,25 +260,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="archives/2022/index.html">
-      
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -330,21 +312,21 @@
       .body--light {
         /* intro-header */
         --intro-header-background-image-url-home: url('/img/220928/main_index_bg.webp');
-        --intro-header-background-image-url-post: url('');
-        --intro-header-background-image-url-page: url('/img/220928/tag_bg.webp');
+        --intro-header-background-image-url-post: url('/img/2210/page-native.jpg');
+        --intro-header-background-image-url-page: url('//img/2210/page-native.jpg');
       }
 
       .body--dark {
         --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/220928/main_index_bg.webp');
-        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/220928/tag_bg.webp');
+        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2210/page-native.jpg');
+        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/2210/page-native.jpg');
       }
 
       header.intro-header {
         
-          /*page*/
-          background-image: var(--intro-header-background-image-url-page);
-          /* background-image: url('/img/220928/tag_bg.webp'); */
+          /*post*/
+          background-image: var(--intro-header-background-image-url-post);
+          /* background-image: url('/img/2210/page-native.jpg'); */
           
       }
 
@@ -367,16 +349,54 @@
               <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                   
-                      <div class="site-heading">
-                        <h1>
-                          扬帆，起航！
-                        </h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">
-                          人为什么要持续学习，难道你心中没有自己的答案吗！
-                        </span>
+                    <div class="post-heading">
+                      <div class="tags">
+                        
+                          <a class="tag" href="/tags/#AOSP" title="AOSP">
+                            AOSP
+                          </a>
+                          
                       </div>
+                      <h1>
+                        了解 framework base（二）
+                      </h1>
+                      <h2 class="subheading">
+                        基于 android-11-r21
+                      </h2>
+                      <span>
+                        作者： 深南村长
+                      </span>
+                      <br>
+                      <span>
+                        时间：2022-10-20
+                      </span>
+                      <br>
                       
+                        <!-- WordCount start -->
+                        <span>
+                          时长： <span>
+                            2
+                          </span> 分钟
+                        </span>
+                        <br>
+                        <span>
+                          字数： <span>
+                            437
+                          </span> 字
+                        </span>
+                        <br>
+                        <!-- WordCount end -->
+                        
+                          
+                            <!-- 不蒜子统计 start -->
+                            <span id="busuanzi_container_page_pv">
+                              次数： <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                            
+
+                    </div>
+                    
                 </div>
               </div>
             </div>
@@ -416,539 +436,344 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1>Framework Base</h1>
+<ul>
+<li>apex
+<ul>
+<li>blobstore【应用程序之间的数据存储】
+<ul>
+<li>framework</li>
+<li>service</li>
+</ul>
+</li>
+<li>jobscheduler【将作业调度到主线模块】</li>
+</ul>
+</li>
+<li>api【略】</li>
+<li>boot
+<ul>
+<li>hiddenapi【限制外部程序访问的接口】</li>
+<li>preloaded-class【由 zygote 进行初始化的类】
+<ul>
+<li>android.accessibilityservice</li>
+<li>android.account</li>
+<li>android.animation</li>
+<li>android.annotation</li>
+<li>android.app</li>
+<li>android.appwidget</li>
+<li>android.bluetooth</li>
+<li>android.content</li>
+<li>android.database</li>
+<li>android.graphics</li>
+<li>android.hardware</li>
+<li>android.icu</li>
+<li>android.location</li>
+<li>android.media</li>
+<li><a target="_blank" rel="noopener" href="http://android.net">android.net</a></li>
+<li>android.nfc</li>
+<li>android.opengl</li>
+<li>android.os</li>
+<li>android.permission</li>
+<li>android.provider</li>
+<li>android.security</li>
+<li>android.service</li>
+<li>android.syspro</li>
+<li>android.telephone</li>
+<li>android.text</li>
+<li>android.transition</li>
+<li>android.util</li>
+<li>android.view</li>
+<li>android.widget</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>cmds
+<ul>
+<li>abx【二进制转XML android binary xml】</li>
+<li>am【am 命令activityManager&amp;packageManager】</li>
+<li>app_process【?】</li>
+<li>appops【app opration 操作权限管理】</li>
+<li>appwidget【adb shell appwidget 命令，管理绑定应用的 widget】</li>
+<li>backup【备份】</li>
+<li>bmgr【备份，adb shell bmgr 命令】</li>
+<li>bootanimation【开机动画】
+<ul>
+<li>audioplay 【开机音频】</li>
+<li>bootanim.rc【服务启动配置】</li>
+</ul>
+</li>
+<li>bu【备份】</li>
+<li>content【内容提供者CURD，adb shell content】</li>
+<li>hid【设备输入】</li>
+<li>idmap2【ID 映射工具】</li>
+<li>ime【输入法】<a target="_blank" rel="noopener" href="https://developer.android.google.cn/guide/topics/text/creating-input-method?hl=zh-cn">参考</a></li>
+<li>incident【解析文本数据到 protobuf】</li>
+<li>input【模拟外设用户事件触发】</li>
+<li>pm【软件包工具 packageManager】</li>
+<li>screencap【截屏】</li>
+<li>sm【存储命令，storageManager】</li>
+<li>svc【nfc\power\usb 等功能开关切换】</li>
+<li>telecom【电话账号相关】</li>
+<li>uiautomator【界面布局工具】
+<ul>
+<li>instrumentation【内部使用，处于测试阶段】</li>
+</ul>
+</li>
+<li>uinput【输入】</li>
+<li>wm【windowManager】</li>
+</ul>
+</li>
+<li>config
+<ul>
+<li>boot-image-profile.txt【dex2oat 编译字典】</li>
+<li>preloaded-classes-denylist【不应由 zygote 初始化的类】
+<ul>
+<li>android.content.AsyncTaskLoader$LoadTask</li>
+<li>android.net.ConnectivityThread$Singleton</li>
+<li>android.os.FileObserver【监听文件访问、创建、修改、删除、移动】</li>
+<li>android.os.NullVibrator</li>
+<li>android.speech.tts.TextToSpeech$Connection$SetupConnectionAsyncTask</li>
+<li>android.widget.Magnifier【虚拟放大镜】<a target="_blank" rel="noopener" href="https://developer.android.google.cn/guide/topics/text/magnifier?hl=zh-cn">参考</a></li>
+<li>gov.nist.core.net.DefaultNetworkLayer</li>
+<li>android.net.rtp.AudioGroup</li>
+<li>android.net.rtp.AudioStream</li>
+<li>android.net.rtp.RtpStream【rtp 数据传输协议】</li>
+<li>java.util.concurrent.ThreadLocalRandom【多线程下生成随机数】</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>core
+<ul>
+<li>api
+<ul>
+<li>removed【被移除的或过时的接口】</li>
+</ul>
+</li>
+<li>java
+<ul>
+<li>android【主要服务】</li>
+<li>com/android</li>
+</ul>
+</li>
+<li>proto【属性】</li>
+<li>jni</li>
+<li>proto</li>
+<li>res</li>
+<li>sysprop</li>
+<li>xsd</li>
+</ul>
+</li>
+<li>data
+<ul>
+<li>etc</li>
+<li>fonts</li>
+<li>keyboards</li>
+<li>sounds
+<ul>
+<li>alarms【闹钟音频】</li>
+<li>notifications【通知音频】</li>
+</ul>
+</li>
+<li>videos</li>
+</ul>
+</li>
+</ul>
+
+
+          <hr>
+          <!-- Pager -->
+          <ul class="pager">
+            
+              <li class="previous">
+                <a href="/undefined/android-pm/" data-toggle="tooltip" data-placement="top">&larr;
+                  上一篇</a>
+              </li>
+              
+                
+                  <li class="next">
+                    <a href="/undefined/Android目录/" data-toggle="tooltip" data-placement="top">下一篇
+                      &rarr;</a>
+                  </li>
+                  
+          </ul>
+
+          
+            <!-- tip start -->
+            <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
     
-
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-
-      <!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
-
-      
-
-      <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2022">
-          <span class="tag-text">2022</span>
-        </span>
-        <ul>
-          
-          <li>
-            10-23
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/android-pm/" style="color: #0085a1">
-              <span>
-                pm 应用程序安装管理（三）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-20
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android-Framework目录/" style="color: #0085a1">
-              <span>
-                了解 framework base（二）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-18
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android目录/" style="color: #0085a1">
-              <span>
-                了解 AOSP 工程目录（一）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/字节码Dalvik/" style="color: #0085a1">
-              <span>
-                字节码 Dalvik
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-16
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/class和dalvik字节码/" style="color: #0085a1">
-              <span>
-                字节码 Class
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-16
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/了解插桩/" style="color: #0085a1">
-              <span>
-                了解程序员口中的 - 插桩
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-16
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/解决不完的Native崩溃/" style="color: #0085a1">
-              <span>
-                了解令人抓挠的 Native 崩溃
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-15
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/我的单词本/" style="color: #0085a1">
-              <span>
-                我的单词本
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-15
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/我的工具/" style="color: #0085a1">
-              <span>
-                我的 Google 记录
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-15
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/毕业一年/" style="color: #0085a1">
-              <span>
-                了解程序员口中的 - 热修复
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-10
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/吾爱破解/" style="color: #0085a1">
-              <span>
-                Android 源码之签名 Apksign
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/设备信息获取检测/" style="color: #0085a1">
-              <span>
-                Xposted 检测获取设备信息
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android系统桌面启动二/" style="color: #0085a1">
-              <span>
-                Android 系统 Home（二）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android系统桌面启动一/" style="color: #0085a1">
-              <span>
-                Android 系统 Home（一）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android系统启动systemserver进程/" style="color: #0085a1">
-              <span>
-                Android 系统 Systemserver
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android系统启动zgote进程/" style="color: #0085a1">
-              <span>
-                Android 系统 zygote
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android系统启动init进程/" style="color: #0085a1">
-              <span>
-                Android 系统 Init
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-26
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/从smail接入第三方/" style="color: #0085a1">
-              <span>
-                从 smail 接入第三方 SDK
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-25
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/你我字节码/" style="color: #0085a1">
-              <span>
-                再探 jclasslib 修改字节码
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-25
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/page-咋们一起修改-class-文件/" style="color: #0085a1">
-              <span>
-                咋们一起修改 class 文件
-                
-                -- 
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-24
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/page-Native信号表/" style="color: #0085a1">
-              <span>
-                Native 信号表（部分）
-                
-                -- 
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-    </div>
-  </div>
+      如果你觉得有用，快来分享给你的小伙伴吧💗
+    
+  </p>
 </div>
+<!-- tip end -->
 
+              <!-- tip end -->
+              
 
-      <!-- 如果开启评论功能 -->
-      
-    </div>
+                
+                  <!-- Sharing Srtart -->
+                  <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
 
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Visitors -->
-<h5>
-  数据统计
-</h5>
-
-  <div class="widget">
-    <span>
-      访问次数：
-      <b>
-        <i>
-          <span id="busuanzi_value_site_pv">
-            <i class="fa fa-spinner fa-spin">
-            </i>
-          </span>
-        </i>
-      </b>
-
-      <br>
-
-      文章数量：
-      <b>
-        <i>
-          <span>
-            <i>
-              21
-            </i>
-          </span>
-        </i>
-      </b>
-
-      <br>
-      
-      文章页数：
-      <b>
-        <i>
-          <span>
-            <i>
-              3
-            </i>
-          </span>
-        </i>
-      </b>
-
-    </span>
-  </div>
-  
-        <hr>
-    
-        <!-- Featured Tags -->
-
-  <section>
-    <h5>
-      个性标签
-    </h5>
-    <div class="tags">
-      
-        
-          <a href="/tags/#字节码" title="字节码" rel="5">
-            字节码
-          </a>
-          
-            
-        
-          <a href="/tags/#笔记" title="笔记" rel="2">
-            笔记
-          </a>
-          
-            
-        
-          <a href="/tags/#AOSP" title="AOSP" rel="9">
-            AOSP
-          </a>
-          
-            
-        
-          <a href="/tags/#SDK" title="SDK" rel="1">
-            SDK
-          </a>
-          
-            
-        
-          <a href="/tags/#工具" title="工具" rel="2">
-            工具
-          </a>
-          
-            
-        
-          <a href="/tags/#刷机" title="刷机" rel="1">
-            刷机
-          </a>
-          
-            
-        
-          <a href="/tags/#Native" title="Native" rel="1">
-            Native
-          </a>
-          
-            
-    </div>
-  </section>
-  
-        <hr>
-    
-        <section class="visible-md visible-lg">
-  <script src="hls.min.js"></script>
-  <script src="APlayer.min.js"></script>
-  <h5>
-    一言一语
-  </h5>
-
-  <div>
-    <ul style="padding-left: 20px; list-style-type: decimal;">
-      <li>Read The Fucking Source Code.</li>
-      <li>站在'巨人'的肩膀上开始自己的旅途。</li>
-      <li>愉快的周末，从打开电脑开始，到骑行归来结束。</li>
-      <li>浮生若梦谁非寄，到处能按便是家！</li>
-    </ul>
-  </div>
-
-</section>
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-  <h5><a href="/">
-      最近博文
-    </a></h5>
-  <div class="widget">
-    <ul style="padding-left: 20px; list-style-type: circle;">
-      
-        <a href="../../undefined/android-pm/">
-          <li>
-            pm 应用程序安装管理（三）
-          </li>
-        </a>
-        
-        <a href="../../undefined/Android-Framework%E7%9B%AE%E5%BD%95/">
-          <li>
-            了解 framework base（二）
-          </li>
-        </a>
-        
-        <a href="../../undefined/Android%E7%9B%AE%E5%BD%95/">
-          <li>
-            了解 AOSP 工程目录（一）
-          </li>
-        </a>
-        
-        <a href="../../undefined/%E5%AD%97%E8%8A%82%E7%A0%81Dalvik/">
-          <li>
-            字节码 Dalvik
-          </li>
-        </a>
-        
-        <a href="../../undefined/class%E5%92%8Cdalvik%E5%AD%97%E8%8A%82%E7%A0%81/">
-          <li>
-            字节码 Class
-          </li>
-        </a>
-        
-    </ul>
-  </div>
-  
-        <hr>
-    
-        <!-- Friends Blog -->
-
-  <h5><a href="/">
-      友情链接
-    </a></h5>
-  <ul class="widget" style="list-style-type: none; padding-left: 0px;">
-    
-      <li><a style="text-decoration: none;" href="https://www.dalv666.top" target="_blank">
-          打驴动漫
-        </a></li>
-      
-      <li><a style="text-decoration: none;" href="https://www.gfysys1.com" target="_blank">
-          干饭影视
-        </a></li>
-      
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
   </ul>
-  
-        <hr>
-    
-        <!-- Archives -->
-
-  <h5><a href="/archives/">
-      每月发布
-    </a></h5>
-  <style>
-  </style>
-  <div style="margin-left: -20px; padding-left:-20px;">
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="10/">October 2022</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="09/">September 2022</a><span class="archive-list-count">10</span></li></ul>
-  </div>
-  
-        <hr>
-    
-        <!-- Categories -->
-
-        <hr>
-    
 </div>
 
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+                    <!-- Sharing End -->
+                    
+                      <!-- <hr> -->
+
+                      <!-- comments start -->
+                      <!--  -->
+                        <!-- comments end -->
+                        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
 
     
-  </div>
-</div>
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Framework Base</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
 
+
+
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+          <!-- Featured Tags -->
+          
+            <section>
+              <!-- no hr -->
+              <h5>
+                <a href="/tags/">
+                  个性标签
+                </a>
+              </h5>
+              <div class="tags">
+                
+                  <a class="tag" href="/tags/#AOSP" title="AOSP">
+                    AOSP
+                  </a>
+                  
+              </div>
+            </section>
+            
+
+              <!-- Friends Blog -->
+              
+                <hr>
+                <h5>
+                  友情链接
+                </h5>
+                <ul class="list-inline">
+
+                  
+                    <li>
+                      <a style="text-decoration: none;" href="https://www.dalv666.top" target="_blank">
+                        打驴动漫
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a style="text-decoration: none;" href="https://www.gfysys1.com" target="_blank">
+                        干饭影视
+                      </a>
+                    </li>
+                    
+                </ul>
+                
+        </div>
+    </div>
+  </div>
+</article>
+
+
+
+  <!-- anchorjs start -->
+  <!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+    <!-- anchorjs end -->
+    
 
 		<!-- Footer (contains ThemeColor、viewer) -->
 		<!-- Footer -->

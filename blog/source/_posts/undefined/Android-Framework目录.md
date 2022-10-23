@@ -1,0 +1,112 @@
+---
+title: 了解 framework base（二）
+catalog: true
+date: 2022-10-20 23:00:41
+subtitle: 基于 android-11-r21
+header-img: /img/2210/page-native.jpg
+tags: AOSP
+categories:
+---
+
+# Framework Base
+
+- apex
+    - blobstore【应用程序之间的数据存储】
+        - framework
+        - service
+    - jobscheduler【将作业调度到主线模块】
+- api【略】
+- boot
+    - hiddenapi【限制外部程序访问的接口】
+    - preloaded-class【由 zygote 进行初始化的类】
+        - android.accessibilityservice
+        - android.account
+        - android.animation
+        - android.annotation
+        - android.app
+        - android.appwidget
+        - android.bluetooth
+        - android.content
+        - android.database
+        - android.graphics
+        - android.hardware
+        - android.icu
+        - android.location
+        - android.media
+        - android.net
+        - android.nfc
+        - android.opengl
+        - android.os
+        - android.permission
+        - android.provider
+        - android.security
+        - android.service
+        - android.syspro
+        - android.telephone
+        - android.text
+        - android.transition
+        - android.util
+        - android.view
+        - android.widget
+- cmds
+    - abx【二进制转XML android binary xml】 
+    - am【am 命令activityManager&packageManager】
+    - app_process【?】
+    - appops【app opration 操作权限管理】
+    - appwidget【adb shell appwidget 命令，管理绑定应用的 widget】
+    - backup【备份】
+    - bmgr【备份，adb shell bmgr 命令】
+    - bootanimation【开机动画】
+        - audioplay 【开机音频】
+        - bootanim.rc【服务启动配置】
+    - bu【备份】
+    - content【内容提供者CURD，adb shell content】
+    - hid【设备输入】
+    - idmap2【ID 映射工具】
+    - ime【输入法】[参考](https://developer.android.google.cn/guide/topics/text/creating-input-method?hl=zh-cn)
+    - incident【解析文本数据到 protobuf】
+    - input【模拟外设用户事件触发】
+    - pm【软件包工具 packageManager】
+    - screencap【截屏】
+    - sm【存储命令，storageManager】
+    - svc【nfc\power\usb 等功能开关切换】
+    - telecom【电话账号相关】
+    - uiautomator【界面布局工具】
+        - instrumentation【内部使用，处于测试阶段】
+    - uinput【输入】
+    - wm【windowManager】
+- config
+    - boot-image-profile.txt【dex2oat 编译字典】
+    - preloaded-classes-denylist【不应由 zygote 初始化的类】
+        - android.content.AsyncTaskLoader$LoadTask
+        - android.net.ConnectivityThread$Singleton
+        - android.os.FileObserver【监听文件访问、创建、修改、删除、移动】
+        - android.os.NullVibrator
+        - android.speech.tts.TextToSpeech$Connection$SetupConnectionAsyncTask
+        - android.widget.Magnifier【虚拟放大镜】[参考](https://developer.android.google.cn/guide/topics/text/magnifier?hl=zh-cn)
+        - gov.nist.core.net.DefaultNetworkLayer
+        - android.net.rtp.AudioGroup
+        - android.net.rtp.AudioStream
+        - android.net.rtp.RtpStream【rtp 数据传输协议】
+        - java.util.concurrent.ThreadLocalRandom【多线程下生成随机数】
+- core
+    - api
+        - removed【被移除的或过时的接口】
+    - java
+        - android【主要服务】
+        - com/android
+    - proto【属性】
+    - jni
+    - proto
+    - res
+    - sysprop
+    - xsd
+- data
+    - etc
+    - fonts
+    - keyboards
+    - sounds
+        - alarms【闹钟音频】
+        - notifications【通知音频】
+    - videos
+
