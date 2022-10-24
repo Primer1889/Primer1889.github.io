@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/tags/Native/">
+  <link rel="canonical" href="http://yoursite-url/undefined/Android日志/">
   <title>
     
-      深南村长
+      Android 日志 logcat - 深南村长
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -260,25 +260,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="tags/Native/index.html">
-      
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -330,21 +312,21 @@
       .body--light {
         /* intro-header */
         --intro-header-background-image-url-home: url('/img/220928/main_index_bg.webp');
-        --intro-header-background-image-url-post: url('');
-        --intro-header-background-image-url-page: url('/img/220928/tag_bg.webp');
+        --intro-header-background-image-url-post: url('/img/2210/page-native.jpg');
+        --intro-header-background-image-url-page: url('//img/2210/page-native.jpg');
       }
 
       .body--dark {
         --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/220928/main_index_bg.webp');
-        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/220928/tag_bg.webp');
+        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2210/page-native.jpg');
+        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/2210/page-native.jpg');
       }
 
       header.intro-header {
         
-          /*page*/
-          background-image: var(--intro-header-background-image-url-page);
-          /* background-image: url('/img/220928/tag_bg.webp'); */
+          /*post*/
+          background-image: var(--intro-header-background-image-url-post);
+          /* background-image: url('/img/2210/page-native.jpg'); */
           
       }
 
@@ -367,16 +349,54 @@
               <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                   
-                      <div class="site-heading">
-                        <h1>
-                          扬帆，起航！
-                        </h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">
-                          人为什么要持续学习，难道你心中没有自己的答案吗！
-                        </span>
+                    <div class="post-heading">
+                      <div class="tags">
+                        
+                          <a class="tag" href="/tags/#AOSP" title="AOSP">
+                            AOSP
+                          </a>
+                          
                       </div>
+                      <h1>
+                        Android 日志 logcat
+                      </h1>
+                      <h2 class="subheading">
+                        基于 android-11-r21
+                      </h2>
+                      <span>
+                        作者： 深南村长
+                      </span>
+                      <br>
+                      <span>
+                        时间：2022-10-24
+                      </span>
+                      <br>
                       
+                        <!-- WordCount start -->
+                        <span>
+                          时长： <span>
+                            2
+                          </span> 分钟
+                        </span>
+                        <br>
+                        <span>
+                          字数： <span>
+                            405
+                          </span> 字
+                        </span>
+                        <br>
+                        <!-- WordCount end -->
+                        
+                          
+                            <!-- 不蒜子统计 start -->
+                            <span id="busuanzi_container_page_pv">
+                              次数： <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                            
+
+                    </div>
+                    
                 </div>
               </div>
             </div>
@@ -416,565 +436,231 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1>Android Log</h1>
+<blockquote>
+<p>base/core/java/android/util/Log.java</p>
+</blockquote>
+<p>在 Android 上常用 Log.d 等输出日志，日志分为不同的等级,Linux kernel 常通过 printk 输出日志，日志输出级别 ASSERT, ERROR, WARN, INFO, DEBUG, VERBOSE。</p>
+<p>以 Log.d 为例，日志输出有两种：</p>
+<h2 id="printlns">printlns</h2>
+<p><strong>Log.d(tag,msg,throwable);</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">Lod.d(tag,msg,trowable);</span><br><span class="line"></span><br><span class="line">printlns(LOG_ID_MAIN, DEBUG, tag, msg, tr);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">printlns</span><span class="params">(<span class="keyword">int</span> bufID, <span class="keyword">int</span> priority, <span class="meta">@Nullable</span> String tag, <span class="meta">@NonNull</span> String msg,</span></span></span><br><span class="line"><span class="function"><span class="params">            <span class="meta">@Nullable</span> Throwable tr)</span> </span>&#123;</span><br><span class="line">        ImmediateLogWriter logWriter = <span class="keyword">new</span> ImmediateLogWriter(bufID, priority, tag);</span><br><span class="line">        <span class="comment">//缓冲区最小 100</span></span><br><span class="line">        bufferSize = Math.max(bufferSize, <span class="number">100</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//分隔符：lineSeparator = System.getProperty(&quot;line.separator&quot;);</span></span><br><span class="line">        LineBreakBufferedWriter lbbw = <span class="keyword">new</span> LineBreakBufferedWriter(logWriter, bufferSize);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//1、先打印 msg，再换一行输出</span></span><br><span class="line">        <span class="comment">//2、走一圈 PrintWriter、Writer，最终还是执行 ImmediateLogWriter 的 write 方法由 println_native 输出</span></span><br><span class="line">        <span class="comment">//3、缓冲区扩容还得是 Arrays.copyOf、System.arraycopy 扩大 char[] </span></span><br><span class="line">        lbbw.println(msg);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (tr != <span class="keyword">null</span>) &#123;</span><br><span class="line">            Throwable t = tr;</span><br><span class="line">            <span class="keyword">while</span> (t != <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (t <span class="keyword">instanceof</span> UnknownHostException) &#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (t <span class="keyword">instanceof</span> DeadSystemException) &#123;</span><br><span class="line">                    lbbw.println(<span class="string">&quot;DeadSystemException: The system died; &quot;</span></span><br><span class="line">                            + <span class="string">&quot;earlier logs will point to the root cause&quot;</span>);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                t = t.getCause();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (t == <span class="keyword">null</span>) &#123;</span><br><span class="line">                tr.printStackTrace(lbbw);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        lbbw.flush();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> logWriter.getWritten();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="println-native">println_native</h2>
+<p><strong>Log.d(tag,msg);</strong></p>
+<p>那么问题来了，该 native 处于哪个 so 文件或者 cpp 实现在哪里？我们了解一点是 native 方法是根据包名 + 类名可以定位到 native 实现，也就是 android.util.log 可以搜索 android_util_log.cpp 等。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">native</span> <span class="keyword">int</span> <span class="title">println_native</span><span class="params">(<span class="keyword">int</span> bufID, <span class="keyword">int</span> priority, String tag, String msg)</span></span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>base/core/jni/android_util_Log.cpp<br>
+base/core/jni/android_util_Log.h</p>
+</blockquote>
+<p><strong>core_jni_helper</strong></p>
+<ul>
+<li>findClass</li>
+<li>getField</li>
+<li>getMethod</li>
+<li>getStaticField</li>
+<li>getStaticMethod</li>
+<li>getStringField</li>
+<li>makeGlobalRef</li>
+<li>AndroidRuntime::registerMethods</li>
+</ul>
+<p>方法注册：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">const</span> JNINativeMethod gMethods[] = &#123;</span><br><span class="line">    <span class="comment">/* name, signature, funcPtr */</span></span><br><span class="line">    &#123; <span class="string">&quot;isLoggable&quot;</span>,      <span class="string">&quot;(Ljava/lang/String;I)Z&quot;</span>, (<span class="keyword">void</span>*) android_util_Log_isLoggable &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;println_native&quot;</span>,  <span class="string">&quot;(IILjava/lang/String;Ljava/lang/String;)I&quot;</span>, (<span class="keyword">void</span>*) android_util_Log_println_native &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;logger_entry_max_payload_native&quot;</span>,  <span class="string">&quot;()I&quot;</span>, (<span class="keyword">void</span>*) android_util_Log_logger_entry_max_payload_native &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>日志输出：</p>
+<ul>
+<li>println_native</li>
+<li>android_util_Log_println_native</li>
+<li>__android_log_buf_write</li>
+</ul>
+
+
+          <hr>
+          <!-- Pager -->
+          <ul class="pager">
+            
+                
+                  <li class="next">
+                    <a href="/undefined/android-pm-pms1/" data-toggle="tooltip" data-placement="top">下一篇
+                      &rarr;</a>
+                  </li>
+                  
+          </ul>
+
+          
+            <!-- tip start -->
+            <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
     
-
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-
-      <!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
-
-      
-
-      <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2022">
-          <span class="tag-text">2022</span>
-        </span>
-        <ul>
-          
-          <li>
-            10-24
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android日志/" style="color: #0085a1">
-              <span>
-                Android 日志 logcat
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-23
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/android-pm-pms1/" style="color: #0085a1">
-              <span>
-                pms 应用程序安装管理（八）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-23
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/android-pm/" style="color: #0085a1">
-              <span>
-                pm 应用程序安装管理（八）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-20
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android-Framework目录/" style="color: #0085a1">
-              <span>
-                了解 framework base（二）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-18
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android目录/" style="color: #0085a1">
-              <span>
-                了解 AOSP 工程目录（一）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/字节码Dalvik/" style="color: #0085a1">
-              <span>
-                字节码 Dalvik
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-16
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/class和dalvik字节码/" style="color: #0085a1">
-              <span>
-                字节码 Class
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-16
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/了解插桩/" style="color: #0085a1">
-              <span>
-                了解程序员口中的 - 插桩
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-16
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/解决不完的Native崩溃/" style="color: #0085a1">
-              <span>
-                了解令人抓挠的 Native 崩溃
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-15
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/我的单词本/" style="color: #0085a1">
-              <span>
-                我的单词本
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-15
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/我的工具/" style="color: #0085a1">
-              <span>
-                我的 Google 记录
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-15
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/毕业一年/" style="color: #0085a1">
-              <span>
-                了解程序员口中的 - 热修复
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-10
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/吾爱破解/" style="color: #0085a1">
-              <span>
-                Android 源码之签名 Apksign
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/设备信息获取检测/" style="color: #0085a1">
-              <span>
-                Xposted 检测获取设备信息
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android系统桌面启动二/" style="color: #0085a1">
-              <span>
-                Android Home 桌面（七）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android系统桌面启动一/" style="color: #0085a1">
-              <span>
-                Android Home 桌面（六）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android系统启动systemserver进程/" style="color: #0085a1">
-              <span>
-                Android Systemserver 进程（五）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android系统启动zgote进程/" style="color: #0085a1">
-              <span>
-                Android zygote 进程（四）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Android系统启动init进程/" style="color: #0085a1">
-              <span>
-                Android Init 进程（三）
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-26
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/从smail接入第三方/" style="color: #0085a1">
-              <span>
-                从 smail 接入第三方 SDK
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-25
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/你我字节码/" style="color: #0085a1">
-              <span>
-                再探 jclasslib 修改字节码
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-25
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/page-咋们一起修改-class-文件/" style="color: #0085a1">
-              <span>
-                咋们一起修改 class 文件
-                
-                -- 
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-24
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/page-Native信号表/" style="color: #0085a1">
-              <span>
-                Native 信号表（部分）
-                
-                -- 
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-    </div>
-  </div>
+      如果你觉得有用，快来分享给你的小伙伴吧💗
+    
+  </p>
 </div>
+<!-- tip end -->
 
+              <!-- tip end -->
+              
 
-      <!-- 如果开启评论功能 -->
-      
-    </div>
+                
+                  <!-- Sharing Srtart -->
+                  <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
 
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Visitors -->
-<h5>
-  数据统计
-</h5>
-
-  <div class="widget">
-    <span>
-      访问次数：
-      <b>
-        <i>
-          <span id="busuanzi_value_site_pv">
-            <i class="fa fa-spinner fa-spin">
-            </i>
-          </span>
-        </i>
-      </b>
-
-      <br>
-
-      文章数量：
-      <b>
-        <i>
-          <span>
-            <i>
-              23
-            </i>
-          </span>
-        </i>
-      </b>
-
-      <br>
-      
-      文章页数：
-      <b>
-        <i>
-          <span>
-            <i>
-              1
-            </i>
-          </span>
-        </i>
-      </b>
-
-    </span>
-  </div>
-  
-        <hr>
-    
-        <!-- Featured Tags -->
-
-  <section>
-    <h5>
-      个性标签
-    </h5>
-    <div class="tags">
-      
-        
-          <a href="/tags/#字节码" title="字节码" rel="5">
-            字节码
-          </a>
-          
-            
-        
-          <a href="/tags/#笔记" title="笔记" rel="2">
-            笔记
-          </a>
-          
-            
-        
-          <a href="/tags/#AOSP" title="AOSP" rel="11">
-            AOSP
-          </a>
-          
-            
-        
-          <a href="/tags/#SDK" title="SDK" rel="1">
-            SDK
-          </a>
-          
-            
-        
-          <a href="/tags/#工具" title="工具" rel="2">
-            工具
-          </a>
-          
-            
-        
-          <a href="/tags/#Native" title="Native" rel="1">
-            Native
-          </a>
-          
-            
-        
-          <a href="/tags/#刷机" title="刷机" rel="1">
-            刷机
-          </a>
-          
-            
-    </div>
-  </section>
-  
-        <hr>
-    
-        <section class="visible-md visible-lg">
-  <script src="hls.min.js"></script>
-  <script src="APlayer.min.js"></script>
-  <h5>
-    一言一语
-  </h5>
-
-  <div>
-    <ul style="padding-left: 20px; list-style-type: decimal;">
-      <li>Read The Fucking Source Code.</li>
-      <li>站在'巨人'的肩膀上开始自己的旅途。</li>
-      <li>愉快的周末，从打开电脑开始，到骑行归来结束。</li>
-      <li>浮生若梦谁非寄，到处能按便是家！</li>
-    </ul>
-  </div>
-
-</section>
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-  <h5><a href="/">
-      最近博文
-    </a></h5>
-  <div class="widget">
-    <ul style="padding-left: 20px; list-style-type: circle;">
-      
-        <a href="../../undefined/Android%E6%97%A5%E5%BF%97/">
-          <li>
-            Android 日志 logcat
-          </li>
-        </a>
-        
-        <a href="../../undefined/android-pm-pms1/">
-          <li>
-            pms 应用程序安装管理（八）
-          </li>
-        </a>
-        
-        <a href="../../undefined/android-pm/">
-          <li>
-            pm 应用程序安装管理（八）
-          </li>
-        </a>
-        
-        <a href="../../undefined/Android-Framework%E7%9B%AE%E5%BD%95/">
-          <li>
-            了解 framework base（二）
-          </li>
-        </a>
-        
-        <a href="../../undefined/Android%E7%9B%AE%E5%BD%95/">
-          <li>
-            了解 AOSP 工程目录（一）
-          </li>
-        </a>
-        
-    </ul>
-  </div>
-  
-        <hr>
-    
-        <!-- Friends Blog -->
-
-  <h5><a href="/">
-      友情链接
-    </a></h5>
-  <ul class="widget" style="list-style-type: none; padding-left: 0px;">
-    
-      <li><a style="text-decoration: none;" href="https://www.dalv666.top" target="_blank">
-          打驴动漫
-        </a></li>
-      
-      <li><a style="text-decoration: none;" href="https://www.gfysys1.com" target="_blank">
-          干饭影视
-        </a></li>
-      
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
   </ul>
-  
-        <hr>
-    
-        <!-- Archives -->
-
-  <h5><a href="/archives/">
-      每月发布
-    </a></h5>
-  <style>
-  </style>
-  <div style="margin-left: -20px; padding-left:-20px;">
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/10/">October 2022</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/09/">September 2022</a><span class="archive-list-count">10</span></li></ul>
-  </div>
-  
-        <hr>
-    
-        <!-- Categories -->
-
-        <hr>
-    
 </div>
 
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+                    <!-- Sharing End -->
+                    
+                      <!-- <hr> -->
+
+                      <!-- comments start -->
+                      <!--  -->
+                        <!-- comments end -->
+                        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
 
     
-  </div>
-</div>
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Android Log</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#printlns"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">printlns</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#println-native"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">println_native</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
 
+
+
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+          <!-- Featured Tags -->
+          
+            <section>
+              <!-- no hr -->
+              <h5>
+                <a href="/tags/">
+                  个性标签
+                </a>
+              </h5>
+              <div class="tags">
+                
+                  <a class="tag" href="/tags/#AOSP" title="AOSP">
+                    AOSP
+                  </a>
+                  
+              </div>
+            </section>
+            
+
+              <!-- Friends Blog -->
+              
+                <hr>
+                <h5>
+                  友情链接
+                </h5>
+                <ul class="list-inline">
+
+                  
+                    <li>
+                      <a style="text-decoration: none;" href="https://www.dalv666.top" target="_blank">
+                        打驴动漫
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a style="text-decoration: none;" href="https://www.gfysys1.com" target="_blank">
+                        干饭影视
+                      </a>
+                    </li>
+                    
+                </ul>
+                
+        </div>
+    </div>
+  </div>
+</article>
+
+
+
+  <!-- anchorjs start -->
+  <!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+    <!-- anchorjs end -->
+    
 
 		<!-- Footer (contains ThemeColor、viewer) -->
 		<!-- Footer -->
