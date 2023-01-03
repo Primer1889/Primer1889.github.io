@@ -1,9 +1,9 @@
 ---
 layout: "about"
-title: "i"
+title: "Jsonlili"
 date: 2016-04-21 04:48:33
-description: "我"
-header-img: "img/2210/about-me.jpg"
+description: "金克丝的含义就是金克丝"
+header-img: "img/2301/2_bg.webp"
 ---
 
 > 学习

@@ -491,7 +491,7 @@ public class InstallInstalling extends AlertActivity {
         //提交到 PackageInstallerSession.commit 执行
             //1、启动安装流程 send message MSG_ON_SESSION_SEALED
             //2、安装前的检验 send message MSG_STREAM_VALIDATE_AND_COMMIT，handleSessionSealed、handleStreamValidateAndCommit();【apk 或 apex】
-            //3、开始安装 send message MSG_STREAM_VALIDATE_AND_COMMIT，StagingManager.commitSession
+            //3、开始安装 send message MSG_INSTALL，StagingManager.commitSession，重要的安装 verify();
             //4、重启验证 PreRebootVerificationHandler.startPreRebootVerification，send message MSG_PRE_REBOOT_VERIFICATION_START，验证 apex、apk
             //5、重启验证结束，启动检查点服务 onPreRebootVerificationComplete
             //6、蒙圈了，真正安装 apk 不知道执行到哪里去了，估计是进入了 PMS，那我们就到此结束吧
@@ -537,3 +537,44 @@ public class InstallSuccess extends AlertActivity {
 安装失败没有太多的其他逻辑，只会想用户展示安装失败的对话框以及说明失败原因
 
 
+# verify
+
+即将进入 PMS 开始真正的安装流程前需检验：
+- verify
+- verifyNonStaged
+- prepareForVerification
+    - makeVerificationParamsLocked
+    - mPm.new VerificationParam 【安装参数验证，外部设置验证结果监听 localObserver】
+- mPm.verifyStage【进入 PMS 验证】
+- VerificationParams：startCopy
+    - VerificationParams.handleStartCopy() 
+    - handleReturnCode()
+        - sendVerificationCompleteNotification
+        - sendVerificationCompleteNotification
+        - mObserver.onPackageInstalled【发送验证完成，回到 localObserver】
+            - onVerificationComplete
+            - install
+            - installNonStaged
+            - mPm.installStage【正式进入 PMS 开始安装】
+
+# installStage
+> base/services/core/java/com/android/server/pm/PackageManagerService.java
+
+- installStage【发送一个 INIT_COPY 消息，由 PackageHandler 处理】
+- InstallParams：params.startCopy()
+    - handleStartCopy
+        - overrideInstallLocation 【覆盖安装】
+            - installLocationPolicy
+    - handleReturnCode
+        - processPendingInstall
+            - copyApk【复制安装包到指定目录，根据包名创建目录】
+    - tryProcessInstallRequest
+    - processInstallRequestsAsync
+    - doPreInstall【清理安装目录】
+    - installPackagesTracedLI【安装包优化】
+    - doPostInstall
+    - restoreAndPostInstall
+        - performBackupManagerRestore【备份】
+    - send message POST_INSTALL【进行安装】
+- handlePackagePostInstall
+    - 

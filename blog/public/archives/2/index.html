@@ -329,13 +329,13 @@
     <style type="text/css">
       .body--light {
         /* intro-header */
-        --intro-header-background-image-url-home: url('/img/220928/main_index_bg.webp');
+        --intro-header-background-image-url-home: url('/img/2301/3_bg.webp');
         --intro-header-background-image-url-post: url('');
         --intro-header-background-image-url-page: url('/img/220928/tag_bg.webp');
       }
 
       .body--dark {
-        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/220928/main_index_bg.webp');
+        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/3_bg.webp');
         --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
         --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/220928/tag_bg.webp');
       }
@@ -344,7 +344,7 @@
         
           /*config*/
           background-image: var(--intro-header-background-image-url-home);
-          /* background-image: url('/img/220928/main_index_bg.webp'); */
+          /* background-image: url('/img/2301/3_bg.webp'); */
           
       }
 
@@ -434,6 +434,63 @@
       <!-- Main Content -->
 
 
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/Android系统启动init进程/">
+    <h2 class="post-title">
+      Android Init 进程（三）
+    </h2>
+    <h3 class="post-subtitle">
+      本系列文章基于 Android 11-r21 master
+    </h3>
+    <div class="post-content-preview">
+      设备启动简述
+1、BIOS 加载
+
+加电自检（基本输出/输入系统 stdio）
+
+硬件自检POST
+
+
+外部存储设备启动顺序排序，下一个获得控制权的设备
+读取激活分区第一个扇区的 主引导记录（512 字节）
+
+负责分区读写合法性判断
+负责引导信息定位
+数据存储
+
+调用操作系统的机器码
+分区表
+
+主分区是激活的，激活分区的第一个扇区是卷引导记录（告诉计算机操作系统在分区的位置-系统盘分区）
+当......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    作者： 深南村长 
+    <br>
+    时间：2022-09-29
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#AOSP" title="AOSP">AOSP</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
   
@@ -711,6 +768,109 @@ SIGSYS
   <!-- top end -->
   
 
+  <a href="/undefined/Android-官方文档/">
+    <h2 class="post-title">
+      Android-官方文档
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      架构
+
+application framework
+binder ipc proxies
+Android system service
+
+media service
+
+audio
+camera
+media player
+
+
+system service
+
+ams
+wms
+
+
+
+
+hal【硬件接口】
+
+camera hal
+audio hal
+graphics hal
+
+
+linux kern......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    作者： 深南村长 
+    <br>
+    时间：2022-10-31
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#AOSP" title="AOSP">AOSP</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/Android日志/">
+    <h2 class="post-title">
+      Android 日志 logcat
+    </h2>
+    <h3 class="post-subtitle">
+      基于 android-11-r21
+    </h3>
+    <div class="post-content-preview">
+      Android Log
+
+base/core/java/android/util/Log.java
+
+在 Android 上常用 Log.d 等输出日志，日志分为不同的等级,Linux kernel 常通过 printk 输出日志，日志输出级别 ASSERT, ERROR, WARN, INFO, DEBUG, VERBOSE。
+以 Log.d 为例，日志输出有两种：
+printlns
+Lo......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    作者： 深南村长 
+    <br>
+    时间：2022-10-24
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#AOSP" title="AOSP">AOSP</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/undefined/android-pm-pms1/">
     <h2 class="post-title">
       pms 应用程序安装管理（八）
@@ -786,152 +946,6 @@ InstallStart 被匹配到开始执行安装，pm 的清单配置文件匹配到�
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/Android-Framework目录/">
-    <h2 class="post-title">
-      了解 framework base（二）
-    </h2>
-    <h3 class="post-subtitle">
-      基于 android-11-r21
-    </h3>
-    <div class="post-content-preview">
-      Framework Base
-
-apex
-
-blobstore【应用程序之间的数据存储】
-
-framework
-service
-
-
-jobscheduler【将作业调度到主线模块】
-
-
-api【略】
-boot
-
-hiddenapi【限制外部程序访问的接口】
-preloaded-class【由 zygote 进行初始化的类】
-
-android.accessibilityservice
-andr......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    作者： 深南村长 
-    <br>
-    时间：2022-10-20
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#AOSP" title="AOSP">AOSP</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/Android目录/">
-    <h2 class="post-title">
-      了解 AOSP 工程目录（一）
-    </h2>
-    <h3 class="post-subtitle">
-      基于 android-11-r21
-    </h3>
-    <div class="post-content-preview">
-      AOSP
-不知道该从哪下手，那就先了解了解。
-framework 是我们重点关注的，因为其他的看不懂。
-
-
-art【Android runtime】
-
-adbconnection【adb 连接】
-artd【?】
-benchmark【衡量代码性能基准】参考
-build【?】
-cmdline【命令行】
-complier【编译，elf】
-
-dex【字节码，内敛方法】
-jit【即时编译，arm/ar......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    作者： 深南村长 
-    <br>
-    时间：2022-10-18
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#AOSP" title="AOSP">AOSP</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/字节码Dalvik/">
-    <h2 class="post-title">
-      字节码 Dalvik
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      字节码 Dalvik
-关于 dalvik 字节码：
-
-JVM 官网
-
-
-Android GitHub
-Android 
-
-...
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    作者： 深南村长 
-    <br>
-    时间：2022-10-17
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#字节码" title="字节码">字节码</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -985,7 +999,7 @@ Android
         <i>
           <span>
             <i>
-              22
+              25
             </i>
           </span>
         </i>
@@ -1018,20 +1032,32 @@ Android
     <div class="tags">
       
         
-          <a href="/tags/#字节码" title="字节码" rel="5">
-            字节码
-          </a>
-          
-            
-        
           <a href="/tags/#笔记" title="笔记" rel="2">
             笔记
           </a>
           
             
         
-          <a href="/tags/#AOSP" title="AOSP" rel="10">
+          <a href="/tags/#其他" title="其他" rel="1">
+            其他
+          </a>
+          
+            
+        
+          <a href="/tags/#字节码" title="字节码" rel="5">
+            字节码
+          </a>
+          
+            
+        
+          <a href="/tags/#AOSP" title="AOSP" rel="12">
             AOSP
+          </a>
+          
+            
+        
+          <a href="/tags/#SDK" title="SDK" rel="1">
+            SDK
           </a>
           
             
@@ -1050,12 +1076,6 @@ Android
         
           <a href="/tags/#刷机" title="刷机" rel="1">
             刷机
-          </a>
-          
-            
-        
-          <a href="/tags/#SDK" title="SDK" rel="1">
-            SDK
           </a>
           
             
@@ -1091,6 +1111,24 @@ Android
   <div class="widget">
     <ul style="padding-left: 20px; list-style-type: circle;">
       
+        <a href="../../undefined/202301-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">
+          <li>
+            年终总结
+          </li>
+        </a>
+        
+        <a href="../../undefined/Android-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">
+          <li>
+            Android-官方文档
+          </li>
+        </a>
+        
+        <a href="../../undefined/Android%E6%97%A5%E5%BF%97/">
+          <li>
+            Android 日志 logcat
+          </li>
+        </a>
+        
         <a href="../../undefined/android-pm-pms1/">
           <li>
             pms 应用程序安装管理（八）
@@ -1100,24 +1138,6 @@ Android
         <a href="../../undefined/android-pm/">
           <li>
             pm 应用程序安装管理（八）
-          </li>
-        </a>
-        
-        <a href="../../undefined/Android-Framework%E7%9B%AE%E5%BD%95/">
-          <li>
-            了解 framework base（二）
-          </li>
-        </a>
-        
-        <a href="../../undefined/Android%E7%9B%AE%E5%BD%95/">
-          <li>
-            了解 AOSP 工程目录（一）
-          </li>
-        </a>
-        
-        <a href="../../undefined/%E5%AD%97%E8%8A%82%E7%A0%81Dalvik/">
-          <li>
-            字节码 Dalvik
           </li>
         </a>
         
@@ -1153,7 +1173,7 @@ Android
   <style>
   </style>
   <div style="margin-left: -20px; padding-left:-20px;">
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/10/">October 2022</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">10</span></li></ul>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/10/">October 2022</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">10</span></li></ul>
   </div>
   
         <hr>
@@ -1197,7 +1217,7 @@ Android
         <p class="copyright text-muted">
           Copyright &copy;
           深南村长
-            2022
+            2023
         </p>
       </div>
     </div>
@@ -1631,22 +1651,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 
 	<link rel="stylesheet" href="/dist/APlayer.min.css">
 	<script src="./node_modules/pjax/pjax.js"></script>
