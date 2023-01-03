@@ -329,13 +329,13 @@
     <style type="text/css">
       .body--light {
         /* intro-header */
-        --intro-header-background-image-url-home: url('/img/220928/main_index_bg.webp');
+        --intro-header-background-image-url-home: url('/img/2301/3_bg.jpeg');
         --intro-header-background-image-url-post: url('img/2210/tag-map.jpg');
         --intro-header-background-image-url-page: url('/img/2210/tag-map.jpg');
       }
 
       .body--dark {
-        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/220928/main_index_bg.webp');
+        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/3_bg.jpeg');
         --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/2210/tag-map.jpg');
         --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2210/tag-map.jpg');
       }
@@ -425,17 +425,17 @@
       <!-- 标签云 -->
       <div id='tag_cloud' class="tags">
         
-        <a href="#字节码" title="字节码" rel="5">字节码</a>
-        
         <a href="#笔记" title="笔记" rel="2">笔记</a>
         
-        <a href="#AOSP" title="AOSP" rel="12">AOSP</a>
+        <a href="#字节码" title="字节码" rel="5">字节码</a>
         
         <a href="#其他" title="其他" rel="1">其他</a>
         
-        <a href="#SDK" title="SDK" rel="1">SDK</a>
+        <a href="#AOSP" title="AOSP" rel="12">AOSP</a>
         
         <a href="#工具" title="工具" rel="2">工具</a>
+        
+        <a href="#SDK" title="SDK" rel="1">SDK</a>
         
         <a href="#Native" title="Native" rel="1">Native</a>
         
@@ -444,6 +444,41 @@
       </div>
 
       <!-- 标签列表 -->
+      
+      <div class="one-tag-list">
+        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="笔记">
+          <span class="tag-text">笔记</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/undefined/page-Native信号表/">
+            <h2 class="post-title">
+              Native 信号表（部分）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              描述对应信号代表的含义，协助问题排查
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/undefined/毕业一年/">
+            <h2 class="post-title">
+              了解程序员口中的 - 热修复
+            </h2>
+            
+            <h3 class="post-subtitle">
+              收藏从未停止，学习从未开始
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
       
       <div class="one-tag-list">
         <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="字节码">
@@ -489,16 +524,6 @@
         <hr>
         
         <div class="post-preview">
-          <a href="/undefined/字节码Dalvik/">
-            <h2 class="post-title">
-              字节码 Dalvik
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
           <a href="/undefined/你我字节码/">
             <h2 class="post-title">
               再探 jclasslib 修改字节码
@@ -512,35 +537,31 @@
         </div>
         <hr>
         
-      </div>
-      
-      <div class="one-tag-list">
-        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="笔记">
-          <span class="tag-text">笔记</span>
-        </span>
-        
         <div class="post-preview">
-          <a href="/undefined/page-Native信号表/">
+          <a href="/undefined/字节码Dalvik/">
             <h2 class="post-title">
-              Native 信号表（部分）
+              字节码 Dalvik
             </h2>
-            
-            <h3 class="post-subtitle">
-              描述对应信号代表的含义，协助问题排查
-            </h3>
             
           </a>
         </div>
         <hr>
         
+      </div>
+      
+      <div class="one-tag-list">
+        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="其他">
+          <span class="tag-text">其他</span>
+        </span>
+        
         <div class="post-preview">
-          <a href="/undefined/毕业一年/">
+          <a href="/undefined/202301-年终总结/">
             <h2 class="post-title">
-              了解程序员口中的 - 热修复
+              年终总结
             </h2>
             
             <h3 class="post-subtitle">
-              收藏从未停止，学习从未开始
+              如果不记得去年的样子，可以翻翻相册
             </h3>
             
           </a>
@@ -569,10 +590,14 @@
         <hr>
         
         <div class="post-preview">
-          <a href="/undefined/Android-官方文档/">
+          <a href="/undefined/Android目录/">
             <h2 class="post-title">
-              Android-官方文档
+              了解 AOSP 工程目录（一）
             </h2>
+            
+            <h3 class="post-subtitle">
+              基于 android-11-r21
+            </h3>
             
           </a>
         </div>
@@ -593,13 +618,23 @@
         <hr>
         
         <div class="post-preview">
-          <a href="/undefined/Android目录/">
+          <a href="/undefined/Android-官方文档/">
             <h2 class="post-title">
-              了解 AOSP 工程目录（一）
+              Android-官方文档
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/undefined/Android系统启动init进程/">
+            <h2 class="post-title">
+              Android Init 进程（三）
             </h2>
             
             <h3 class="post-subtitle">
-              基于 android-11-r21
+              本系列文章基于 Android 11-r21 master
             </h3>
             
           </a>
@@ -649,34 +684,6 @@
         <hr>
         
         <div class="post-preview">
-          <a href="/undefined/Android系统桌面启动二/">
-            <h2 class="post-title">
-              Android Home 桌面（七）
-            </h2>
-            
-            <h3 class="post-subtitle">
-              启动桌面就是查找并启动 Activity
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/undefined/Android系统启动init进程/">
-            <h2 class="post-title">
-              Android Init 进程（三）
-            </h2>
-            
-            <h3 class="post-subtitle">
-              本系列文章基于 Android 11-r21 master
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
           <a href="/undefined/android-pm-pms1/">
             <h2 class="post-title">
               pms 应用程序安装管理（八）
@@ -705,6 +712,20 @@
         <hr>
         
         <div class="post-preview">
+          <a href="/undefined/Android系统桌面启动二/">
+            <h2 class="post-title">
+              Android Home 桌面（七）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              启动桌面就是查找并启动 Activity
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
           <a href="/undefined/吾爱破解/">
             <h2 class="post-title">
               Android 源码之签名 Apksign
@@ -712,48 +733,6 @@
             
             <h3 class="post-subtitle">
               应用签名 V1、V2、V3、V4
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="其他">
-          <span class="tag-text">其他</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/undefined/202301-年终总结/">
-            <h2 class="post-title">
-              年终总结
-            </h2>
-            
-            <h3 class="post-subtitle">
-              如果不记得去年的样子，可以翻翻相册
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="SDK">
-          <span class="tag-text">SDK</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/undefined/从smail接入第三方/">
-            <h2 class="post-title">
-              从 smail 接入第三方 SDK
-            </h2>
-            
-            <h3 class="post-subtitle">
-              有时通过查看、修改第三方库能更好解决问题
             </h3>
             
           </a>
@@ -789,6 +768,27 @@
             
             <h3 class="post-subtitle">
               工欲善其事，必先利其器
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="SDK">
+          <span class="tag-text">SDK</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/undefined/从smail接入第三方/">
+            <h2 class="post-title">
+              从 smail 接入第三方 SDK
+            </h2>
+            
+            <h3 class="post-subtitle">
+              有时通过查看、修改第三方库能更好解决问题
             </h3>
             
           </a>
