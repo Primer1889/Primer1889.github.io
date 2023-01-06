@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="学习痕迹，留下痕迹可作为回忆的点滴"/>
+  <meta name="keyword" content="学习痕迹，深南村长"/>
+  <link rel="shortcut icon" href="/"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="http://yoursite-url/undefined/Android系统启动systemserver进程/">
+  <title>
+    
+      Android Systemserver 进程（五） - 深南村长
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav style="background-color: rgba(255, 255, 255, 0); border: 0px;" class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div  style="background-color: rgba(255, 255, 255, 0);" class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+          <li>
+            <a href="/categories/">分类</a>
+          </li>
+          <li>
+            <a href="/tags/">标签</a>
+          </li>
+          <li>
+            <a href="/about/">关于</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+    <style type="text/css">
+      .body--light {
+        /* intro-header */
+        --intro-header-background-image-url-home: url('/img/2301/5_bg.jpg');
+        --intro-header-background-image-url-post: url('/img/220928/android_sysserver_bg.png');
+        --intro-header-background-image-url-page: url('//img/220928/android_sysserver_bg.png');
+      }
+
+      .body--dark {
+        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/5_bg.jpg');
+        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/220928/android_sysserver_bg.png');
+        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/220928/android_sysserver_bg.png');
+      }
+
+      header.intro-header {
+        
+          /*post*/
+          background-image: var(--intro-header-background-image-url-post);
+          /* background-image: url('/img/220928/android_sysserver_bg.png'); */
+          
+      }
+
+      #signature {
+          /*signature*/
+          background-image: url('/img/signature/nick-name.png');
+        }
+
+        
+    </style>
+    
+
+
+
+      
+        <header class="intro-header">
+          <!-- Signature -->
+          <div id="signature">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+                    <div class="post-heading">
+                      <div class="tags">
+                        
+                          <a class="tag" href="/tags/#AOSP" title="AOSP">
+                            AOSP
+                          </a>
+                          
+                      </div>
+                      <h1>
+                        Android Systemserver 进程（五）
+                      </h1>
+                      <h2 class="subheading">
+                        启动服务、核心服务、其他服务
+                      </h2>
+                      <span>
+                        作者： 深南村长
+                      </span>
+                      <br>
+                      <span>
+                        时间：2022-09-29
+                      </span>
+                      <br>
+                      
+                        <!-- WordCount start -->
+                        <span>
+                          时长： <span>
+                            20
+                          </span> 分钟
+                        </span>
+                        <br>
+                        <span>
+                          字数： <span>
+                            4.6k
+                          </span> 字
+                        </span>
+                        <br>
+                        <!-- WordCount end -->
+                        
+                          
+                            <!-- 不蒜子统计 start -->
+                            <span id="busuanzi_container_page_pv">
+                              次数： <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                            
+
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+            <!-- waveoverlay start -->
+            <div class="preview-overlay">
+              <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+                  </path>
+                </defs>
+                <g class="preview-parallax">
+                  <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+                  <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+                  <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+                  <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+                </g>
+              </svg>
+            </div>
+            <!-- waveoverlay end -->
+            
+
+        </header>
+        
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p><strong>相关文件</strong></p>
+<ul>
+<li>/framework/base/service/java/com/android/server/SystemServer.java</li>
+<li>/framework/base/service/java/com/android/server/SystemServiceManager.java</li>
+<li>/framework/base/service/java/com/android/server/WatchDog.java</li>
+<li>/frameworks/base/core/java/com/android/server/SystemConfig.java</li>
+<li>… etc</li>
+</ul>
+<h1>运行 System server</h1>
+<p>经过前两篇的系统文章，已经完成了 init、zygote 进程的创建和初始化，即将启动系统各大服务，各项服务由服务管理者 <code>System server</code> 完成创建和启动，那么赶紧进入瞧瞧去 <code>/framework/base/service/java/com/android/server/SystemServer.java</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//SystemServer.java</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">SystemServer</span> <span class="keyword">implements</span> <span class="title">Dumpable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//列举几个认为重要的成员</span></span><br><span class="line">    </span><br><span class="line">   <span class="comment">//类似这样的服务名称不少于 50 个</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String WIFI_SERVICE_CLASS =</span><br><span class="line">            <span class="string">&quot;com.android.server.wifi.WifiService&quot;</span>;                  <span class="comment">//Wi-Fi服务</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String WIFI_SCANNING_SERVICE_CLASS =</span><br><span class="line">            <span class="string">&quot;com.android.server.wifi.scanner.WifiScanningService&quot;</span>;  <span class="comment">//Wi-Fi 扫描</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String ALARM_MANAGER_SERVICE_CLASS =</span><br><span class="line">            <span class="string">&quot;com.android.server.alarm.AlarmManagerService&quot;</span>;         <span class="comment">//闹钟</span></span><br><span class="line">    ... etc</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//系统默认的对话框等主题</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DEFAULT_SYSTEM_THEME =</span><br><span class="line">           com.android.internal.R.style.Theme_DeviceDefault_System;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//很重要的一个主角，系统服务管理者</span></span><br><span class="line">    <span class="keyword">private</span> SystemServiceManager mSystemServiceManager;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//具体服务实现类</span></span><br><span class="line">    <span class="keyword">private</span> ActivityManagerService mActivityManagerService;  <span class="comment">//Activity 管理</span></span><br><span class="line">    <span class="keyword">private</span> PackageManagerService mPackageManagerService;    <span class="comment">//安装包管理</span></span><br><span class="line">    <span class="keyword">private</span> ContentResolver mContentResolver;                <span class="comment">//内容解析——内容提供者数据解析</span></span><br><span class="line">    <span class="keyword">private</span> DisplayManagerService mDisplayManagerService;    <span class="comment">//设备显示相关</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//看变量名就很清晰，application 错误报告信息记录</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> LinkedList&lt;Pair&lt;String, ApplicationErrorReport.CrashInfo&gt;&gt; sPendingWtfs;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//memtracker：memory tracker 【参考链接】</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">native</span> <span class="keyword">void</span> <span class="title">startMemtrackProxyService</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Hidl Hardware Interface Definition Language 硬件抽象层语言【参考链接】</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">native</span> <span class="keyword">void</span> <span class="title">startHidlServices</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//调试模式下我们应用进程能够 dump head，dump file 是进程的内存镜像，把进程当前保存的状态保存到 dump 文件</span></span><br><span class="line">    <span class="comment">//head dump 其实利用 Android studio 内置的工具（Android profile、Memory profile）也是可以生成的，直接帮你把文件可视化</span></span><br><span class="line">    <span class="comment">//生成的文件保存路径 /data/system/heapdump/</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">native</span> <span class="keyword">void</span> <span class="title">initZygoteChildHeapProfiling</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//从主函数开始执行</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> SystemServer().run();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//SystemServer</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">SystemServer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">//记录性信息，不影响继续阅读吧，主要还是后面的 run 方法</span></span><br><span class="line"></span><br><span class="line">    mFactoryTestMode = FactoryTest.getMode();</span><br><span class="line">    mStartCount = SystemProperties.getInt(SYSPROP_START_COUNT, <span class="number">0</span>) + <span class="number">1</span>;</span><br><span class="line">    mRuntimeStartElapsedTime = SystemClock.elapsedRealtime();</span><br><span class="line">    mRuntimeStartUptime = SystemClock.uptimeMillis();</span><br><span class="line">    Process.setStartTimes(mRuntimeStartElapsedTime, mRuntimeStartUptime);</span><br><span class="line"></span><br><span class="line">    mRuntimeRestart = <span class="string">&quot;1&quot;</span>.equals(SystemProperties.get(<span class="string">&quot;sys.boot_completed&quot;</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//SystemServer.java</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//通过设置系统属性，记录进程启动信息，启动次数等</span></span><br><span class="line">    SystemProperties.set(SYSPROP_START_COUNT,String.valueOf(mStartCount));</span><br><span class="line">    <span class="comment">//如果当前时区无效将被设置为默认值 GMT —— 格林威治时间</span></span><br><span class="line">    SystemProperties.set(<span class="string">&quot;persist.sys.timezone&quot;</span>, <span class="string">&quot;GMT&quot;</span>);</span><br><span class="line">    <span class="comment">//如果知道了语言，尝试通过语言设置地区属性</span></span><br><span class="line">    <span class="comment">//【presist 前缀的系统属性是可写的，ro 前缀的系统属性是只读的】</span></span><br><span class="line">    <span class="keyword">if</span> (!SystemProperties.get(<span class="string">&quot;persist.sys.language&quot;</span>).isEmpty()) &#123;</span><br><span class="line">        <span class="keyword">final</span> String languageTag = Locale.getDefault().toLanguageTag();</span><br><span class="line">        SystemProperties.set(<span class="string">&quot;persist.sys.locale&quot;</span>, languageTag); </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*前面都是在设置一些系统属性，接下来将要真正启动服务*/</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//SystemClock.elapsedRealtime();  获取设备启动到当前的毫秒值</span></span><br><span class="line">    <span class="comment">//清理一次内存，为 application 可以分配得到更多内存</span></span><br><span class="line">    VMRuntime.getRuntime().clearGrowthLimit();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//启动准备线程策略 THREAD_PRIORITY_FOREGROUND：应用程序不得更改线程优先级、不得更改线程数量，这些将由系统自动调整</span></span><br><span class="line">    android.os.Process.setThreadPriority(</span><br><span class="line">        android.os.Process.THREAD_PRIORITY_FOREGROUND); </span><br><span class="line">    <span class="comment">//这是对前一条语句设置前台进程的限制 THREAD_PRIORITY_FOREGROUND，这里传入 false，如果此前设置的线程策略是‘后台进程组’将抛出异常</span></span><br><span class="line">    android.os.Process.setCanSelfBackground(<span class="keyword">false</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Looper 是线程的消息循环机制，这里的线程自然是执行的主线程 Main-Thread，也就是 application 所在线程</span></span><br><span class="line">    <span class="comment">//这里有一个经典八股文😊：自定义子线程 Looper 需要手动执行 prepareLooper，为什么我们在使用主线程的 Looper 前不需要先调用 prepare Looper？</span></span><br><span class="line">    <span class="comment">//       A答：调用时肯定要调用的。这不是废话吗，我们不调用那肯定是‘别人’已经在我们使用前就调用了————那这个‘别人’其实就是 Android env 在创建时候调用了</span></span><br><span class="line">    <span class="comment">//这个 application main loop 被系统缓存在 Looper.java 中（static final ThreadLocal&lt;Looper&gt; sThreadLocal = new ThreadLocal&lt;Looper&gt;();）</span></span><br><span class="line">    <span class="comment">//我们平时使用是通过： Looper.getMainLooper()</span></span><br><span class="line">    Looper.prepareMainLooper();</span><br><span class="line">    Looper.getMainLooper().setSlowLogThresholdMs(</span><br><span class="line">        SLOW_DISPATCH_THRESHOLD_MS, SLOW_DELIVERY_THRESHOLD_MS);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建系统上下文 mSystemContext 以及设置上述的默认主题</span></span><br><span class="line">    createSystemContext();</span><br><span class="line">    <span class="comment">//继续</span></span><br><span class="line">    mSystemServiceManager = <span class="keyword">new</span> SystemServiceManager(mSystemContext);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//启动读取系统全局配置的线程池，下面启动服务启动时候将会用到</span></span><br><span class="line">    <span class="comment">//什么时候关闭线程池呢？if (phase == SystemService.PHASE_BOOT_COMPLETED)&#123;SystemServerInitThreadPool.shutdown();&#125;</span></span><br><span class="line">    SystemServerInitThreadPool tp = SystemServerInitThreadPool.start();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//【重点、重点、重点】</span></span><br><span class="line">    <span class="comment">//启动各种 Service</span></span><br><span class="line">    startBootstrapServices(t);  <span class="comment">//启动服务</span></span><br><span class="line">    startCoreServices(t);       <span class="comment">//核心服务</span></span><br><span class="line">    startOtherServices(t);      <span class="comment">//其他服务</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//一个检测工具</span></span><br><span class="line">    StrictMode.initVmDefaults(<span class="keyword">null</span>);</span><br><span class="line">    <span class="comment">//进入一个无眠的世界默默`打工`，为‘人民’服务</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        1、获得当前线程的消息队列 MessageQueue</span></span><br><span class="line"><span class="comment">        2、在 for(;;) 循环中不断从消息队列取出消息，queue.next()，这是一个阻塞的过程</span></span><br><span class="line"><span class="comment">        3、如果获取到可用的消息则进行分发 msg.target.dispatchMessage(msg)</span></span><br><span class="line"><span class="comment">        4、消息分发之后进行回收或清理 msg.recycleUnChecked()</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    Looper.loop();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1>启动 Bootstrap 服务</h1>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//SystemServer.java</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">startBootstrapServices</span><span class="params">(<span class="meta">@NonNull</span> TimingsTraceAndSlog t)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//【1】watchdog 看门🐶？看着是有这个意思，大概就是监控服务</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        1、它运行在一个单独的线程中 mThread = new Thread(this::run, &quot;watchdog&quot;);</span></span><br><span class="line"><span class="comment">        2、主要是检查一些线程的运行状态和调度情况，比如检查的线程有前台线程、IO、UI、main、display、animation、surface animation 等线程</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">final</span> Watchdog watchdog = Watchdog.getInstance();</span><br><span class="line">    watchdog.start();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//【2】加载全局系统配置信息</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        1、此线程池在 SystemServer 启动时候执行</span></span><br><span class="line"><span class="comment">        2、在 SystemServer 启动完成之后关闭 SystemService.PHASE_BOOT_COMPLETE</span></span><br><span class="line"><span class="comment">        3、调用 submit 方法真正执行系统全局配置读取的方法在哪里？线程池提交之后执行的当然是 run 方法。谁的 run 方法？SystemConfig::getInstance 又是啥，在哪里？【不解，知者欢迎评论】</span></span><br><span class="line"><span class="comment">        4、SystemConfig::getInstance：Java 能够使用双引号访问静态方法，在此之前我只知道 cpp 是可以这样的，后来查了一下似乎是 lambada 的语法糖😺不知者无罪</span></span><br><span class="line"><span class="comment">        5、readPublicNativeLibrariesList();//String[] dirs = &#123;&quot;/system/etc&quot;, &quot;/system_ext/etc&quot;, &quot;/product/etc&quot;,&quot;vendor/etc&quot;&#125;;读取此目录下 public.libraries- 开头，.txt 结尾的配置文件</span></span><br><span class="line"><span class="comment">        6、readAllPermissions();//解析根目录、Vendor目录等 etc/sysconfig、etc/permission 下 XML 权限文件</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">final</span> String TAG_SYSTEM_CONFIG = <span class="string">&quot;ReadingSystemConfig&quot;</span>;</span><br><span class="line">    SystemServerInitThreadPool.submit(SystemConfig::getInstance, TAG_SYSTEM_CONFIG);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//【3】公共服务</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        1、将来 ActivityManagerService、PackageManagerService ...etc 会使用</span></span><br><span class="line"><span class="comment">        2、调用 addService 一看流程最终到了 IServiceManager.cpp 藏得这么深，真是服了这个老 six，sp&lt;AidlServiceManager&gt; mTheRealServiceManager;   </span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    PlatformCompat platformCompat = <span class="keyword">new</span> PlatformCompat(mSystemContext);</span><br><span class="line">    ServiceManager.addService(Context.PLATFORM_COMPAT_SERVICE, platformCompat);</span><br><span class="line">    ServiceManager.addService(Context.PLATFORM_COMPAT_NATIVE_SERVICE,</span><br><span class="line">        <span class="keyword">new</span> PlatformCompatNative(platformCompat));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//【4】文件完整性校验相关服务</span></span><br><span class="line">    mSystemServiceManager.startService(FileIntegrityService.class);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//【5】应用程序安装相关服务</span></span><br><span class="line">    Installer installer = mSystemServiceManager.startService(Installer.class);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//【6】设备标识访问策略服务</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        1、获取手机序列号：getSerial()，系统属性对应键 ro.serialn。调用时</span></span><br><span class="line"><span class="comment">elephonyPermissions.checkCallingOrSelfReadDeviceIdentifiers</span></span><br><span class="line"><span class="comment">        2、指定包名获取序列号 getSerialForPackage，其中再根据包名 + 当前用户ID获取调用此类的 UID，所以猜测还有有不少限制的，比如限制非 root 用户、限制非系统应用</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    SystemServiceManager.startService(DeviceIdentifiersPolicyService.class);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//【7】URI 授权管理服务 （关于 Uri 可参考链接）</span></span><br><span class="line">    mSystemServiceManager.startService(UriGrantsManagerService.Lifecycle.class);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//【8】电池相关服务</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        1、电量🔋触发器BatteryTrigger mBatteryTrigger，通过广播监听电量变化，当电量下降1%将会接收到广播，似乎只做一件事：就是更新最新电量信息</span></span><br><span class="line"><span class="comment">        2、IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED); 通过 context 注册广播</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    mSystemServiceManager.startService(PowerStatsService.class);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//【9】内存分析服务  （native 调用）</span></span><br><span class="line">    startMemtrackProxyService();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//【10】AMS 服务（终于看到一个比较常见的🐶）</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        1、高版本任务栈管理类似乎被分离出来了，由 ActivityTaskManagerService 实现，内容太多，下次一定看看</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    ActivityTaskManagerService atm = mSystemServiceManager.startService(</span><br><span class="line">        ActivityTaskManagerService.Lifecycle.class).getService();</span><br><span class="line">    mActivityManagerService = ActivityManagerService.Lifecycle.startService(</span><br><span class="line">        mSystemServiceManager, atm);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//【11】数据加载</span></span><br><span class="line">    mDataLoaderManagerService = mSystemServiceManager.startService(</span><br><span class="line">        DataLoaderManagerService.class);</span><br><span class="line">        </span><br><span class="line">    <span class="comment">//【12】电源管理服务，之前那个时电池状态管理（只做了一件事：监听电量变化）</span></span><br><span class="line">    mPowerManagerService = mSystemServiceManager.startService(PowerManagerService.class);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//【13】系统恢复服务，我们刷机常见的 Recover 模式</span></span><br><span class="line">    mSystemServiceManager.startService(RecoverySystemService.Lifecycle.class);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//【14】安装包管理服务，这是个大类，三万行呢，下次一定看看</span></span><br><span class="line">    mPackageManagerService = PackageManagerService.main(mSystemContext, installer,</span><br><span class="line">        domainVerificationService, mFactoryTestMode != FactoryTest.FACTORY_TEST_OFF,</span><br><span class="line">        mOnlyCore);</span><br><span class="line">        </span><br><span class="line">    <span class="comment">//【15】传感器服务</span></span><br><span class="line">    mSystemServiceManager.startService(<span class="keyword">new</span> SensorPrivacyService(mSystemContext));</span><br><span class="line">    mSystemServiceManager.startService(SensorService.class);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>启动服务到这里就结束啦，只是部分列举，并不完整，服务是如何运行的？具体都在做了些什么？等等！！！这些执行细节希望在之后的系列文章进一步深入（内容实在是太多了😭）</p>
+<h1>启动 Core 服务</h1>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//SystemServer.java</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">startCoreServices</span><span class="params">(<span class="meta">@NonNull</span> TimingsTraceAndSlog t)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//【1】主要负责读取系统配置信息</span></span><br><span class="line">    mSystemServiceManager.startService(SystemConfigService.class);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//【2】电量跟踪</span></span><br><span class="line">    mSystemServiceManager.startService(BatteryService.class);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//【3】应用使用状态跟踪</span></span><br><span class="line">    mSystemServiceManager.startService(UsageStatsService.class);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//【4】监控设备是否充电、屏幕是否亮起</span></span><br><span class="line">    <span class="comment">//（通过高优先级的广播监听📢，指定特定的 intentfilter——ACTION_SCREEN_ON/ACTION_SCREEN_OFF/ACTION_BATTERY_CHANGED）</span></span><br><span class="line">    mSystemServiceManager.startService(CachedDeviceStateService.class);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//【5】应用程序回滚？？？</span></span><br><span class="line">    mSystemServiceManager.startService(ROLLBACK_MANAGER_SERVICE_CLASS);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//【6】tombstone 墓碑，记录进程被杀死前的一些信息，比如调用栈、内存使用情况、CPU 使用情况、backtrace 等等，主要是监控和记录 native 崩溃信息（获取这个崩溃日志需要 root 权限）</span></span><br><span class="line">    mSystemServiceManager.startService(NativeTombstoneManagerService.class);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//【7】Android 错误报告生成，应用崩溃时候查看这个报告还是很有用的（前提是你能够看懂报告）</span></span><br><span class="line">    <span class="comment">// 可以同 adb bugreport 获取错误报告（Android 版本之间获取方式稍有区别，根据 adb bugreport 提示操作即可）</span></span><br><span class="line">    mSystemServiceManager.startService(BugreportManagerService.class);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//【8】主要还是监视和收集 GPU 信息</span></span><br><span class="line">    mSystemServiceManager.startService(GpuService.class);    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>核心服务不是很多，主要是信息记录相关，必不可少、确实很是关键。</p>
+<h1>启动 Other 服务</h1>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//SystemServer.java</span></span><br><span class="line"> <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">startOtherServices</span><span class="params">(<span class="meta">@NonNull</span> TimingsTraceAndSlog t)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//闹钟服务⏰</span></span><br><span class="line">            mSystemServiceManager.startService(ALARM_MANAGER_SERVICE_CLASS);</span><br><span class="line">            <span class="comment">//WMS 服务</span></span><br><span class="line">            mSystemServiceManager.startBootPhase(t, SystemService.PHASE_WAIT_FOR_SENSOR_SERVICE);</span><br><span class="line">            wm = WindowManagerService.main(context, inputManager, !mFirstBoot, mOnlyCore,</span><br><span class="line">                    <span class="keyword">new</span> PhoneWindowManager(), mActivityManagerService.mActivityTaskManager);</span><br><span class="line">            ServiceManager.addService(Context.WINDOW_SERVICE, wm, <span class="comment">/* allowIsolated= */</span> <span class="keyword">false</span>,</span><br><span class="line">                    DUMP_FLAG_PRIORITY_CRITICAL | DUMP_FLAG_PROTO);</span><br><span class="line">            ServiceManager.addService(Context.INPUT_SERVICE, inputManager,</span><br><span class="line">                    <span class="comment">/* allowIsolated= */</span> <span class="keyword">false</span>, DUMP_FLAG_PRIORITY_CRITICAL);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//蓝牙服务</span></span><br><span class="line">            <span class="keyword">if</span> (mFactoryTestMode == FactoryTest.FACTORY_TEST_LOW_LEVEL) &#123;</span><br><span class="line">                Slog.i(TAG, <span class="string">&quot;No Bluetooth Service (factory test)&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!context.getPackageManager().hasSystemFeature</span><br><span class="line">                    (PackageManager.FEATURE_BLUETOOTH)) &#123;</span><br><span class="line">                Slog.i(TAG, <span class="string">&quot;No Bluetooth Service (Bluetooth Hardware Not Present)&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                mSystemServiceManager.startService(BluetoothService.class);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//网络列表监控服务</span></span><br><span class="line">            mSystemServiceManager.startService(NetworkWatchlistService.Lifecycle.class);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//输入法管理服务</span></span><br><span class="line">            <span class="keyword">if</span> (InputMethodSystemProperty.MULTI_CLIENT_IME_ENABLED) &#123;</span><br><span class="line">                mSystemServiceManager.startService(</span><br><span class="line">                        MultiClientInputMethodManagerService.Lifecycle.class);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                mSystemServiceManager.startService(InputMethodManagerService.Lifecycle.class);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//辅助功能</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                mSystemServiceManager.startService(ACCESSIBILITY_MANAGER_SERVICE_CLASS);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">                reportWtf(<span class="string">&quot;starting Accessibility Manager&quot;</span>, e);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//开发者选项中，OEM 解锁还记得吗</span></span><br><span class="line">            <span class="keyword">if</span> (hasPdb || OemLockService.isHalPresent()) &#123;</span><br><span class="line">                mSystemServiceManager.startService(OemLockService.class);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//状态栏    </span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                statusBar = <span class="keyword">new</span> StatusBarManagerService(context);</span><br><span class="line">                ServiceManager.addService(Context.STATUS_BAR_SERVICE, statusBar);</span><br><span class="line">             &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">             &#125;</span><br><span class="line">             </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            startContentCaptureService(context, t);</span><br><span class="line">            startAttentionService(context, t);</span><br><span class="line">            startRotationResolverService(context, t);</span><br><span class="line">            startSystemCaptionsManagerService(context, t);</span><br><span class="line">            <span class="comment">//文字语音转换</span></span><br><span class="line">            startTextToSpeechManagerService(context, t);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//系统语音识别</span></span><br><span class="line">            mSystemServiceManager.startService(SPEECH_RECOGNITION_MANAGER_SERVICE_CLASS);</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//智慧空间？记得华为手机搜索页面是这个名称，有的叫‘智慧场景’</span></span><br><span class="line">            mSystemServiceManager.startService(SMARTSPACE_MANAGER_SERVICE_CLASS);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//网络</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                networkManagement = NetworkManagementService.create(context);</span><br><span class="line">                ServiceManager.addService(Context.NETWORKMANAGEMENT_SERVICE, networkManagement);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//字体</span></span><br><span class="line">            mSystemServiceManager.startService(<span class="keyword">new</span> FontManagerService.Lifecycle(context, safeMode));</span><br><span class="line"></span><br><span class="line">            <span class="comment">//Wi-Fi</span></span><br><span class="line">            <span class="keyword">if</span> (context.getPackageManager().hasSystemFeature(</span><br><span class="line">                    PackageManager.FEATURE_WIFI)) &#123;</span><br><span class="line">                mSystemServiceManager.startServiceFromJar(</span><br><span class="line">                        WIFI_SERVICE_CLASS, WIFI_APEX_SERVICE_JAR_PATH);</span><br><span class="line">                mSystemServiceManager.startServiceFromJar(</span><br><span class="line">                        WIFI_SCANNING_SERVICE_CLASS, WIFI_APEX_SERVICE_JAR_PATH);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (context.getPackageManager().hasSystemFeature(</span><br><span class="line">                    PackageManager.FEATURE_WIFI_RTT)) &#123;</span><br><span class="line">                mSystemServiceManager.startServiceFromJar(</span><br><span class="line">                        WIFI_RTT_SERVICE_CLASS, WIFI_APEX_SERVICE_JAR_PATH);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (context.getPackageManager().hasSystemFeature(</span><br><span class="line">                    PackageManager.FEATURE_WIFI_AWARE)) &#123;</span><br><span class="line">                mSystemServiceManager.startServiceFromJar(</span><br><span class="line">                        WIFI_AWARE_SERVICE_CLASS, WIFI_APEX_SERVICE_JAR_PATH);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (context.getPackageManager().hasSystemFeature(</span><br><span class="line">                    PackageManager.FEATURE_WIFI_DIRECT)) &#123;</span><br><span class="line">                mSystemServiceManager.startServiceFromJar(</span><br><span class="line">                        WIFI_P2P_SERVICE_CLASS, WIFI_APEX_SERVICE_JAR_PATH);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//VPN</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                vpnManager = VpnManagerService.create(context);</span><br><span class="line">                ServiceManager.addService(Context.VPN_MANAGEMENT_SERVICE, vpnManager);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">            &#125;</span><br><span class="line">            t.traceEnd();</span><br><span class="line"></span><br><span class="line">            t.traceBegin(<span class="string">&quot;StartVcnManagementService&quot;</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                vcnManagement = VcnManagementService.create(context);</span><br><span class="line">                ServiceManager.addService(Context.VCN_MANAGEMENT_SERVICE, vcnManagement);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">                reportWtf(<span class="string">&quot;starting VCN Management Service&quot;</span>, e);</span><br><span class="line">            &#125;</span><br><span class="line">            t.traceEnd();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//系统更新</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                ServiceManager.addService(Context.SYSTEM_UPDATE_SERVICE,</span><br><span class="line">                        <span class="keyword">new</span> SystemUpdateManagerService(context));</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//通知栏</span></span><br><span class="line">            mSystemServiceManager.startService(NotificationManagerService.class);</span><br><span class="line">            SystemNotificationChannels.removeDeprecated(context);</span><br><span class="line">            SystemNotificationChannels.createAll(context);</span><br><span class="line">            notification = INotificationManager.Stub.asInterface(</span><br><span class="line">                    ServiceManager.getService(Context.NOTIFICATION_SERVICE));</span><br><span class="line"></span><br><span class="line">            <span class="comment">//壁纸</span></span><br><span class="line">            <span class="keyword">if</span> (context.getResources().getBoolean(R.bool.config_enableWallpaperService)) &#123;</span><br><span class="line">                mSystemServiceManager.startService(WALLPAPER_SERVICE_CLASS);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//音量</span></span><br><span class="line">            <span class="keyword">if</span> (!isArc) &#123;</span><br><span class="line">                mSystemServiceManager.startService(AudioService.Lifecycle.class);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                String className = context.getResources()</span><br><span class="line">                        .getString(R.string.config_deviceSpecificAudioService);</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    mSystemServiceManager.startService(className + <span class="string">&quot;$Lifecycle&quot;</span>);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//无限广播</span></span><br><span class="line">            <span class="keyword">if</span> (mPackageManager.hasSystemFeature(PackageManager.FEATURE_BROADCAST_RADIO)) &#123;</span><br><span class="line">                t.traceBegin(<span class="string">&quot;StartBroadcastRadioService&quot;</span>);</span><br><span class="line">                mSystemServiceManager.startService(BroadcastRadioService.class);</span><br><span class="line">                t.traceEnd();</span><br><span class="line">            &#125;</span><br><span class="line">        </span><br><span class="line">            <span class="comment">//adb 调试</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                mSystemServiceManager.startService(ADB_SERVICE_CLASS);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">                Slog.e(TAG, <span class="string">&quot;Failure starting AdbService&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//app 启动</span></span><br><span class="line">        mSystemServiceManager.startService(LauncherAppsService.class);</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//启动密码锁</span></span><br><span class="line">        mSystemServiceManager.startBootPhase(t, SystemService.PHASE_LOCK_SETTINGS_READY);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//紧接着会有各项之前启动的服务调用 systemReady() 方法，指定服务准备完毕，即将进入下一个阶段</span></span><br><span class="line">        mPackageManagerService.systemReady();</span><br><span class="line">        mDisplayManagerService.systemReady(safeMode, mOnlyCore);</span><br><span class="line">        ... etc</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//等待服务准备完毕</span></span><br><span class="line">        mPackageManagerService.waitForAppDataPrepared();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//各项服务调用 systemRunning()、start() 方法开始运行服务自身</span></span><br><span class="line">        countryDetectorF.systemRunning();</span><br><span class="line">        networkTimeUpdaterF.systemRunning();</span><br><span class="line">        inputManagerF.systemRunning();</span><br><span class="line">        telephonyRegistryF.systemRunning();</span><br><span class="line">        mmsServiceF.systemRunning();</span><br><span class="line">        ... etc</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//启动系统界面服务</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            1、通过 intent 指定特定的组件 context.startServiceAsUser(intent, UserHandle.SYSTEM);</span></span><br><span class="line"><span class="comment">            2、startServiceAsUser 更上层的代码对我们看来像是调用 context.startService</span></span><br><span class="line"><span class="comment">            3、指定的启动的服务组件 pm.getSystemUiServiceComponent() 是什么呢？</span></span><br><span class="line"><span class="comment">                PackageManagerInternal pm = LocalServices.getService(PackageManagerInternal.class);</span></span><br><span class="line"><span class="comment">                PackageManagerInternal 是一个抽象类，实现类是 PackageManagerInternalImpl</span></span><br><span class="line"><span class="comment">                而 PackageManagerInternalImpl 是 PackageManager 的内部类，所属成员是 private final PackageManagerInternal mPmInternal;</span></span><br><span class="line"><span class="comment">                而 getSystemUiServiceComponent 就是获取一个 string 资源com.android.internal.R.string.config_systemUIServiceComponent</span></span><br><span class="line"><span class="comment">            4、资源文件所在路径：frameworks/base/core/res/res/values/config.xml【看这个文件有好多服务的 component】</span></span><br><span class="line"><span class="comment">            5、资源内容 </span></span><br><span class="line"><span class="comment">            &lt;!-- SystemUi service component --&gt;</span></span><br><span class="line"><span class="comment">            &lt;string name=&quot;config_systemUIServiceComponent&quot; translatable=&quot;false&quot;&gt;com.android.systemui/com.android.systemui.SystemUIService&lt;/string&gt;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        startSystemUi(context, windowManagerF);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="启动-SystemUI-服务">启动 SystemUI 服务</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//SystemServer.java</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">startSystemUi</span><span class="params">(Context context, WindowManagerService windowManager)</span> </span>&#123;</span><br><span class="line">    PackageManagerInternal pm = LocalServices.getService(PackageManagerInternal.class);</span><br><span class="line">    Intent intent = <span class="keyword">new</span> Intent();</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        1、很明显这是一个服务 component: com.android.systemui/com.android.systemui.SystemUIService</span></span><br><span class="line"><span class="comment">        2、此服务 Java 实现类所在路径是 /framework/base/packages/SystemUI/src/com/android/systemui/SystemUIService.java</span></span><br><span class="line"><span class="comment">        3、这个类比较简洁，主要有三个成员分别负责不同的事情</span></span><br><span class="line"><span class="comment">            mainHandle  ：主线程通讯，明知故问</span></span><br><span class="line"><span class="comment">            dumpHandle  ：当前线程运行状态信息输出</span></span><br><span class="line"><span class="comment">            logBufferFreezer   ：负责错误报告日志相关【错误报告-参考链接】</span></span><br><span class="line"><span class="comment">            </span></span><br><span class="line"><span class="comment">        4、system server 进程启动的 UI 服务：来到了 SystemUIApplication.java 这个类 ((SystemUIApplication) getApplication()).startServicesIfNeeded();</span></span><br><span class="line"><span class="comment">            所有的 UI 服务包含哪些？服务名称列表哪里来？又是一个字符串数组资源 config_systemUIServiceComponents R.array.config_systemUIServiceComponentsPerUser</span></span><br><span class="line"><span class="comment">            资源所在路径是 /framework/base/packages/SystemUI/res/value/config.xml</span></span><br><span class="line"><span class="comment">            </span></span><br><span class="line"><span class="comment">            4.1【服务列表参考下文】</span></span><br><span class="line"><span class="comment">            4.2 通过反射创建服务 Class.forname(serviceName) 调用指定构造函数 newInstance</span></span><br><span class="line"><span class="comment">            4.3 启动服务 mServices[i].start(); 接下来就不具体看了，以后具体服务具体分析</span></span><br><span class="line"><span class="comment">            </span></span><br><span class="line"><span class="comment">        5、SysteUIApplication 他是一个 Application，所以在此之前创建该实例是会先执行 onCreate 方法，</span></span><br><span class="line"><span class="comment">            这里有调用一个重要的方法，对于非私有的非系统用户将执行 startSecondaryUserServicesIfNeeded();</span></span><br><span class="line"><span class="comment">            获取的服务列表是 R.array.config_systemUIServiceComponentsPerUser 查看只有一个服务</span></span><br><span class="line"><span class="comment">            </span></span><br><span class="line"><span class="comment">            5.1 com.android.systemui.util.NotificationChannels</span></span><br><span class="line"><span class="comment">            </span></span><br><span class="line"><span class="comment">    intent.setComponent(pm.getSystemUiServiceComponent());</span></span><br><span class="line"><span class="comment">    intent.addFlags(Intent.FLAG_DEBUG_TRIAGED_MISSING);</span></span><br><span class="line"><span class="comment">    context.startServiceAsUser(intent, UserHandle.SYSTEM);</span></span><br><span class="line"><span class="comment">    windowManager.onSystemUiStarted();</span></span><br><span class="line"><span class="comment">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><strong>system UI 服务列表</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">//通知渠道服务（Android 低版本的通知创建是不需要设置通知渠道，后来高版本引入通知渠道并且必须设置，否则通知显示存在异常）</span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.util.NotificationChannels<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.keyguard.KeyguardViewMediator<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line">//应用最近任务列表</span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.recents.Recents<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line">//音量</span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.volume.VolumeUI<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.stackdivider.Divider<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line">//状态栏</span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.statusbar.phone.StatusBar<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.usb.StorageNotification<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.power.PowerUI<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.media.RingtonePlayer<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line">//键盘</span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.keyboard.KeyboardUI<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.pip.PipUI<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.shortcut.ShortcutKeyDispatcher<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>@string/config_systemUIVendorServiceComponent<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.util.leak.GarbageMonitor$Service<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.LatencyTester<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.globalactions.GlobalActionsComponent<span class="tag">&lt;/<span class="name">item</span>&gt;</span> <span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.ScreenDecorations<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.biometrics.AuthController<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.SliceBroadcastRelayHandler<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.SizeCompatModeActivityController<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.statusbar.notification.InstantAppNotifier<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.theme.ThemeOverlayController<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.accessibility.WindowMagnification<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.accessibility.SystemActions<span class="tag">&lt;/<span class="name">item</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">item</span>&gt;</span>com.android.systemui.toast.ToastUI<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>System Server 大概是启动完成，那么接下来又去哪里运行了呢？？？或者下一步我们继续看那个点比较合适呢？？？之前我们只是粗略浏览，中间忽略了很多，下一步的入口点可能要返回之前的代码重新阅读发现合适的切入点，SystemServer 也已经进入了‘永久的循环’，等待的就是接受外部‘信号’做相应处理、继续分发到具体执行。</p>
+<p>那么，我们下周再见😊</p>
+<h1>附加</h1>
+<h2 id="如何快速搜索">如何快速搜索</h2>
+<p><strong>Android 项目中如何快速搜索某关键字？</strong></p>
+<p>AOSP 整个项目是很庞大的，不仅仅是包含 java 代码，就拿当前我下载的 <code>Android 11-r21 分支</code>来说，我是通过 git 下载在没有指定 <code>single-branch dept=1</code> 参数下，整个过程下载完毕占用大约 <strong>430G</strong> 存储空间。</p>
+<p>一开始我把源码存储在机械硬盘，通过 VSCode 打开机存在械硬盘的中的项目（整个 AOSP），比如搜索某个关键字，那个速度堪比龟速；后来把项目拷贝到笔记本 SSD 固态硬盘，搜索速度确实有了明显的提高，但整个项目搜索还是比较慢，不是十分满意；如果是单独打开某个模块——— framework 模块、framework base 模块等等，搜索速度还可以接受。但如果要找的代码根本不在当前模块，比如你打开 framework base 模块，但实际代码在 framework service 模块，这样是搜索不到结果的，因此还得把搜索范围扩大，引入的模块多了速度终是会变慢。</p>
+<p>搜索能够快速找到目标，是不是要借助一个东西————<strong>索引</strong>，如果有工具把 AOSP 整个项目预先建立索引，然后再打开项目搜索，下次搜索时无需重新创建索引，通过索引搜索不得要起飞。<s>与搜索相关索引确实是个好东西。</s></p>
+<p>【<strong>最后</strong>】</p>
+<p>推荐使用已有的在线网站辅助搜索：<a target="_blank" rel="noopener" href="http://aospxref.com"><strong>基于 opengrok 的 AOSPXRef</strong></a></p>
+<p>以搜索 SystemUIService <code>config_systemUIServiceComponent</code>为例：<br>
+<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f6d6877806a144cfb2a73a40aa569c01~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>【<strong>最后的最后</strong>】</p>
+<p>ASOPXRef 现有的项目是较少的，也就是几个特定的版本，如果能满足自己的需求刚好，要是想看的源码版本不是已存在的建议还是自己通过 <code>opengrok</code> 引擎搭建一个服务。<br>
+<strong>Oracle opengrok：</strong><a target="_blank" rel="noopener" href="https://github.com/oracle/opengrok">快速且可用的源代码搜索和交叉引用引擎</a></p>
+<h2 id="参考链接">参考链接</h2>
+<ul>
+<li>WTF：What a Terrible Failure —— Android 系统错误记录的一种</li>
+<li>Memtrack：内存分析 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/168361476">https://zhuanlan.zhihu.com/p/168361476</a></li>
+<li>Hidl：硬件抽象层，在较低 Android 版本可能还在使用 HAL （hardware abstract layer）<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/28256541">https://zhuanlan.zhihu.com/p/28256541</a></li>
+<li>Android Uri：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/bhlsheji/p/4246580.html">https://www.cnblogs.com/bhlsheji/p/4246580.html</a></li>
+<li>Android 错误报告：<a target="_blank" rel="noopener" href="https://developer.android.com/studio/debug/bug-report">https://developer.android.com/studio/debug/bug-report</a> ，<a target="_blank" rel="noopener" href="https://source.android.com/source/read-bug-reports.html">https://source.android.com/source/read-bug-reports.html</a></li>
+<li>Android 墓碑：<a target="_blank" rel="noopener" href="https://source.android.com/devices/tech/debug">https://source.android.com/devices/tech/debug</a></li>
+</ul>
+
+
+          <hr>
+          <!-- Pager -->
+          <ul class="pager">
+            
+              <li class="previous">
+                <a href="/undefined/Android系统桌面启动一/" data-toggle="tooltip" data-placement="top">&larr;
+                  上一篇</a>
+              </li>
+              
+                
+                  <li class="next">
+                    <a href="/undefined/Android系统启动zgote进程/" data-toggle="tooltip" data-placement="top">下一篇
+                      &rarr;</a>
+                  </li>
+                  
+          </ul>
+
+          
+            <!-- tip start -->
+            <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果你觉得有用，快来分享给你的小伙伴吧💗
+    
+  </p>
+</div>
+<!-- tip end -->
+
+              <!-- tip end -->
+              
+
+                
+                  <!-- Sharing Srtart -->
+                  <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+                    <!-- Sharing End -->
+                    
+                      <!-- <hr> -->
+
+                      <!-- comments start -->
+                      <!--  -->
+                        <!-- comments end -->
+                        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">运行 System server</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">启动 Bootstrap 服务</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">启动 Core 服务</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">启动 Other 服务</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8-SystemUI-%E6%9C%8D%E5%8A%A1"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">启动 SystemUI 服务</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">附加</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%9C%E7%B4%A2"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">如何快速搜索</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">参考链接</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+          <!-- Featured Tags -->
+          
+            <section>
+              <!-- no hr -->
+              <h5>
+                <a href="/tags/">
+                  个性标签
+                </a>
+              </h5>
+              <div class="tags">
+                
+                  <a class="tag" href="/tags/#AOSP" title="AOSP">
+                    AOSP
+                  </a>
+                  
+              </div>
+            </section>
+            
+
+              <!-- Friends Blog -->
+              
+                <hr>
+                <h5>
+                  友情链接
+                </h5>
+                <ul class="list-inline">
+
+                  
+                    <li>
+                      <a style="text-decoration: none;" href="https://www.dalv666.top" target="_blank">
+                        打驴动漫
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a style="text-decoration: none;" href="https://www.gfysys1.com" target="_blank">
+                        干饭影视
+                      </a>
+                    </li>
+                    
+                </ul>
+                
+        </div>
+    </div>
+  </div>
+</article>
+
+
+
+  <!-- anchorjs start -->
+  <!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+    <!-- anchorjs end -->
+    
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+              
+
+                  
+
+                      
+
+                          
+
+                              
+
+                                  
+
+                                      
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          深南村长
+            2023
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+                            <!-- jQuery -->
+                            <script type="text/javascript" src="/js/jquery.min.js"></script>
+                            <!-- Bootstrap Core JavaScript -->
+                            <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+                            <!-- Custom Theme JavaScript -->
+                            <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+                            <!-- catalog -->
+                            <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+                            <!-- totop(rocket) -->
+                            <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+                            
+                              <!-- Busuanzi JavaScript -->
+                              <script async="async"
+                                src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                              
+
+                                
+                                  <!-- Scroll start -->
+                                  <script async="async" type="text/javascript"
+                                    src="/js/scroll.js"></script>
+                                  <!-- Scroll end -->
+                                  
+
+                                    
+                                      <!-- LangSelect start -->
+                                      <script type="text/javascript" src="/js/langselect.js"></script>
+                                      <!-- LangSelect end -->
+                                      
+
+                                        
+                                          <!-- Mouseclick -->
+                                          <script type="text/javascript" src="/js/mouseclick.js"
+                                            content=''
+                                            color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+                                          
+
+                                            
+                                              <!-- ribbon -->
+                                              <script type="text/javascript"
+                                                src="/js/ribbonDynamic.js"></script>
+                                              
+
+                                                
+
+                                                    
+
+                                                      
+
+                                                          
+                                                            <!-- viewer start -->
+                                                            <!-- viewer start (Picture preview) -->
+                                                            
+                                                                <script async="async" type="text/javascript"
+                                                                  src="/js/viewer/viewer.min.js"></script>
+                                                                <script async="async" type="text/javascript"
+                                                                  src="/js/viewer/pic-viewer.js"></script>
+                                                                
+
+                                                                  <!-- viewer end -->
+                                                                  
+
+                                                                    <script>
+                                                                      // async load function
+                                                                      function async(u, c) {
+                                                                        var d = document,
+                                                                          t = 'script',
+                                                                          o = d.createElement(t),
+                                                                          s = d.getElementsByTagName(t)[0];
+                                                                        o.src = u;
+                                                                        if (c) {
+                                                                          o.addEventListener('load', function (e) {
+                                                                            c(null, e);
+                                                                          }, false);
+                                                                        }
+                                                                        s.parentNode.insertBefore(o, s);
+                                                                      }
+
+                                                                      // fastClick.js
+                                                                      async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+                                                                        var $nav = document.querySelector("nav");
+                                                                        if ($nav)
+                                                                          FastClick.attach($nav);
+                                                                      }
+                                                                      )
+                                                                    </script>
+
+                                                                    <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+                                                                    <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+                                                                    <!-- jquery.tagcloud.js -->
+                                                                    <!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+		<!-- Search -->
+		
+		<div style="margin-top: 300px;" class="popup search-popup local-search-popup">
+  <span style="margin-left: 120px;" class="popup-btn-close">
+    退出搜索
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div style="padding-left: 100px;" class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索" type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+	<link rel="stylesheet" href="/dist/APlayer.min.css">
+	<script src="./node_modules/pjax/pjax.js"></script>
+	<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+	<script type="text/javascript" src="/dist/music.js"></script>
+	<script src="https://myhkw.cn/api/player/166394977156" id="myhk" key="166394977156" m="1"></script>
+</html>
