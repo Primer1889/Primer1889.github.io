@@ -300,15 +300,19 @@ body {
 
 .sidebar-container a {
   color: var(--sidebar-tags-color) !important;
+  text-decoration: none;
 }
 
 .sidebar-container a:hover,
 .sidebar-container a:active {
   color: var(--sidebar-tags-color-hovor) !important;
+  text-decoration: none;
 }
 
 a:hover, a:focus {
   color: var(--sidebar-tags-color-hovor);
+  text-decoration: none;
+  font-size: 18px;
 }
 
 li.archive-list-item:hover {

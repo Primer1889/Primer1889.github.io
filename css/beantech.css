@@ -30,11 +30,13 @@
 
 .sidebar-container a {
   color: #bfbfbf !important;
+  text-decoration: none;
 }
 
 .sidebar-container a:hover,
 .sidebar-container a:active {
   color: #0085a1 !important;
+  text-decoration: none;
 }
 
 .sidebar-container .tags a {
