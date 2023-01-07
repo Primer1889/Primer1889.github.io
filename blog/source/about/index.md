@@ -3,7 +3,7 @@ layout: "about"
 title: "Jsonlili"
 date: 2016-04-21 04:48:33
 description: "金克丝的含义就是金克丝"
-header-img: "img/2301/2_bg.webp"
+header-img: "img/2301/2_bg.jpg"
 ---
 
 > 学习

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite-url/undefined/Gradle%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2023-01-07</lastmod>
+  </url>
+  <url>
     <loc>http://yoursite-url/undefined/%E6%88%91%E7%9A%84%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2023-01-03</lastmod>
   </url>
