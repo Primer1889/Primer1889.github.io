@@ -446,6 +446,50 @@
   <!-- top end -->
   
 
+  <a href="/undefined/Android系统启动zgote进程/">
+    <h2 class="post-title">
+      Android zygote 进程（四）
+    </h2>
+    <h3 class="post-subtitle">
+      俗称 Java 世界的鼻祖
+    </h3>
+    <div class="post-content-preview">
+      相关文件：
+
+/system/core/init/init.cpp
+/system/etc/init/hw/init.rc  (源码工程没找到，是从手机上获取)
+/system/etc/init/hw/init.zygote32.rc （手机上获取）
+/system/etc/init/hw/init.zygote64_32.rc （手机上获取）
+/system/core/init/actio......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    作者： 深南村长 
+    <br>
+    时间：2022-09-29
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#AOSP" title="AOSP">AOSP</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
   <a href="/undefined/Android系统启动systemserver进程/">
     <h2 class="post-title">
       Android Systemserver 进程（五）
@@ -496,26 +540,21 @@
       本系列文章基于 Android 11-r21 master
     </h3>
     <div class="post-content-preview">
-      设备启动简述
-1、BIOS 加载
+      设备启动简述1、BIOS 加载
 
 加电自检（基本输出/输入系统 stdio）
-
 硬件自检POST
 
 
 外部存储设备启动顺序排序，下一个获得控制权的设备
 读取激活分区第一个扇区的 主引导记录（512 字节）
-
 负责分区读写合法性判断
 负责引导信息定位
 数据存储
-
 调用操作系统的机器码
 分区表
-
 主分区是激活的，激活分区的第一个扇区是卷引导记录（告诉计算机操作系统在分区的位置-系统盘分区）
-当......
+当只有一个系......
     </div>
   </a>
   
@@ -553,12 +592,11 @@
       拒绝应用不合理获取个人信息的行为
     </h3>
     <div class="post-content-preview">
-      前言
-设备的个人信息（例如：联系人信息、短信内容等）属于用户隐私，违规获取个人信息被视为侵犯用户权益；在设备上获取个人信息一般需先获取到相应的权限才能进行获取，例如想获取相册图片，那么需要申请读写权限，用户同意权限申请之后可读取相册图片。应用存在违规获取个人信息的行为，不为罕见，何为违规行为？
+      前言设备的个人信息（例如：联系人信息、短信内容等）属于用户隐私，违规获取个人信息被视为侵犯用户权益；在设备上获取个人信息一般需先获取到相应的权限才能进行获取，例如想获取相册图片，那么需要申请读写权限，用户同意权限申请之后可读取相册图片。应用存在违规获取个人信息的行为，不为罕见，何为违规行为？
 个人理解：
 
 在用户不知情下获取个人信息。比如，在用户同意隐私政策前获取个人信息
-未向用户明确个人......
+未向用户明确个人信......
     </div>
   </a>
   
@@ -596,11 +634,8 @@
       有时通过查看、修改第三方库能更好解决问题
     </h3>
     <div class="post-content-preview">
-      遇到过这种场景吗
-什么时候要利用 smali 语言层面接入第三方 sdk ？一般都是使用 java 接口，一目了然，搞个 smali 不是没事找事？场景不同，在没有办法的时候这就是一种方法。
-programer A：   发你一个 apk 文件，帮我看下
-programer A：   因为我们没有原工程，只有一个 APK，我想把咋们的 sdk 接入到里面，怎么搞？
-programer B： ......
+      遇到过这种场景吗什么时候要利用 smali 语言层面接入第三方 sdk ？一般都是使用 java 接口，一目了然，搞个 smali 不是没事找事？场景不同，在没有办法的时候这就是一种方法。
+programer A：   发你一个 apk 文件，帮我看下programer A：   因为我们没有原工程，只有一个 APK，我想把咋们的 sdk 接入到里面，怎么搞？programer B：   应......
     </div>
   </a>
   
@@ -638,13 +673,12 @@ programer B： ......
       夏天的海边，再美不过落日余晖
     </h3>
     <div class="post-content-preview">
-      从 jclasslib 认识 Hello world
-那年，再熟悉不过的 Hello world。
+      从 jclasslib 认识 Hello world那年，再熟悉不过的 Hello world。
 可能很多人的第一个 java 程序都从‘你好世界’开始，从此踏上了一条不归路，多年以后（大概毕业半年），我以另一种方式重新认识它，这种方式叫字节码。
 
 Test.java
 
-12345678910111213141516171819package primer;//比如 Test 类的组成：/......
+12345678910111213141516171819package primer;//比如 Test 类的组成：//......
     </div>
   </a>
   
@@ -683,13 +717,11 @@ Test.java
     </h3>
     <div class="post-content-preview">
       你有遇到适用的场景吗
-
 你有没有遇到需要修改 class 文件重新打包的场景呢？巧得很，最近刚好遇到需要修改一个已存在的 jar 包以满足当前的需求，不过本次修改的是字符常量，尚未涉及到比较复杂的逻辑，记录下此刻，如何修改？如何快速修改完成需求？希望可以抛砖引玉，剩下的较为复杂的逻辑修改就交给你们了 :)
 举个例子：
-问题描述：
-1、某弹窗文本显示不正确（文字冗余，格式不符合要求）
+问题描述：    1、某弹窗文本显示不正确（文字冗余，格式不符合要求）
 
-关于描......
+关......
     </div>
   </a>
   
@@ -819,20 +851,16 @@ SIGSYS
     </h3>
     <div class="post-content-preview">
       架构
-
 application framework
 binder ipc proxies
 Android system service
-
 media service
-
 audio
 camera
 media player
 
 
 system service
-
 ams
 wms
 
@@ -840,13 +868,13 @@ wms
 
 
 hal【硬件接口】
-
 camera hal
 audio hal
 graphics hal
 
 
-linux kern......
+linux kernel
+ca......
     </div>
   </a>
   
@@ -881,13 +909,11 @@ linux kern......
     </h3>
     <div class="post-content-preview">
       Android Log
-
 base/core/java/android/util/Log.java
 
 在 Android 上常用 Log.d 等输出日志，日志分为不同的等级,Linux kernel 常通过 printk 输出日志，日志输出级别 ASSERT, ERROR, WARN, INFO, DEBUG, VERBOSE。
 以 Log.d 为例，日志输出有两种：
-printlns
-Lo......
+printlnsLog.......
     </div>
   </a>
   
@@ -895,41 +921,6 @@ Lo......
     作者： 深南村长 
     <br>
     时间：2022-10-24
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#AOSP" title="AOSP">AOSP</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/android-pm-pms1/">
-    <h2 class="post-title">
-      pms 应用程序安装管理（八）
-    </h2>
-    <h3 class="post-subtitle">
-      基于 android-11-r21
-    </h3>
-    <div class="post-content-preview">
-      上一篇到提交 session 之后不知道该执行到哪里去了，猜测是进入了 PMS。那它是如何进入的？
-...
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    作者： 深南村长 
-    <br>
-    时间：2022-10-23
   </p>
   <div class="tags">
     
@@ -994,7 +985,7 @@ Lo......
         <i>
           <span>
             <i>
-              26
+              27
             </i>
           </span>
         </i>
@@ -1027,12 +1018,6 @@ Lo......
     <div class="tags">
       
         
-          <a href="/tags/#字节码" title="字节码" rel="5">
-            字节码
-          </a>
-          
-            
-        
           <a href="/tags/#笔记" title="笔记" rel="2">
             笔记
           </a>
@@ -1045,8 +1030,20 @@ Lo......
           
             
         
+          <a href="/tags/#字节码" title="字节码" rel="5">
+            字节码
+          </a>
+          
+            
+        
           <a href="/tags/#AOSP" title="AOSP" rel="12">
             AOSP
+          </a>
+          
+            
+        
+          <a href="/tags/#Gradle" title="Gradle" rel="1">
+            Gradle
           </a>
           
             
@@ -1063,14 +1060,14 @@ Lo......
           
             
         
-          <a href="/tags/#Native" title="Native" rel="1">
-            Native
+          <a href="/tags/#刷机" title="刷机" rel="1">
+            刷机
           </a>
           
             
         
-          <a href="/tags/#刷机" title="刷机" rel="1">
-            刷机
+          <a href="/tags/#Native" title="Native" rel="1">
+            Native
           </a>
           
             
@@ -1106,6 +1103,12 @@ Lo......
   <div class="widget">
     <ul style="padding-left: 20px; list-style-type: circle;">
       
+        <a href="../../undefined/Gradle%E7%AC%94%E8%AE%B0/">
+          <li>
+            Gradle 图文笔记
+          </li>
+        </a>
+        
         <a href="../../undefined/%E6%88%91%E7%9A%84%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/">
           <li>
             我的常用知识
@@ -1127,12 +1130,6 @@ Lo......
         <a href="../../undefined/Android%E6%97%A5%E5%BF%97/">
           <li>
             Android 日志 logcat
-          </li>
-        </a>
-        
-        <a href="../../undefined/android-pm-pms1/">
-          <li>
-            pms 应用程序安装管理（八）
           </li>
         </a>
         
@@ -1168,7 +1165,7 @@ Lo......
   <style>
   </style>
   <div style="margin-left: -20px; padding-left:-20px;">
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/10/">October 2022</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">10</span></li></ul>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/10/">October 2022</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">10</span></li></ul>
   </div>
   
         <hr>
@@ -1651,22 +1648,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 
 	<link rel="stylesheet" href="/dist/APlayer.min.css">
 	<script src="./node_modules/pjax/pjax.js"></script>
