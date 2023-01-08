@@ -381,7 +381,7 @@
                         <br>
                         <span>
                           字数： <span>
-                            2.1k
+                            2k
                           </span> 字
                         </span>
                         <br>
@@ -444,60 +444,179 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="字节码-Class"><a href="#字节码-Class" class="headerlink" title="字节码 Class"></a>字节码 Class</h1><blockquote>
+        <h1>字节码 Class</h1>
+<blockquote>
 <p><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/specs/jvms/se11/html/index.html">关于 class 字节码</a></p>
 </blockquote>
-<h2 id="Java-虚拟机结构"><a href="#Java-虚拟机结构" class="headerlink" title="Java 虚拟机结构"></a>Java 虚拟机结构</h2><p><strong>1、class 文件格式</strong><br>class 文件格式定义了类和接口的表示形式。</p>
-<p><strong>2、数据类型</strong><br>主要包括两种数据类型<code>原始类型、引用类型</code>。类型检查在运行时之前，编译器进行类型检查。<br>&emsp;&emsp;2.1、原始类型<br>原始类型包括整形、浮点类型、布尔类型，jvm 中布尔类型使用整型 true=1  false=0 表示。<br>&emsp;&emsp;2.2、引用类型<br>引用类型包括类类型、数组类型和接口类型，引用类型可以是 null，默认也是 null，可以转换为任意类型。</p>
-<p><strong>3、运行时数据</strong><br>&emsp;&emsp;3.1、程序计数器（pc 寄存器)<br>每个线程创建时都可以拥有的，当执行 Java 方法时该寄存器存放的是当前正在执行的 jvm 指令地址，当执行 native 方法时不存放值。<br>&emsp;&emsp;3.2、虚拟机堆栈<br>每个线程创建时都可以拥有的，存储局部变量和中间计算结果，常用在方法调用和返回。<br>&emsp;&emsp;3.3、堆<br>在虚拟机启动时创建所有线程共享，主要分配给类实例和数组，堆的对象存储由垃圾收集器回收。<br>&emsp;&emsp;3.4、方法区<br>在虚拟机启动时创建所有线程共享，在逻辑上是堆的一部分，存储类结构信息。<br>&emsp;&emsp;3.5、运行时常量池<br>主要存储包括编译时已知的数字、字符和运行时需要解析的方法、字段引用符号。<br>&emsp;&emsp;3.6、native 方法堆栈<br>每个线程创建时分配，服务于非 Java 语言实现 jvm 指令集解析。</p>
-<p><strong>4、栈帧</strong><br>每次方法调用时都会创建帧，当方法正常执行完成或异常退出方法时帧都会被销毁，帧的创建从虚拟机堆栈中分配内存（3.2），每个帧拥有自己的局部变量数组、操作数堆栈、当前方法运行时常量的引用。局部变量数组和操作数组的大小在编译时确定，当前执行的方法帧属于活跃状态又叫当前帧，对局部变量数组和操作数堆栈的操作都在当前帧上进行。<br>&emsp;&emsp;4.1、局部变量<br>方法内使用到的值被存储在局部变量数组中，⚠️注意 long、double 类型的值占用两个连续的局部变量，其他类型占用一个，在非静态方法中局部变量数组索引 0 的值表示当前对象的 this 引用。<br>&emsp;&emsp;4.2、操作数堆栈<br>常用于辅助计算。把要操作的数据（常量、局部变量值）推送到操作数栈，jvm 指令从操作数栈获取操作数进行操作（计算），再把操作结果推送到操作数栈上。<br>&emsp;&emsp;4.3、动态链接<br>当前帧包含当前方法类型的运行时常量引用（方法类型常量就是一字符串，存储在常量池中），支持方法的解析并能正确链接。<br>&emsp;&emsp;4.4、方法返回<br>如果方法正常执行完成，如果有返回值，则把返回值推送到调用该方法的帧操作数堆栈顶部；如果方法执行过程中出现异常并且内部没有捕获异常（try），那么不会向调用者返回值。</p>
-<p><strong>5、特殊方法</strong><br>&emsp;&emsp;5.1、实例初始化方法 <code>&lt;init&gt;</code><br>该方法的声明和使用受 jvm 的限制，无需外部调用。<br>&emsp;&emsp;5.2、类初始化方法 <code>&lt;clinit&gt;</code><br>无需外部调用。</p>
-<p><strong>6、其他说明</strong><br>1、指令注记符：<br>i - int<br>l - ong<br>s - short<br>b - byte<br>c - char<br>f - float<br>d - double<br>a - reference<br>[ - array</p>
-<p>2、加载和存储：<br>通常包含 <code>load</code> 相关指令表示<code>把本地变量加载到操作数堆栈</code>，通常包含 <code>store</code> 相关指令表示<code>把值从操作数堆栈存储到本地变量</code>，还有部分指定表示<code>将常量加载到操作数堆栈</code>。</p>
-<p>3、算数指令：<br>算数指令通常是从操作数堆栈获取两个操作数进行计算，然后把计算结果推送到操作数堆栈顶部。</p>
-<p>4、操作数堆栈管理：<br>表示可以直接操作操作数堆栈的指令，如 dup 复制一份栈顶数据。</p>
-<p>5、其他常用指令：<br>new —— 创建对象<br>newarray —— 创建数组<br>f2i —— 浮点型转整型<br>getstatic —— 访问静态字段<br>instanceof —— 检查类实例<br>checkcast —— 检查数组<br>ifeq —— 条件分支<br>goto —— 无条件分支<br>invokevirtual —— 调用对象实例方法<br>invokeinterface —— 调用接口方法<br>invokespecial —— 调用实例初始化方法、当前类方法、超类方法<br>invokestatic —— 调用静态方法<br>invokedynamic —— 动态调用</p>
-<h2 id="Java-虚拟机编译"><a href="#Java-虚拟机编译" class="headerlink" title="Java 虚拟机编译"></a>Java 虚拟机编译</h2><p><strong>1、每一条字节码</strong><br>&emsp;&emsp;格式：<code>&lt;当前方法操作码指令索引&gt; &lt;操作码注记符&gt; [[可选的操作数1] ...] [可选的注释]</code><br>&emsp;&emsp;例子：8 bipush 100 //把常量 100 推送到操作数堆栈顶部</p>
-<p><strong>2、访问运行时常量池</strong><br>ldc/ldc_w —— 访问 double、long 以为类型的运行时常量值（可以访问 string 类型）<br>ldc2_w —— 访问 double、long 类型的值（占两个连续的局部变量）<br>iconst —— 通常用于访问字面值较小的整型常量值<br>fcmpl —— float 浮点型比较<br>dcmpl —— double </p>
-<p><strong>3、方法参数</strong><br>⚠️注意局部变量表大小以及使用的 iload 指令区别，关键是非静态的实例方法局部变量表内第一个索引处是当前对象 this 引用。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//非静态方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addA</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> i+j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//对应字节码</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addA</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">int</span>)</span></span>;</span><br><span class="line">    descriptor: (II)I</span><br><span class="line">    flags: ACC_PUBLIC</span><br><span class="line">    Code:</span><br><span class="line">      stack=<span class="number">2</span>, locals=<span class="number">3</span>, args_size=<span class="number">3</span></span><br><span class="line">         <span class="number">0</span>: iload_1</span><br><span class="line">         <span class="number">1</span>: iload_2</span><br><span class="line">         <span class="number">2</span>: iadd</span><br><span class="line">         <span class="number">3</span>: ireturn</span><br><span class="line">      LineNumberTable:</span><br><span class="line">        line <span class="number">9</span>: <span class="number">0</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Java-虚拟机结构">Java 虚拟机结构</h2>
+<p><strong>1、class 文件格式</strong><br>
+class 文件格式定义了类和接口的表示形式。</p>
+<p><strong>2、数据类型</strong><br>
+主要包括两种数据类型<code>原始类型、引用类型</code>。类型检查在运行时之前，编译器进行类型检查。<br>
+  2.1、原始类型<br>
+原始类型包括整形、浮点类型、布尔类型，jvm 中布尔类型使用整型 true=1  false=0 表示。<br>
+  2.2、引用类型<br>
+引用类型包括类类型、数组类型和接口类型，引用类型可以是 null，默认也是 null，可以转换为任意类型。</p>
+<p><strong>3、运行时数据</strong><br>
+  3.1、程序计数器（pc 寄存器)<br>
+每个线程创建时都可以拥有的，当执行 Java 方法时该寄存器存放的是当前正在执行的 jvm 指令地址，当执行 native 方法时不存放值。<br>
+  3.2、虚拟机堆栈<br>
+每个线程创建时都可以拥有的，存储局部变量和中间计算结果，常用在方法调用和返回。<br>
+  3.3、堆<br>
+在虚拟机启动时创建所有线程共享，主要分配给类实例和数组，堆的对象存储由垃圾收集器回收。<br>
+  3.4、方法区<br>
+在虚拟机启动时创建所有线程共享，在逻辑上是堆的一部分，存储类结构信息。<br>
+  3.5、运行时常量池<br>
+主要存储包括编译时已知的数字、字符和运行时需要解析的方法、字段引用符号。<br>
+  3.6、native 方法堆栈<br>
+每个线程创建时分配，服务于非 Java 语言实现 jvm 指令集解析。</p>
+<p><strong>4、栈帧</strong><br>
+每次方法调用时都会创建帧，当方法正常执行完成或异常退出方法时帧都会被销毁，帧的创建从虚拟机堆栈中分配内存（3.2），每个帧拥有自己的局部变量数组、操作数堆栈、当前方法运行时常量的引用。局部变量数组和操作数组的大小在编译时确定，当前执行的方法帧属于活跃状态又叫当前帧，对局部变量数组和操作数堆栈的操作都在当前帧上进行。<br>
+  4.1、局部变量<br>
+方法内使用到的值被存储在局部变量数组中，⚠️注意 long、double 类型的值占用两个连续的局部变量，其他类型占用一个，在非静态方法中局部变量数组索引 0 的值表示当前对象的 this 引用。<br>
+  4.2、操作数堆栈<br>
+常用于辅助计算。把要操作的数据（常量、局部变量值）推送到操作数栈，jvm 指令从操作数栈获取操作数进行操作（计算），再把操作结果推送到操作数栈上。<br>
+  4.3、动态链接<br>
+当前帧包含当前方法类型的运行时常量引用（方法类型常量就是一字符串，存储在常量池中），支持方法的解析并能正确链接。<br>
+  4.4、方法返回<br>
+如果方法正常执行完成，如果有返回值，则把返回值推送到调用该方法的帧操作数堆栈顶部；如果方法执行过程中出现异常并且内部没有捕获异常（try），那么不会向调用者返回值。</p>
+<p><strong>5、特殊方法</strong><br>
+  5.1、实例初始化方法 <code>&lt;init&gt;</code><br>
+该方法的声明和使用受 jvm 的限制，无需外部调用。<br>
+  5.2、类初始化方法 <code>&lt;clinit&gt;</code><br>
+无需外部调用。</p>
+<p><strong>6、其他说明</strong><br>
+1、指令注记符：<br>
+i - int<br>
+l - ong<br>
+s - short<br>
+b - byte<br>
+c - char<br>
+f - float<br>
+d - double<br>
+a - reference<br>
+[ - array</p>
+<p>2、加载和存储：<br>
+通常包含 <code>load</code> 相关指令表示<code>把本地变量加载到操作数堆栈</code>，通常包含 <code>store</code> 相关指令表示<code>把值从操作数堆栈存储到本地变量</code>，还有部分指定表示<code>将常量加载到操作数堆栈</code>。</p>
+<p>3、算数指令：<br>
+算数指令通常是从操作数堆栈获取两个操作数进行计算，然后把计算结果推送到操作数堆栈顶部。</p>
+<p>4、操作数堆栈管理：<br>
+表示可以直接操作操作数堆栈的指令，如 dup 复制一份栈顶数据。</p>
+<p>5、其他常用指令：<br>
+new —— 创建对象<br>
+newarray —— 创建数组<br>
+f2i —— 浮点型转整型<br>
+getstatic —— 访问静态字段<br>
+instanceof —— 检查类实例<br>
+checkcast —— 检查数组<br>
+ifeq —— 条件分支<br>
+goto —— 无条件分支<br>
+invokevirtual —— 调用对象实例方法<br>
+invokeinterface —— 调用接口方法<br>
+invokespecial —— 调用实例初始化方法、当前类方法、超类方法<br>
+invokestatic —— 调用静态方法<br>
+invokedynamic —— 动态调用</p>
+<h2 id="Java-虚拟机编译">Java 虚拟机编译</h2>
+<p><strong>1、每一条字节码</strong><br>
+  格式：<code>&lt;当前方法操作码指令索引&gt; &lt;操作码注记符&gt; [[可选的操作数1] ...] [可选的注释]</code><br>
+  例子：8 bipush 100 //把常量 100 推送到操作数堆栈顶部</p>
+<p><strong>2、访问运行时常量池</strong><br>
+ldc/ldc_w —— 访问 double、long 以为类型的运行时常量值（可以访问 string 类型）<br>
+ldc2_w —— 访问 double、long 类型的值（占两个连续的局部变量）<br>
+iconst —— 通常用于访问字面值较小的整型常量值<br>
+fcmpl —— float 浮点型比较<br>
+dcmpl —— double</p>
+<p><strong>3、方法参数</strong><br>
+⚠️注意局部变量表大小以及使用的 iload 指令区别，关键是非静态的实例方法局部变量表内第一个索引处是当前对象 this 引用。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//非静态方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addA</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> i+j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//对应字节码</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addA</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">int</span>)</span></span>;</span><br><span class="line">    descriptor: (II)I</span><br><span class="line">    flags: ACC_PUBLIC</span><br><span class="line">    Code:</span><br><span class="line">      stack=<span class="number">2</span>, locals=<span class="number">3</span>, args_size=<span class="number">3</span></span><br><span class="line">         <span class="number">0</span>: iload_1</span><br><span class="line">         <span class="number">1</span>: iload_2</span><br><span class="line">         <span class="number">2</span>: iadd</span><br><span class="line">         <span class="number">3</span>: ireturn</span><br><span class="line">      LineNumberTable:</span><br><span class="line">        line <span class="number">9</span>: <span class="number">0</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//静态方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">addB</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> i+j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//对应字节码</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">addB</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">int</span>)</span></span>;</span><br><span class="line">    descriptor: (II)I</span><br><span class="line">    flags: ACC_PUBLIC, ACC_STATIC</span><br><span class="line">    Code:</span><br><span class="line">      stack=<span class="number">2</span>, locals=<span class="number">2</span>, args_size=<span class="number">2</span></span><br><span class="line">         <span class="number">0</span>: iload_0</span><br><span class="line">         <span class="number">1</span>: iload_1</span><br><span class="line">         <span class="number">2</span>: iadd</span><br><span class="line">         <span class="number">3</span>: ireturn</span><br><span class="line">      LineNumberTable:</span><br><span class="line">        line <span class="number">13</span>: <span class="number">0</span></span><br></pre></td></tr></table></figure>
 <p>上述知识列举一小部分，更多详细内容可以参考官方文档，比如还有方法调用、创建类对象、创建数组、switch int、switch string、try 异常、throw 异常、finally 等。</p>
-<h2 id="class-文件格式"><a href="#class-文件格式" class="headerlink" title="class 文件格式"></a>class 文件格式</h2><p><strong>1、基本组成结构</strong></p>
+<h2 id="class-文件格式">class 文件格式</h2>
+<p><strong>1、基本组成结构</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">ClassFile &#123;</span><br><span class="line">    u4             magic;         <span class="comment">//class 文件格式编码 0xCAFEBABE</span></span><br><span class="line">    u2             minor_version; <span class="comment">//次版本 m</span></span><br><span class="line">    u2             major_version; <span class="comment">//主版本 M</span></span><br><span class="line">                                  <span class="comment">//class 文件格式版本：M.m</span></span><br><span class="line"></span><br><span class="line">    u2             constant_pool_count;                   <span class="comment">//常量池大小</span></span><br><span class="line">    cp_info        constant_pool[constant_pool_count-<span class="number">1</span>];  <span class="comment">//常量池数组</span></span><br><span class="line">    u2             access_flags;                          <span class="comment">//访问权限标识 </span></span><br><span class="line">                  </span><br><span class="line">                  <span class="comment">//public\final\super\interface\abstract</span></span><br><span class="line">                  <span class="comment">//synthetic\annomation\enum\module</span></span><br><span class="line"></span><br><span class="line">    u2             this_class;                    <span class="comment">//当前类，CONSTANT_Class_info</span></span><br><span class="line">    u2             super_class;                   <span class="comment">//父类，CONSTANT_Class_info</span></span><br><span class="line">    u2             interfaces_count;              <span class="comment">//接口数量</span></span><br><span class="line">    u2             interfaces[interfaces_count];  <span class="comment">//接口数组，CONSTANT_Class_info</span></span><br><span class="line"></span><br><span class="line">    u2             fields_count;                  <span class="comment">//字段数量，包括静态变量和实例变量</span></span><br><span class="line">    field_info     fields[fields_count];          <span class="comment">//字段数组，元素结构 field_info</span></span><br><span class="line">    u2             methods_count;                 <span class="comment">//方法数量</span></span><br><span class="line">    method_info    methods[methods_count];        <span class="comment">//方法数组，元素结构 method_info</span></span><br><span class="line">    u2             attributes_count;              <span class="comment">//属性个数</span></span><br><span class="line">    attribute_info attributes[attributes_count];  <span class="comment">//属性数组，元素结构 attribute_info</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>2、描述符</strong></p>
 <blockquote>
 <p>完全限定形式：字节码中类和接口名称表现形式，如 java.lang.String 表示为 Ljava/lang/String;</p>
 </blockquote>
 <ul>
-<li><p>字段类型字符串描述</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">B <span class="keyword">byte</span>    字节</span><br><span class="line">C <span class="keyword">char</span>    字符</span><br><span class="line">D <span class="keyword">double</span>    双精度</span><br><span class="line">F <span class="keyword">float</span>   单精度</span><br><span class="line">I <span class="keyword">int</span>   整数</span><br><span class="line">J <span class="keyword">long</span>    长整数</span><br><span class="line">L 类名;   对象（必须紧跟分号）</span><br><span class="line">S <span class="keyword">short</span>   短整型</span><br><span class="line">Z <span class="keyword">boolean</span>   布尔</span><br><span class="line">[ reference   一维数组（多个 [ 表示多维数组）</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方法类型字符串描述（包括参数类型、返回值类型）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法</span></span><br><span class="line"><span class="function">String <span class="title">append</span><span class="params">(<span class="keyword">int</span> age,String name)</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//方法类型签名</span></span><br><span class="line">(ILjava/lang/String;)Ljava/lang/String;</span><br></pre></td></tr></table></figure>
-</li>
+<li>字段类型字符串描述</li>
 </ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">B <span class="keyword">byte</span>    字节</span><br><span class="line">C <span class="keyword">char</span>    字符</span><br><span class="line">D <span class="keyword">double</span>    双精度</span><br><span class="line">F <span class="keyword">float</span>   单精度</span><br><span class="line">I <span class="keyword">int</span>   整数</span><br><span class="line">J <span class="keyword">long</span>    长整数</span><br><span class="line">L 类名;   对象（必须紧跟分号）</span><br><span class="line">S <span class="keyword">short</span>   短整型</span><br><span class="line">Z <span class="keyword">boolean</span>   布尔</span><br><span class="line">[ reference   一维数组（多个 [ 表示多维数组）</span><br></pre></td></tr></table></figure>
+<ul>
+<li>方法类型字符串描述（包括参数类型、返回值类型）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法</span></span><br><span class="line"><span class="function">String <span class="title">append</span><span class="params">(<span class="keyword">int</span> age,String name)</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//方法类型签名</span></span><br><span class="line">(ILjava/lang/String;)Ljava/lang/String;</span><br></pre></td></tr></table></figure>
 <p><strong>3、常量池</strong></p>
 <blockquote>
-<p>cp_info {<br>&emsp;u1 tag;<br>&emsp;u1 info[];<br>}</p>
+<p>cp_info {<br>
+ u1 tag;<br>
+ u1 info[];<br>
+}</p>
 </blockquote>
-<p>标签：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">CONSTANT_Utf8	<span class="number">1</span>	</span><br><span class="line">CONSTANT_Integer	<span class="number">3</span>	</span><br><span class="line">CONSTANT_Float	<span class="number">4</span>	</span><br><span class="line">CONSTANT_Long	<span class="number">5</span>	</span><br><span class="line">CONSTANT_Double	<span class="number">6</span>	</span><br><span class="line">CONSTANT_Class	<span class="number">7</span>	</span><br><span class="line">CONSTANT_String	<span class="number">8</span></span><br><span class="line">CONSTANT_Fieldref	<span class="number">9</span>	</span><br><span class="line">CONSTANT_Methodref	<span class="number">10</span>	</span><br><span class="line"></span><br><span class="line">CONSTANT_InterfaceMethodref	<span class="number">11</span></span><br><span class="line">CONSTANT_NameAndType	<span class="number">12</span>	</span><br><span class="line">CONSTANT_MethodHandle	<span class="number">15</span>	</span><br><span class="line">CONSTANT_MethodType	<span class="number">16</span>	</span><br><span class="line">CONSTANT_Dynamic	<span class="number">17</span>	</span><br><span class="line">CONSTANT_InvokeDynamic	<span class="number">18</span>	</span><br><span class="line">CONSTANT_Module	<span class="number">19</span>	</span><br><span class="line">CONSTANT_Package	<span class="number">20</span></span><br></pre></td></tr></table></figure></p>
+<p>标签：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">CONSTANT_Utf8	<span class="number">1</span>	</span><br><span class="line">CONSTANT_Integer	<span class="number">3</span>	</span><br><span class="line">CONSTANT_Float	<span class="number">4</span>	</span><br><span class="line">CONSTANT_Long	<span class="number">5</span>	</span><br><span class="line">CONSTANT_Double	<span class="number">6</span>	</span><br><span class="line">CONSTANT_Class	<span class="number">7</span>	</span><br><span class="line">CONSTANT_String	<span class="number">8</span></span><br><span class="line">CONSTANT_Fieldref	<span class="number">9</span>	</span><br><span class="line">CONSTANT_Methodref	<span class="number">10</span>	</span><br><span class="line"></span><br><span class="line">CONSTANT_InterfaceMethodref	<span class="number">11</span></span><br><span class="line">CONSTANT_NameAndType	<span class="number">12</span>	</span><br><span class="line">CONSTANT_MethodHandle	<span class="number">15</span>	</span><br><span class="line">CONSTANT_MethodType	<span class="number">16</span>	</span><br><span class="line">CONSTANT_Dynamic	<span class="number">17</span>	</span><br><span class="line">CONSTANT_InvokeDynamic	<span class="number">18</span>	</span><br><span class="line">CONSTANT_Module	<span class="number">19</span>	</span><br><span class="line">CONSTANT_Package	<span class="number">20</span></span><br></pre></td></tr></table></figure>
 <p><strong>4、结构体</strong></p>
 <blockquote>
-<p>CONSTANT_Class_info {<br>    u1 tag;<br>    u2 name_index<br>}</p>
-<p>CONSTANT_Fieldref_info {<br>    u1 tag;<br>    u2 class_index;<br>    u2 name_and_type_index;<br>}</p>
-<p>CONSTANT_Methodref_info {<br>    u1 tag;<br>    u2 class_index;<br>    u2 name_and_type_index;<br>}</p>
-<p>CONSTANT_InterfaceMethodref_info {<br>    u1 tag;<br>    u2 class_index;<br>    u2 name_and_type_index;<br>}</p>
-<p>CONSTANT_String_info {<br>    u1 tag;<br>    u2 string_index;<br>}</p>
-<p>CONSTANT_Integer_info {<br>    u1 tag;<br>    u4 bytes;<br>}</p>
-<p>CONSTANT_Long_info {<br>    u1 tag;<br>    u4 high_bytes;<br>    u4 low_bytes;<br>}</p>
+<p>CONSTANT_Class_info {<br>
+u1 tag;<br>
+u2 name_index<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>CONSTANT_Fieldref_info {<br>
+u1 tag;<br>
+u2 class_index;<br>
+u2 name_and_type_index;<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>CONSTANT_Methodref_info {<br>
+u1 tag;<br>
+u2 class_index;<br>
+u2 name_and_type_index;<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>CONSTANT_InterfaceMethodref_info {<br>
+u1 tag;<br>
+u2 class_index;<br>
+u2 name_and_type_index;<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>CONSTANT_String_info {<br>
+u1 tag;<br>
+u2 string_index;<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>CONSTANT_Integer_info {<br>
+u1 tag;<br>
+u4 bytes;<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>CONSTANT_Long_info {<br>
+u1 tag;<br>
+u4 high_bytes;<br>
+u4 low_bytes;<br>
+}</p>
 </blockquote>
 <p>等等等</p>
-<p><strong>5、字段</strong><br>一个 class 文件中没有两个字段具有相同的名称和描述，方法也是如此。</p>
+<p><strong>5、字段</strong><br>
+一个 class 文件中没有两个字段具有相同的名称和描述，方法也是如此。</p>
 <blockquote>
-<p>field_info {<br>    u2             access_flags; //表示访问权限或字段属性，public、static<br>    u2             name_index;<br>    u2             descriptor_index;<br>    u2             attributes_count;<br>    attribute_info attributes[attributes_count];<br>}</p>
+<p>field_info {<br>
+u2             access_flags; //表示访问权限或字段属性，public、static<br>
+u2             name_index;<br>
+u2             descriptor_index;<br>
+u2             attributes_count;<br>
+attribute_info attributes[attributes_count];<br>
+}</p>
 </blockquote>
 <p>略略略</p>
-<h1 id="JVM-指令集"><a href="#JVM-指令集" class="headerlink" title="JVM 指令集"></a><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-6.html">JVM 指令集</a></h1>
+<h1><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-6.html">JVM 指令集</a></h1>
+
 
           <hr>
           <!-- Pager -->
@@ -575,7 +694,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%AD%97%E8%8A%82%E7%A0%81-Class"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">字节码 Class</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Java 虚拟机结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BC%96%E8%AF%91"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Java 虚拟机编译</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#class-%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">class 文件格式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#JVM-%E6%8C%87%E4%BB%A4%E9%9B%86"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">JVM 指令集</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">字节码 Class</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Java 虚拟机结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BC%96%E8%AF%91"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Java 虚拟机编译</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#class-%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">class 文件格式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">JVM 指令集</span></a></li></ol>
         
         </div>
       </aside>
