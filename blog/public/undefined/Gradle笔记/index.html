@@ -142,7 +142,7 @@
   <link rel="canonical" href="http://yoursite-url/undefined/Gradle笔记/">
   <title>
     
-      Gradle 图文笔记 - 深南村长
+      简约的 Gradle 图文笔记 - 深南村长
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -358,7 +358,7 @@
                           
                       </div>
                       <h1>
-                        Gradle 图文笔记
+                        简约的 Gradle 图文笔记
                       </h1>
                       <h2 class="subheading">
                         常听说：掌握 gradle 是初级 Android 程序员进阶的一项必备技能
@@ -381,7 +381,7 @@
                         <br>
                         <span>
                           字数： <span>
-                            14
+                            12
                           </span> 字
                         </span>
                         <br>
@@ -445,8 +445,12 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h1 id="Gradle-了解"><a href="#Gradle-了解" class="headerlink" title="Gradle 了解"></a>Gradle 了解</h1><p><img src="../../img/gradle/了解Gradle.png" alt="Gradle 了解"></p>
-<h1 id="Gradle-生命周期"><a href="#Gradle-生命周期" class="headerlink" title="Gradle 生命周期"></a>Gradle 生命周期</h1><p><img src="../../img/gradle/Gradle生命周期.png" alt="Gradle 生命周期"></p>
+<p><img src="../../img/gradle/Gradle生命周期.png" alt="Gradle 生命周期"></p>
 <h1 id="Gradle-命令"><a href="#Gradle-命令" class="headerlink" title="Gradle 命令"></a>Gradle 命令</h1><p><img src="../../img/gradle/gradlew命令.png" alt="Gradle 命令"></p>
+<h1 id="Gradle-打包"><a href="#Gradle-打包" class="headerlink" title="Gradle 打包"></a>Gradle 打包</h1><p><img src="../../img/gradle/Android打包.png" alt="Gradle 打包3"></p>
+<p><img src="../../img/gradle/签名验证.png" alt="Android 签名验证"></p>
+<p><img src="../../img/gradle/打包1.png" alt="Gradle 打包1"></p>
+<p><img src="../../img/gradle/打包2.png" alt="Gradle 打包2"></p>
 <h1 id="Gradle-提速"><a href="#Gradle-提速" class="headerlink" title="Gradle 提速"></a>Gradle 提速</h1><p><img src="../../img/gradle/Gradle提速.png" alt="Gradle 提速"></p>
 
 
@@ -521,7 +525,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Gradle-%E4%BA%86%E8%A7%A3"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Gradle 了解</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Gradle-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Gradle 生命周期</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Gradle-%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Gradle 命令</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Gradle-%E6%8F%90%E9%80%9F"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Gradle 提速</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Gradle-%E4%BA%86%E8%A7%A3"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Gradle 了解</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Gradle-%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Gradle 命令</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Gradle-%E6%89%93%E5%8C%85"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Gradle 打包</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Gradle-%E6%8F%90%E9%80%9F"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Gradle 提速</span></a></li></ol>
         
         </div>
       </aside>
@@ -1091,7 +1095,22 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 
 	<link rel="stylesheet" href="/dist/APlayer.min.css">
 	<script src="./node_modules/pjax/pjax.js"></script>
