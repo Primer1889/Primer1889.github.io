@@ -41,9 +41,15 @@ Android 详细打包流程：
 
 # Gradle Transform
 
+![Gradle 打包2](../../img/gradle/Transform.png)
+
+![Gradle 打包2](../../img/gradle/Transform2.png)
+
 
 # Gradle 提速
 
 ![Gradle 提速](../../img/gradle/Gradle提速.png)
 
 # Gradle 源码
+
+https://juejin.cn/post/6844903858641043463
