@@ -2,7 +2,7 @@
 layout: "about"
 title: "Jsonlili"
 date: 2016-04-21 04:48:33
-description: "金克丝的含义就是金克丝"
+description: "我记得我"
 header-img: "img/2301/2_bg.jpg"
 ---
 
