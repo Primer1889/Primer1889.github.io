@@ -241,7 +241,7 @@
             <a href="/">首页</a>
           </li>
           <li>
-            <a href="/categories/">分类</a>
+            <a href="/categories/">日记</a>
           </li>
           <li>
             <a href="/tags/">标签</a>
@@ -444,8 +444,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>前言</h1>
-<p>设备的个人信息（例如：联系人信息、短信内容等）属于用户隐私，违规获取个人信息被视为侵犯用户权益；在设备上获取个人信息一般需先获取到相应的权限才能进行获取，例如想获取相册图片，那么需要申请读写权限，用户同意权限申请之后可读取相册图片。应用存在违规获取个人信息的行为，不为罕见，何为违规行为？</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>设备的个人信息（例如：联系人信息、短信内容等）属于用户隐私，违规获取个人信息被视为侵犯用户权益；在设备上获取个人信息一般需先获取到相应的权限才能进行获取，例如想获取相册图片，那么需要申请读写权限，用户同意权限申请之后可读取相册图片。应用存在违规获取个人信息的行为，不为罕见，何为违规行为？</p>
 <p>个人理解：</p>
 <ul>
 <li>在用户不知情下获取个人信息。比如，在用户同意隐私政策前获取个人信息</li>
@@ -456,14 +455,10 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- 未公开收集使用规则的行为</span><br><span class="line">- 未明示收集使用个人信息的目的、方式和范围的行为</span><br><span class="line">- 未经用户同意收集个人信息的行为【该点为本文讨论和解决的重点】</span><br><span class="line">- 收集与其提供服务无关的个人信息的行为</span><br><span class="line">- 未经同意向他人提供个人信息的行为</span><br><span class="line">- 未按法律规定提供删除或更正个人信息功能的</span><br><span class="line"></span><br><span class="line">除此之外，国内商店渠道还有其他要求，比如：</span><br><span class="line">- 不允许频繁获取设备信息（IMEI、SSID、AndroidID 等）</span><br></pre></td></tr></table></figure>
 <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fb0f36e7ad9b4293b24fc5afcc4bc7a8~tplv-k3u1fbpfcp-watermark.image?" alt="origin_img_v2_640fd02b-1194-4342-9ed9-200b1e9bf7ag.jpg"></p>
 <p>以下围绕如何检测应用是否存在<strong>未经用户同意收集个人信息或设备信息</strong>的行为，以及<strong>是否存在频繁获取个人信息或设备信息</strong>的行为。</p>
-<h1>Xposted 模块</h1>
-<h2 id="介绍-☕️">介绍 ☕️</h2>
-<p>该模板编写主要是 Hook 知识点，Hook 作为‘钩子’可以粗略理解为拦截某段代码的执行，并在代码段前后插入监控事件，程序执行此代码段同时也将触发监控事件，将监控事件返回给外层用于进一步处理。个人理解，使用 Hook 工具较为关键的一点就是找到较为准确的 Hook 点。</p>
-<h2 id="Hook-框架-🤔">Hook 框架 🤔</h2>
-<p>Android 上的 Hook 框架，想必很多人都略有耳闻，当年狂热的 <strong>Xposted</strong>，后面编写的检测工具便是基于 Xposted 库，Xposted 模块编写教程在网上是满天飞，这篇文章我觉得描述得比较清晰：<a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/terminal/189021.html">新手不要再被误导！这是一篇最新的Xposed模块编写教程</a>。看完引用的文章，我们便知道 xposted 库使用的 hook 模板，检测工具根据模板编写代码，整合多个检测点就可以（比如我需要检测 AndroidId、MAC、IMEI 等的获取）。</p>
+<h1 id="Xposted-模块"><a href="#Xposted-模块" class="headerlink" title="Xposted 模块"></a>Xposted 模块</h1><h2 id="介绍-☕️"><a href="#介绍-☕️" class="headerlink" title="介绍 ☕️"></a>介绍 ☕️</h2><p>该模板编写主要是 Hook 知识点，Hook 作为‘钩子’可以粗略理解为拦截某段代码的执行，并在代码段前后插入监控事件，程序执行此代码段同时也将触发监控事件，将监控事件返回给外层用于进一步处理。个人理解，使用 Hook 工具较为关键的一点就是找到较为准确的 Hook 点。</p>
+<h2 id="Hook-框架-🤔"><a href="#Hook-框架-🤔" class="headerlink" title="Hook 框架 🤔"></a>Hook 框架 🤔</h2><p>Android 上的 Hook 框架，想必很多人都略有耳闻，当年狂热的 <strong>Xposted</strong>，后面编写的检测工具便是基于 Xposted 库，Xposted 模块编写教程在网上是满天飞，这篇文章我觉得描述得比较清晰：<a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/terminal/189021.html">新手不要再被误导！这是一篇最新的Xposed模块编写教程</a>。看完引用的文章，我们便知道 xposted 库使用的 hook 模板，检测工具根据模板编写代码，整合多个检测点就可以（比如我需要检测 AndroidId、MAC、IMEI 等的获取）。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//模板</span></span><br><span class="line">XposedHelpers.findAndHookMethod(</span><br><span class="line">className,      <span class="comment">//需要 hook 的类名，因为使用反射，需要类的全限定名</span></span><br><span class="line">methondName,    <span class="comment">//需要 hook 的方法签名</span></span><br><span class="line">params1.class,  <span class="comment">//需要 hook 的方法的参数（参数存在多个，因此这是一个可变参数，参数类型需和方法签名保持一致）</span></span><br><span class="line">params2.class,</span><br><span class="line">...</span><br><span class="line"><span class="keyword">new</span> XC_MethodHook() &#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">beforeHookedMethod</span><span class="params">(MethodHookParam param)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">      <span class="comment">//hook before</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">afterHookedMethod</span><span class="params">(MethodHookParam param)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">      <span class="comment">//hook after</span></span><br><span class="line">    &#125;&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="举个栗子🌰">举个栗子🌰</h2>
-<p>Android Java 层获取 AndroidID 的代码通常是：</p>
+<h2 id="举个栗子🌰"><a href="#举个栗子🌰" class="headerlink" title="举个栗子🌰"></a>举个栗子🌰</h2><p>Android Java 层获取 AndroidID 的代码通常是：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Settings.Secure.getString(context.getContentResolver(), </span><br><span class="line">Settings.Secure.ANDROID_ID);</span><br></pre></td></tr></table></figure>
 <p>那么，根据上述的 hook 模版，找到以下参数只值：</p>
 <ul>
@@ -476,8 +471,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 检测 AndroidID 获取</span></span><br><span class="line">XposedHelpers.findAndHookMethod(</span><br><span class="line"><span class="string">&quot;android.provider.Settings&quot;</span>,</span><br><span class="line"><span class="string">&quot;getString&quot;</span>,</span><br><span class="line">ContentResolver.class,</span><br><span class="line">String.class,</span><br><span class="line"><span class="keyword">new</span> XC_MethodHook() &#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">beforeHookedMethod</span><span class="params">(MethodHookParam param)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">      <span class="comment">//hook before</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">afterHookedMethod</span><span class="params">(MethodHookParam param)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">      <span class="comment">//hook after</span></span><br><span class="line">      <span class="keyword">if</span>(param == <span class="keyword">null</span>)<span class="keyword">return</span>;</span><br><span class="line">      <span class="comment">//方法参数是一个可变参数，也就是一个列表</span></span><br><span class="line">      Object[] args = param.args;</span><br><span class="line">      <span class="keyword">if</span>(args == <span class="keyword">null</span> || args.lenght &lt;= <span class="number">0</span>)<span class="keyword">return</span>;</span><br><span class="line">      <span class="comment">//getString 方法我们需要知道第二个参数值才有意义，才能继续判断是获取 androidid 还是别的信息</span></span><br><span class="line">      <span class="keyword">if</span>(args.lenght &gt;= <span class="number">2</span>)&#123;</span><br><span class="line">          String params2 = (String)args[<span class="number">1</span>];</span><br><span class="line">          <span class="comment">//注意：public static final String ANDROID_ID = &quot;android_id&quot;;</span></span><br><span class="line">          <span class="keyword">if</span>(<span class="string">&quot;android_id&quot;</span>.equal(params2))&#123;</span><br><span class="line">              Log.d(<span class="string">&quot;TAG&quot;</span>,<span class="string">&quot;检测到获取 androidid&quot;</span>)</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>就这样，检测 androidid 获取的代码就写好了，简单吧。如果你对 xposted 实现感兴趣可以看源码<a target="_blank" rel="noopener" href="https://github.com/android-hacker/VirtualXposed">：android-hacker-VirtualXposted</a>。查看 android 源码可知，获取 androidid 的 getString 方法第二个参数可选值</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//所以，当你 Hook 这个方法时候，不仅仅可以 Hook AndroidID 的获取，也可以检测其他信息的获取情况</span></span><br><span class="line"><span class="comment">//public static final String ANDROID_ID = &quot;android_id&quot;;</span></span><br><span class="line"><span class="keyword">static</span> &#123;</span><br><span class="line">    MOVED_TO_SECURE = <span class="keyword">new</span> HashSet&lt;&gt;(<span class="number">30</span>);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.ADAPTIVE_SLEEP);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.ANDROID_ID);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.HTTP_PROXY);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.LOCATION_PROVIDERS_ALLOWED);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.LOCK_BIOMETRIC_WEAK_FLAGS);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.LOCK_PATTERN_ENABLED);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.LOCK_PATTERN_VISIBLE);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.LOCK_PATTERN_TACTILE_FEEDBACK_ENABLED);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.LOGGING_ID);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.PARENTAL_CONTROL_ENABLED);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.PARENTAL_CONTROL_LAST_UPDATE);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.PARENTAL_CONTROL_REDIRECT_URL);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.SETTINGS_CLASSNAME);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.USE_GOOGLE_MAIL);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_NETWORKS_AVAILABLE_NOTIFICATION_ON);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_NETWORKS_AVAILABLE_REPEAT_DELAY);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_NUM_OPEN_NETWORKS_KEPT);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_ON);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_ACCEPTABLE_PACKET_LOSS_PERCENTAGE);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_AP_COUNT);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_BACKGROUND_CHECK_DELAY_MS);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_BACKGROUND_CHECK_ENABLED);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_BACKGROUND_CHECK_TIMEOUT_MS);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_INITIAL_IGNORED_PING_COUNT);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_MAX_AP_CHECKS);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_ON);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_PING_COUNT);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_PING_DELAY_MS);</span><br><span class="line">    MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_PING_TIMEOUT_MS);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// At one time in System, then Global, but now back in Secure</span></span><br><span class="line">    MOVED_TO_SECURE.add(Secure.INSTALL_NON_MARKET_APPS);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="有没有现成的代码-🤔️">有没有现成的代码 🤔️</h2>
-<p>读到这里，根据上面的 xposted hook 模板，思维发散，你已经具备写一个合规检 Xposted 插件的能力。通常，合规检测插件应该 hook 哪些地方？应该检测哪些信息的获取行为？其实你可以参考渠道审核要求综合考虑，归纳总结，包括但不局限于以下几点：</p>
+<h2 id="有没有现成的代码-🤔️"><a href="#有没有现成的代码-🤔️" class="headerlink" title="有没有现成的代码 🤔️"></a>有没有现成的代码 🤔️</h2><p>读到这里，根据上面的 xposted hook 模板，思维发散，你已经具备写一个合规检 Xposted 插件的能力。通常，合规检测插件应该 hook 哪些地方？应该检测哪些信息的获取行为？其实你可以参考渠道审核要求综合考虑，归纳总结，包括但不局限于以下几点：</p>
 <ul>
 <li>androidID 检测</li>
 <li>IMEI 检测</li>
@@ -499,13 +493,11 @@
 <li>Android 平台数据库框架初始化依赖 context。是否需要 hook application 获取 context</li>
 <li>等等（需求驱动开发）</li>
 </ul>
-<h1>Use VirtualXposted 💔</h1>
-<p><strong>方案可行但不推荐，存在一定的局限</strong></p>
+<h1 id="Use-VirtualXposted-💔"><a href="#Use-VirtualXposted-💔" class="headerlink" title="Use VirtualXposted 💔"></a>Use VirtualXposted 💔</h1><p><strong>方案可行但不推荐，存在一定的局限</strong></p>
 <p>为什么不推荐？有什么局限？需检查应用运行环境以来 VirtualXpostedApp，侵入性强，易被第三方检测到存在 xposted 环境，xposted hook 特征明显，容易被检测。比如某些应用或第三方 SDK 有做 xposted 防护，运行过程中检测到运行环境存在 xposted，可能会做相应处理————终止程序继续运行，不利于检测应用个人信息获取情况。优点是环境准备简单。</p>
-<h2 id="如何使用">如何使用</h2>
-<p>1、下载安装 virtualXposted</p>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>1、下载安装 virtualXposted</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/android-hacker/VirtualXposed">android-hacker-VirtualXposted</a></p>
-<p>2、激活 xposted</p>
+<p>2、激活 xposted </p>
 <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ca83e472c58447ce84f6eb4f1aad5b2e~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0b53d5cd381f419ba50e4eea9f9f8a39~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p>3、添加模板和待检测应用</p>
@@ -517,8 +509,7 @@
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c7748fbdc0e24f12bc2148383117e9b8~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5622c01867c64155a5cae84c6a57be57~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p>最后就是运行应用，查看自定义输出日志。由于 xposted 防护的局限，若不能满足当前需求，还需另寻他法。</p>
-<h1>Use Taichi 💔</h1>
-<p><strong>方案不可行但不推荐，写好的模板无法使用（也可能是我不会用）</strong></p>
+<h1 id="Use-Taichi-💔"><a href="#Use-Taichi-💔" class="headerlink" title="Use Taichi 💔"></a>Use Taichi 💔</h1><p><strong>方案不可行但不推荐，写好的模板无法使用（也可能是我不会用）</strong></p>
 <p>为什么不推荐？写好的检测模板被限制使用，官网：<a target="_blank" rel="noopener" href="https://github.com/taichi-framework/TaiChi">https://github.com/taichi-framework/TaiChi</a></p>
 <p>如何使用太极就不过多解释了，这里提下遇到的问题：</p>
 <p><strong>问题一：暂不支持</strong></p>
@@ -529,23 +520,18 @@
 <li>当前模块不存在白名单中</li>
 </ul>
 <p>暂时没办法，试试把太极激活为‘太极阳’模式，然而呢还是显示暂不支持；猜测是另一种可能，模板不存在白名单中，要加入白名单要联系作者，比较麻烦，还是另寻他法吧。后来发现了另一个框架 LSP 。（如何开启太极阳，官网有教程，需要借助 Magisk，下文会用到这个工具）</p>
-<h1>Use Lsposted ❤️</h1>
-<p><strong>方案可行，推荐使用</strong><br>
-为什么推荐？LSP 侵入性弱，不易被第三方检测，一定程度上能够避免 xposted 防护。</p>
-<h2 id="注意事项">注意事项</h2>
-<ul>
+<h1 id="Use-Lsposted-❤️"><a href="#Use-Lsposted-❤️" class="headerlink" title="Use Lsposted ❤️"></a>Use Lsposted ❤️</h1><p><strong>方案可行，推荐使用</strong><br>为什么推荐？LSP 侵入性弱，不易被第三方检测，一定程度上能够避免 xposted 防护。</p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
 <li>BootLoader 解锁将清除设备数据，重要数据请注意备份</li>
 <li>此操作需要设备解锁 Bootloader （刷机），若BootLoader 解锁失败，其他操作已无意义，没有继续操作的必要，建议更换设备。</li>
-<li>各厂商设备 BootLoader 解锁方式可能不尽相同。
-<ul>
+<li>各厂商设备 BootLoader 解锁方式可能不尽相同。<ul>
 <li>小米官网仍然开放 BL 解锁工具（建议使用小米手机测试）</li>
 <li>购买第三方解锁工具 UAndroid</li>
 <li>OPPO 官方也有‘深度测试’解锁工具，但申请名额有限，审核时间长，不推荐</li>
 </ul>
 </li>
 </ul>
-<h2 id="如何使用-2">如何使用</h2>
-<p>以小米手机为例（因为 BL 解锁方便）</p>
+<h2 id="如何使用-1"><a href="#如何使用-1" class="headerlink" title="如何使用"></a>如何使用</h2><p>以小米手机为例（因为 BL 解锁方便）</p>
 <p><strong>1、设备 Bootloader 解锁</strong></p>
 <p><a target="_blank" rel="noopener" href="http://www.miui.com/unlock/download.html">官方：申请解锁小米手机</a></p>
 <p>小米的 BL 解锁对设备的以及账号绑定也有要求，比如账号与设备绑定时间等。官网下载得到的可能不是最新版本，请使用最新版本。</p>
@@ -559,43 +545,37 @@
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/87a8268965d648df8775781e37f77679~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p><strong>5、刷入 Magisk</strong></p>
 <p>尽量按顺序操作</p>
-<p>5.1 从刷机包中解压获取  <strong>boot.img</strong> 文件（若无此文件建议更换刷机包，也可以另寻他法从刷机包中解析获得此文件）<br>
-5.2 打开 Magisk 选择 boot.img 安装补丁，等待刷入完成（此截图是已安装完成的，以实际为准）</p>
+<p>5.1 从刷机包中解压获取  <strong>boot.img</strong> 文件（若无此文件建议更换刷机包，也可以另寻他法从刷机包中解析获得此文件）<br>5.2 打开 Magisk 选择 boot.img 安装补丁，等待刷入完成（此截图是已安装完成的，以实际为准）</p>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9c6b1f76ad8845d98bf1f2c901286ed9~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p>5.3 刷入完成，查看日志获得生成的 img 文件</p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f0d9d3a707544199a1b8e5f5518b4e4f~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
-<p>5.4 复制生成的 img 文件和 boot.img 文件到 adb-fastboot 目录下，打开 打开CMD命令行.bat（若 boot.img 不存在此目录下，刷入 magisk 无效）</p>
+<p>5.4 复制生成的 img 文件和 boot.img 文件到 adb-fastboot 目录下，打开 打开CMD命令行.bat（若 boot.img 不存在此目录下，刷入 magisk 无效）</p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/05c3c9d8aa38426294d85cfdd38255a4~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
-<p>5.5 设备进入 BootLoader 模式<br>
-方式一：执行 adb reboot bootloader<br>
-方式二：关机状态下，同时按住 音量— + 电源键</p>
-<p>执行以下命令等待完成，使用命令重启设备；重启后重新打开 magisk 显示版本号表示成功。</p>
+<p>5.5 设备进入 BootLoader 模式<br>    方式一：执行 adb reboot bootloader<br>    方式二：关机状态下，同时按住 音量— + 电源键</p>
+<p>执行以下命令等待完成，使用命令重启设备；重启后重新打开 magisk 显示版本号表示成功。 </p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e0cf7cae60c44815b1127984face396c~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ffe997317c794ad08d6c1242a54bf9a5~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b35d48af81574b27bfba0c5eca5cfdc0~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
 <p><strong>6、刷入 LSPosted</strong></p>
-<p>官网：<a target="_blank" rel="noopener" href="https://github.com/LSPosed/LSPosed%E3%80%81https://github.com/RikkaApps/Riru/tags">https://github.com/LSPosed/LSPosed、https://github.com/RikkaApps/Riru/tags</a></p>
+<p>官网：<a target="_blank" rel="noopener" href="https://github.com/LSPosed/LSPosed、https://github.com/RikkaApps/Riru/tags">https://github.com/LSPosed/LSPosed、https://github.com/RikkaApps/Riru/tags</a></p>
 <p>6.1 开启 Zygisk，按提示重启设备</p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3c329e61e1fc48e5945863ce1a1f8cda~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
 <p>6.2 开启 Zygisk，按提示重启设备</p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d948643a1a3f4bf79cb1ee7dd8075ea1~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
 <p>6.3 下载<strong>LSPosted-zygisk</strong>备用（必选）</p>
 <p>如果设备支持 Zygisk，ritu、LSPosted-ritu 模块可不需要，建议使用支持 Zygisk 的设备</p>
-<p>6.4 打开 Magisk 开始刷入必选模块，按照提示重启设备后显示 Zygisk 是，桌面出现 LSPosted</p>
+<p>6.4 打开 Magisk 开始刷入必选模块，按照提示重启设备后显示 Zygisk 是，桌面出现 LSPosted</p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8e39c410d444628be03c7f83adaf92a~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4b73cb22078b4610a4fac35e369b8eea~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90ae1ca939964ce68b0e56331bd50b63~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/baffbe16b1d04a1899ba2c4caee9b37b~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p><strong>7、安装检测模块</strong></p>
-<p>如果之前没有安装我们的 <strong>合规检测模块</strong>，那么现在要安装啦！！！启动模块，勾选要检测的应用，返回桌面执行应用就可以看日志</p>
+<p>如果之前没有安装我们的 <strong>合规检测模块</strong>，那么现在要安装啦！！！启动模块，勾选要检测的应用，返回桌面执行应用就可以看日志</p>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b5196bdc80d84b64b8fd752e47285651~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h1>其他</h1>
-<ul>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
 <li>⚠️ Android 9 及其以下设备才支持 IMEI 获取，在测试设备选择上需注意</li>
 <li><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/">学习网站：XDA Forums</a> 该网站的主要讨论手机系统，并提供相关设备的技术信息、<a target="_blank" rel="noopener" href="https://zh.m.wikipedia.org/wiki/ROM">ROM</a>升级、技术支持、Q＆A</li>
-<li><a target="_blank" rel="noopener" href="https://bbs.gsmua.cn/">搞机网站：UA手机维修交流 - Powered by Discuz!</a><br>
-可提供 UAndroid 工具，用于各厂商设备 BootLoader 解锁<br>
-付费工具、也可以账号租用方式使用（专业搞机，某宝也有相关技术服务）</li>
+<li><a target="_blank" rel="noopener" href="https://bbs.gsmua.cn/">搞机网站：UA手机维修交流 - Powered by Discuz!</a><br>  可提供 UAndroid 工具，用于各厂商设备 BootLoader 解锁<br>  付费工具、也可以账号租用方式使用（专业搞机，某宝也有相关技术服务）</li>
 </ul>
 
 
@@ -675,7 +655,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前言</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Xposted 模块</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%8B%E7%BB%8D-%E2%98%95%EF%B8%8F"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">介绍 ☕️</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Hook-%E6%A1%86%E6%9E%B6-%F0%9F%A4%94"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Hook 框架 🤔</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%BE%E4%B8%AA%E6%A0%97%E5%AD%90%F0%9F%8C%B0"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">举个栗子🌰</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9C%89%E6%B2%A1%E6%9C%89%E7%8E%B0%E6%88%90%E7%9A%84%E4%BB%A3%E7%A0%81-%F0%9F%A4%94%EF%B8%8F"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">有没有现成的代码 🤔️</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Use VirtualXposted 💔</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">如何使用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Use Taichi 💔</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Use Lsposted ❤️</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">注意事项</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-2"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">如何使用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">其他</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前言</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Xposted-%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Xposted 模块</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%8B%E7%BB%8D-%E2%98%95%EF%B8%8F"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">介绍 ☕️</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Hook-%E6%A1%86%E6%9E%B6-%F0%9F%A4%94"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Hook 框架 🤔</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%BE%E4%B8%AA%E6%A0%97%E5%AD%90%F0%9F%8C%B0"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">举个栗子🌰</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9C%89%E6%B2%A1%E6%9C%89%E7%8E%B0%E6%88%90%E7%9A%84%E4%BB%A3%E7%A0%81-%F0%9F%A4%94%EF%B8%8F"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">有没有现成的代码 🤔️</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Use-VirtualXposted-%F0%9F%92%94"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Use VirtualXposted 💔</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">如何使用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Use-Taichi-%F0%9F%92%94"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Use Taichi 💔</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Use-Lsposted-%E2%9D%A4%EF%B8%8F"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Use Lsposted ❤️</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">注意事项</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-1"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">如何使用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">其他</span></a></li></ol>
         
         </div>
       </aside>

@@ -241,7 +241,7 @@
             <a href="/">首页</a>
           </li>
           <li>
-            <a href="/categories/">分类</a>
+            <a href="/categories/">日记</a>
           </li>
           <li>
             <a href="/tags/">标签</a>
@@ -444,65 +444,58 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>架构</h1>
-<ul>
+        <h1 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h1><ul>
 <li>application framework</li>
 <li>binder ipc proxies</li>
-<li>Android system service
-<ul>
-<li>media service
-<ul>
+<li>Android system service<ul>
+<li>media service<ul>
 <li>audio</li>
 <li>camera</li>
 <li>media player</li>
 </ul>
 </li>
-<li>system service
-<ul>
+<li>system service<ul>
 <li>ams</li>
 <li>wms</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>hal【硬件接口】
-<ul>
+<li>hal【硬件接口】<ul>
 <li>camera hal</li>
 <li>audio hal</li>
 <li>graphics hal</li>
 </ul>
 </li>
-<li>linux kernel
-<ul>
+<li>linux kernel<ul>
 <li>camera driver</li>
 <li>audio driver</li>
-<li>display driver</li>
+<li>display driver    </li>
 </ul>
 </li>
 </ul>
-<h2 id="架构资源">架构资源</h2>
-<p>1、hal：<br>
-- 绑定式 HAL：通过 HIDL 或 AIDL 表示，Android framework 和 HAL 之间通过 Binder 通讯。<br>
-- 直通式 HAL：Android 8 及其以上设备可用</p>
-<p>2、aidl：<br>
-- 抽象化 IPC 工具，构造 c++ 与 Java 的绑定；通常一个进程无法访问另一个进程的内存，如需通讯进程需将对象分解成操作系统理解的原语言<br>
-- 线程调用<br>
-- 本地进程线程调用：可能发生在当前线程执行<br>
-- oneway：修饰远程调用，发送数据并立即返回；修复本地调用无效<br>
-- 远程进程线程调用：来自线程池未知线程<br>
-- 定义 aidl<br>
-- android sdk 会生成 .aidl 文件的 IBinder 接口，接口通常拥有一个名为 Stub 的内部抽象类，具体需要实现 Stub 类<br>
-- 实现 service 重写 onbind，返回 Stub 实现类给客户端<br>
-- 工作原理<br>
-- 使用 binder 内核驱动程序进行调用</p>
-<p>3、Binder：<br>
-- 自身应用同进程使用服务可使用<br>
-- 扩展 Binder 类实现公共方法，使用 bindService 绑定 service 和 ServiceConnection</p>
-<p>4、Messenger：<br>
-- 不同进程间可使用，无需使用 aidl，适用单线程<br>
-- 服务端：扩展 service 且内部包含 messenger，messenger 绑定一个 handle 并通过 onbind 返回 messenger<br>
-- 客户度：通过 binderservice 绑定 serviceConnection，connection 内部通过服务链接获得 messenger，messenger 接口可以发消息了</p>
-
+<h2 id="架构资源"><a href="#架构资源" class="headerlink" title="架构资源"></a>架构资源</h2><p>1、hal：</p>
+<pre><code>- 绑定式 HAL：通过 HIDL 或 AIDL 表示，Android framework 和 HAL 之间通过 Binder 通讯。
+- 直通式 HAL：Android 8 及其以上设备可用
+</code></pre><p>2、aidl：</p>
+<pre><code>- 抽象化 IPC 工具，构造 c++ 与 Java 的绑定；通常一个进程无法访问另一个进程的内存，如需通讯进程需将对象分解成操作系统理解的原语言
+- 线程调用
+    - 本地进程线程调用：可能发生在当前线程执行
+    - oneway：修饰远程调用，发送数据并立即返回；修复本地调用无效 
+    - 远程进程线程调用：来自线程池未知线程
+- 定义 aidl
+    - android sdk 会生成 .aidl 文件的 IBinder 接口，接口通常拥有一个名为 Stub 的内部抽象类，具体需要实现 Stub 类
+    - 实现 service 重写 onbind，返回 Stub 实现类给客户端
+- 工作原理
+    - 使用 binder 内核驱动程序进行调用
+</code></pre><p>3、Binder：</p>
+<pre><code>- 自身应用同进程使用服务可使用
+- 扩展 Binder 类实现公共方法，使用 bindService 绑定 service 和 ServiceConnection
+</code></pre><p>4、Messenger：</p>
+<pre><code>- 不同进程间可使用，无需使用 aidl，适用单线程
+- 服务端：扩展 service 且内部包含 messenger，messenger 绑定一个 handle 并通过 onbind 返回 messenger
+- 客户度：通过 binderservice 绑定 serviceConnection，connection 内部通过服务链接获得 messenger，messenger 接口可以发消息了
+</code></pre>
 
           <hr>
           <!-- Pager -->
@@ -580,7 +573,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">架构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9E%B6%E6%9E%84%E8%B5%84%E6%BA%90"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">架构资源</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%9E%B6%E6%9E%84"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">架构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9E%B6%E6%9E%84%E8%B5%84%E6%BA%90"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">架构资源</span></a></li></ol></li></ol>
         
         </div>
       </aside>

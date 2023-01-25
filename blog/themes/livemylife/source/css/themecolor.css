@@ -312,7 +312,7 @@ body {
 a:hover, a:focus {
   color: var(--sidebar-tags-color-hovor);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 li.archive-list-item:hover {
