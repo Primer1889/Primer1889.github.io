@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="学习痕迹，留下痕迹可作为回忆的点滴"/>
+  <meta name="keyword" content="学习痕迹，深南村长"/>
+  <link rel="shortcut icon" href="/"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="http://yoursite-url/undefined/从smail接入第三方/">
+  <title>
+    
+      从 smail 接入第三方 SDK - 深南村长
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav style="background-color: rgba(255, 255, 255, 0); border: 0px;" class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div  style="background-color: rgba(255, 255, 255, 0);" class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+          <li>
+            <a href="/categories/">日记</a>
+          </li>
+          <li>
+            <a href="/tags/">标签</a>
+          </li>
+          <li>
+            <a href="/about/">关于</a>
+          </li>
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+    <style type="text/css">
+      .body--light {
+        /* intro-header */
+        --intro-header-background-image-url-home: url('/img/2301/5_bg.jpg');
+        --intro-header-background-image-url-post: url('/img/220926_smailsdk/smail_bg.webp');
+        --intro-header-background-image-url-page: url('//img/220926_smailsdk/smail_bg.webp');
+      }
+
+      .body--dark {
+        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/5_bg.jpg');
+        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/220926_smailsdk/smail_bg.webp');
+        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/220926_smailsdk/smail_bg.webp');
+      }
+
+      header.intro-header {
+        
+          /*post*/
+          background-image: var(--intro-header-background-image-url-post);
+          /* background-image: url('/img/220926_smailsdk/smail_bg.webp'); */
+          
+      }
+
+      #signature {
+          /*signature*/
+          background-image: url('/img/signature/nick-name.png');
+        }
+
+        
+    </style>
+    
+
+
+
+      
+        <header class="intro-header">
+          <!-- Signature -->
+          <div id="signature">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+                    <div class="post-heading">
+                      <div class="tags">
+                        
+                          <a class="tag" href="/tags/#SDK" title="SDK">
+                            SDK
+                          </a>
+                          
+                      </div>
+                      <h1>
+                        从 smail 接入第三方 SDK
+                      </h1>
+                      <h2 class="subheading">
+                        有时通过查看、修改第三方库能更好解决问题
+                      </h2>
+                      <span>
+                        作者： 深南村长
+                      </span>
+                      <br>
+                      <span>
+                        时间：2022-09-26
+                      </span>
+                      <br>
+                      
+                        <!-- WordCount start -->
+                        <span>
+                          时长： <span>
+                            29
+                          </span> 分钟
+                        </span>
+                        <br>
+                        <span>
+                          字数： <span>
+                            5.5k
+                          </span> 字
+                        </span>
+                        <br>
+                        <!-- WordCount end -->
+                        
+                          
+                            <!-- 不蒜子统计 start -->
+                            <span id="busuanzi_container_page_pv">
+                              次数： <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                            
+
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+            <!-- waveoverlay start -->
+            <div class="preview-overlay">
+              <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+                  </path>
+                </defs>
+                <g class="preview-parallax">
+                  <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+                  <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+                  <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+                  <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+                </g>
+              </svg>
+            </div>
+            <!-- waveoverlay end -->
+            
+
+        </header>
+        
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1>遇到过这种场景吗</h1>
+<p>什么时候要利用 smali 语言层面接入第三方 sdk ？一般都是使用 java 接口，一目了然，搞个 smali 不是没事找事？场景不同，在没有办法的时候这就是一种方法。</p>
+<p>programer A：   发你一个 apk 文件，帮我看下<br>
+programer A：   因为我们没有原工程，只有一个 APK，我想把咋们的 sdk 接入到里面，怎么搞？<br>
+programer B：   应该可以，可以试试以字节码、smail 形式接入<br>
+programer A：   smail ？这是啥啊！<br>
+programer B：   自己查资料。。。。。。</p>
+<p><strong>嗯？没有思路，不然写个 Demo 看看吧</strong></p>
+<p>1、准备一个 sdk: <code>gcsdk-1.0.0.jar</code><br>
+2、准备一个 apk: <code>app-0.apk</code>（假设是我们的应用）<br>
+3、创建一个空白 Android 项目，预备接入 sdk: <code>app-1.apk</code>（备用）</p>
+<p>模拟几个对外的接口简单生成一个 jar，实际中接入的第三方 sdk 接口也不会很复杂。</p>
+<hr>
+<blockquote>
+<p>gcsdk-1.0.0（示例）</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 初始化</span></span><br><span class="line">GCSDK.getInstance().init(<span class="keyword">new</span> InitCallback() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initSuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;gcsdk-初始化成功&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initFail</span><span class="params">(<span class="keyword">int</span> code, String error)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;gcsdk-初始化失败：code = &quot;</span> + code + <span class="string">&quot;  error = &quot;</span> + error);</span><br><span class="line">            &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//登录</span></span><br><span class="line">GCSDK.getInstance().login(<span class="keyword">new</span> LoginCallback() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoginSuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;登录-成功&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inLoginFail</span><span class="params">(<span class="keyword">int</span> code, String error)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;登录-失败：code = &quot;</span> + code + <span class="string">&quot; error = &quot;</span> + error);</span><br><span class="line">            &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//广告        </span></span><br><span class="line">AdParams adParams = <span class="keyword">new</span> AdParams();</span><br><span class="line">GCSDK.getInstance().openAd(adParams, <span class="keyword">new</span> AdCallback() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;广告-点击&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClickSkip</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;广告-点击跳过&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClose</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;广告-关闭&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onOpenFaild</span><span class="params">(<span class="keyword">int</span> code, String error)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;广告-打开失败：code = &quot;</span> + code + <span class="string">&quot; error = &quot;</span> + error);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onOpenSuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;广告-打开成功&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoadBegin</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;广告-加载开始&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoadFaild</span><span class="params">(<span class="keyword">int</span> code, String error)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;广告-加载失败：code = &quot;</span> + code + <span class="string">&quot; error = &quot;</span> + error);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoadComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;广告-加载完成&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDownloadBegin</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;广告-下载开始&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDownloadFail</span><span class="params">(<span class="keyword">int</span> code, String error)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;广告-下载失败：code =&quot;</span> + code + <span class="string">&quot; error = &quot;</span> + error);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDownloadComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;广告-下载完成&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//支付</span></span><br><span class="line">PayParams payParams = <span class="keyword">new</span> PayParams();</span><br><span class="line">PayManager.getInstance().pay(payParams, <span class="keyword">new</span> PayCallback() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onPaySuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;支付-成功&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onPayFail</span><span class="params">(<span class="keyword">int</span> code, String error)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;支付-失败：code = &quot;</span> + code + <span class="string">&quot; error = &quot;</span> + error);</span><br><span class="line">            &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>空白 Android 项目，模拟接入 gcsdk，接入完成后打包备用，生成的 apk 用于获取 smali 代码</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// App.java</span></span><br><span class="line"><span class="keyword">package</span> com.example.gcsdkdemo;</span><br><span class="line"><span class="keyword">import</span> android.app.Application;</span><br><span class="line"><span class="keyword">import</span> android.util.Log;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.callback.InitCallback;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.core.GCSDK;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String TAG = <span class="string">&quot;cunzhang&quot;</span>;</span><br><span class="line">    <span class="comment">//初始化回调</span></span><br><span class="line">    <span class="keyword">private</span> InitCallback mInitCallback = <span class="keyword">new</span> InitCallback() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initSuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            Log.d(TAG, <span class="string">&quot;initSuccess: &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initFail</span><span class="params">(<span class="keyword">int</span> i, String s)</span> </span>&#123;</span><br><span class="line">            Log.d(TAG, <span class="string">&quot;initFail: &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate();</span><br><span class="line">        <span class="comment">//gcsdk 初始化</span></span><br><span class="line">        GCSDK.getInstance().init(mInitCallback);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//MainActivity.java</span></span><br><span class="line"><span class="keyword">package</span> com.example.gcsdkdemo;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.util.Log;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.callback.AdCallback;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.callback.LoginCallback;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.callback.PayCallback;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.core.GCSDK;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.params.AdParams;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.params.PayParams;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String TAG = <span class="string">&quot;cunzhang&quot;</span>;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onPay</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">        Log.d(TAG, <span class="string">&quot;onPay: &quot;</span>);</span><br><span class="line">        <span class="comment">//支付接口</span></span><br><span class="line">        PayParams payParams = <span class="keyword">new</span> PayParams();</span><br><span class="line">        GCSDK.getInstance().pay(payParams, <span class="keyword">new</span> PayCallback() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onPaySuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onPaySuccess: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onPayFail</span><span class="params">(<span class="keyword">int</span> i, String s)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onPayFail: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLogin</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">        Log.d(TAG, <span class="string">&quot;onLogin: &quot;</span>);</span><br><span class="line">        <span class="comment">//登录接口</span></span><br><span class="line">        GCSDK.getInstance().login(<span class="keyword">new</span> LoginCallback() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoginSuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onLoginSuccess: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inLoginFail</span><span class="params">(<span class="keyword">int</span> i, String s)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;inLoginFail: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onOpenAd</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">        Log.d(TAG, <span class="string">&quot;onOpenAd: &quot;</span>);</span><br><span class="line">        <span class="comment">//广告接口</span></span><br><span class="line">        AdParams adParams = <span class="keyword">new</span> AdParams();</span><br><span class="line">        GCSDK.getInstance().openAd(adParams, <span class="keyword">new</span> AdCallback() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onClick: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClickSkip</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onClickSkip: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClose</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onClose: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onOpenFaild</span><span class="params">(<span class="keyword">int</span> i, String s)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onOpenFaild: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onOpenSuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onOpenSuccess: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoadBegin</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onLoadBegin: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoadFaild</span><span class="params">(<span class="keyword">int</span> i, String s)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onLoadFaild: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoadComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onLoadComplete: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDownloadBegin</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onDownloadBegin: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDownloadFail</span><span class="params">(<span class="keyword">int</span> i, String s)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onDownloadFail: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDownloadComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onDownloadComplete: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>依次触发按钮点击事件</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/f13a6793367598f0a03c93cb84c3a781.png" alt="image.png"></p>
+<p>假设这是咋们的应用，接着要预备接入</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c999c536a59d0ae7df378a1c36b140f6.png" alt="image.png"></p>
+<h1>了解下 smali</h1>
+<p><strong>1、获得 smali</strong><br>
+两个安装包的代码都要反编译获得</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java -jar apktool_2<span class="number">.6</span><span class="number">.0</span>.jar [-r] d app-<span class="number">0.</span>apk</span><br><span class="line"></span><br><span class="line">java -jar apktool_2<span class="number">.6</span><span class="number">.0</span>.jar [-r] d app-<span class="number">1.</span>apk</span><br></pre></td></tr></table></figure>
+<p>我们的应用</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/f45e85873cea6435fddc0548f82af6ee.png" alt="image.png"></p>
+<p>空白项目模拟 Java 接口模拟接入</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b6ff5a0f01ab90cb1132849cb6d138f0.png" alt="image.png"></p>
+<p><strong>2、了解项目的 smali</strong></p>
+<p>可以使用 VSCode 插件 smali、smali2java 方便查看 smali 代码，以下 smali 主要是列举与 sdk 相关，了解 smali 具体实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//App.java &amp; App.smal</span></span><br><span class="line"><span class="keyword">package</span> com.example.gcsdkdemo;</span><br><span class="line"><span class="keyword">import</span> android.app.Application;</span><br><span class="line"><span class="keyword">import</span> android.util.Log;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.callback.InitCallback;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.core.GCSDK;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String TAG = <span class="string">&quot;cunzhang&quot;</span>; </span><br><span class="line"></span><br><span class="line">    <span class="comment">//定义属性 mInitCallback：      .field private mInitCallback:Lcom/primer/jsonlili/callback/InitCallback;</span></span><br><span class="line">    <span class="comment">//创建对象：                    new-instance v0, Lcom/example/gcsdkdemo/App$1;</span></span><br><span class="line">    <span class="comment">//调用类隐藏初始化方法 &lt;init&gt;：   invoke-direct &#123;v0, p0&#125;, Lcom/example/gcsdkdemo/App$1;-&gt;&lt;init&gt;(Lcom/example/gcsdkdemo/App;)V</span></span><br><span class="line">    <span class="comment">//把创建的对象赋值给本地变量：     iput-object v0, p0, Lcom/example/gcsdkdemo/App;-&gt;mInitCallback:Lcom/primer/jsonlili/callback/InitCallback;</span></span><br><span class="line">    <span class="keyword">private</span> InitCallback mInitCallback = <span class="keyword">new</span> InitCallback() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initSuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            Log.d(TAG, <span class="string">&quot;initSuccess: &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initFail</span><span class="params">(<span class="keyword">int</span> i, String s)</span> </span>&#123;</span><br><span class="line">            Log.d(TAG, <span class="string">&quot;initFail: &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//调用类的静态方法：         invoke-static &#123;&#125;, Lcom/primer/jsonlili/core/GCSDK;-&gt;getInstance()Lcom/primer/jsonlili/core/GCSDK;</span></span><br><span class="line">        <span class="comment">//移动操作数：              move-result-object v0</span></span><br><span class="line">        <span class="comment">//从操作数栈获取两个操作数：  iget-object v1, p0, Lcom/example/gcsdkdemo/App;-&gt;mInitCallback:Lcom/primer/jsonlili/callback/InitCallback;</span></span><br><span class="line">        <span class="comment">//调用实现方法：            invoke-virtual &#123;v0, v1&#125;, Lcom/primer/jsonlili/core/GCSDK;-&gt;init(Lcom/primer/jsonlili/callback/InitCallback;)V</span></span><br><span class="line">        GCSDK.getInstance().init(mInitCallback);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>InitCallback 内部类实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"># 表明类限定名</span><br><span class="line">.class Lcom/example/gcsdkdemo/App$<span class="number">1</span>;</span><br><span class="line"># 父类</span><br><span class="line">.<span class="keyword">super</span> Ljava/lang/Object;</span><br><span class="line"># 源文件名称</span><br><span class="line">.source <span class="string">&quot;App.java&quot;</span></span><br><span class="line"></span><br><span class="line"># interfaces</span><br><span class="line">.implements Lcom/primer/jsonlili/callback/InitCallback;</span><br><span class="line"></span><br><span class="line"># annotations</span><br><span class="line">.annotation system Ldalvik/annotation/EnclosingClass;</span><br><span class="line">value = Lcom/example/gcsdkdemo/App;</span><br><span class="line">.end annotation</span><br><span class="line"></span><br><span class="line"># 内部类</span><br><span class="line">.annotation system Ldalvik/annotation/InnerClass;</span><br><span class="line">accessFlags = <span class="number">0x0</span></span><br><span class="line">name = <span class="keyword">null</span></span><br><span class="line">.end annotation</span><br><span class="line"></span><br><span class="line"># 内部类持有外部类 this 引用</span><br><span class="line"># instance fields</span><br><span class="line">.field <span class="keyword">final</span> synthetic <span class="keyword">this</span>$<span class="number">0</span>:Lcom/example/gcsdkdemo/App;</span><br><span class="line"></span><br><span class="line"># direct methods</span><br><span class="line">.method constructor &lt;init&gt;(Lcom/example/gcsdkdemo/App;)V</span><br><span class="line">.locals <span class="number">0</span></span><br><span class="line">.param p1, &quot;this$0&quot; # Lcom/example/gcsdkdemo/App;</span><br><span class="line"># 行数，删除不影响代码执行</span><br><span class="line">.line <span class="number">13</span></span><br><span class="line">iput-object p1, p0, Lcom/example/gcsdkdemo/App$<span class="number">1</span>;-&gt;<span class="keyword">this</span>$<span class="number">0</span>:Lcom/example/gcsdkdemo/App;</span><br><span class="line">invoke-direct &#123;p0&#125;, Ljava/lang/Object;-&gt;&lt;init&gt;()V</span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line"># virtual methods</span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">initFail</span><span class="params">(ILjava/lang/String;)</span>V</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"># 指定方法中可用的非参寄存器数量</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.param p1, &quot;i&quot; # I</span></span><br><span class="line"><span class="function">.param p2, &quot;s&quot; # Ljava/lang/String</span>;</span><br><span class="line">.line <span class="number">21</span></span><br><span class="line"><span class="keyword">const</span>-string v0, <span class="string">&quot;cunzhang&quot;</span></span><br><span class="line"><span class="keyword">const</span>-string v1, <span class="string">&quot;initFail: &quot;</span></span><br><span class="line">invoke-<span class="keyword">static</span> &#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">22</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">initSuccess</span><span class="params">()</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.line 16</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v0, &quot;cunzhang&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v1, &quot;initSuccess: &quot;</span></span><br><span class="line"><span class="function">invoke-<span class="keyword">static</span> </span>&#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">17</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//MainActivity.java $ MainActivity.smali</span></span><br><span class="line"><span class="keyword">package</span> com.example.gcsdkdemo;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.util.Log;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.callback.AdCallback;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.callback.LoginCallback;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.callback.PayCallback;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.core.GCSDK;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.params.AdParams;</span><br><span class="line"><span class="keyword">import</span> com.primer.jsonlili.params.PayParams;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String TAG = <span class="string">&quot;cunzhang&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onPay</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">        Log.d(TAG, <span class="string">&quot;onPay: &quot;</span>);</span><br><span class="line">        <span class="comment">//创建 PayParams 对象并存储到 v0，</span></span><br><span class="line">        <span class="comment">//new-instance v0, Lcom/primer/jsonlili/params/PayParams;</span></span><br><span class="line">        <span class="comment">//invoke-direct &#123;v0&#125;, Lcom/primer/jsonlili/params/PayParams;-&gt;&lt;init&gt;()V</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//.local v0, &quot;payParams&quot;:Lcom/primer/jsonlili/params/PayParams;</span></span><br><span class="line">        <span class="comment">//invoke-static &#123;&#125;, Lcom/primer/jsonlili/core/GCSDK;-&gt;getInstance()Lcom/primer/jsonlili/core/GCSDK;</span></span><br><span class="line">        <span class="comment">//move-result-object v1</span></span><br><span class="line">        <span class="comment">//new-instance v2, Lcom/example/gcsdkdemo/MainActivity$1;</span></span><br><span class="line">        <span class="comment">//invoke-direct &#123;v2, p0&#125;, Lcom/example/gcsdkdemo/MainActivity$1;-&gt;&lt;init&gt;(Lcom/example/gcsdkdemo/MainActivity;)V</span></span><br><span class="line">        <span class="comment">//invoke-virtual &#123;v1, v0, v2&#125;, Lcom/primer/jsonlili/core/GCSDK;-&gt;pay(Lcom/primer/jsonlili/params/PayParams;Lcom/primer/jsonlili/callback/PayCallback;)V</span></span><br><span class="line">        </span><br><span class="line">        PayParams payParams = <span class="keyword">new</span> PayParams();</span><br><span class="line">        GCSDK.getInstance().pay(payParams, <span class="keyword">new</span> PayCallback() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onPaySuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onPaySuccess: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onPayFail</span><span class="params">(<span class="keyword">int</span> i, String s)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onPayFail: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLogin</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">        Log.d(TAG, <span class="string">&quot;onLogin: &quot;</span>);</span><br><span class="line">        <span class="comment">//调用 getInstance，把 getInstance 返回的对象存储到 v0，创建内部类 LoginCallback 对象，调用内部类初始化，调用登录方法</span></span><br><span class="line">        <span class="comment">//invoke-static &#123;&#125;, Lcom/primer/jsonlili/core/GCSDK;-&gt;getInstance()Lcom/primer/jsonlili/core/GCSDK;</span></span><br><span class="line">        <span class="comment">//move-result-object v0</span></span><br><span class="line">        <span class="comment">//new-instance v1, Lcom/example/gcsdkdemo/MainActivity$2;</span></span><br><span class="line">        <span class="comment">//invoke-direct &#123;v1, p0&#125;, Lcom/example/gcsdkdemo/MainActivity$2;-&gt;&lt;init&gt;(Lcom/example/gcsdkdemo/MainActivity;)V</span></span><br><span class="line">        <span class="comment">//invoke-virtual &#123;v0, v1&#125;, Lcom/primer/jsonlili/core/GCSDK;-&gt;login(Lcom/primer/jsonlili/callback/LoginCallback;)V</span></span><br><span class="line">        </span><br><span class="line">        GCSDK.getInstance().login(<span class="keyword">new</span> LoginCallback() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoginSuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onLoginSuccess: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inLoginFail</span><span class="params">(<span class="keyword">int</span> i, String s)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;inLoginFail: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onOpenAd</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">        Log.d(TAG, <span class="string">&quot;onOpenAd: &quot;</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//new-instance v0, Lcom/primer/jsonlili/params/AdParams;</span></span><br><span class="line">        <span class="comment">//invoke-direct &#123;v0&#125;, Lcom/primer/jsonlili/params/AdParams;-&gt;&lt;init&gt;()V</span></span><br><span class="line">        <span class="comment">//.line 60</span></span><br><span class="line">        <span class="comment">//.local v0, &quot;adParams&quot;:Lcom/primer/jsonlili/params/AdParams;</span></span><br><span class="line">        <span class="comment">//invoke-static &#123;&#125;, Lcom/primer/jsonlili/core/GCSDK;-&gt;getInstance()Lcom/primer/jsonlili/core/GCSDK;</span></span><br><span class="line">        <span class="comment">//move-result-object v1</span></span><br><span class="line">        <span class="comment">//new-instance v2, Lcom/example/gcsdkdemo/MainActivity$3;</span></span><br><span class="line">        <span class="comment">//invoke-direct &#123;v2, p0&#125;, Lcom/example/gcsdkdemo/MainActivity$3;-&gt;&lt;init&gt;(Lcom/example/gcsdkdemo/MainActivity;)V</span></span><br><span class="line">        <span class="comment">//invoke-virtual &#123;v1, v0, v2&#125;, Lcom/primer/jsonlili/core/GCSDK;-&gt;openAd(Lcom/primer/jsonlili/params/AdParams;Lcom/primer/jsonlili/callback/AdCallback;)V</span></span><br><span class="line"></span><br><span class="line">        AdParams adParams = <span class="keyword">new</span> AdParams();</span><br><span class="line">        GCSDK.getInstance().openAd(adParams, <span class="keyword">new</span> AdCallback() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onClick: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClickSkip</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onClickSkip: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClose</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onClose: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onOpenFaild</span><span class="params">(<span class="keyword">int</span> i, String s)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onOpenFaild: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onOpenSuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onOpenSuccess: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoadBegin</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onLoadBegin: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoadFaild</span><span class="params">(<span class="keyword">int</span> i, String s)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onLoadFaild: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoadComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onLoadComplete: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDownloadBegin</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onDownloadBegin: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDownloadFail</span><span class="params">(<span class="keyword">int</span> i, String s)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onDownloadFail: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDownloadComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">&quot;onDownloadComplete: &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>PayCallback 内部类实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">.class Lcom/example/gcsdkdemo/MainActivity$<span class="number">1</span>;</span><br><span class="line">.<span class="keyword">super</span> Ljava/lang/Object;</span><br><span class="line">.source <span class="string">&quot;MainActivity.java&quot;</span></span><br><span class="line"></span><br><span class="line"># interfaces</span><br><span class="line">.implements Lcom/primer/jsonlili/callback/PayCallback;</span><br><span class="line"></span><br><span class="line"># annotations</span><br><span class="line">.annotation system Ldalvik/annotation/EnclosingMethod;</span><br><span class="line">value = Lcom/example/gcsdkdemo/MainActivity;-&gt;onPay(Landroid/view/View;)V</span><br><span class="line">.end annotation</span><br><span class="line"></span><br><span class="line">.annotation system Ldalvik/annotation/InnerClass;</span><br><span class="line">accessFlags = <span class="number">0x0</span></span><br><span class="line">name = <span class="keyword">null</span></span><br><span class="line">.end annotation</span><br><span class="line"></span><br><span class="line"># instance fields</span><br><span class="line">.field <span class="keyword">final</span> synthetic <span class="keyword">this</span>$<span class="number">0</span>:Lcom/example/gcsdkdemo/MainActivity;</span><br><span class="line"></span><br><span class="line"># direct methods</span><br><span class="line">.method constructor &lt;init&gt;(Lcom/example/gcsdkdemo/MainActivity;)V</span><br><span class="line">.locals <span class="number">0</span></span><br><span class="line">.param p1, &quot;this$0&quot; # Lcom/example/gcsdkdemo/MainActivity;</span><br><span class="line">.line <span class="number">28</span></span><br><span class="line">iput-object p1, p0, Lcom/example/gcsdkdemo/MainActivity$<span class="number">1</span>;-&gt;<span class="keyword">this</span>$<span class="number">0</span>:Lcom/example/gcsdkdemo/MainActivity;</span><br><span class="line">invoke-direct &#123;p0&#125;, Ljava/lang/Object;-&gt;&lt;init&gt;()V</span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line"># virtual methods</span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onPayFail</span><span class="params">(ILjava/lang/String;)</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.param p1, &quot;i&quot; # I</span></span><br><span class="line"><span class="function">.param p2, &quot;s&quot; # Ljava/lang/String</span>;</span><br><span class="line">.line <span class="number">36</span></span><br><span class="line"><span class="keyword">const</span>-string v0, <span class="string">&quot;cunzhang&quot;</span></span><br><span class="line"><span class="keyword">const</span>-string v1, <span class="string">&quot;onPayFail: &quot;</span></span><br><span class="line">invoke-<span class="keyword">static</span> &#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">37</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onPaySuccess</span><span class="params">()</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.line 31</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v0, &quot;cunzhang&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v1, &quot;onPaySuccess: &quot;</span></span><br><span class="line"><span class="function">invoke-<span class="keyword">static</span> </span>&#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">32</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br></pre></td></tr></table></figure>
+<p>内部类 LoginCallback 实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">.class Lcom/example/gcsdkdemo/MainActivity$<span class="number">2</span>;</span><br><span class="line">.<span class="keyword">super</span> Ljava/lang/Object;</span><br><span class="line">.source <span class="string">&quot;MainActivity.java&quot;</span></span><br><span class="line"></span><br><span class="line"># interfaces</span><br><span class="line">.implements Lcom/primer/jsonlili/callback/LoginCallback;</span><br><span class="line"></span><br><span class="line"># annotations</span><br><span class="line">.annotation system Ldalvik/annotation/EnclosingMethod;</span><br><span class="line">value = Lcom/example/gcsdkdemo/MainActivity;-&gt;onLogin(Landroid/view/View;)V</span><br><span class="line">.end annotation</span><br><span class="line"></span><br><span class="line">.annotation system Ldalvik/annotation/InnerClass;</span><br><span class="line">accessFlags = <span class="number">0x0</span></span><br><span class="line">name = <span class="keyword">null</span></span><br><span class="line">.end annotation</span><br><span class="line"></span><br><span class="line"># instance fields</span><br><span class="line">.field <span class="keyword">final</span> synthetic <span class="keyword">this</span>$<span class="number">0</span>:Lcom/example/gcsdkdemo/MainActivity;</span><br><span class="line"></span><br><span class="line"># direct methods</span><br><span class="line">.method constructor &lt;init&gt;(Lcom/example/gcsdkdemo/MainActivity;)V</span><br><span class="line">.locals <span class="number">0</span></span><br><span class="line">.param p1, &quot;this$0&quot; # Lcom/example/gcsdkdemo/MainActivity;</span><br><span class="line">.line <span class="number">43</span></span><br><span class="line">iput-object p1, p0, Lcom/example/gcsdkdemo/MainActivity$<span class="number">2</span>;-&gt;<span class="keyword">this</span>$<span class="number">0</span>:Lcom/example/gcsdkdemo/MainActivity;</span><br><span class="line">invoke-direct &#123;p0&#125;, Ljava/lang/Object;-&gt;&lt;init&gt;()V</span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line"># virtual methods</span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">inLoginFail</span><span class="params">(ILjava/lang/String;)</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.param p1, &quot;i&quot; # I</span></span><br><span class="line"><span class="function">.param p2, &quot;s&quot; # Ljava/lang/String</span>;</span><br><span class="line">.line <span class="number">51</span></span><br><span class="line"><span class="keyword">const</span>-string v0, <span class="string">&quot;cunzhang&quot;</span></span><br><span class="line"><span class="keyword">const</span>-string v1, <span class="string">&quot;inLoginFail: &quot;</span></span><br><span class="line">invoke-<span class="keyword">static</span> &#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">52</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onLoginSuccess</span><span class="params">()</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.line 46</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v0, &quot;cunzhang&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v1, &quot;onLoginSuccess: &quot;</span></span><br><span class="line"><span class="function">invoke-<span class="keyword">static</span> </span>&#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">47</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br></pre></td></tr></table></figure>
+<p>AdCallback 内部类实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br></pre></td><td class="code"><pre><span class="line">.class Lcom/example/gcsdkdemo/MainActivity$<span class="number">3</span>;</span><br><span class="line">.<span class="keyword">super</span> Ljava/lang/Object;</span><br><span class="line">.source <span class="string">&quot;MainActivity.java&quot;</span></span><br><span class="line"></span><br><span class="line"># interfaces</span><br><span class="line">.implements Lcom/primer/jsonlili/callback/AdCallback;</span><br><span class="line"></span><br><span class="line"># annotations</span><br><span class="line">.annotation system Ldalvik/annotation/EnclosingMethod;</span><br><span class="line">value = Lcom/example/gcsdkdemo/MainActivity;-&gt;onOpenAd(Landroid/view/View;)V</span><br><span class="line">.end annotation</span><br><span class="line"></span><br><span class="line">.annotation system Ldalvik/annotation/InnerClass;</span><br><span class="line">accessFlags = <span class="number">0x0</span></span><br><span class="line">name = <span class="keyword">null</span></span><br><span class="line">.end annotation</span><br><span class="line"></span><br><span class="line"># instance fields</span><br><span class="line">.field <span class="keyword">final</span> synthetic <span class="keyword">this</span>$<span class="number">0</span>:Lcom/example/gcsdkdemo/MainActivity;</span><br><span class="line"></span><br><span class="line"># direct methods</span><br><span class="line">.method constructor &lt;init&gt;(Lcom/example/gcsdkdemo/MainActivity;)V</span><br><span class="line">.locals <span class="number">0</span></span><br><span class="line">.param p1, &quot;this$0&quot; # Lcom/example/gcsdkdemo/MainActivity;</span><br><span class="line">.line <span class="number">60</span></span><br><span class="line">iput-object p1, p0, Lcom/example/gcsdkdemo/MainActivity$<span class="number">3</span>;-&gt;<span class="keyword">this</span>$<span class="number">0</span>:Lcom/example/gcsdkdemo/MainActivity;</span><br><span class="line">invoke-direct &#123;p0&#125;, Ljava/lang/Object;-&gt;&lt;init&gt;()V</span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line"># virtual methods</span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onClick</span><span class="params">()</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.line 63</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v0, &quot;cunzhang&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v1, &quot;onClick: &quot;</span></span><br><span class="line"><span class="function">invoke-<span class="keyword">static</span> </span>&#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">64</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onClickSkip</span><span class="params">()</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.line 68</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v0, &quot;cunzhang&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v1, &quot;onClickSkip: &quot;</span></span><br><span class="line"><span class="function">invoke-<span class="keyword">static</span> </span>&#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">69</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onClose</span><span class="params">()</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.line 73</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v0, &quot;cunzhang&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v1, &quot;onClose: &quot;</span></span><br><span class="line"><span class="function">invoke-<span class="keyword">static</span> </span>&#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">74</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onDownloadBegin</span><span class="params">()</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.line 103</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v0, &quot;cunzhang&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v1, &quot;onDownloadBegin: &quot;</span></span><br><span class="line"><span class="function">invoke-<span class="keyword">static</span> </span>&#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">104</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onDownloadComplete</span><span class="params">()</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.line 113</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v0, &quot;cunzhang&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v1, &quot;onDownloadComplete: &quot;</span></span><br><span class="line"><span class="function">invoke-<span class="keyword">static</span> </span>&#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">114</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onDownloadFail</span><span class="params">(ILjava/lang/String;)</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.param p1, &quot;i&quot; # I</span></span><br><span class="line"><span class="function">.param p2, &quot;s&quot; # Ljava/lang/String</span>;</span><br><span class="line">.line <span class="number">108</span></span><br><span class="line"><span class="keyword">const</span>-string v0, <span class="string">&quot;cunzhang&quot;</span></span><br><span class="line"><span class="keyword">const</span>-string v1, <span class="string">&quot;onDownloadFail: &quot;</span></span><br><span class="line">invoke-<span class="keyword">static</span> &#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">109</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onLoadBegin</span><span class="params">()</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.line 88</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v0, &quot;cunzhang&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v1, &quot;onLoadBegin: &quot;</span></span><br><span class="line"><span class="function">invoke-<span class="keyword">static</span> </span>&#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">89</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onLoadComplete</span><span class="params">()</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.line 98</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v0, &quot;cunzhang&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v1, &quot;onLoadComplete: &quot;</span></span><br><span class="line"><span class="function">invoke-<span class="keyword">static</span> </span>&#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">99</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onLoadFaild</span><span class="params">(ILjava/lang/String;)</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.param p1, &quot;i&quot; # I</span></span><br><span class="line"><span class="function">.param p2, &quot;s&quot; # Ljava/lang/String</span>;</span><br><span class="line">.line <span class="number">93</span></span><br><span class="line"><span class="keyword">const</span>-string v0, <span class="string">&quot;cunzhang&quot;</span></span><br><span class="line"><span class="keyword">const</span>-string v1, <span class="string">&quot;onLoadFaild: &quot;</span></span><br><span class="line">invoke-<span class="keyword">static</span> &#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">94</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onOpenFaild</span><span class="params">(ILjava/lang/String;)</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.param p1, &quot;i&quot; # I</span></span><br><span class="line"><span class="function">.param p2, &quot;s&quot; # Ljava/lang/String</span>;</span><br><span class="line">.line <span class="number">78</span></span><br><span class="line"><span class="keyword">const</span>-string v0, <span class="string">&quot;cunzhang&quot;</span></span><br><span class="line"><span class="keyword">const</span>-string v1, <span class="string">&quot;onOpenFaild: &quot;</span></span><br><span class="line">invoke-<span class="keyword">static</span> &#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">79</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onOpenSuccess</span><span class="params">()</span>V</span></span><br><span class="line"><span class="function">.locals 2</span></span><br><span class="line"><span class="function">.line 83</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v0, &quot;cunzhang&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">const</span>-string v1, &quot;onOpenSuccess: &quot;</span></span><br><span class="line"><span class="function">invoke-<span class="keyword">static</span> </span>&#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line">.line <span class="number">84</span></span><br><span class="line"><span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br></pre></td></tr></table></figure>
+<p>熟能生巧，这样的代码看多了自然了解和认识的语法等也会越多，读取来就没那么费劲</p>
+<p><strong>我们的应用</strong></p>
+<p>假如我们已知代码插入点位置————对应按钮的点击事件，那么我们更应该关注的是<code>找到对应按钮的点击事件所在位置并插入新的 smali 代码</code>，插入代码不能引入新的编译器等错误</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/44d85c0db3e3955ffbe9fb8d82b82f72.png" alt="image.png"></p>
+<h1>试着接入 smali</h1>
+<p><strong>1、把 sdk 相关的 smali 代码复制到我们应用反编译后的工程目录下</strong></p>
+<p>这里我新建 <code>smali_classes9</code> 目录，gcsdk 比较简单，只有代码没有资源、so 文件等；如果有，也需要复制到工程的相应目录下，确保项目能够编译成功、运行期间能找到路径正确加载代码，这是项目能够运行的前提。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/42ce50c1f4987d6caf1dadbb4b1ba80a.png" alt="image.png"></p>
+<p>下面就开始往应用中插入点处插入 sdk smali 代码。</p>
+<p><strong>2、LeaderApp.java &amp; LeaderApp.smali</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">.class <span class="keyword">public</span> Lcom/example/leaderapp/ui/LeaderApp;</span><br><span class="line">.<span class="keyword">super</span> Landroid/app/Application;</span><br><span class="line">.source <span class="string">&quot;LeaderApp.java&quot;</span></span><br><span class="line"></span><br><span class="line"># instance fields</span><br><span class="line">.field <span class="keyword">private</span> <span class="keyword">final</span> TAG:Ljava/lang/String;</span><br><span class="line"># 1、定义初始化回调字段 </span><br><span class="line">.field <span class="keyword">private</span> mInitCallback:Lcom/primer/jsonlili/callback/InitCallback;</span><br><span class="line"></span><br><span class="line"># direct methods</span><br><span class="line">.method <span class="keyword">public</span> constructor &lt;init&gt;()V</span><br><span class="line"> .locals <span class="number">1</span></span><br><span class="line"> .line <span class="number">6</span></span><br><span class="line"> invoke-direct &#123;p0&#125;, Landroid/app/Application;-&gt;&lt;init&gt;()V</span><br><span class="line"> .line <span class="number">7</span></span><br><span class="line"> <span class="keyword">const</span>-string v0, <span class="string">&quot;leader&quot;</span></span><br><span class="line"> iput-object v0, p0, Lcom/example/leaderapp/ui/LeaderApp;-&gt;TAG:Ljava/lang/String;</span><br><span class="line"># 2、初始化方法中创建内部类对象</span><br><span class="line"> <span class="keyword">new</span>-instance v0, Lcom/example/leaderapp/ui/LeaderApp$<span class="number">1</span>;</span><br><span class="line"> invoke-direct &#123;v0, p0&#125;, Lcom/example/leaderapp/ui/LeaderApp$<span class="number">1</span>;-&gt;&lt;init&gt;(Lcom/example/leaderapp/ui/LeaderApp;)V</span><br><span class="line"> iput-object v0, p0, Lcom/example/leaderapp/ui/LeaderApp;-&gt;mInitCallback:Lcom/primer/jsonlili/callback/InitCallback;</span><br><span class="line"> <span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line"># virtual methods</span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onCreate</span><span class="params">()</span>V</span></span><br><span class="line"><span class="function"> .locals 2</span></span><br><span class="line"><span class="function"> .line 11</span></span><br><span class="line"><span class="function"> invoke-<span class="keyword">super</span> </span>&#123;p0&#125;, Landroid/app/Application;-&gt;onCreate()V</span><br><span class="line"> .line <span class="number">12</span></span><br><span class="line"> <span class="keyword">const</span>-string v0, <span class="string">&quot;leader&quot;</span></span><br><span class="line"> <span class="keyword">const</span>-string v1, <span class="string">&quot;onCreate: &quot;</span></span><br><span class="line"> invoke-<span class="keyword">static</span> &#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line"># 3、调用初始化方法</span><br><span class="line"> invoke-<span class="keyword">static</span> &#123;&#125;, Lcom/primer/jsonlili/core/GCSDK;-&gt;getInstance()Lcom/primer/jsonlili/core/GCSDK;</span><br><span class="line"> move-result-object v0</span><br><span class="line"> iget-object v1, p0, Lcom/example/leaderapp/ui/LeaderApp;-&gt;mInitCallback:Lcom/primer/jsonlili/callback/InitCallback;</span><br><span class="line"> invoke-virtual &#123;v0, v1&#125;, Lcom/primer/jsonlili/core/GCSDK;-&gt;init(Lcom/primer/jsonlili/callback/InitCallback;)V</span><br><span class="line"> <span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"># 4、创建 LeaderApp$1.smali，并更新路径、类等</span><br></pre></td></tr></table></figure>
+<p>检验插入是否正确并符合期望，可使用 VSCODE smali 插件通过代码转换验证</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/4c945faf21ac85feb9392dbba3f9f527.png" alt="image.png"></p>
+<p>对比原始项目和插入后的效果是否一致</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/36199a2e95b678da1afe678f4f9ed9f3.png" alt="image.png"></p>
+<p>对安装包手动签名，运行查看日志，能看到 sdk 初始化正确，说明上述接入是无误的。</p>
+<p>jarsigner -verbose -keystore [aa.keystore] [sign-app0.apk] [app-0.apk] key0</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d9a2aa7640b31bea5158a5c79d08c34b.png" alt="image.png"></p>
+<p><strong>注意⚠️：</strong></p>
+<p>反编译使用 <code>java -jar apktool.jar d ***.apk</code>，在回编译时候可能出现错误，日志中发现 <code>res/</code> 目录像是资源问题。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">W: invalid resource directory name: &gt;/Users/jsonli/Desktop/demo/<span class="number">0603</span>/app-<span class="number">0</span>/app-<span class="number">0</span>/res navigation</span><br><span class="line">brut.androlib.AndrolibException: brut.common.BrutException: <span class="function">could not <span class="title">exec</span> <span class="params">(exit code = <span class="number">1</span>)</span>:</span></span><br><span class="line"><span class="function">/Users/jsonli/Library/apktool/framework/1.apk, -S, </span></span><br><span class="line"><span class="function">/Users/jsonli/Desktop/demo/0603/app-0/app-0/res, -M, </span></span><br><span class="line"><span class="function">/Users/jsonli/Desktop/demo/0603/app-0/app-0/AndroidManifest.xml]</span></span><br></pre></td></tr></table></figure>
+<p>尝试在反编译时不处理资源命令加上 -r 参数<code>java -jar apktool.jar -r d ***.apk</code> 果然能够正常打包，继续完成剩下的接入吧 :)</p>
+<p><strong>3、HomeFragment$1.smali、HomeFrgment$2.smali</strong></p>
+<p><code>HomeFragment$1.smali</code>: button 点击事件实现类，登录调用处<br>
+<code>HomeFragment$2.smali</code>: gcsdk 登录回调</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">.class Lcom/example/leaderapp/ui/home/HomeFragment$<span class="number">1</span>;</span><br><span class="line">.<span class="keyword">super</span> Ljava/lang/Object;</span><br><span class="line">.source <span class="string">&quot;HomeFragment.java&quot;</span></span><br><span class="line"></span><br><span class="line"># interfaces</span><br><span class="line">.implements Landroid/view/View$OnClickListener;</span><br><span class="line"></span><br><span class="line"># annotations</span><br><span class="line">.annotation system Ldalvik/annotation/EnclosingMethod;</span><br><span class="line"> value = Lcom/example/leaderapp/ui/home/HomeFragment;-&gt;onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;</span><br><span class="line">.end annotation</span><br><span class="line">.annotation system Ldalvik/annotation/InnerClass;</span><br><span class="line"> accessFlags = <span class="number">0x0</span></span><br><span class="line"> name = <span class="keyword">null</span></span><br><span class="line">.end annotation</span><br><span class="line"></span><br><span class="line"># instance fields</span><br><span class="line">.field <span class="keyword">final</span> synthetic <span class="keyword">this</span>$<span class="number">0</span>:Lcom/example/leaderapp/ui/home/HomeFragment;</span><br><span class="line"></span><br><span class="line"># direct methods</span><br><span class="line">.method constructor &lt;init&gt;(Lcom/example/leaderapp/ui/home/HomeFragment;)V</span><br><span class="line"> .locals <span class="number">0</span></span><br><span class="line"> .param p1, &quot;this$0&quot; # Lcom/example/leaderapp/ui/home/HomeFragment;</span><br><span class="line"> .line <span class="number">40</span></span><br><span class="line"> iput-object p1, p0, Lcom/example/leaderapp/ui/home/HomeFragment$<span class="number">1</span>;-&gt;<span class="keyword">this</span>$<span class="number">0</span>:Lcom/example/leaderapp/ui/home/HomeFragment;</span><br><span class="line"> invoke-direct &#123;p0&#125;, Ljava/lang/Object;-&gt;&lt;init&gt;()V</span><br><span class="line"> <span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line"># virtual methods</span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onClick</span><span class="params">(Landroid/view/View;)</span>V</span></span><br><span class="line"><span class="function"> .locals 3</span></span><br><span class="line"><span class="function"> .param p1, &quot;view&quot; # Landroid/view/View</span>;</span><br><span class="line"> .line <span class="number">43</span></span><br><span class="line"> invoke-virtual &#123;p1&#125;, Landroid/view/View;-&gt;getContext()Landroid/content/Context;</span><br><span class="line"> move-result-object v0</span><br><span class="line"> <span class="keyword">const</span>-string v1, <span class="string">&quot;\u767b\u5f55&quot;</span></span><br><span class="line"> <span class="keyword">const</span>/<span class="number">4</span> v2, <span class="number">0x0</span></span><br><span class="line"> invoke-<span class="keyword">static</span> &#123;v0, v1, v2&#125;, Landroid/widget/Toast;-&gt;makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;</span><br><span class="line"> move-result-object v0</span><br><span class="line"> invoke-virtual &#123;v0&#125;, Landroid/widget/Toast;-&gt;show()V</span><br><span class="line"> .line <span class="number">44</span></span><br><span class="line"> <span class="keyword">const</span>-string v0, <span class="string">&quot;leader&quot;</span></span><br><span class="line"> <span class="keyword">const</span>-string v1, <span class="string">&quot;onClick: login&quot;</span></span><br><span class="line"> invoke-<span class="keyword">static</span> &#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line"></span><br><span class="line"># 1、调用登录接口，修改类路径、内部类（登录回调实现类）</span><br><span class="line"> invoke-<span class="keyword">static</span> &#123;&#125;, Lcom/primer/jsonlili/core/GCSDK;-&gt;getInstance()Lcom/primer/jsonlili/core/GCSDK;</span><br><span class="line"> move-result-object v0</span><br><span class="line"> <span class="keyword">new</span>-instance v1, Lcom/example/leaderapp/ui/home/HomeFragment$<span class="number">2</span>;</span><br><span class="line"> </span><br><span class="line"># 内部类持有外部类引用，这里的外部类是 button 的点击事件实现类，因此传入 HomeFragment$1，而不是 HomeFragment</span><br><span class="line"> invoke-direct &#123;v1, p0&#125;, Lcom/example/leaderapp/ui/home/HomeFragment$<span class="number">2</span>;-&gt;&lt;init&gt;(Lcom/example/leaderapp/ui/home/HomeFragment$<span class="number">1</span>;)V</span><br><span class="line"> invoke-virtual &#123;v0, v1&#125;, Lcom/primer/jsonlili/core/GCSDK;-&gt;login(Lcom/primer/jsonlili/callback/LoginCallback;)V</span><br><span class="line"> <span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">.class Lcom/example/leaderapp/ui/home/HomeFragment$<span class="number">2</span>;</span><br><span class="line">.<span class="keyword">super</span> Ljava/lang/Object;</span><br><span class="line">.source <span class="string">&quot;HomeFragment.java&quot;</span></span><br><span class="line"></span><br><span class="line"># 2、创建内部类文件，并把对应的登录回调代码复制过来</span><br><span class="line"># 3、修改类路径 .class、.source、</span><br><span class="line"># interfaces</span><br><span class="line">.implements Lcom/primer/jsonlili/callback/LoginCallback;</span><br><span class="line"></span><br><span class="line"># annotations</span><br><span class="line">.annotation system Ldalvik/annotation/EnclosingMethod;</span><br><span class="line"> value = Lcom/example/leaderapp/ui/home/HomeFragment;-&gt;onLogin(Landroid/view/View;)V</span><br><span class="line">.end annotation</span><br><span class="line">.annotation system Ldalvik/annotation/InnerClass;</span><br><span class="line"> accessFlags = <span class="number">0x0</span></span><br><span class="line"> name = <span class="keyword">null</span></span><br><span class="line">.end annotation</span><br><span class="line"></span><br><span class="line"># 这里传入的外部类是 button 点击事件实现类，因此初始化函数和 this 类型应该是 </span><br><span class="line"># instance fields</span><br><span class="line">.field <span class="keyword">final</span> synthetic <span class="keyword">this</span>$<span class="number">0</span>:Lcom/example/leaderapp/ui/home/HomeFragment$<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"># direct methods</span><br><span class="line">.method constructor &lt;init&gt;(Lcom/example/leaderapp/ui/home/HomeFragment$<span class="number">1</span>;)V</span><br><span class="line"> .locals <span class="number">0</span></span><br><span class="line"> .param p1, <span class="string">&quot;this$0&quot;</span></span><br><span class="line"> </span><br><span class="line"># 这里也是 HomeFragment$1</span><br><span class="line"> iput-object p1, p0, Lcom/example/leaderapp/ui/home/HomeFragment$<span class="number">2</span>;-&gt;<span class="keyword">this</span>$<span class="number">0</span>:Lcom/example/leaderapp/ui/home/HomeFragment$<span class="number">1</span>;</span><br><span class="line"> invoke-direct &#123;p0&#125;, Ljava/lang/Object;-&gt;&lt;init&gt;()V</span><br><span class="line"> <span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line"># virtual methods</span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">inLoginFail</span><span class="params">(ILjava/lang/String;)</span>V</span></span><br><span class="line"><span class="function"> .locals 2</span></span><br><span class="line"><span class="function"> .param p1, &quot;i&quot; # I</span></span><br><span class="line"><span class="function"> .param p2, &quot;s&quot; # Ljava/lang/String</span>;</span><br><span class="line"> .line <span class="number">51</span></span><br><span class="line"> <span class="keyword">const</span>-string v0, <span class="string">&quot;cunzhang&quot;</span></span><br><span class="line"> <span class="keyword">const</span>-string v1, <span class="string">&quot;inLoginFail: &quot;</span></span><br><span class="line"> invoke-<span class="keyword">static</span> &#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line"> .line <span class="number">52</span></span><br><span class="line"> <span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br><span class="line"></span><br><span class="line">.<span class="function">method <span class="keyword">public</span> <span class="title">onLoginSuccess</span><span class="params">()</span>V</span></span><br><span class="line"><span class="function"> .locals 2</span></span><br><span class="line"><span class="function"> .line 46</span></span><br><span class="line"><span class="function"> <span class="keyword">const</span>-string v0, &quot;cunzhang&quot;</span></span><br><span class="line"><span class="function"> <span class="keyword">const</span>-string v1, &quot;onLoginSuccess: &quot;</span></span><br><span class="line"><span class="function"> invoke-<span class="keyword">static</span> </span>&#123;v0, v1&#125;, Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I</span><br><span class="line"> .line <span class="number">47</span></span><br><span class="line"> <span class="keyword">return</span>-<span class="keyword">void</span></span><br><span class="line">.end method</span><br></pre></td></tr></table></figure>
+<p><strong>4、NotificationsFragment.smali、DashboardFragment.smali</strong></p>
+<p>因为代码简单，且逻辑一致，剩下的支付和广告接口代码就不贴了</p>
+<h1>最后的最后</h1>
+<p><code>0、</code>获取 smail 代码（一般是根据 java 代码获取 smail 代码，同理根据 java 代码获取字节码，在代码量多的时候较难直接写出完整的 smail、字节码）<br>
+<code>1、</code>寻找插入点，smali 代码插入、保存、插入检验<br>
+<code>2、</code>打包、签名、运行调试查看效果（依此点击按钮，触发点击事件，运行结果和预期一致）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/831157f13e5c535bafa42839e3f80257.png" alt="image.png"></p>
+<p>思考：</p>
+<p>A：为什么搞 smali 接入，这不是给自己找坑嘛<br>
+B：这是需求，为了解决问题；我觉得重点是可以扩展知识<br>
+A：既然你已有 apk，可以把它转换为 java 代码，在 java 代码上接入不更清晰、省事，避免盲区不好吗，还是不方便<br>
+B：好像…也 可 以❓<br>
+A：我觉得可以，AndroidFk 工具可以把 apk 直接反编译为 android 项目（若加固、加密的 apk 可能就没那么容易，那是另一个话题了）<br>
+B：也是，在 java 代码上接入方便多了<br>
+A：我又有疑问了：如果接入的第三方 sdk 是一个 aar资源文件（包含资源等文件） 而不是 jar（纯 Java 代码），接入会不会遇到其他问题<br>
+B：区别肯定是有，实操方知晓<br>
+A：下次你来一个试试<br>
+B：… …<br>
+A：这不可怕啊，持续学习，提升广度办法总比困难多</p>
+
+
+          <hr>
+          <!-- Pager -->
+          <ul class="pager">
+            
+              <li class="previous">
+                <a href="/undefined/Android系统启动init进程/" data-toggle="tooltip" data-placement="top">&larr;
+                  上一篇</a>
+              </li>
+              
+                
+                  <li class="next">
+                    <a href="/undefined/你我字节码/" data-toggle="tooltip" data-placement="top">下一篇
+                      &rarr;</a>
+                  </li>
+                  
+          </ul>
+
+          
+            <!-- tip start -->
+            <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果你觉得有用，快来分享给你的小伙伴吧💗
+    
+  </p>
+</div>
+<!-- tip end -->
+
+              <!-- tip end -->
+              
+
+                
+                  <!-- Sharing Srtart -->
+                  <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+                    <!-- Sharing End -->
+                    
+                      <!-- <hr> -->
+
+                      <!-- comments start -->
+                      <!--  -->
+                        <!-- comments end -->
+                        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">遇到过这种场景吗</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">了解下 smali</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">试着接入 smali</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">最后的最后</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+          <!-- Featured Tags -->
+          
+            <section>
+              <!-- no hr -->
+              <h5>
+                <a href="/tags/">
+                  个性标签
+                </a>
+              </h5>
+              <div class="tags">
+                
+                  <a class="tag" href="/tags/#SDK" title="SDK">
+                    SDK
+                  </a>
+                  
+              </div>
+            </section>
+            
+
+              <!-- Friends Blog -->
+              
+                <hr>
+                <h5>
+                  友情链接
+                </h5>
+                <ul class="list-inline">
+
+                  
+                    <li>
+                      <a style="text-decoration: none;" href="https://www.dalv666.top" target="_blank">
+                        打驴动漫
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a style="text-decoration: none;" href="https://www.gfysys1.com" target="_blank">
+                        干饭影视
+                      </a>
+                    </li>
+                    
+                </ul>
+                
+        </div>
+    </div>
+  </div>
+</article>
+
+
+
+  <!-- anchorjs start -->
+  <!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+    <!-- anchorjs end -->
+    
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+              
+
+                  
+
+                      
+
+                          
+
+                              
+
+                                  
+
+                                      
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          深南村长
+            2023
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+                            <!-- jQuery -->
+                            <script type="text/javascript" src="/js/jquery.min.js"></script>
+                            <!-- Bootstrap Core JavaScript -->
+                            <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+                            <!-- Custom Theme JavaScript -->
+                            <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+                            <!-- catalog -->
+                            <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+                            <!-- totop(rocket) -->
+                            <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+                            
+                              <!-- Busuanzi JavaScript -->
+                              <script async="async"
+                                src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                              
+
+                                
+                                  <!-- Scroll start -->
+                                  <script async="async" type="text/javascript"
+                                    src="/js/scroll.js"></script>
+                                  <!-- Scroll end -->
+                                  
+
+                                    
+                                      <!-- LangSelect start -->
+                                      <script type="text/javascript" src="/js/langselect.js"></script>
+                                      <!-- LangSelect end -->
+                                      
+
+                                        
+                                          <!-- Mouseclick -->
+                                          <script type="text/javascript" src="/js/mouseclick.js"
+                                            content=''
+                                            color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+                                          
+
+                                            
+                                              <!-- ribbon -->
+                                              <script type="text/javascript"
+                                                src="/js/ribbonDynamic.js"></script>
+                                              
+
+                                                
+
+                                                    
+
+                                                      
+
+                                                          
+                                                            <!-- viewer start -->
+                                                            <!-- viewer start (Picture preview) -->
+                                                            
+                                                                <script async="async" type="text/javascript"
+                                                                  src="/js/viewer/viewer.min.js"></script>
+                                                                <script async="async" type="text/javascript"
+                                                                  src="/js/viewer/pic-viewer.js"></script>
+                                                                
+
+                                                                  <!-- viewer end -->
+                                                                  
+
+                                                                    <script>
+                                                                      // async load function
+                                                                      function async(u, c) {
+                                                                        var d = document,
+                                                                          t = 'script',
+                                                                          o = d.createElement(t),
+                                                                          s = d.getElementsByTagName(t)[0];
+                                                                        o.src = u;
+                                                                        if (c) {
+                                                                          o.addEventListener('load', function (e) {
+                                                                            c(null, e);
+                                                                          }, false);
+                                                                        }
+                                                                        s.parentNode.insertBefore(o, s);
+                                                                      }
+
+                                                                      // fastClick.js
+                                                                      async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+                                                                        var $nav = document.querySelector("nav");
+                                                                        if ($nav)
+                                                                          FastClick.attach($nav);
+                                                                      }
+                                                                      )
+                                                                    </script>
+
+                                                                    <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+                                                                    <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+                                                                    <!-- jquery.tagcloud.js -->
+                                                                    <!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+		<!-- Search -->
+		
+		<div style="margin-top: 300px;" class="popup search-popup local-search-popup">
+  <span style="margin-left: 120px;" class="popup-btn-close">
+    退出搜索
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div style="padding-left: 100px;" class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索" type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+	<link rel="stylesheet" href="/dist/APlayer.min.css">
+	<script src="./node_modules/pjax/pjax.js"></script>
+	<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+	<script type="text/javascript" src="/dist/music.js"></script>
+	<script src="https://myhkw.cn/api/player/166394977156" id="myhk" key="166394977156" m="1"></script>
+</html>
