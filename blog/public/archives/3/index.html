@@ -442,6 +442,109 @@
   <!-- top end -->
   
 
+  <a href="/undefined/Android-官方文档/">
+    <h2 class="post-title">
+      Android-官方文档
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      架构
+
+application framework
+binder ipc proxies
+Android system service
+
+media service
+
+audio
+camera
+media player
+
+
+system service
+
+ams
+wms
+
+
+
+
+hal【硬件接口】
+
+camera hal
+audio hal
+graphics hal
+
+
+linux kern......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    作者： 深南村长 
+    <br>
+    时间：2022-10-31
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#AOSP" title="AOSP">AOSP</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/Android日志/">
+    <h2 class="post-title">
+      Android 日志 logcat
+    </h2>
+    <h3 class="post-subtitle">
+      基于 android-11-r21
+    </h3>
+    <div class="post-content-preview">
+      Android Log
+
+base/core/java/android/util/Log.java
+
+在 Android 上常用 Log.d 等输出日志，日志分为不同的等级,Linux kernel 常通过 printk 输出日志，日志输出级别 ASSERT, ERROR, WARN, INFO, DEBUG, VERBOSE。
+以 Log.d 为例，日志输出有两种：
+printlns
+Lo......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    作者： 深南村长 
+    <br>
+    时间：2022-10-24
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#AOSP" title="AOSP">AOSP</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/undefined/android-pm-pms1/">
     <h2 class="post-title">
       pms 应用程序安装管理（八）
@@ -485,7 +588,8 @@
       基于 android-11-r21
     </h3>
     <div class="post-content-preview">
-      Warm-up1、安装方式（系统）
+      Warm-up
+1、安装方式（系统）
 
 adb 安装（程序）
 点击安装（用户）
@@ -497,7 +601,7 @@ InstallStart 被匹配到开始执行安装，pm 的清单配置文件匹配到�
 跳转到 InstallStaging activity
 再跳转到 PackageInstallerActivity
 
-3......
+......
     </div>
   </a>
   
@@ -532,8 +636,11 @@ InstallStart 被匹配到开始执行安装，pm 的清单配置文件匹配到�
     </h3>
     <div class="post-content-preview">
       Framework Base
+
 apex
+
 blobstore【应用程序之间的数据存储】
+
 framework
 service
 
@@ -543,10 +650,12 @@ jobscheduler【将作业调度到主线模块】
 
 api【略】
 boot
+
 hiddenapi【限制外部程序访问的接口】
 preloaded-class【由 zygote 进行初始化的类】
+
 android.accessibilityservice
-android.a......
+andr......
     </div>
   </a>
   
@@ -580,7 +689,10 @@ android.a......
       基于 android-11-r21
     </h3>
     <div class="post-content-preview">
-      AOSP不知道该从哪下手，那就先了解了解。framework 是我们重点关注的，因为其他的看不懂。
+      AOSP
+不知道该从哪下手，那就先了解了解。
+framework 是我们重点关注的，因为其他的看不懂。
+
 
 art【Android runtime】
 
@@ -590,8 +702,9 @@ benchmark【衡量代码性能基准】参考
 build【?】
 cmdline【命令行】
 complier【编译，elf】
+
 dex【字节码，内敛方法】
-jit【即时编译，arm/arm64/......
+jit【即时编译，arm/ar......
     </div>
   </a>
   
@@ -619,19 +732,20 @@ jit【即时编译，arm/arm64/......
 
   <a href="/undefined/字节码Dalvik/">
     <h2 class="post-title">
-      字节码 Dalvik
+      了解了解 Dalvik 字节码
     </h2>
     <h3 class="post-subtitle">
-      
+      基础不牢，摇头抓挠
     </h3>
     <div class="post-content-preview">
-      字节码 Dalvik关于 dalvik 字节码：
+      字节码 Dalvik
+关于 dalvik 字节码：
 
 JVM 官网
 
+
 Android GitHub
 Android 
-
 
 ...
     </div>
@@ -661,17 +775,25 @@ Android
 
   <a href="/undefined/class和dalvik字节码/">
     <h2 class="post-title">
-      字节码 Class
+      了解了解 Class 字节码
     </h2>
     <h3 class="post-subtitle">
-      
+      基础不牢，摇头抓挠
     </h3>
     <div class="post-content-preview">
       字节码 Class
+
 关于 class 字节码
 
-Java 虚拟机结构1、class 文件格式class 文件格式定义了类和接口的表示形式。
-2、数据类型主要包括两种数据类型原始类型、引用类型。类型检查在运行时之前，编译器进行类型检查。&emsp;&emsp;2.1、原始类型原始类型包括整形、浮点类型、布尔类型，jvm 中布尔类型使用整型 true=1  false=0 表示。&emsp;&e......
+Java 虚拟机结构
+1、class 文件格式
+class 文件格式定义了类和接口的表示形式。
+2、数据类型
+主要包括两种数据类型原始类型、引用类型。类型检查在运行时之前，编译器进行类型检查。
+  2.1、原始类型
+原始类型包括整形、浮点类型、布尔类型，jvm 中布尔类型使用整型 true=1  false=0 表示。
+  2.2、引用类型
+......
     </div>
   </a>
   
@@ -706,6 +828,7 @@ Java 虚拟机结构1、class 文件格式class 文件格式定义了类和接�
     </h3>
     <div class="post-content-preview">
       计算机专业
+
 编程入门那会，我们可能都有过这个疑惑：学习编程对英文水平有什么要求？一定要英语很好吗？但我想说的是，多多益善
 
 
@@ -784,7 +907,7 @@ Trampoline：跳床（跳板）
         <i>
           <span>
             <i>
-              27
+              29
             </i>
           </span>
         </i>
@@ -829,7 +952,7 @@ Trampoline：跳床（跳板）
           
             
         
-          <a href="/tags/#其他" title="其他" rel="1">
+          <a href="/tags/#其他" title="其他" rel="2">
             其他
           </a>
           
@@ -853,8 +976,14 @@ Trampoline：跳床（跳板）
           
             
         
-          <a href="/tags/#工具" title="工具" rel="2">
+          <a href="/tags/#工具" title="工具" rel="3">
             工具
+          </a>
+          
+            
+        
+          <a href="/tags/#踩坑" title="踩坑" rel="1">
+            踩坑
           </a>
           
             
@@ -902,6 +1031,18 @@ Trampoline：跳床（跳板）
   <div class="widget">
     <ul style="padding-left: 20px; list-style-type: circle;">
       
+        <a href="../../undefined/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%B8%A9%E5%9D%91/">
+          <li>
+            常见问题踩坑
+          </li>
+        </a>
+        
+        <a href="../../undefined/%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/">
+          <li>
+            简易且实用的 Tutorial
+          </li>
+        </a>
+        
         <a href="../../undefined/Gradle%E7%AC%94%E8%AE%B0/">
           <li>
             简约的 Gradle 图文笔记
@@ -917,18 +1058,6 @@ Trampoline：跳床（跳板）
         <a href="../../undefined/202301-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">
           <li>
             年终总结
-          </li>
-        </a>
-        
-        <a href="../../undefined/Android-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">
-          <li>
-            Android-官方文档
-          </li>
-        </a>
-        
-        <a href="../../undefined/Android%E6%97%A5%E5%BF%97/">
-          <li>
-            Android 日志 logcat
           </li>
         </a>
         
@@ -964,7 +1093,7 @@ Trampoline：跳床（跳板）
   <style>
   </style>
   <div style="margin-left: -20px; padding-left:-20px;">
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/10/">October 2022</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">10</span></li></ul>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/10/">October 2022</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">10</span></li></ul>
   </div>
   
         <hr>

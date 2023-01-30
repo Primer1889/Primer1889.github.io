@@ -446,6 +446,101 @@
   <!-- top end -->
   
 
+  <a href="/undefined/常见问题踩坑/">
+    <h2 class="post-title">
+      常见问题踩坑
+    </h2>
+    <h3 class="post-subtitle">
+      工作中难免会遇到各种问题
+    </h3>
+    <div class="post-content-preview">
+      Frida
+端口占用
+Q:
+Unable to start: Error binding to address: Address already in use
+A:
+netstat -tunlp 查看端口占用，kill -9 pid 杀死进程，重新启动 frida
+启动失败
+Q:
+frida Failed to attach: process with pid 8581 either ref......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    作者： 深南村长 
+    <br>
+    时间：2023-01-18
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#其他" title="其他">其他</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/简易教程/">
+    <h2 class="post-title">
+      简易且实用的 Tutorial
+    </h2>
+    <h3 class="post-subtitle">
+      资料整理杂烩
+    </h3>
+    <div class="post-content-preview">
+      替换 unity 资源
+1、首先使用工具 AssetStudioGUI.exe 打开 unity.data 查看资源
+
+https://github.com/Perfare/AssetStudio
+
+
+2、根据 pathID=3 找到资源，进行修改、替换 Asset bundle Extractor.exe
+
+https://github.com/SeriousCache/UABE
+
+
+3、......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    作者： 深南村长 
+    <br>
+    时间：2023-01-18
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#踩坑" title="踩坑">踩坑</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
   <a href="/undefined/Gradle笔记/">
     <h2 class="post-title">
       简约的 Gradle 图文笔记
@@ -454,18 +549,31 @@
       常听说：掌握 gradle 是初级 Android 程序员进阶的一项必备技能
     </h3>
     <div class="post-content-preview">
-      Gradle 了解基础了解：
+      Gradle 了解
+基础了解：
+
 生命周期：
+
 构建阶段 Hook：
+
 Gradle 命令
-Gradle 打包基础知识：
+
+Gradle 打包
+基础知识：
+
 Android 签名验证：
+
 Android 简约打包流程：
+
 Android 详细打包流程：
+
 Gradle Transform
 
+
 Gradle 提速
-Gradle 源码https://juejin.cn/post/6844903858641043463
+
+Gradle 源码
+https://juejin.cn/post/6844903858641043463
 ...
     </div>
   </a>
@@ -504,19 +612,21 @@ Gradle 源码https://juejin.cn/post/6844903858641043463
       
     </h3>
     <div class="post-content-preview">
-      Git
+      Android
+Git
+
 git init
 git add
 git commit -m ‘message’
 git push origin master
-git reset —soft HEAD~1
-git reset —soft [commitId]
-git rm -r —cached [file]
+git reset --soft HEAD~1
+git reset --soft [commitId]
+git rm -r --cached [file]
 git remote add origin ssh
 
 Jar
-jar -xvf [jarFile]
-jar ......
+
+jar -xvf [......
     </div>
   </a>
   
@@ -526,6 +636,8 @@ jar ......
     时间：2023-01-03
   </p>
   <div class="tags">
+    
+    <a href="/tags/#工具" title="工具">工具</a>
     
   </div>
   
@@ -554,11 +666,22 @@ jar ......
     <div class="post-content-preview">
       
 过去一年感觉怎么样？
+
+
 有什么收获吗？
+
+
 有什么遗憾吗？
 
-去年回想以前，似乎发生和遇到了不少事情，后知后觉都毕业一年半了，时间过得是真快，在学校时那份学习的干劲似乎被削弱了不少，也不知道为啥，毕业后的这一年半时间里也并没有停止学习，只是感觉不如从前。
-在学习上虽然没有了那股狠劲，但也不断尝试在新的方向迈出重要的第一步，例如，从 Android 源码下载到某个周末中午去图书馆阅读，以前陌生的 ......
+去年
+回想以前，
+似乎发生和遇到了不少事情，
+后知后觉都毕业一年半了，时间过得是真快，
+在学校时那份学习的干劲似乎被削弱了不少，也不知道为啥，
+毕业后的这一年半时间里也并没有停止学习，只是感觉不如从前。
+在学习上虽然没有了那股狠劲，
+但也不断尝试在新的方向迈出重要的第一步，
+例如，从 Android 源码下载到某个周末中午去图......
     </div>
   </a>
   
@@ -599,7 +722,8 @@ jar ......
       都知道 Android Java 代码的编译过程包括：java -&gt;  class -&gt; dex
 Java 到 class 是通过工具 javac，class 到 dex 是通过工具 dx，编译插桩是在编译期间修改已有代码或生成新的代码（常见的注解框架）。（d8、r8）d8 用来取代 dx, r8 用来取代 d8 和 proguard
 编译插桩场景
-代码生成：注解生成框架 But......
+
+代码生成：注解生成框架 Bu......
     </div>
   </a>
   
@@ -637,14 +761,16 @@ Java 到 class 是通过工具 javac，class 到 dex 是通过工具 dx，编译
       Java 崩溃调用栈等很清晰易解决，但是遇到 Native 崩溃时呢
     </h3>
     <div class="post-content-preview">
-      关于崩溃Android 崩溃大致分为两个部分，一是 Java 崩溃，其二是 Native 崩溃。Java 崩溃还是比较好解决的，但要是遇到 native 崩溃就没那么容易，像我遇到非法地址访问（空指针）、触发相应 signal 信号杀死进程。
+      关于崩溃
+Android 崩溃大致分为两个部分，一是 Java 崩溃，其二是 Native 崩溃。
+Java 崩溃还是比较好解决的，但要是遇到 native 崩溃就没那么容易，像我遇到非法地址访问（空指针）、触发相应 signal 信号杀死进程。
 为啥 native 崩溃不易解决呢？
 
 崩溃上下文不全
 出错信息模糊，较难分析
 难以捕获
 
-我们发现，在日常开发中常常遇到的 native 崩溃是信号......
+我们发现，在日常开发中常常遇到的 native 崩溃是......
     </div>
   </a>
   
@@ -684,6 +810,7 @@ Java 到 class 是通过工具 javac，class 到 dex 是通过工具 dx，编译
     <div class="post-content-preview">
       最近更新时间：2022/10/15  20:34
 Source code
+
 Android 进阶也好，看看源码真的很好，虽然它有时是枯燥的
 
 
@@ -691,13 +818,14 @@ Android 进阶也好，看看源码真的很好，虽然它有时是枯燥的
 Android 源码 - AospXref 
 
 Github pages
+
 我不会造轮子，但希望对此有点了解
 
 
 工具类 AndroidUtilCode
 字节码编辑工具 Recaf
 工具 smali
-搭建本地 Json Ser......
+搭建本地 Json S......
     </div>
   </a>
   
@@ -735,9 +863,11 @@ Github pages
       收藏从未停止，学习从未开始
     </h3>
     <div class="post-content-preview">
-      热修复介绍背景： dex 方法个数限制，最大不能超过 65536
+      热修复
+介绍
+背景： dex 方法个数限制，最大不能超过 65536
 方案： 将编译好的 class 文件拆分为两个 dex 文件，运行时使用系统类加载器动态加载其他的 dex 文件；dex 文件拆分官方早有方案 multidex。
-原理： 使用 DexClassLoader 加载字节码元素，（通过反射）把字节码元素追加到 dexElements 数组；对于热修复，同名字节码文件只有第一个元素会......
+原理： 使用 DexClassLoader 加载字节码元素，（通过反射）把字节码元素追加到 dexElements 数组；对于热修复，同名字节码文件只有第一个元......
     </div>
   </a>
   
@@ -776,6 +906,7 @@ Github pages
     </h3>
     <div class="post-content-preview">
       预备知识
+
 apksig：签名源码工程
 apksigner：命令行签名工具
 签名 SchemeSigner，验证 SchemeVerifier
@@ -783,12 +914,14 @@ apksigner：命令行签名工具
 签名算法：
 
 错误处理
+
 压缩文件格式异常（安装包本来就是一个压缩包）
 安装包格式异常
 没有找到安装包签名块异常
 签名能够支持的最小 Android 版本异常
 
-安装包结构...
+安装包结构
+...
     </div>
   </a>
   
@@ -796,84 +929,6 @@ apksigner：命令行签名工具
     作者： 深南村长 
     <br>
     时间：2022-10-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#AOSP" title="AOSP">AOSP</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/Android系统桌面启动二/">
-    <h2 class="post-title">
-      Android Home 桌面（七）
-    </h2>
-    <h3 class="post-subtitle">
-      启动桌面就是查找并启动 Activity
-    </h3>
-    <div class="post-content-preview">
-      桌面启动类似 Activity 启动，接着上一章节继续查阅启动流程，启动限制、启动条件检查是重点，Activity 生命周期也会逐步回调给外部，这里只是粗略描述启动过程，除此之外还包括窗口的创建、绘制等等。
-startActivityUnchecked12345678910111213141516171819202122232425262728293031323334353637383940......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    作者： 深南村长 
-    <br>
-    时间：2022-09-29
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#AOSP" title="AOSP">AOSP</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/Android系统桌面启动一/">
-    <h2 class="post-title">
-      Android Home 桌面（六）
-    </h2>
-    <h3 class="post-subtitle">
-      启动桌面就是查找并启动 Activity
-    </h3>
-    <div class="post-content-preview">
-      Ready go在系列文章中，上一章我们对 package 目录下的内容有了一定的了解，我们知道设备上的桌面其实就是一个系统应用，AOSP 原生有提供，但是厂商定制的 ROM 往往会自己重写或重新实现，扩展功能；那么继续 Android 系统启动思考往下走，我们是不是应该看看手机桌面是如何显示的———桌面程序是如何启动的？
-虽然我们知道桌面程序是Launcher，但是我们作为刚阅读源码的小白......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    作者： 深南村长 
-    <br>
-    时间：2022-09-29
   </p>
   <div class="tags">
     
@@ -934,7 +989,7 @@ startActivityUnchecked1234567891011121314151617181920212223242526272829303132333
         <i>
           <span>
             <i>
-              27
+              29
             </i>
           </span>
         </i>
@@ -979,7 +1034,7 @@ startActivityUnchecked1234567891011121314151617181920212223242526272829303132333
           
             
         
-          <a href="/tags/#其他" title="其他" rel="1">
+          <a href="/tags/#其他" title="其他" rel="2">
             其他
           </a>
           
@@ -1003,8 +1058,14 @@ startActivityUnchecked1234567891011121314151617181920212223242526272829303132333
           
             
         
-          <a href="/tags/#工具" title="工具" rel="2">
+          <a href="/tags/#工具" title="工具" rel="3">
             工具
+          </a>
+          
+            
+        
+          <a href="/tags/#踩坑" title="踩坑" rel="1">
+            踩坑
           </a>
           
             
@@ -1052,6 +1113,18 @@ startActivityUnchecked1234567891011121314151617181920212223242526272829303132333
   <div class="widget">
     <ul style="padding-left: 20px; list-style-type: circle;">
       
+        <a href="undefined/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%B8%A9%E5%9D%91/">
+          <li>
+            常见问题踩坑
+          </li>
+        </a>
+        
+        <a href="undefined/%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/">
+          <li>
+            简易且实用的 Tutorial
+          </li>
+        </a>
+        
         <a href="undefined/Gradle%E7%AC%94%E8%AE%B0/">
           <li>
             简约的 Gradle 图文笔记
@@ -1067,18 +1140,6 @@ startActivityUnchecked1234567891011121314151617181920212223242526272829303132333
         <a href="undefined/202301-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">
           <li>
             年终总结
-          </li>
-        </a>
-        
-        <a href="undefined/Android-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">
-          <li>
-            Android-官方文档
-          </li>
-        </a>
-        
-        <a href="undefined/Android%E6%97%A5%E5%BF%97/">
-          <li>
-            Android 日志 logcat
           </li>
         </a>
         
@@ -1114,7 +1175,7 @@ startActivityUnchecked1234567891011121314151617181920212223242526272829303132333
   <style>
   </style>
   <div style="margin-left: -20px; padding-left:-20px;">
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/01/">January 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/10/">October 2022</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/09/">September 2022</a><span class="archive-list-count">10</span></li></ul>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/01/">January 2023</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/10/">October 2022</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/09/">September 2022</a><span class="archive-list-count">10</span></li></ul>
   </div>
   
         <hr>

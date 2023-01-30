@@ -3,8 +3,26 @@ layout: "diary"
 title: "Happy every day"
 date: 2023-01-22 13:48:33
 description: "时间不会停止，在未来一切都将逝去，愿你早些懂得珍惜！"
-header-img: "img/220928/total_bg.png"
+header-img: "img/2301/7_bg.jpg"
 ---
+
+> 时间：2023/01/28 17:22
+>
+> 地点：家乡
+
+开始新一年的打工生活。
+
+<center>
+<img src="../img/diary/2023-1-28-17-21.webp" width="50%" height="50%" />
+<span>《梧州南站》</span>
+</center>
+
+<center>
+<img src="../img/diary/2023-1-28-17-22.webp" width="50%" height="50%" />
+<span>《远程办公》</span>
+</center>
+
+
 
 > 时间：2023/01/26 16:00
 >
