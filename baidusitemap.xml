@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite-url/undefined/Android%E6%8A%80%E8%83%BD/</loc>
+    <lastmod>2023-01-31</lastmod>
+  </url>
+  <url>
+    <loc>http://yoursite-url/undefined/%E4%BB%A3%E7%A0%81%E5%B0%8FTip/</loc>
+    <lastmod>2023-01-31</lastmod>
+  </url>
+  <url>
     <loc>http://yoursite-url/undefined/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%B8%A9%E5%9D%91/</loc>
     <lastmod>2023-01-18</lastmod>
   </url>

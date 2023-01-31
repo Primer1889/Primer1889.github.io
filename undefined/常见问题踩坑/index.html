@@ -311,13 +311,13 @@
     <style type="text/css">
       .body--light {
         /* intro-header */
-        --intro-header-background-image-url-home: url('/img/2301/5_bg.jpg');
+        --intro-header-background-image-url-home: url('/img/2301/9_bg.webp');
         --intro-header-background-image-url-post: url('/img/2301/8_bg.png');
         --intro-header-background-image-url-page: url('//img/2301/8_bg.png');
       }
 
       .body--dark {
-        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/5_bg.jpg');
+        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/9_bg.webp');
         --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/8_bg.png');
         --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/2301/8_bg.png');
       }
@@ -381,7 +381,7 @@
                         <br>
                         <span>
                           字数： <span>
-                            149
+                            210
                           </span> 字
                         </span>
                         <br>
@@ -444,39 +444,128 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>Frida</h1>
-<h2 id="端口占用">端口占用</h2>
-<p>Q:<br>
-Unable to start: Error binding to address: Address already in use<br>
-A:<br>
-netstat -tunlp 查看端口占用，kill -9 pid 杀死进程，重新启动 frida</p>
-<h2 id="启动失败">启动失败</h2>
-<p>Q:<br>
-frida Failed to attach: process with pid 8581 either refused to load frida-agent, or terminated during injection<br>
-A:<br>
-adb server 重启 adb，重启 frida</p>
+        <table>
+<thead>
+<tr>
+<th style="text-align:left">问题简述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">简约日志</td>
+</tr>
+<tr>
+<td style="text-align:left">解决方法</td>
+</tr>
+</tbody>
+</table>
+<center>
+<span>《模板》</span>
+</center>
+<h1>Frida</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">1、端口占用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Unable to start: Error binding to address: Address already in use</td>
+</tr>
+<tr>
+<td style="text-align:left">netstat -tunlp 查看端口占用，kill -9 pid 杀死进程，重新启动 frida</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">2、启动失败</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">frida Failed to attach: process with pid 8581 either refused to load frida-agent, or terminated during injection</td>
+</tr>
+<tr>
+<td style="text-align:left">adb server 重启 adb，重启 frida</td>
+</tr>
+</tbody>
+</table>
 <h1>Android</h1>
-<h2 id="打包失败-clean">打包失败-clean</h2>
-<p>Q：<br>
-Caused by: java.io.IOException: Unable to delete directory 'D:\AndroidStudioLatest\java11\install\caches\transforms-2\files-2.1<br>
-A：<br>
-等待一段时间（约两分钟）再次执行 clean 后重新打包</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">1、打包失败-clean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Caused by: java.io.IOException: Unable to delete directory 'caches\transforms-2\files-2.1</td>
+</tr>
+<tr>
+<td style="text-align:left">等待一段时间（约两分钟）再次执行 clean 后重新打包</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">2、打包失败-变量未定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">No such property: out for class: com.vimedia.plugin.obs.ObsPlugin</td>
+</tr>
+<tr>
+<td style="text-align:left">当前类中存在使用非法变量，请检查上文变量是否定义或作用域是否在允许范围内</td>
+</tr>
+</tbody>
+</table>
 <h1>Hexo</h1>
-<h2 id="hexo-d-失败">hexo d 失败</h2>
-<p>Q：<br>
-err: Error: Spawn failed<br>
-at ChildProcess.cp.emit<br>
-at Process.ChildProcess._handle.onexit (node:internal/child_process:293:12)<br>
-A：<br>
-rm -rf .deploy_git<br>
-hexo g<br>
-hexo d</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">1、hexo d 失败</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">err: Error: Spawn failed at ChildProcess.cp.emit at Process.ChildProcess._handle.onexit</td>
+</tr>
+<tr>
+<td style="text-align:left">rm -rf .deploy_git &amp;&amp; hexo g &amp;&amp; hexo d</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
 
 
           <hr>
           <!-- Pager -->
           <ul class="pager">
             
+              <li class="previous">
+                <a href="/undefined/代码小Tip/" data-toggle="tooltip" data-placement="top">&larr;
+                  上一篇</a>
+              </li>
+              
                 
                   <li class="next">
                     <a href="/undefined/简易教程/" data-toggle="tooltip" data-placement="top">下一篇
@@ -544,7 +633,7 @@ hexo d</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Frida</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">端口占用</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">启动失败</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Android</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%89%93%E5%8C%85%E5%A4%B1%E8%B4%A5-clean"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">打包失败-clean</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Hexo</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo-d-%E5%A4%B1%E8%B4%A5"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">hexo d 失败</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Frida</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Android</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Hexo</span></a></li></ol>
         
         </div>
       </aside>

@@ -311,22 +311,22 @@
     <style type="text/css">
       .body--light {
         /* intro-header */
-        --intro-header-background-image-url-home: url('/img/2301/5_bg.jpg');
-        --intro-header-background-image-url-post: url('/img/2301/4_bg.png');
-        --intro-header-background-image-url-page: url('//img/2301/4_bg.png');
+        --intro-header-background-image-url-home: url('/img/2301/9_bg.webp');
+        --intro-header-background-image-url-post: url('/img/2301/4_bg.webp');
+        --intro-header-background-image-url-page: url('//img/2301/4_bg.webp');
       }
 
       .body--dark {
-        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/5_bg.jpg');
-        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/4_bg.png');
-        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/2301/4_bg.png');
+        --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/9_bg.webp');
+        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/4_bg.webp');
+        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/2301/4_bg.webp');
       }
 
       header.intro-header {
         
           /*post*/
           background-image: var(--intro-header-background-image-url-post);
-          /* background-image: url('/img/2301/4_bg.png'); */
+          /* background-image: url('/img/2301/4_bg.webp'); */
           
       }
 
@@ -381,7 +381,7 @@
                         <br>
                         <span>
                           字数： <span>
-                            173
+                            182
                           </span> 字
                         </span>
                         <br>
@@ -493,6 +493,7 @@
 <li>keep 规则：seeds.txt</li>
 <li>被移除：usage.txt</li>
 <li>映射表：mapping.txt</li>
+<li>keep 内部类：-keep class com.amdroid.Animal$<em>{</em>;}</li>
 </ul>
 <h2 id="Python">Python</h2>
 <ul>
