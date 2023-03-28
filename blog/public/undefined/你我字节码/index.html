@@ -312,21 +312,21 @@
       .body--light {
         /* intro-header */
         --intro-header-background-image-url-home: url('/img/2301/5_bg.jpg');
-        --intro-header-background-image-url-post: url('/img/220923_classmodify/ymclass_bg.png');
-        --intro-header-background-image-url-page: url('//img/220923_classmodify/ymclass_bg.png');
+        --intro-header-background-image-url-post: url('/img/220923_classmodify/ymclass_bg.webp');
+        --intro-header-background-image-url-page: url('//img/220923_classmodify/ymclass_bg.webp');
       }
 
       .body--dark {
         --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/5_bg.jpg');
-        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/220923_classmodify/ymclass_bg.png');
-        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/220923_classmodify/ymclass_bg.png');
+        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/220923_classmodify/ymclass_bg.webp');
+        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/220923_classmodify/ymclass_bg.webp');
       }
 
       header.intro-header {
         
           /*post*/
           background-image: var(--intro-header-background-image-url-post);
-          /* background-image: url('/img/220923_classmodify/ymclass_bg.png'); */
+          /* background-image: url('/img/220923_classmodify/ymclass_bg.webp'); */
           
       }
 
@@ -454,14 +454,14 @@
 <blockquote>
 <p><code>javac Test.java</code> 编译得到 Test.class 字节码文件</p>
 </blockquote>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/6fd777b8a85ec867a59fdb307082595b.png" alt="image.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6fd777b8a85ec867a59fdb307082595b.png" alt="image.webp"></p>
 <p>也可以直接使用 <code>java &lt;类全路径&gt;</code> 直接运行查看效果，类全路径：包名 + 类名</p>
 <p><strong>举个例子：</strong></p>
 <p>Test 启动类的包名是 <code>package primer</code>，我本地目录是<code>primer/primer/Test.class</code></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/ec87c8988833fd4f5d34a8f9edb76d8c.png" alt="image.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ec87c8988833fd4f5d34a8f9edb76d8c.png" alt="image.webp"></p>
 <p>1、在 class 所在目录下运行 ❌</p>
 <p>如果你在 Test.class 同级目录下执行命令运行，可惜报错了，大概意思是你的 Test 类全路径不对，当存在主类存在包名时，不能在当前 class 文件所在路径执行命令，需要在包名所在目录执行，否则报错，java 命令认为在当前目录下找<em><strong>包名路径</strong></em>，如果文件夹存在，则继续根据包名往下查找，直到找到主类，否则抛出异常。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/421255941965168858b22ae04aebe4d6.png" alt="image.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/421255941965168858b22ae04aebe4d6.png" alt="image.webp"></p>
 <p>前面提到，直接执行字节码是这样 <strong><code>java &lt;类全路径&gt;</code></strong>，全路径是要包含包名在内，比如 <code>com.tencent.mmkv.MMKV</code>，如果 MMKV 类有执行入口，想要通过 java 命令执行它必须确保路径正确。**JVM 在加载类过程中是如何确定唯一个类的？**比如，有两个类名相同但包名（全路径）不同的 Test 类，JVM 通过<code>包名限定符 + 是否同一个虚拟机</code>唯一确定一个类（一般情况下，我们运行的程序只有一个虚拟机）</p>
 <p>2、在 class 启动类最外层包名的上一层目录运行 ☑️</p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/ec6fbd643ecb13cd555200dc4ab5fbd2.png" alt="image.png"></p>

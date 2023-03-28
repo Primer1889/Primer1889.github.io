@@ -3,7 +3,7 @@ title: 了解 framework base（二）
 catalog: true
 date: 2022-10-20 23:00:41
 subtitle: 基于 android-11-r21
-header-img: /img/2210/page-native.jpg
+header-img: /img/2210/page-native.webp
 tags: AOSP
 categories:
 ---

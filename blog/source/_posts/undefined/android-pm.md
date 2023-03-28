@@ -3,7 +3,7 @@ title: pm 应用程序安装管理（八）
 catalog: true
 date: 2022-10-23 10:00:16
 subtitle: 基于 android-11-r21
-header-img: /img/2210/page-native.jpg
+header-img: /img/2210/page-native.webp
 tags: AOSP
 categories:
 ---

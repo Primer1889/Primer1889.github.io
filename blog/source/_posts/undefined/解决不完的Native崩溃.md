@@ -3,7 +3,7 @@ title: 了解令人抓挠的 Native 崩溃
 catalog: true
 date: 2022-10-16 11:57:27
 subtitle: Java 崩溃调用栈等很清晰易解决，但是遇到 Native 崩溃时呢
-header-img: /img/2210/page-native.jpg
+header-img: /img/2210/page-native.webp
 tags: Native
 categories:
 sticky: 14

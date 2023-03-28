@@ -3,7 +3,7 @@ title: 简约的 Gradle 图文笔记
 catalog: true
 date: 2023-01-07 19:30:41
 subtitle: 常听说：掌握 gradle 是初级 Android 程序员进阶的一项必备技能
-header-img: /img/gradle/7_bg.jpg
+header-img: /img/gradle/7_bg.webp
 tags: Gradle
 categories:
 sticky: 17

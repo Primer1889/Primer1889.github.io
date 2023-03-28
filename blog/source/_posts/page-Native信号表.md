@@ -3,7 +3,7 @@ title: Native 信号表（部分）
 catalog: true
 date: 2022-09-24 15:35:36
 subtitle: 描述对应信号代表的含义，协助问题排查
-header-img: /img/header_img/tag_bg.png
+header-img: /img/header_img/tag_bg.webp
 tags: 笔记
 categories: 
 sticky: 1

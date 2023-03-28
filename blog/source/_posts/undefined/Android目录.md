@@ -3,7 +3,7 @@ title: 了解 AOSP 工程目录（一）
 catalog: true
 date: 2022-10-18 21:20:48
 subtitle: 基于 android-11-r21
-header-img: /img/2210/page-native.jpg
+header-img: /img/2210/page-native.webp
 tags: AOSP
 categories:
 ---

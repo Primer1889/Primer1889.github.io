@@ -330,21 +330,21 @@
       .body--light {
         /* intro-header */
         --intro-header-background-image-url-home: url('/img/2301/5_bg.jpg');
-        --intro-header-background-image-url-post: url('img/2301/6_bg.jpg');
-        --intro-header-background-image-url-page: url('/img/2301/6_bg.jpg');
+        --intro-header-background-image-url-post: url('img/2301/6_bg.webp');
+        --intro-header-background-image-url-page: url('/img/2301/6_bg.webp');
       }
 
       .body--dark {
         --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/5_bg.jpg');
-        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/2301/6_bg.jpg');
-        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/6_bg.jpg');
+        --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/2301/6_bg.webp');
+        --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/2301/6_bg.webp');
       }
 
       header.intro-header {
         
           /*page*/
           background-image: var(--intro-header-background-image-url-page);
-          /* background-image: url('/img/2301/6_bg.jpg'); */
+          /* background-image: url('/img/2301/6_bg.webp'); */
           
       }
 
@@ -439,9 +439,9 @@
         
         <a href="#工具" title="工具" rel="3">工具</a>
         
-        <a href="#踩坑" title="踩坑" rel="1">踩坑</a>
-        
         <a href="#Native" title="Native" rel="1">Native</a>
+        
+        <a href="#踩坑" title="踩坑" rel="1">踩坑</a>
         
         <a href="#刷机" title="刷机" rel="1">刷机</a>
         
@@ -616,6 +616,20 @@
         <hr>
         
         <div class="post-preview">
+          <a href="/undefined/Android目录/">
+            <h2 class="post-title">
+              了解 AOSP 工程目录（一）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              基于 android-11-r21
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
           <a href="/undefined/Android-官方文档/">
             <h2 class="post-title">
               Android-官方文档
@@ -640,13 +654,13 @@
         <hr>
         
         <div class="post-preview">
-          <a href="/undefined/Android目录/">
+          <a href="/undefined/Android系统启动systemserver进程/">
             <h2 class="post-title">
-              了解 AOSP 工程目录（一）
+              Android Systemserver 进程（五）
             </h2>
             
             <h3 class="post-subtitle">
-              基于 android-11-r21
+              启动服务、核心服务、其他服务
             </h3>
             
           </a>
@@ -661,20 +675,6 @@
             
             <h3 class="post-subtitle">
               本系列文章基于 Android 11-r21 master
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/undefined/Android系统启动systemserver进程/">
-            <h2 class="post-title">
-              Android Systemserver 进程（五）
-            </h2>
-            
-            <h3 class="post-subtitle">
-              启动服务、核心服务、其他服务
             </h3>
             
           </a>
@@ -855,27 +855,6 @@
       </div>
       
       <div class="one-tag-list">
-        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="踩坑">
-          <span class="tag-text">踩坑</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/undefined/简易教程/">
-            <h2 class="post-title">
-              简易且实用的 Tutorial
-            </h2>
-            
-            <h3 class="post-subtitle">
-              资料整理杂烩
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
         <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="Native">
           <span class="tag-text">Native</span>
         </span>
@@ -888,6 +867,27 @@
             
             <h3 class="post-subtitle">
               Java 崩溃调用栈等很清晰易解决，但是遇到 Native 崩溃时呢
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span style="font-style: bold;" class="fa fa-tag listing-seperator" id="踩坑">
+          <span class="tag-text">踩坑</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/undefined/简易教程/">
+            <h2 class="post-title">
+              简易且实用的 Tutorial
+            </h2>
+            
+            <h3 class="post-subtitle">
+              资料整理杂烩
             </h3>
             
           </a>

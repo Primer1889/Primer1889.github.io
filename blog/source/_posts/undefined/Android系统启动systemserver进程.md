@@ -3,7 +3,7 @@ title: Android Systemserver 进程（五）
 catalog: true
 date: 2022-09-29 22:57:13
 subtitle: 启动服务、核心服务、其他服务
-header-img: /img/220928/android_sysserver_bg.png
+header-img: /img/220928/android_sysserver_bg.webp
 tags: AOSP
 sticky: 6
 categories:

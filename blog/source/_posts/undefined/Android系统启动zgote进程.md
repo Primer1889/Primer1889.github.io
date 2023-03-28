@@ -3,7 +3,7 @@ title: Android zygote 进程（四）
 catalog: true
 date: 2022-09-29 22:56:05
 subtitle: 俗称 Java 世界的鼻祖
-header-img: /img/220928/android_zygot_bg.png
+header-img: /img/220928/android_zygot_bg.webp
 tags: AOSP
 sticky: 7
 categories:

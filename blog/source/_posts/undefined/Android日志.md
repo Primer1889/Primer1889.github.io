@@ -3,7 +3,7 @@ title: Android 日志 logcat
 catalog: true
 date: 2022-10-24 20:59:07
 subtitle: 基于 android-11-r21
-header-img: /img/2210/page-native.jpg
+header-img: /img/2210/page-native.webp
 tags: AOSP
 categories:
 ---

@@ -5,7 +5,7 @@ title: Android Init 进程（三）
 subtitle: 本系列文章基于 Android 11-r21 master
 date: 2022-09-29 22:55:05
 tags: AOSP
-header-img: /img/220928/android_init_bg.png
+header-img: /img/220928/android_init_bg.webp
 sticky: 5
 ---
 

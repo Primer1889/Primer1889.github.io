@@ -3,7 +3,7 @@ title: Android Home 桌面（六）
 catalog: true
 date: 2022-09-29 22:57:44
 subtitle: 启动桌面就是查找并启动 Activity
-header-img: /img/220928/android_sysserver_bg.png
+header-img: /img/220928/android_sysserver_bg.webp
 tags: AOSP
 sticky: 8
 categories:
