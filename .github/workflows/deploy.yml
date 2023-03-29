@@ -21,26 +21,26 @@ jobs:
         with:
           node-version: '12'
 
-(base) jsonli@JsondeMacBook-Pro workflows % vim deploy.yml 
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12'
-
-      - name: Setup Hexo
-        env:
-          ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
-        run: |
-          mkdir -p ~/.ssh/
-          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
-          chmod 700 ~/.ssh
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.email "2464113103@qq.com"
-          git config --global user.name "Jasonlili"
-          npm install hexo-cli -g
-          npm install
+#(base) jsonli@JsondeMacBook-Pro workflows % vim deploy.yml
+#
+#      - name: Setup Node.js
+#        uses: actions/setup-node@v1
+#        with:
+#          node-version: '12'
+#
+#      - name: Setup Hexo
+#        env:
+#          ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
+#        run: |
+#          mkdir -p ~/.ssh/
+#          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+#          chmod 700 ~/.ssh
+#          chmod 600 ~/.ssh/id_rsa
+#          ssh-keyscan github.com >> ~/.ssh/known_hosts
+#          git config --global user.email "2464113103@qq.com"
+#          git config --global user.name "Jasonlili"
+#          npm install hexo-cli -g
+#          npm install
 
       - name: Deploy
         run: |
